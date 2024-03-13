@@ -1,0 +1,169 @@
+\documentclass[10pt, a4paper]{report}
+
+\usepackage{tocloft} % para cambiar formato de \tableofcontents
+\usepackage{titlesec} % para cambiar formato de los titulos
+\usepackage{amsmath, amssymb, amsthm, mathtools, esint} % Paquetes de simbolos matematicos
+\usepackage[skip=20pt, indent=0pt]{parskip} 
+\usepackage[margin=3cm]{geometry}
+\usepackage[spanish]{babel}
+\usepackage{chngcntr} % para cambiar los contadores
+\usepackage{hyperref} % para hyperlinks asociados al documento
+\usepackage{pgfplots} % para graficos 
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{fillbetween}
+
+% Definicion de ambiente para preguntas y respuestas
+\theoremstyle{definition} % Para que el texto no aparezca en italicas
+\newtheorem{question}{Ejercicio}
+\newtheorem{solution}{Solución}
+
+% Para que se resetee el contador en cada seccion
+% \counterwithin*{equation}{subsubsection}
+\counterwithin*{solution}{subsubsection}
+\counterwithin*{question}{subsubsection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\contentsname}{Indice}
+\renewcommand{\listfigurename}{Lista de Figuras}
+\renewcommand{\listtablename}{Lista de Tablas}
+\renewcommand{\bibname}{Bibliograf\'{\i}a}
+\renewcommand{\indexname}{Indice}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\partname}{Parte}
+\renewcommand{\chaptername}{Cap\'{\i}tulo}
+\renewcommand{\appendixname}{Ap\'endice}
+\renewcommand{\abstractname}{Resumen}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Teoremas y proposiciones
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{prop}[teo]{Proposici\'on}
+\newtheorem{lema}[teo]{Lema}
+\newtheorem{obs}[teo]{Observaci\'on}
+\newtheorem{exmpl}[teo]{Ejemplo}
+\newtheorem{coro}[teo]{Corolario}
+\newtheorem{comen}[teo]{Comentario}
+\newtheorem{conje}[teo]{Conjetura}
+\theoremstyle{definition}
+\newtheorem{definition}[teo]{Definici\'on}
+
+% numeros reales
+\renewcommand{\Re}{\mathbb {R}}
+% derivadas parciales
+\newcommand{\partialx}{\frac{\partial}{\partial x}}
+\newcommand{\partialy}{\frac{\partial}{\partial y}}
+\newcommand{\partialz}{\frac{\partial}{\partial z}}
+
+\spanishdecimal{.}
+
+% ajuste formato capitulos
+\titleformat{\chapter}[display]
+  {\normalfont\fontsize{14}{16}\selectfont\bfseries}{\vspace{-4cm}}{0pt}{}[\vspace{-1cm}]
+
+% ajuste formato secciones
+\titleformat{\section}
+  {\normalfont\fontsize{12}{14}\selectfont\bfseries}{\thesection}{1em}{}
+
+% ajuste formato indice
+\renewcommand{\cfttoctitlefont}{\normalfont\Large\bfseries}
+\renewcommand{\cftbeforetoctitleskip}{-.5cm}
+
+\begin{document}
+%===================================================
+%                     CARATULA
+%===================================================
+    \begin{center}
+
+        \thispagestyle{empty}  % Saca la numeracion a la primer pagina
+
+        \includegraphics[scale=0.2]{logoitba2.png}
+        \medskip
+        
+        \textbf{\large{INSTITUTO  TECNOL\'OGICO DE BUENOS AIRES}\normalsize}
+        
+        \smallskip
+        
+        \textbf{\large  Departamento de Ciencias Exactas y Naturales}
+        
+        \smallskip
+        \textbf{\large \'Area  Matem\'atica}
+      
+        \vspace{2 cm}
+        
+        \textbf{\Large \noindent \textbf{Parciales Resueltos.}}
+             
+        \vspace{1.5cm}
+        
+        \large  Material de lectura para alumnos........  \normalsize
+    \end{center}
+    
+    \newpage
+
+%===================================================
+%                   INTRODUCCION
+%===================================================
+    \setcounter{page}{1}
+    \begin{center}
+        \textbf{ \noindent \textbf{Parciales Resueltos}}
+    \end{center}
+    \vspace{3cm}
+      
+    (Pequena explicacion).  Este documento presentaremos distintos ejercicios de parcial....
+    \newpage
+
+%===================================================
+%                      INDICE
+%===================================================
+    \tableofcontents
+        \pagenumbering{arabic}
+        \setcounter{page}{1}
+
+%===================================================
+%                CONTENIDO TEORICO
+%===================================================
+    \chapter{Contenido teórico. Pirmera parte}
+        \section{Derivadas}
+        \section{Diferenciabilidad}
+
+    \chapter{Contenido teórico. Segunda parte}
+        \section{Operadores}
+        \section{Integrales dobles y triples}
+        \section{Integrales de l\'inea}
+        \section{Integrales de Superficie}
+        \section{Teoremas Integrales}
+
+        Contenidos teoricos basicos. A modo de resumen. 
+
+%===================================================
+%               EJERCICIOS RESUELTOS
+%===================================================
+    \chapter{Primeros parciales resueltos}
+        \section{Fecha 29 de septiembre de 2023}
+            \input{1p_29_09_2023}
+
+        \newpage
+        \section{Fecha 25 de abril de 2023}
+            \input{1p_25_04_2023}
+
+        \newpage
+        \section{Fecha Recuperatorio 2cuatri 2022}
+            \input{1p_recu_2Q_2022}
+
+
+        \newpage
+    \chapter{Segundos parciales resueltos}
+        \section{Fecha 25 de junio de 2023}
+            \input{2p_25_06_2023}
+
+        \newpage
+        \section{Fecha recuperatorio 29 de junio de 2023}
+            \input{2p_recu_29_06_2023}
+
+        \newpage
+        \section{Fecha recuperatorio extra}
+            \input{2doRecupExtra}
+    
+\end{document}

@@ -1,0 +1,18 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\numberline {1}Contenido teórico. Pirmera parte}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Derivadas}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Diferenciabilidad}{2}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Contenido teórico. Segunda parte}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Operadores}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Integrales dobles y triples}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Integrales de l\'inea}{3}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Integrales de Superficie}{3}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Teoremas Integrales}{3}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Primeros parciales resueltos}{4}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Fecha 29 de septiembre de 2023}{4}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Fecha 25 de abril de 2023}{8}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Fecha Recuperatorio 2cuatri 2022}{13}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Segundos parciales resueltos}{18}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Fecha 25 de junio de 2023}{18}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Fecha recuperatorio 29 de junio de 2023}{23}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Fecha recuperatorio extra}{28}{section.4.3}%
