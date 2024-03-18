@@ -44,7 +44,7 @@
 
 \begin{solution}
     Por el teorema de Schwartz sabemos que si $f \in\ C^2$ en  $B_{\delta}(0,0)$
-    entonces $$  f_{xy} (x,y) = f_{yx} (x,y) \; \forall (x,y) \in B_{\delta}(0,0).$$ En particular, deber\'ia pasar que $f_{xy} (0,0) = f_{yx}(0,0).$ Veamos que esto \'ultimo no sucede.
+    entonces $$  f_{xy} (x,y) = f_{yx} (x,y) \quad \forall (x,y) \in B_{\delta}(0,0).$$ En particular, deber\'ia pasar que $f_{xy} (0,0) = f_{yx}(0,0).$ Veamos que esto \'ultimo no sucede.
 
     \begin{equation}
         f_x(x,y) = \frac{(3yx^2-y^3)(x^2+y^2) - (yx^3-xy^3)2x}{(x^2+y^2)^2} \label{eq:partXej1}
@@ -128,10 +128,11 @@
     Entonces queda
     \[
         \begin{aligned}
-            P_2(x,y)      & = 1+(2,3)\cdot(x,y)+\frac{1}{2}(x,y)\left(\begin{array}{cc}
-                                                                              4 & 6 \\
-                                                                              6 & 9
-                                                                          \end{array}\right)
+            P_2(x,y)      & = 1+(2,3)\cdot(x,y)+\frac{1}{2}(x,y)
+            \left(\begin{array}{cc}  
+                    4 & 6 \\
+                    6 & 9
+                \end{array}\right)
             \left(\begin{array}{cc}
                           x \\
                           y
@@ -146,7 +147,7 @@
     Por tanto, podemos reescribir el límite original como
     \[\\[2pt]
         \lim_{(x,y) \to (0,0)} \frac{R_2(x,y) - x^2 - y^2}{\|(x,y)\|^2} =
-        \lim_{(x,y) \to (0,0)} \Big( \frac{R_2(x,y)}{\|(x,y)\|^2} - \frac{x^2+y^2}{\|(x,y)\|^2} \Big) = -1,
+        \lim_{(x,y) \to (0,0)} \left( \frac{R_2(x,y)}{\|(x,y)\|^2} - \frac{x^2+y^2}{\|(x,y)\|^2} \right) = -1,
     \]
     pues el primer término tiende a 0 por el teorema de Taylor  y el segundo  tiende claramente a $1.$
 \end{solution}
@@ -205,7 +206,7 @@
         \Pi: 3x + 4y + 5y = 0.
     \]
 
-    b. Dado que el único plano paralelo a otro tangente a un punto en una esfera es el que se encuentra en el polo opuesto de ésta, buscamos el plano tangente a ese otro punto $\mathbf{w}$. Llamando $\mathbf{v} = (-3,-4,-5)$ al vector que sale del centro de la esfera y termina en el origen, queda que
+    b. Dado que el único plano paralelo a otro tangente a un punto en una esfera es el que se encuentra en el polo opuesto de ésta, buscamos el plano tangente $\Pi'$ a ese otro punto $\mathbf{w}$. Llamando $\mathbf{v} = (-3,-4,-5)$ al vector que sale del centro de la esfera y termina en el origen, queda que
     \[
         \mathbf{w} = (3,4,5) - \mathbf{v} = (6,8,10).
     \]
