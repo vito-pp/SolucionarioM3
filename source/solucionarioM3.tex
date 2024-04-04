@@ -18,7 +18,6 @@
 \newtheorem{solution}{Solución}
 
 % Para que se resetee el contador en cada seccion
-% \counterwithin*{equation}{subsubsection}
 \counterwithin*{solution}{subsubsection}
 \counterwithin*{question}{subsubsection}
 
@@ -49,6 +48,7 @@
 \newtheorem{conje}[teo]{Conjetura}
 \theoremstyle{definition}
 \newtheorem{definition}[teo]{Definici\'on}
+\newtheorem{propertie}[teo]{Propiedad}
 
 % numeros reales
 \renewcommand{\Re}{\mathbb {R}}
@@ -126,7 +126,9 @@
 %===================================================
     \chapter{Contenido teórico. Pirmera parte}
         \section{Derivadas}
+            \input{derivadas.tex}
         \section{Diferenciabilidad}
+            \input{diferenciab.tex}
 
     \chapter{Contenido teórico. Segunda parte}
         \section{Operadores}

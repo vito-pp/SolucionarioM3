@@ -1,0 +1,78 @@
+\begin{definition}
+    Si $f:U\subset\Re^n\to\Re$, $U$ abierto, es diferenciable el \textbf{gradiente} de $f$ en $\mathbf{x}$ es el vector en el espacio $\Re^n$ dado por 
+    \[
+        \text{grad}\:f=\nabla f=(\frac{\partial}{\partial x_1} f,\frac{\partial}{\partial x_2} f,\:\ldots,\: \frac{\partial}{\partial x_n} f),
+    \]
+    donde $\mathbf{x}=(x_1, x_2,\ldots, x_n)$.
+\end{definition}
+\begin{definition}
+    Sea $\mathbf{F}:U\subset\Re^n\to\Re^n$, $U$ abierto, de clase $C^1(\Re^n)$. Entonces la \textbf{divergencia} de $\mathbf{F}$ se define como
+    \[
+        \text{div}\:\mathbf{F}=\nabla\cdot \mathbf{F}=  \frac{\partial F_1}{\partial x_1}+\frac{\partial F_2}{\partial x_2}+\:\ldots+\: \frac{\partial F_n}{\partial x_n},
+    \]
+    donde $\mathbf{F}=(F_1,F_2,\ldots,F_n)$.
+\end{definition}
+\begin{definition}
+    Sea $\mathbf{F}:U\subset\Re^3\to\Re^n$, $U$ abierto, de clase $C^1(\Re^3)$. Entonces el \textbf{rotor} de $\mathbf{F}$ se define como 
+    \[
+        \text{rot}\:\mathbf{F}=\nabla\times\mathbf{F}=\left(\frac{\partial F_3}{\partial y}-\frac{\partial F_2}{\partial z},\;\frac{\partial F_1}{\partial z}-\frac{\partial F_3}{\partial x},\;\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y}\right),
+    \]   
+    donde $\mathbf{F}(x,y)=(F_1(x,y,z),\:F_2(x,y,z),\:F_3(x,y,z))$.
+    Y para el caso en el que $\mathbf{F}:U\subset\Re^2\to\Re^n$, con las mismas condiciones, el \textbf{rotor} es
+    \[
+        \text{rot}\:\mathbf{F}=\nabla\times\mathbf{F}=\left(\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y}\right).
+    \]
+\end{definition}
+    Estas f\'ormulas son m\'as faciles de recordar si pensamos a ``nabla'' $\nabla$ como el operador tal que 
+    \[
+        \nabla = (\frac{\partial}{\partial x_1},\frac{\partial}{\partial x_2},\:\ldots,\: \frac{\partial}{\partial x_n}).  
+    \]
+    Por lo que, pensando a $\nabla$ como un vector, la divergencia es el producto escalar de $\nabla$ con un campo vectorial y para el caso en $\Re^3$ es el producto vectorial. Esto \'ultimo es
+    \begin{align*}
+        \nabla\times\mathbf{F}&= 
+        \begin{vmatrix}
+        \mathbf{i} & \mathbf{j} & \mathbf{k} \\
+        \partialx & \partialy & \partialz \\
+        F_1 & F_2 & F_3
+        \end{vmatrix} \\[.2cm]
+        &=\left(\frac{\partial F_3}{\partial y}-\frac{\partial F_2}{\partial z},\;\frac{\partial F_1}{\partial z}-\frac{\partial F_3}{\partial x},\;\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y}\right)\\[.2cm]
+        &=\text{rot}\:\mathbf{F}.
+    \end{align*}
+\begin{definition}
+    Sea $f:U\subset\Re^n\to\Re$ un campo escalar de clase $C^2(\Re^n)$. Entonces se define el \textbf{laplaciano} de $f$ como
+    \[
+        \Delta f=\nabla^2f=\nabla\cdot(\nabla f)=\text{div}\:\text{grad}\:\mathbf{F}  
+    \]
+    Y para el caso de un campo vectorial $F:U\subset\Re^n\to\Re^n$ de clase $C^2(\Re^n)$, el \textbf{laplaciano} escalar
+    \[
+        \Delta\mathbf{F}=(\Delta F_1,\Delta F_2,\ldots,\Delta F_n).  
+    \]
+\end{definition}
+\begin{definition}
+    Para un campo vectorial $\mathbf{F}$, si $\nabla\times\mathbf{F}=0$, lo llamamos \textbf{irrotacional}. Y si $\nabla\cdot\mathbf{F}=0$, lo llamamos \textbf{solenoidal}.
+\end{definition}
+\begin{definition}
+    Tanto como para un campo escalar como vectorial, decimos que la funci\'on es \textbf{arm\'onica} si $\Delta f=0$ o $\Delta \mathbf{F}=0$.
+\end{definition}
+\begin{propertie}
+    Los operadores vectoriales son aplicaciones lineales, $\alpha,\;\beta\in\Re$:
+    \begin{enumerate}
+        \item \(\nabla(\alpha f+\beta g)=\alpha\nabla f+\beta\nabla g\)
+        \item \(\nabla\cdot(\alpha \mathbf{F}+\beta \mathbf{G})=\alpha\nabla\cdot\mathbf{F}+\beta\nabla\cdot\mathbf{G}\)
+        \item \(\nabla\times(\alpha \mathbf{F}+\beta \mathbf{G})=\alpha\nabla\times\mathbf{F}+\beta\nabla\times\mathbf{G}\)
+    \end{enumerate}
+\end{propertie}
+\begin{propertie}
+    Regla de Leibnitz para el producto. Sea $h:\Re^n\to\Re$ un campo escalar tal que $h\in C^1$.
+    \begin{enumerate}
+        \item Sea $\mathbf{F}:\Re^n\to\Re^n$ de clase $C^1$, entonces $\nabla\cdot(h\mathbf{F})=h\nabla\cdot\mathbf{F}+\nabla h\cdot\mathbf{F}$
+        \item Sea $\mathbf{F}:\Re^3\to\Re^3$ de clase $C^1$, entonces $\nabla\times(h\mathbf{F})=h\nabla\times\mathbf{F}+\nabla h\times\mathbf{F}$
+    \end{enumerate}
+\end{propertie}
+\begin{propertie}
+    Productos:
+    \begin{enumerate}
+        \item $\nabla(fg)=f\nabla g+g\nabla f$
+        \item $\nabla\cdot(\mathbf{F}\times\mathbf{G})=\nabla\times\mathbf{F}\cdot\mathbf{G}-\mathbf{F}\cdot\nabla\times\mathbf{G}$
+    \end{enumerate}
+\end{propertie}
