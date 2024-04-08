@@ -94,12 +94,28 @@
 
 %------------------Solucion 2--------------------------------
 
-\begin{solution}
+\begin{solution} 
+La curva de la intersecci\'on se muestra en el siguiente gr\'afico.
 
-  \textcolor{red}{(insertar imagen)}
+\begin{center}
+  \begin{tikzpicture}
+    \begin{axis}
+        [view={110}{30},colormap/redyellow,xlabel=$x$, ylabel=$y$, zlabel=$z$]
+    \addplot3[
+        domain=0:pi,
+        samples = 60,
+        samples y=0,
+        mesh,
+    ]
+    ({4*cos(deg(x))},
+    {-4*sin(deg(x))+4},
+    {4*sin(deg(x))});
+    \end{axis}
+  \end{tikzpicture}
+\end{center}
 
   Notemos que $C$ es una curva no cerrada. Para cerrarla, llamemos $C=C_1$, 
-  $C_2=\{(x,y,z)\in\Re^3:z=0\;\land\;y=4\;\land\;|x|\leq4\}$ y $C_0=C_1+C_2$. Y sea $\text{int}(C_0)=D$. Ahora $C_0$ es una curva simple cerrada. Entonces podemos aplicar el teorema de Stokes, eligiendo la orientaci\'on de $C_0$ tal que se cumpla la regla de la mano derecha.
+  $C_2=\{(x,y,z)\in\Re^3:z=0\;\land\;y=4\;\land\;|x|\leq4\}$, en palabras, $C_2$ es la recta que une la curva; y $C_0=C_1+C_2$. Y sea $\text{int}(C_0)=D$. Ahora $C_0$ es una curva simple cerrada. Entonces podemos aplicar el teorema de Stokes, eligiendo la orientaci\'on de $C_0$ tal que se cumpla la regla de la mano derecha.
   \[
       \oint_{C_0}\mathbf{F}\cdot d\mathbf{s}= \int_{C_1}\mathbf{F}\cdot d\mathbf{s} + \int_{C_2}\mathbf{F}\cdot d\mathbf{s} = \iint_D \nabla\times\mathbf{F}\cdot d\mathbf{A},
   \]
@@ -234,19 +250,17 @@
   Por las condiciones de $\Omega$ tenemos que
   $$z\leq\sqrt{x^2+y^2}\iff\rho\cos\phi\leq\sqrt{\rho^2\sen^2\phi}=\rho |\sen\phi|.$$
   Adem\'as, como estamos en el primer octante,  nos queda que $\frac{\pi}{4} \leq\phi\leq\frac{\pi}{2}$ y  $0\leq\theta\leq\frac{\pi}{2}.$
-
   Por otro lado,  $$ \rho^2\leq32  \; \land \;  \rho \geq 0 \iff     0\leq  \rho\leq\sqrt{32}= 4 \sqrt{2}.$$
   Escribimos nuestro nuevo volumen $\Omega^*$  y usamos el teorema de cambio de variables.
   \[
     \Omega^*=\{(\rho,\phi,\theta)\in\Re^3:0\leq\rho\leq4\sqrt{2}\:\land\:0\leq\phi\leq\frac{\pi}{4}\:\land\:0\leq\theta\leq\frac{\pi}{2}\}
   \]
-
-
+  Y la masa del s\'olido $\Omega$ queda
   \begin{align*}
     M & =\iiint_{\Omega^*}k\delta(z)\rho^2\sen\phi\:dV=\iiint_{\Omega^*}k\rho\cos\phi\rho^2\sen\phi\:d\rho d\phi d\theta \\
       & =k\int_0^{\frac{\pi}{2}} \int_0^{\frac{\pi}{4}} \int_0^{4\sqrt{2}}\rho^3\cos\phi\sen\phi \:d\rho d\phi d\theta   \\
       & =k2\pi\int_0^{\frac{\pi}{4}}\cos\phi\sen\phi\:d\phi\int_0^{4\sqrt{2}}\rho^3\:d\rho                               \\
-      & =k2\pi\frac{1}{4}256=128k\pi
+      & =k2\pi\frac{1}{4}256=128k\pi.
   \end{align*}
 
 \end{solution}

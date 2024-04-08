@@ -27,31 +27,6 @@
 \newpage
 \begin{solution}
     Es \'util primero entender con qu\'e superficies y regiones se trabajar\'a.
-    % \begin{center}
-    % \begin{tikzpicture}
-    %     \begin{axis}[
-    %         view={60}{20}, % ajusta el angulo de vision
-    %         xlabel=$x$,
-    %         ylabel=$y$,
-    %         zlabel=$z$,
-    %         zmin=0, % valor minino del eje z
-    %         zmax=5, % valor maximo del eje z
-    %         axis lines=center, % sin caja solo ejes
-    %         ticks=none, % ejes sin marcas
-    %         width=10cm,
-    %         height=12cm,
-    %         enlargelimits=0.2, % ajuste de limite de vision
-    %         domain=-3:3,
-    %         y domain=-3:3,
-    %         samples=30, % numero de cuadrados por simulacion (esto aumenta el tiempo de compilacion drasticamente)
-    %         colormap/cool, % color
-    %     ]
-    %     \addplot3 [surf, opacity=0.5, draw=none, restrict z to domain=1:4, 
-    %     data cs=polar, domain=0:360, y domain=0:4] (x, y, y^2);
-
-    %     \end{axis}
-    % \end{tikzpicture}
-    % \end{center}
     \begin{center}
         \begin{tikzpicture}
             \begin{axis}[
@@ -65,7 +40,7 @@
                     xmax=2.5,
                     ymax=2.5,
                     zmax=5,
-                    samples=30,
+                    samples=50,
                     width=10cm,
                     height=12cm,
                     colormap/viridis,
