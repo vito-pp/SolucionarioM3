@@ -46,7 +46,35 @@
     integral de volumen conviene trabajar en coordenadas
     cil\'indricas y para la de superficie habr\'a que parametrizar.
 
-    \textcolor{red}{(insertar imagen)}
+    \begin{center}
+        \begin{tikzpicture}
+          \begin{axis}[
+                axis lines=center,
+                axis equal,
+                view={110}{20},
+                xlabel=$x$,
+                ylabel=$y$,
+                zlabel=$z$,
+                xtick={1},
+                ytick={-1,1},
+                ztick={1,1.5},
+                xmin=-1,
+                ymin=-0.5,
+                zmin=0,
+                xmax=1.7,
+                ymax=1.1,
+                zmax=1,
+                samples=30,
+                width=14cm,
+                height=12cm,
+                colormap/viridis,
+                xlabel style={at={(0.31,0.2)}},
+            ]
+            \addplot3 [surf, opacity=0.8, draw=none, restrict z to domain=0:1,
+            data cs=polar, domain=0:90, y domain=0:1] (x, y, 1-y^2);
+          \end{axis}
+        \end{tikzpicture}
+      \end{center}
 
     Aplicando la transformaci\'on $V \rightarrow V^*$ queda
     \begin{align*}

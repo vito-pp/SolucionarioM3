@@ -100,12 +100,13 @@ La curva de la intersecci\'on se muestra en el siguiente gr\'afico.
 \begin{center}
   \begin{tikzpicture}
     \begin{axis}
-        [view={110}{30},colormap/redyellow,xlabel=$x$, ylabel=$y$, zlabel=$z$]
+        [view={110}{30},xlabel=$x$, ylabel=$y$, zlabel=$z$]
     \addplot3[
         domain=0:pi,
         samples = 60,
         samples y=0,
         mesh,
+        color=red,
     ]
     ({4*cos(deg(x))},
     {-4*sin(deg(x))+4},
@@ -236,9 +237,6 @@ La curva de la intersecci\'on se muestra en el siguiente gr\'afico.
 
 \begin{solution}
   La distancia $d$ de un punto $(x_0,y_0,z_0)$ en el primer octante a el plano $z=0$ est\'a dada por $$d\Big(  (x_0,y_0,z_0); (x_0,y_0, 0) \Big)= \sqrt{(x_0-x_0)^2+(y_0-y_0)^2+z_0^2}=z_0.$$ Luego  la funci\'on de densidad del s\'olido es $\delta(z)=kz$,  con $k\in\Re$. Adem\'as  sea $$\Omega=\{(x,y,z)\in\Re^3:z\leq\sqrt{x^2+y^2}\:\land\:x^2+y^2+z^2\leq32\:\land\: x,y,z\geq0\}.$$
-
-  \textcolor{red}{ (insertar imagen)}
-
   Trabajaremos  en coordenadas esf\'ericas.  En este sentido,  recordemos lo siguiente.
   \[
     \begin{dcases}
