@@ -1,0 +1,48 @@
+\begin{definition}
+    \textcolor{red}{Definicion conjunto conexo...}
+\end{definition}
+
+\begin{theorem} \label{thm:t1}
+    Sean $A\subseteq\Re^n$ abierto y conexo y $f:A\subseteq\Re^n\to\Re$ de clase $C^1$. Sea $\boldsymbol{\sigma}:[a,b]\to A\subseteq\Re^n$ una trayectoria $C^1$ a trozos. Entonces
+    \[
+       \int_{\boldsymbol{\sigma}}\nabla f\cdot d\mathbf{s}=f(\boldsymbol{\sigma}(b))-f(\boldsymbol{\sigma}(a)).
+    \]    
+\end{theorem}
+
+\begin{corollary}
+    En las condiciones del \autoref{thm:t1}, $\int_{\boldsymbol{\sigma}}\nabla f\cdot d\mathbf{s}$ no depende de $\boldsymbol{\sigma}$, s\'olo depende de los puntos inicla y final de la trayectoria. Si $\boldsymbol{\sigma}_1$, $\boldsymbol{\sigma}_2$ son trayectorias $C^1$ a trozos tales que $\boldsymbol{\sigma}_1:[a,b]\to A\subseteq\Re^n$ y $\boldsymbol{\sigma}_2:[a,b]\to A\subseteq\Re^n$, entonces
+    $$\int_{\boldsymbol{\sigma}_1}\nabla f\cdot d\mathbf{s}=\int_{\boldsymbol{\sigma}_2}\nabla f\cdot d\mathbf{s}.$$
+\end{corollary}
+
+\begin{corollary}
+    En las condiciones del \autoref{thm:t1}, si $\mathbf{F}:A\subseteq\Re^n\to\Re^n$ es un campo vectorial para el cual $\exists f:A\subseteq\Re^n\to\Re$ clase $C^1$ tal que 
+    $$\nabla f(\mathbf{x})=\mathbf{F}(\mathbf{x})\quad\forall\:\mathbf{x}\in A,$$
+    entonces para todo par de puntos $\mathbf{p}_0,\:\mathbf{p}_1\in A$
+    $$\int_{C_1}\mathbf{F}\cdot d\mathbf{s}=\int_{C_2}\mathbf{F}\cdot d\mathbf{s},$$
+    para cualquier par de curvas $C_1,\;C_2\subset A$ que vayan de $\mathbf{p}_0$ a $\mathbf{p}_1$ 
+\end{corollary}
+
+\begin{corollary}
+    En las condiciones del \autoref{thm:t1}, si $\mathbf{F}=\nabla f$ Entonces
+    $$\oint_C\mathbf{F}\cdot d\mathbf{s}=0,$$
+    para toda curva $C$ simple cerrada contenida en $A$.
+\end{corollary}
+
+\begin{theorem}
+    Sean $A\subseteq\Re^n$ abierto y conexo, $\mathbf{F}:A\subseteq\Re^n\to\Re^n$ continuo tal que $\int_C \mathbf{F}\cdot d\mathbf{s}$ es independiente del camino en $A$. Entonces $f:A\subseteq\Re^n\to\Re$ tal que
+    $$f(\mathbf{x})=\int_{\mathbf{x}_0}^{\mathbf{x}}\mathbf{F}\cdot d\mathbf{s},$$
+    con $\mathbf{x}_0\in A$, cumple que: 
+    \begin{enumerate}
+        \item $f$ es $C^1$.
+        \item $\nabla f(\mathbf{x})=\mathbf{F}(\mathbf{x})\quad\forall\:\mathbf{x}\in A.$
+    \end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+    Sean $A\subseteq\Re^n$ abierto y conexo, $\mathbf{F}:A\subseteq\Re^n\to\Re$ continuo. Las siguientes condiciones sobre $\mathbf{F}$ son equivalentes:
+    \begin{enumerate}
+        \item $\exists f:A\subseteq\Re^n\to\Re$ de clase $C^1$ tal que $\mathbf{F}=\nabla f.$ 
+        \item La integral de $\mathbf{F}$ es independiente del camino en $A$.
+        \item $\oint_C\mathbf{F}\cdot d\mathbf{s}=0$ para toda curva cerrada simple $C$ en $A$.
+    \end{enumerate}
+\end{theorem}
