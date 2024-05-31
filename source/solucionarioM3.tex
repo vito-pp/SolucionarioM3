@@ -12,15 +12,6 @@
 \pgfplotsset{compat=1.18}
 \usepgfplotslibrary{fillbetween}
 
-% Definicion de ambiente para preguntas y respuestas
-\theoremstyle{definition} % Para que el texto no aparezca en italicas
-\newtheorem{question}{Ejercicio}
-\newtheorem{solution}{Solución}
-
-% Para que se resetee el contador en cada seccion
-\counterwithin*{solution}{subsubsection}
-\counterwithin*{question}{subsubsection}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\contentsname}{Indice}
 \renewcommand{\listfigurename}{Lista de Figuras}
@@ -38,10 +29,28 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  Teoremas y proposiciones
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{definition} % Para que el texto no aparezca en italicas
+\newtheorem{question}{Ejercicio}
+\newtheorem{solution}{Solución}
 \newtheorem{theorem}{Teorema}[section]
 \newtheorem{corollary}{Corolario}[section]
 \newtheorem{definition}{Definic\'on}[section]
 \newtheorem{propertie}{Propiedad}[section]
+\newtheorem{example}{Ejemplo}[section]
+
+% Provide commands for \autoref
+\providecommand*{\questionautorefname}{Ejercicio}
+\providecommand*{\solutionautorefname}{Solución}
+\providecommand*{\theoremautorefname}{Teorema}
+\providecommand*{\corollaryautorefname}{Corolario}
+\providecommand*{\definitionautorefname}{Definición}
+\providecommand*{\propertieautorefname}{Propiedad}
+\providecommand*{\exampleautorefname}{Ejemplo}
+
+% Para que se resetee el contador en cada seccion
+\counterwithin*{solution}{subsubsection}
+\counterwithin*{question}{subsubsection}
+
 % \newtheorem{teo}{Teorema}[section]
 % \newtheorem{prop}[teo]{Proposici\'on}
 % \newtheorem{lema}[teo]{Lema}
@@ -130,16 +139,19 @@
 %===================================================
     \chapter{Contenido teórico. Pirmera parte}
 
-    \chapter{Contenido teórico. Segunda parte}
+    \chapter{Contenido Teórico. Segunda parte}
         \section{Operadores}
             \input{operadores.tex}
         \section{Curvas}
             \input{curvas.tex}
-        \section{Integrales dobles y triples}
-        \section{Integrales de l\'inea}
+        \section{Integrales Dobles} 
+            \input{integrales_dobles.tex}
+        \section{Integrales Triples}
+        \section{Integrales de L\'inea}
             \input{integrales.tex}
         \section{Integrales de Superficie}
         \section{Campos Conservativos}
+
             \input{conservativos.tex}
         \section{Teoremas Integrales}
 

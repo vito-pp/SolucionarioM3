@@ -1,0 +1,79 @@
+\begin{definition}
+    Sea $D\subseteq\Re^2$. $D$ se llama conjunto de tipo 1 si
+    \[
+        D=\{(x,y)\in\Re^2: a\leq x\leq b;\;\phi_1(x)\leq y\leq \phi_2(x),\;\text{con }\phi_1,\;\phi_2\text{ continuas}\}.
+    \]
+\end{definition}
+\begin{definition}
+    Sea $D\subseteq\Re^2$. $D$ se llama conjunto de tipo 2 si
+    \[
+        D=\{(x,y)\in\Re^2: c\leq y\leq d;\;\psi_1(y)\leq x\leq \psi_2(y),\;\text{con }\psi_1,\;\psi_2\text{ continuas}\}.
+    \]
+\end{definition}
+\begin{definition}
+    Sea $D\subseteq\Re^2$. $D$ se llama conjunto de tipo 1 y tipo 2 a la vez.
+\end{definition}
+\begin{definition}
+    A \'estos conjuntos (tipo 1, 2, 3) se los llama elementales.
+\end{definition}
+\begin{corollary} \label{col:fubini}
+    \textcolor{red}{corolario de que teorema es?}
+    \begin{enumerate}
+        \item Sea $D\subseteq\Re^2$ un conjunto de tipo 1. Supongamos que $f:D\to\Re$ es continua y las $\phi_i$ son continuas. Entonces
+        \[
+            \iint_D f=\int_a^b\left(\int_{y=\phi_1(x)}^{y=\phi_2(x)}f(x,y)\:dy\right)dx.  
+        \]
+        \item Sea $D\subseteq\Re^2$ un conjunto de tipo 2. Supongamos que $f:D\to\Re$ es continua y las $\psi_i$ son continuas. Entonces
+        \[
+            \iint_D f=\int_a^b\left(\int_{x=\psi_1(y)}^{x=\psi_2(y)}f(x,y)\:dx\right)dy.  
+        \]
+        \item Si $D$ es de tipo 3 y $f,\;\phi_i,\psi_i\;$ son continuas, entonces 
+        \[
+            \iint_D f=\int_a^b\left(\int_{y=\phi_1(x)}^{y=\phi_2(x)}f(x,y)\:dy\right)dx=\int_a^b\left(\int_{x=\psi_1(y)}^{x=\psi_2(y)}f(x,y)\:dx\right)dy. 
+        \]
+    \end{enumerate}
+\end{corollary}
+\begin{example}
+    Se quiere calcular la integral $\iint_D f$, donde $f(x,y)=x^2y$, mientras que $D$ es la regi\'on del plano encerrado entre $y=x^3$, $y=x^2$, con $x\in[0,1]$. \textcolor{red}{agregar figura}
+
+    En este caso 
+    \[
+        D=\{(x,y)\in\Re^2:0\leq x\leq1;\;x^3\leq y\leq x^2\}.  
+    \]
+    Luego $D$ es de tipo 1. Notar que la \'unica manera de demostrar que un conjunto es elemental es dando su descrici\'on impl\'icita. Por el \autoref{col:fubini}
+    \begin{gather*}
+        \iint_D x^2y\:dA=\int_0^1\left(\int_{x^3}^{x^2}\:dy\right)dx=\int_0^1\left(x^2\frac{1}{2}y^2\Big\lvert_{x^3}^{x^2}\right)dx\\
+        =\int_0^1\frac{1}{2}x^2\left((x^2)^2-(x^3)^2\right)=\int_0^1\frac{1}{2}x^6-\frac{1}{2}x^8\;dx\\=\frac{1}{14}x^7-\frac{1}{18}x^9\Big\lvert_0^1=\frac{1}{14}-\frac{1}{18}.
+    \end{gather*}
+\end{example}
+\begin{definition} %cambie la palabra region --> conjunto
+    Se define el \'area de un conjunto $D\subset\Re^n$ como la integral, si existe, de la funci\'on 1. Es decir,
+    \[
+        \text{A}(D)=\int_D1\:dA.  
+    \]
+\end{definition}
+\begin{theorem}
+    \textbf{Teorema del valor medio para integrales dobles}. Suponer que $f:D\to\Re$ es continua y $D$ es un conjunto elemental. Entonces para alg\'un punto $(x_0,y_0)$ en $D$, tenemos
+    \[
+        \int_D f(x,y)\:dA=f(x_0,y_0)\text{A}(D).
+    \]
+\end{theorem}
+\begin{theorem} % lo escribi como lo tenia en mis apuntes
+    Sea $f:D\subseteq\Re^n\to\Re^2$ un campo escalar integrable. Sea $T:D^*\subseteq\Re^n\to D$ continua de clase $C^1$ en int($D^*$), inyectiva en int($D^*$) y $T(D^*)=D$. Entonces:
+    \begin{enumerate}
+        \item 
+        \[
+            \iint_D f\:dA=\iint_{D^*}f\circ T|\text{det}(\boldsymbol{D}_T)|\:dA\quad(n=2)
+        \]
+        \item 
+        \[
+            \iiint_D f\:dV=\iiint_{D^*}f\circ T|\text{det}(\boldsymbol{D}_T)|\:dV\quad(n=3)
+        \]
+    \end{enumerate}
+    % supuse que ya esta definida la matriz diferencial D_T
+    Se suele notar a 
+    \[
+        |\text{det}(\boldsymbol{D}_T)|=J(T)
+    \]
+    y se lo llama \textbf{jacobiano} de la matriz diferencial $\boldsymbol{D}_T$.
+\end{theorem}
