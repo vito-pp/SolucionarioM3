@@ -1,21 +1,21 @@
-\begin{definition}
-    Sea $D\subseteq\Re^2$. $D$ se llama conjunto de tipo 1 si
+\begin{definition}\textbf{Conjuntos elementales en }$\Re^2$.
+
+    \begin{enumerate}
+    \item[i.]Sea $D\subseteq\Re^2$. $D$ se llama conjunto de tipo 1 si
     \[
         D=\{(x,y)\in\Re^2: a\leq x\leq b;\;\phi_1(x)\leq y\leq \phi_2(x),\;\text{con }\phi_1,\;\phi_2\text{ continuas}\}.
     \]
-\end{definition}
-\begin{definition}
+    \item[ii.]
     Sea $D\subseteq\Re^2$. $D$ se llama conjunto de tipo 2 si
     \[
         D=\{(x,y)\in\Re^2: c\leq y\leq d;\;\psi_1(y)\leq x\leq \psi_2(y),\;\text{con }\psi_1,\;\psi_2\text{ continuas}\}.
     \]
-\end{definition}
-\begin{definition}
+    \item[iii.]
     Sea $D\subseteq\Re^2$. $D$ se llama conjunto de tipo 1 y tipo 2 a la vez.
+    \end{enumerate}
+    A \'estos conjuntos, tipo 1, 2 o 3, se los llama elementales.
 \end{definition}
-\begin{definition}
-    A \'estos conjuntos (tipo 1, 2, 3) se los llama elementales.
-\end{definition}
+
 \begin{corollary} \label{col:fubini}
     \textcolor{red}{corolario de que teorema es?}
     \begin{enumerate}
@@ -59,17 +59,10 @@
     \]
 \end{theorem}
 \begin{theorem} % lo escribi como lo tenia en mis apuntes
-    Sea $f:D\subseteq\Re^n\to\Re^2$ un campo escalar integrable. Sea $T:D^*\subseteq\Re^n\to D$ continua de clase $C^1$ en int($D^*$), inyectiva en int($D^*$) y $T(D^*)=D$. Entonces:
-    \begin{enumerate}
-        \item 
-        \[
-            \iint_D f\:dA=\iint_{D^*}f\circ T|\text{det}(\boldsymbol{D}_T)|\:dA\quad(n=2)
-        \]
-        \item 
-        \[
-            \iiint_D f\:dV=\iiint_{D^*}f\circ T|\text{det}(\boldsymbol{D}_T)|\:dV\quad(n=3)
-        \]
-    \end{enumerate}
+    \textbf{Teorema del cambio de variables para integrales dobles}. Sea $f:D\subseteq\Re^2\to\Re^2$ un campo escalar integrable. Sea $T:D^*\subseteq\Re^2\to D$ continua de clase $C^1$ en int($D^*$), inyectiva en int($D^*$) y $T(D^*)=D$. Entonces
+    \[
+        \iint_D f\:dA=\iint_{D^*}f\circ T\:|\text{det}(\boldsymbol{D}_T)|
+    \]
     % supuse que ya esta definida la matriz diferencial D_T
     Se suele notar a 
     \[

@@ -1,0 +1,64 @@
+% segui la definicion del tromba
+Dada una funci\'on continua $f:B\to\Re$, donde $B$ es un paralelep\'ipedo rectangular (una caja) en $\Re^3$, se puede definir la integral de $f$ sobre $B$ como un l\'imite de sumas, o sea una integral de Reimann. Partiendo los tres lados de $B$ en $n$ partes iguales y formando la suma
+\[
+    S_n=\sum_{i=0}^{n-1}\sum_{j=0}^{n-1}\sum_{k=0}^{n-1}f(c_{ijk})\Delta V,
+\]  
+donde $c_{ijk}\in B_{ijk}$, el $ijk$-\'esimo paralelep\'ipedo rectangular en la partici\'on de $B$, y $\Delta V$ es el volumen de $B_{ijk}$
+\textcolor{red}{agregar dibujo caja en r3}
+
+\begin{definition} 
+    Sean $B=[a,b]\times[c,d]\times[p,q]$ y $f:B\to\Re$ una funci\'on acotada. Si existe el $\lim_{n\to\infty}S_n$, para cualquier $c_{ijk}$, llamamos \textbf{integral triple} de $f$ sobre $B$ a
+    \[
+          \iiint_B f\:dV=\iiint_B f(x,y,z)\:dxdydz
+    \]
+\end{definition}
+
+Para tener la extender esta noci\'on de integral a un conjunto acotado m\'as general $W\subset\Re^3$, esto es conjuntos que puedan ser encerrados por una caja. Dada $f:U\to\Re$, extender $f$ a una funci\'on $f^*$ tal que
+\[
+    f^*(x,y,z)=
+    \begin{dcases*}
+        f(x,y,z) & si $(x,y,z)\in U$ \\[.2cm]
+        0        & si $(x,y,z)\notin U$
+    \end{dcases*}.
+\]
+Entonces si $B$ es una caja que contiene a $U$ y $\partial U$ est\'a formada por las gr\'aficas de un n\'umero finito de funciones continuas, % no se que significa esto ultimo
+$f^*$ ser\'a integrable y definimos
+\[
+    \iiint_U f\:dV=\iiint_B f^*\:dV.  
+\]
+Esta integral es independiente de la selecci\'on de $B$.
+
+\begin{propertie}
+    Sean $f,\;g$ dos funciones acotadas e integrables en una regi\'on $U\subset\Re^3$, entonces:
+    \begin{enumerate}
+        \item[i.] $\alpha f+\beta g$ es integrable en $U$, $\forall\;\alpha,\;\beta\in\Re$ y adem\'as
+        \[
+            \iiint_U \alpha f+\beta g\:dV=\alpha\iiint_U f\:dV+\beta\iiint_U g\:dV.
+        \]
+        \item[ii.] El producto $fg$ es integrable en $U$.
+        \item[iii.] Si $|g(x,y,z)|\geq k>0\;\forall(x,y,z)\in U$, el conciente $f/g$ es integrable en $U$.
+        \item[iv.] Si $f\geq$ en $U$, $\iiint_U f\:dV\geq0$.
+        \item[v.]Si $f\leq g$ en $U$, $\iiint_U f\:dV\leq\iiint_U g\:dV.$
+        \item[vi.]Si $|f|$ es integrable en $U$, entonces 
+        \[
+            \left|\iiint_U f\:dv\right|\leq\iiint_U|f|\:dV.  
+        \]    
+        \item[vii.] Si $U=D_1\cup D_2$ es una partici\'on de $U$, $f$ es integrable en $U$ $\iff$ $f$ es integrable en $D_1$ y $D_2$. En este caso 
+        \[
+            \iiint_U f\:dV=\iiint_{D_1} f\:dV+\iiint_{d_2}f\:dV.    
+        \]
+    \end{enumerate}
+\end{propertie}
+
+\begin{theorem}
+    \textbf{Teorema del valor medio}. Si $f$ es continua en $U$, $\exists(x_0,y_0,z_0)\in U$ tal que 
+    \[
+        \iiint_U f\:dV=f(x_0,y_0,z_0)\text{Vol}\:(U),
+    \]
+    donde Vol$\:(U)$ es el volumen de $U$. 
+    % no esta definido el volumen de un conjunto (\iiint_U 1 = vol(U)) 
+\end{theorem}
+
+\begin{definition}
+    \textbf{Regi\'on elemental en }$\Re^3$. Sea $U\subseteq\Re^3$. Se llama 
+\end{definition}
