@@ -1,19 +1,22 @@
 \begin{definition}\textbf{Conjuntos elementales en }$\Re^2$.
-
+    Sea $D\subseteq\Re^2$.
     \begin{enumerate}
-    \item[i.]Sea $D\subseteq\Re^2$. $D$ se llama conjunto de tipo 1 si
+    \item[i.]
+    Decimos que la regi\'on $D$ es de \textit{tipo 1} si existen funciones continuas $\phi_1,\;\phi_2:[a,b]\to\Re$ tales que $D$ es el conjunto de puntos $(x,y)$ que satisfacen
     \[
-        D=\{(x,y)\in\Re^2: a\leq x\leq b;\;\phi_1(x)\leq y\leq \phi_2(x),\;\text{con }\phi_1,\;\phi_2\text{ continuas}\}.
-    \]
+        x\in[a,b], \qquad \phi_1(x)\leq y\leq\phi_2(x),  
+    \]% no se pq no funciona \hfill para no usar \qquad
+    donde $\phi_1(x)\leq\phi_2(x)\;\forall\;x\in[a,b].$
     \item[ii.]
-    Sea $D\subseteq\Re^2$. $D$ se llama conjunto de tipo 2 si
+    Decimos que la regi\'on $D$ es de \textit{tipo 2} si existen funciones continuas $\psi_1,\;\psi_2:[c,d]\to\Re$ tales que $D$ es el conjunto de puntos $(x,y)$ que satisfacen
     \[
-        D=\{(x,y)\in\Re^2: c\leq y\leq d;\;\psi_1(y)\leq x\leq \psi_2(y),\;\text{con }\psi_1,\;\psi_2\text{ continuas}\}.
+        y\in[c,d], \qquad \psi_1(y)\leq x\leq\psi_2(y),  
     \]
+    donde $\psi_1(y)\leq\psi_2(y)\;\forall\;y\in[c,d].$
     \item[iii.]
-    Sea $D\subseteq\Re^2$. $D$ se llama conjunto de tipo 1 y tipo 2 a la vez.
+    $D$ se llama conjunto de \textit{tipo 3} si es \textit{tipo 1} y \textit{tipo 2} a la vez.
     \end{enumerate}
-    A \'estos conjuntos, tipo 1, 2 o 3, se los llama elementales.
+    A \'estos conjuntos (\textit{tipo 1, 2, 3}) se los llama elementales.
 \end{definition}
 
 \begin{corollary} \label{col:fubini}

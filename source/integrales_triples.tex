@@ -59,6 +59,24 @@ Esta integral es independiente de la selecci\'on de $B$.
     % no esta definido el volumen de un conjunto (\iiint_U 1 = vol(U)) 
 \end{theorem}
 
+% region o conjunto para las definiciones? 
 \begin{definition}
-    \textbf{Regi\'on elemental en }$\Re^3$. Sea $U\subseteq\Re^3$. Se llama 
+    \textbf{Regi\'on elemental en }$\Re^3$.
+    Sea $U\subseteq\Re^3$.
+    \begin{enumerate}
+        \item[i.]
+        Decimos que la regi\'on $U$ es de \textit{tipo} \rom{1} si existen funciones continuas $\phi_1,\;\phi_2:[a,b]\to\Re$ tales que $U$ es el conjunto de puntos $(x,y,z)$ que satisfacen
+        \begin{equation} \label{eq:tipo i}
+            x\in[a,b], \qquad \phi_1(x)\leq y\leq\phi_2(x), \qquad \gamma_1(x,y)\leq z\leq\gamma_2(x,y) 
+        \end{equation}
+        donde $\phi_1(x)\leq\phi_2(x)\;\forall\;x\in[a,b]$ y $\gamma_1,\;\gamma_2:D\to\Re$, son funciones continuas, $D\subset\Re^2$ de tipo 1. Tambi\'en se llamar\'a de \textit{tipo} \rom{1} si puede expresarse como el conjunto de los $(x,y,z)$ tales que
+        \begin{equation} \label{eq:tipo ii}
+            y\in[c,d], \qquad \psi_1(y)\leq x\leq\psi_2(y), \qquad \gamma_1(x,y)\leq z\leq\gamma_2(x,y), 
+        \end{equation}
+        donde $\gamma_1,\;\gamma_2$ son como antes y $D$ es de tipo 2.
+        \item[ii.]
+        Decimos que la regi\'on $U$ es de \textit{tipo} \rom{2} si puede expresarse de la forma de \eqref{eq:tipo i} o \eqref{eq:tipo ii}, intercambiados los papeles de $x$ y $z$.
+        \item[iii.]
+        Decimos que la regi\'on $U$ es de \textit{tipo} \rom{3} si se puede expresar en la forma de \eqref{eq:tipo i} o \eqref{eq:tipo ii}, intercambiados los papeles de $y$ y $z$.
+        \end{enumerate}
 \end{definition}
