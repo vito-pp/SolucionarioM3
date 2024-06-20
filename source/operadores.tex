@@ -10,14 +10,14 @@
     \[
         \text{div}\:\mathbf{F}=\nabla\cdot \mathbf{F}=  \frac{\partial F_1}{\partial x_1}+\frac{\partial F_2}{\partial x_2}+\:\ldots+\: \frac{\partial F_n}{\partial x_n},
     \]
-    donde $\mathbf{F}=(F_1,F_2,\ldots,F_n)$.
+    donde $\mathbf{F}=(F_1,F_2,\ldots,F_n),$ con cada $F_i:\Re^n\to\Re\;(i=1,\ldots,n)$.
 \end{definition}
 \begin{definition}
     Sea $\mathbf{F}:U\subset\Re^3\to\Re^n$, $U$ abierto, de clase $C^1(\Re^3)$. Entonces el \textbf{rotor} de $\mathbf{F}$ se define como 
     \[
         \text{rot}\:\mathbf{F}=\nabla\times\mathbf{F}=\left(\frac{\partial F_3}{\partial y}-\frac{\partial F_2}{\partial z},\;\frac{\partial F_1}{\partial z}-\frac{\partial F_3}{\partial x},\;\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y}\right),
     \]   
-    donde $\mathbf{F}(x,y)=(F_1(x,y,z),\:F_2(x,y,z),\:F_3(x,y,z))$.
+    donde $\mathbf{F}(x,y,z)=(F_1(x,y,z),\:F_2(x,y,z),\:F_3(x,y,z))$.
     Y para el caso en el que $\mathbf{F}:U\subset\Re^2\to\Re^n$, con las mismas condiciones, el \textbf{rotor} es
     \[
         \text{rot}\:\mathbf{F}=\nabla\times\mathbf{F}=\left(\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y}\right).
@@ -43,7 +43,7 @@
     \[
         \Delta f=\nabla^2f=\nabla\cdot(\nabla f)=\text{div}\:\text{grad}\:\mathbf{F}.  
     \]
-    Y para el caso de un campo vectorial $F:U\subset\Re^n\to\Re^n$ de clase $C^2(\Re^n)$, el \textbf{laplaciano} escalar
+    Y para el caso de un campo vectorial $\mathbf{F}:U\subset\Re^n\to\Re^n$ de clase $C^2(\Re^n)$, el \textbf{laplaciano} escalar
     \[
         \Delta\mathbf{F}=(\Delta F_1,\Delta F_2,\ldots,\Delta F_n).  
     \]
@@ -63,7 +63,7 @@
     \end{enumerate}
 \end{propertie}
 \begin{propertie}
-    Regla de Leibnitz para el producto. Sea $h:\Re^n\to\Re$ un campo escalar tal que $h\in C^1$.
+    \textbf{Regla de Leibniz para el producto}. Sea $h:\Re^n\to\Re$ un campo escalar tal que $h\in C^1$.
     \begin{enumerate}
         \item Sea $\mathbf{F}:\Re^n\to\Re^n$ de clase $C^1$, entonces $\nabla\cdot(h\mathbf{F})=h\nabla\cdot\mathbf{F}+\nabla h\cdot\mathbf{F}$
         \item Sea $\mathbf{F}:\Re^3\to\Re^3$ de clase $C^1$, entonces $\nabla\times(h\mathbf{F})=h\nabla\times\mathbf{F}+\nabla h\times\mathbf{F}$
