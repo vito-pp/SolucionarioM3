@@ -9,7 +9,7 @@ donde $c_{ijk}\in B_{ijk}$, el $ijk$-\'esimo paralelep\'ipedo rectangular en la 
 \begin{definition} 
     Sean $B=[a,b]\times[c,d]\times[p,q]$ y $f:B\to\Re$ una funci\'on acotada. Si existe el $\lim_{n\to\infty}S_n$, para cualquier $c_{ijk}$, llamamos \textbf{integral triple} de $f$ sobre $B$ a
     \[
-          \iiint_B f\:dV=\iiint_B f(x,y,z)\:dxdydz
+          \iiint_B f\:dV=\iiint_B f(x,y,z)\:dxdydz.
     \]
 \end{definition}
 
@@ -18,15 +18,15 @@ Para tener la extender esta noci\'on de integral a un conjunto acotado m\'as gen
     f^*(x,y,z)=
     \begin{dcases*}
         f(x,y,z) & si $(x,y,z)\in U$ \\[.2cm]
-        0        & si $(x,y,z)\notin U$
-    \end{dcases*}.
+        0        & si $(x,y,z)\notin U.$
+    \end{dcases*}
 \]
 Entonces si $B$ es una caja que contiene a $U$ y $\partial U$ est\'a formada por las gr\'aficas de un n\'umero finito de funciones continuas, % no se que significa esto ultimo
 $f^*$ ser\'a integrable y definimos
 \[
     \iiint_U f\:dV=\iiint_B f^*\:dV.  
 \]
-Esta integral es independiente de la selecci\'on de $B$.
+Notar que \'esta integral es independiente de la selecci\'on de $B$.
 
 \begin{propertie}
     Sean $f,\;g$ dos funciones acotadas e integrables en una regi\'on $U\subset\Re^3$, entonces:
