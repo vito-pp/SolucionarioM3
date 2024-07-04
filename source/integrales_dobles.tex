@@ -16,7 +16,7 @@
     \item[iii.]
     $D$ se llama conjunto de \textit{tipo 3} si es \textit{tipo 1} y \textit{tipo 2} a la vez.
     \end{enumerate}
-    A \'estos conjuntos (\textit{tipo 1, 2, 3}) se los llama elementales.
+    A \'estos conjuntos (\textit{tipo 1, 2, 3}) se los llama elementales.\final
 \end{definition}
 
 \begin{corollary} \label{col:fubini}
@@ -32,7 +32,7 @@
         \]
         \item Si $D$ es de tipo 3 y $f,\;\phi_i,\psi_i\;$ son continuas, entonces 
         \[
-            \iint_D f=\int_a^b\left(\int_{y=\phi_1(x)}^{y=\phi_2(x)}f(x,y)\:dy\right)dx=\int_a^b\left(\int_{x=\psi_1(y)}^{x=\psi_2(y)}f(x,y)\:dx\right)dy. 
+            \iint_D f=\int_a^b\left(\int_{y=\phi_1(x)}^{y=\phi_2(x)}f(x,y)\:dy\right)dx=\int_a^b\left(\int_{x=\psi_1(y)}^{x=\psi_2(y)}f(x,y)\:dx\right)dy.\finalmath 
         \]
     \end{enumerate}
 \end{corollary}
@@ -46,19 +46,19 @@
     Luego $D$ es de tipo 1. Notar que la \'unica manera de demostrar que un conjunto es elemental es dando su descrici\'on impl\'icita. Por el \autoref{col:fubini}
     \begin{gather*}
         \iint_D x^2y\:dA=\int_0^1\left(\int_{x^3}^{x^2}\:dy\right)dx=\int_0^1\left(x^2\frac{1}{2}y^2\Big\lvert_{x^3}^{x^2}\right)dx\\
-        =\int_0^1\frac{1}{2}x^2\left((x^2)^2-(x^3)^2\right)=\int_0^1\frac{1}{2}x^6-\frac{1}{2}x^8\;dx\\=\frac{1}{14}x^7-\frac{1}{18}x^9\Big\lvert_0^1=\frac{1}{14}-\frac{1}{18}.
+        =\int_0^1\frac{1}{2}x^2\left((x^2)^2-(x^3)^2\right)=\int_0^1\frac{1}{2}x^6-\frac{1}{2}x^8\;dx\\=\frac{1}{14}x^7-\frac{1}{18}x^9\Big\lvert_0^1=\frac{1}{14}-\frac{1}{18}.\finalmath
     \end{gather*}
 \end{example}
 \begin{definition} %cambie la palabra region --> conjunto
     Se define el \'area de un conjunto $D\subset\Re^n$ como la integral, si existe, de la funci\'on 1. Es decir,
     \[
-        \text{A}(D)=\iint_D1\:dA.  
+        \text{A}(D)=\iint_D1\:dA.\finalmath
     \]
 \end{definition}
 \begin{theorem}
     \textbf{Teorema del valor medio para integrales dobles}. Suponer que $f:D\to\Re$ es continua y $D$ es un conjunto elemental. Entonces para alg\'un punto $(x_0,y_0)$ en $D$, tenemos
     \[
-        \int_D f(x,y)\:dA=f(x_0,y_0)\text{A}(D).
+        \int_D f(x,y)\:dA=f(x_0,y_0)\text{A}(D).\finalmath
     \]
 \end{theorem}
 \begin{theorem} % lo escribi como lo tenia en mis apuntes
@@ -71,5 +71,5 @@
     \[
         |\text{det}(\boldsymbol{D}_T)|=J(T)
     \]
-    y se lo llama \textbf{jacobiano} de la matriz diferencial $\boldsymbol{D}_T$.
+    y se lo llama \textbf{jacobiano} de la matriz diferencial $\boldsymbol{D}_T$.\final
 \end{theorem}

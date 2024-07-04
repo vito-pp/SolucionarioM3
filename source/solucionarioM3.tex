@@ -3,6 +3,7 @@
 \usepackage{tocloft} % para cambiar formato de \tableofcontents
 \usepackage{titlesec} % para cambiar formato de los titulos
 \usepackage{amsmath, amssymb, amsthm, mathtools, esint} % Paquetes de simbolos matematicos
+\usepackage{xcolor}
 \usepackage[skip=20pt, indent=0pt]{parskip} 
 \usepackage[margin=3cm]{geometry}
 \usepackage[spanish]{babel}
@@ -13,12 +14,24 @@
 \usepgfplotslibrary{fillbetween}
 \usetikzlibrary{patterns, shapes}
 
+% para graficar flechas en curvas cerradas
 \xdef\Rad{2}
 \newcommand{\ARW}[2][]{%
     \foreach \ang in {#2}{%
         \draw[#1] (\ang:\Rad)--(\ang+1:\Rad) ;
     }
 }
+% simbolo final de teorema, definicion, corolario, etc.
+\newcommand{\final}{\hfill$\diamond$}
+\newcommand{\finalmath}{\tag*{$\diamond$}}
+% numeros reales
+\renewcommand{\Re}{\mathbb {R}}
+% derivadas parciales
+\newcommand{\partialx}{\frac{\partial}{\partial x}}
+\newcommand{\partialy}{\frac{\partial}{\partial y}}
+\newcommand{\partialz}{\frac{\partial}{\partial z}}
+% numeros romanos
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\contentsname}{Indice}
@@ -70,15 +83,6 @@
 % \theoremstyle{definition}
 % \newtheorem{definition}[teo]{Definici\'on}
 % \newtheorem{propertie}[teo]{Propiedad}
-
-% numeros reales
-\renewcommand{\Re}{\mathbb {R}}
-% derivadas parciales
-\newcommand{\partialx}{\frac{\partial}{\partial x}}
-\newcommand{\partialy}{\frac{\partial}{\partial y}}
-\newcommand{\partialz}{\frac{\partial}{\partial z}}
-% numeros romanos
-\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
 
 \spanishdecimal{.}
 
@@ -159,7 +163,7 @@
         \section{Integrales Triples}
             \input{integrales_triples.tex}
         \section{Integrales de L\'inea}
-            \input{integrales.tex}
+            \input{integrales_linea.tex}
         \section{Integrales de Superficie}
         \section{Campos Conservativos}
             \input{conservativos.tex}

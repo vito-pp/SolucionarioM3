@@ -9,7 +9,7 @@ donde $c_{ijk}\in B_{ijk}$, el $ijk$-\'esimo paralelep\'ipedo rectangular en la 
 \begin{definition} 
     Sean $B=[a,b]\times[c,d]\times[p,q]$ y $f:B\to\Re$ una funci\'on acotada. Si existe el $\lim_{n\to\infty}S_n$, para cualquier $c_{ijk}$, llamamos \textbf{integral triple} de $f$ sobre $B$ a
     \[
-          \iiint_B f\:dV=\iiint_B f(x,y,z)\:dxdydz.
+          \iiint_B f\:dV=\iiint_B f(x,y,z)\:dxdydz.\finalmath
     \]
 \end{definition}
 
@@ -45,7 +45,7 @@ Notar que \'esta integral es independiente de la selecci\'on de $B$.
         \]    
         \item[vii.] Si $U=D_1\cup D_2$ es una partici\'on de $U$, $f$ es integrable en $U$ $\iff$ $f$ es integrable en $D_1$ y $D_2$. En este caso 
         \[
-            \iiint_U f\:dV=\iiint_{D_1} f\:dV+\iiint_{D_2}f\:dV.    
+            \iiint_U f\:dV=\iiint_{D_1} f\:dV+\iiint_{D_2}f\:dV. \finalmath   
         \]
     \end{enumerate}
 \end{propertie}
@@ -55,7 +55,7 @@ Notar que \'esta integral es independiente de la selecci\'on de $B$.
     \[
         \iiint_U f\:dV=f(x_0,y_0,z_0)\text{Vol}\:(U),
     \]
-    donde Vol$\:(U)$ es el volumen de $U$. 
+    donde Vol$\:(U)$ es el volumen de $U$. \final
     % no esta definido el volumen de un conjunto (\iiint_U 1 = vol(U)) 
 \end{theorem}
 
@@ -77,21 +77,21 @@ Notar que \'esta integral es independiente de la selecci\'on de $B$.
         \item[ii.]
         Decimos que la regi\'on $U$ es de \textit{tipo} \rom{2} si puede expresarse de la forma de \eqref{eq:tipo i} o \eqref{eq:tipo ii}, intercambiados los papeles de $x$ y $z$.
         \item[iii.]
-        Decimos que la regi\'on $U$ es de \textit{tipo} \rom{3} si se puede expresar en la forma de \eqref{eq:tipo i} o \eqref{eq:tipo ii}, intercambiados los papeles de $y$ y $z$.
+        Decimos que la regi\'on $U$ es de \textit{tipo} \rom{3} si se puede expresar en la forma de \eqref{eq:tipo i} o \eqref{eq:tipo ii}, intercambiados los papeles de $y$ y $z$.\final
         \end{enumerate}
 \end{definition}
 
 \begin{definition}
     Se define el volumen de un conjunto $U\subset\Re^n$ como la integral, si existe, de la funci\'on 1. Es decir,
     \[
-        \text{Vol}(U)=\text{volumen}(U)=\iiint_U1\:dV.  
+        \text{Vol}(U)=\text{volumen}(U)=\iiint_U1\:dV.  \finalmath
     \]
 \end{definition}
 
 \begin{theorem} \textcolor{red}{lo escribi como lo tenia en mis apuntes}
     \textbf{Teorema del cambio de variables para integrales triples}. Sea $f:U\subseteq\Re^3\to\Re^3$ un campo escalar integrable. Sea $T:U^*\subseteq\Re^3\to D$ continua de clase $C^1$ en int($U^*$), inyectiva en int($U^*$) y $T(U^*)=U$. Entonces
     \[
-        \iiint_U f\:dV=\iiint_{U^*}f\circ T\:|\text{det}(\boldsymbol{D}_T)|.
+        \iiint_U f\:dV=\iiint_{U^*}f\circ T\:|\text{det}(\boldsymbol{D}_T)|.\finalmath
     \]
 \end{theorem}
 \textcolor{red}{es la misma definicion que para integrales dobles, quizas conviene ponerlas juntas?}
