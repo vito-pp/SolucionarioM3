@@ -11,7 +11,14 @@
 \usepackage{pgfplots} % para graficos 
 \pgfplotsset{compat=1.18}
 \usepgfplotslibrary{fillbetween}
-\usetikzlibrary{patterns}
+\usetikzlibrary{patterns, shapes}
+
+\xdef\Rad{2}
+\newcommand{\ARW}[2][]{%
+    \foreach \ang in {#2}{%
+        \draw[#1] (\ang:\Rad)--(\ang+1:\Rad) ;
+    }
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\contentsname}{Indice}
