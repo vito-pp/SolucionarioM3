@@ -62,14 +62,14 @@
     \]
 \end{theorem}
 \begin{theorem} % lo escribi como lo tenia en mis apuntes
-    \textbf{Teorema del cambio de variables para integrales dobles}. Sea $f:D\subseteq\Re^2\to\Re^2$ un campo escalar integrable. Sea $T:D^*\subseteq\Re^2\to D$ continua de clase $C^1$ en int($D^*$), inyectiva en int($D^*$) y $T(D^*)=D$. Entonces
+    \textbf{Teorema del cambio de variables para integrales dobles}. Sea $f:D\subseteq\Re^2\to\Re^2$ un campo escalar integrable. Sea $\mathbf{T}:D^*\subseteq\Re^2\to D$ continua de clase $C^1$ en int($D^*$), inyectiva en int($D^*$) y $\mathbf{T}(D^*)=D$. Entonces
     \[
-        \iint_D f\:dA=\iint_{D^*}f\circ T\:|\text{det}(\boldsymbol{D}_T)|
+        \iint_D f\:dA=\iint_{D^*}f\circ \mathbf{T}\:|\text{det}(\boldsymbol{D}_\mathbf{T})|.
     \]
     % supuse que ya esta definida la matriz diferencial D_T
     Se suele notar a 
     \[
-        |\text{det}(\boldsymbol{D}_T)|=J(T)
+        |\text{det}(\boldsymbol{D}_\mathbf{T})|=\boldsymbol{J}(\mathbf{T})
     \]
-    y se lo llama \textbf{jacobiano} de la matriz diferencial $\boldsymbol{D}_T$.\final
+    y se lo llama \textbf{jacobiano} de la matriz diferencial $\boldsymbol{D}_\mathbf{T}$.\final
 \end{theorem}
