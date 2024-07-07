@@ -6,13 +6,15 @@
 \usepackage{xcolor}
 \usepackage[skip=20pt, indent=0pt]{parskip} 
 \usepackage[margin=3cm]{geometry}
-\usepackage[spanish]{babel}
+\usepackage[spanish, shorthands=off]{babel} % Disable shorthands to prevent conflicts
 \usepackage{chngcntr} % para cambiar los contadores
 \usepackage{hyperref} % para hyperlinks asociados al documento
 \usepackage{pgfplots} % para graficos 
 \pgfplotsset{compat=1.18}
+\usepackage{tikz}
 \usepgfplotslibrary{fillbetween}
 \usetikzlibrary{patterns, shapes}
+\usetikzlibrary{arrows.meta, decorations.pathmorphing, positioning}
 
 % para graficar flechas en curvas cerradas
 \xdef\Rad{2}
