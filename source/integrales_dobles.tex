@@ -37,7 +37,36 @@
     \end{enumerate}
 \end{corollary}
 \begin{example}
-    Se quiere calcular la integral $\iint_D f$, donde $f(x,y)=x^2y$, mientras que $D$ es la regi\'on del plano encerrado entre $y=x^3$, $y=x^2$, con $x\in[0,1]$. \textcolor{red}{agregar figura}
+    Se quiere calcular la integral $\iint_D f$, donde $f(x,y)=x^2y$, mientras que $D$ es la regi\'on del plano encerrado entre $y=x^3$, $y=x^2$, con $x\in[0,1]$. 
+
+    \begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle,
+            xmin = 0, xmax = 1.5,
+            ymin = 0, ymax = 1.5,
+            xlabel = {$x$},
+            ylabel = {$y$},
+            domain = 0:1.25,
+            samples = 100,
+            xtick={0.5,1},
+            ytick={0.5,1},
+            clip=false,
+            ]
+        
+            % Define the curves
+            \addplot[name path=A, blue, thick, domain=0:1.22] {x^2} node[pos=0.75, right] {$y=x^2$};
+            \addplot[name path=B, red, thick, domain=0:1.15] {x^3} node[pos=0.3, below right] {$y=x^3$};
+        
+            % Fill the area between the curves
+            \addplot[orange!50, fill opacity=0.5] fill between[of=A and B, soft clip={domain=0:1}];
+        
+            % Label the enclosed area as D
+            \node at (axis cs:0.6,0.29) {$D$};
+        
+        \end{axis}
+    \end{tikzpicture}
+    \end{center}
 
     En este caso 
     \[
