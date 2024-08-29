@@ -1,5 +1,9 @@
 \begin{definition}
-    Definimos una curva $\Gamma\in\Re^n$ como la imagen de una trayectoria $\boldsymbol{\sigma}:I\subseteq\Re\to\Re^n$ continua y de clase $C^1$ a trozos. Si $I=[a,b]$ a los puntos $\boldsymbol{\sigma}(a)$ y $\boldsymbol{\sigma}(b)$ se los llama extremos de la curva.\final
+    \textcolor{red}{Falta definici\'on $C^1$ a trozos.}
+\end{definition}
+
+\begin{definition}
+    Se define una curva $\Gamma\in\Re^n$ como la imagen de una trayectoria $\boldsymbol{\sigma}:I\subseteq\Re\to\Re^n$ continua y de clase $C^1$ a trozos. Si $I=[a,b]$ a los puntos $\boldsymbol{\sigma}(a)$ y $\boldsymbol{\sigma}(b)$ se los llama extremos de la curva.\final
 \end{definition}
 
 \begin{center}
@@ -13,15 +17,15 @@
     
     % Curved arrow in the middle
     \draw[semithick,->] (2,1) to[out=45,in=135,looseness=0.8] (8,1);
-    \node[label=below:$\boldsymbol{\sigma}$] at (5,2) {};
+    \node[label=below:$\boldsymbol{\sigma}_1$] at (5,2) {};
     
     % Plane R^2 on the right
     \begin{scope}[xshift=8cm]
         \draw[semithick] (0,0) .. controls (1,2) and (2,-1) .. (3,1);
         \node at (0,0) [circle,fill,inner sep=1pt] {};
         \node at (3,1) [circle,fill,inner sep=1pt] {};
-        \node[below left] at (0,0) {$\boldsymbol{\sigma}(a)$};
-        \node[above right] at (3,1) {$\boldsymbol{\sigma}(b)$};
+        \node[below left] at (0,0) {$\boldsymbol{\sigma}_1(a)$};
+        \node[above right] at (3,1) {$\boldsymbol{\sigma}_1(b)$};
     \end{scope}
 
 \end{tikzpicture}
@@ -38,7 +42,7 @@
 
     % Curved arrow in the middle
     \draw[semithick,->] (2,1) to[out=45,in=135,looseness=0.8] (8,1);
-    \node[label=below:$\boldsymbol{\sigma}$] at (5,2) {};
+    \node[label=below:$\boldsymbol{\sigma}_2$] at (5,2) {};
 
     % Plane R^2 on the right
     \begin{scope}[xshift=8cm, yshift=0.4cm]
@@ -46,8 +50,8 @@
             (0,0) .. controls (4.5,-1) and (-1.5,-2.5) .. (3,1);
         \node at (0,0) [circle,fill,inner sep=1pt] {};
     \node at (3,1) [circle,fill,inner sep=1pt] {};
-    \node[below left] at (0,0) {$\boldsymbol{\sigma}(a)$};
-    \node[above right] at (3,1) {$\boldsymbol{\sigma}(b)$};
+    \node[below left] at (0,0) {$\boldsymbol{\sigma}_2(a)$};
+    \node[above right] at (3,1) {$\boldsymbol{\sigma}_2(b)$};
     \end{scope}
 
 \end{tikzpicture}
@@ -55,7 +59,9 @@
 
 \textcolor{red}{desp agrego las leyendas}
 
-Si $\boldsymbol{\sigma}(a)=\boldsymbol{\sigma}(b)$ entonces $\Gamma$ se llama curva cerrada.
+\begin{definition}
+    Si $\boldsymbol{\sigma}(a)=\boldsymbol{\sigma}(b)$ entonces $\Gamma$ se llama curva cerrada.    
+\end{definition}
 
 \begin{center}
 \begin{tikzpicture}
@@ -68,7 +74,7 @@ Si $\boldsymbol{\sigma}(a)=\boldsymbol{\sigma}(b)$ entonces $\Gamma$ se llama cu
     
     % Curved arrow in the middle
     \draw[semithick,->] (2,1) to[out=45,in=135,looseness=0.8] (8,1);
-    \node[label=below:$\boldsymbol{\sigma}$] at (5,2) {};
+    \node[label=below:$\boldsymbol{\sigma}_3$] at (5,2) {};
     
     % Plane R^2 on the right
     \begin{scope}[xshift=8.2cm, yshift=0.5cm]
@@ -79,16 +85,22 @@ Si $\boldsymbol{\sigma}(a)=\boldsymbol{\sigma}(b)$ entonces $\Gamma$ se llama cu
             % \node at \point [circle,fill,inner sep=1pt] {};
             % }
         \node at (0,0) [circle,fill,inner sep=1pt] {};
-        \node[below left] at (0,0) {$\boldsymbol{\sigma}(a)=\boldsymbol{\sigma}(b)$};
+        \node[below left] at (0,0) {$\boldsymbol{\sigma}_3(a)=\boldsymbol{\sigma}_3(b)$};
     \end{scope}
 
 \end{tikzpicture}
 \end{center}
 
-Adem\'as, si $\boldsymbol{\sigma}$ es inyectiva en $I$, salvo tal vez en sus bordes, entonces se llama a $\Gamma$ curva simple.
+\begin{definition}
+    Si $\boldsymbol{\sigma}$ es inyectiva en $I$, salvo tal vez en sus bordes, entonces se llama a $\Gamma$ curva simple.    
+\end{definition}
 
 \begin{example}
-    Sea la trayectoria $\boldsymbol{\sigma}:[0,2\pi]\to\Gamma$, tal que $\boldsymbol{\sigma}(t)=(\cos t, \sen t)$.
+    $\Gamma_1$ y $\Gamma_3$ son curvas simples. $\Gamma_2$ no es una curva simple. 
+\end{example}
+
+\begin{example}
+    Sea la trayectoria $\boldsymbol{\sigma}:[0,2\pi]\to\Gamma$, tal que $\boldsymbol{\sigma}(t)=(\cos t, \sen t)$. La curva $\Gamma=\text{Im}(\boldsymbol{\sigma})$ es la que se muestra a continuaci\'on.
 
     \begin{center}
     \begin{tikzpicture}
@@ -123,15 +135,15 @@ Adem\'as, si $\boldsymbol{\sigma}$ es inyectiva en $I$, salvo tal vez en sus bor
 \end{example}
 
 \begin{definition}
-    Continuidad a trozos. [...] \textcolor{red}{No est\'a en el Tromba y no s\'e como definirlo formalmente}.\final
+    Sape? \textcolor{red}{Continuidad a trozos. Igual que C1 a trozos}.\final
 \end{definition}
 
-Cada curva simple $\Gamma$ tiene asociadas dos orientaciones o sentidos posibles. Si los puntos $P$ y $Q$ son los extremos de la curva entonces podemos considerar a $\Gamma$ con orientaci\'on desde $P$ hacia $Q$ o bien desde $Q$ hacia $P$.
+Cada curva simple $\Gamma$ tiene asociadas dos orientaciones o sentidos posibles. Si los puntos $P$ y $Q$ son los extremos de la curva, y $P\neq Q$, entonces podemos considerar a $\Gamma$ con orientaci\'on desde $P$ hacia $Q$ o bien desde $Q$ hacia $P$. \textcolor{red}{Si P=Q definir horario y antihorario.}
 
 \begin{definition}
-    Parametrizaci\'on de una curva. Una parametrizaci\'on de una curva simple $\Gamma\in\Re^n$ es una trayectoria $\boldsymbol{\sigma}:I\subseteq\Re\to\Re^n$ continua, de clase $C^1$ a trozos, inyectiva en $\text{int}\:(I)$ y $\text{Im}\:(\boldsymbol{\sigma})=\Gamma$.\final
+    Se define una parametrizaci\'on de una curva simple $\Gamma\in\Re^n$ como una trayectoria $\boldsymbol{\sigma}:I\subseteq\Re\to\Re^n$ continua, de clase $C^1$ a trozos, inyectiva en $\interior{I}$ y $\text{Im}\:(\boldsymbol{\sigma})=\Gamma$.\final
 \end{definition}
 
 \begin{definition}
-    Una paremetrizaci\'on $\boldsymbol{\sigma}:I\subset\Re\to\Re^n$ se llama regular si $\boldsymbol{\sigma}'(t)\neq0$.\final
+    Una paremetrizaci\'on $\boldsymbol{\sigma}:I\subset\Re\to\Re^n$ se llama regular si $\boldsymbol{\sigma}'(t)\neq0$, $\forall t\in\interior{I}$.\final
 \end{definition}

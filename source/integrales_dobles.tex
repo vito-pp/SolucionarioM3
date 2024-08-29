@@ -1,43 +1,104 @@
-\begin{definition}\textbf{Conjuntos elementales en }$\Re^2$.\textcolor{red}{region o conjunto?}
+\begin{definition}
+Dada una funci\'on continua $f:B\to\Re$, donde $B$ es un rect\'angulo en $\Re^2$, se define la suma de Reimann de $f$ sobre $B$, partiendo los dos lados de $B$ en $n$ partes iguales y formando la suma, a
+\[
+    S_n=\sum_{i=0}^{n-1}\sum_{j=0}^{n-1} f(c_{ij})\Delta A,
+\]  
+donde $c_{ij}\in B_{ij}$, el $ij$-\'esimo rect\'angulo en la partici\'on de $B$, y $\Delta A$ es el \'area de $B_{ij}$.\final
+\end{definition}
+
+\begin{definition} 
+    Sean $B=[a,b]\times[c,d]$ y $f:B\to\Re$ una funci\'on acotada. El l\'imite $\lim_{n\to\infty}S_n$, se llama \textbf{integral doble} de $f$ sobre $B$, y se nota $\iint_U f\:dA$, a
+    \[
+          \iint_U f\:dA=\iint_U f(x,y)\:dxdy.\finalmath
+    \]
+\end{definition}
+
+\textcolor{red}{\textit{Aclaramos que el} $\lim_{n\to\infty}B_{ij}=dA$\textit{? Y que $dA=dxdy$}?}
+
+Para extender esta noci\'on de integral a un conjunto acotado m\'as general, esto es, conjuntos que puedan ser encerrados por un rect\'angulo, definimos lo siguiente. 
+
+\begin{definition}
+Dada $f:B\to\Re$, se define la funci\'on $f^*$ tal que
+\[
+    f^*(x,y)=
+    \begin{dcases*}
+        f(x,y) & si $(x,y)\in D$ \\[.2cm]
+        0        & si $(x,y)\notin D.$
+    \end{dcases*}
+\]
+Entonces si $B$ es una caja que contiene a $D$ y $\partial D$ est\'a formada por las gr\'aficas de un n\'umero finito de funciones continuas, $f^*$ ser\'a integrable. Luego, se define
+\[
+    \iint_D f\:dA=\iint_B f^*\:dA.  \finalmath
+\]
+\end{definition}
+
+\textbf{Observaci\'on.} Notar que esta integral es independiente de la selecci\'on de $B$.
+
+\begin{propertie}
+    Sean $f,\;g$ dos funciones integrables en una regi\'on $D\subset\Re^2$, entonces:
+    \begin{enumerate}
+        \item[i.] $\alpha f+\beta g$ es integrable en $D$, $\forall\;\alpha,\;\beta\in\Re$ y adem\'as
+        \[
+            \iint_D \left(\alpha f+\beta g\right)dA=\alpha\iint_D f\:dA+\beta\iint_D g\:dA.
+        \]
+        \item[ii.] El producto $fg$ es integrable en $D$.
+        \item[iii.] Si $|g(x,y)|\geq k>0\;\forall(x,y)\in D$, el cociente $f/g$ es integrable en $D$.
+        \item[iv.] Si $f\geq$ en $D$, $\iint_D f\:dA\geq0$.
+        \item[v.]Si $f\leq g$ en $D$, $\iint_D f\:dA\leq\iint_D g\:dA.$
+        \item[vi.]Si $|f|$ es integrable en $D$, entonces 
+        \[
+            \left|\iint_D f\:dA\right|\leq\iint_D|f|\:dA.  
+        \]    
+        \item[vii.] Si $D=D_1\cup D_2,\;D_1\cap D_2\neq\varnothing,$ es una partici\'on de $D$, $f$ es integrable en $D$ $\iff$ $f$ es integrable en $D_1$ y $D_2$. En este caso 
+        \[
+            \iint_D f\:dA=\iint_{D_1} f\:dA+\iint_{D_2}f\:dA. \finalmath   
+        \]
+    \end{enumerate}
+\end{propertie}
+
+%-----------------------------------------------------------
+\begin{definition}\textbf{Conjuntos elementales en }$\Re^2$.
     Sea $D\subseteq\Re^2$.
     \begin{enumerate}
     \item[i.]
-    Decimos que la regi\'on $D$ es de \textit{tipo 1} si existen funciones continuas $\phi_1,\;\phi_2:[a,b]\to\Re$ tales que $D$ es el conjunto de puntos $(x,y)$ que satisfacen
+    Decimos que el conjunto elemental $D$ es de \textit{tipo 1} si existen funciones continuas $\phi_1,\;\phi_2:[a,b]\to\Re$ tales que $D$ es el conjunto de puntos $(x,y)$ que satisfacen
     \[
         x\in[a,b], \qquad \phi_1(x)\leq y\leq\phi_2(x),  
     \]% no se pq no funciona \hfill para no usar \qquad
     donde $\phi_1(x)\leq\phi_2(x)\;\forall\;x\in[a,b].$
     \item[ii.]
-    Decimos que la regi\'on $D$ es de \textit{tipo 2} si existen funciones continuas $\psi_1,\;\psi_2:[c,d]\to\Re$ tales que $D$ es el conjunto de puntos $(x,y)$ que satisfacen
+    Decimos que el conjunto elemental $D$ es de \textit{tipo 2} si existen funciones continuas $\psi_1,\;\psi_2:[c,d]\to\Re$ tales que $D$ es el conjunto de puntos $(x,y)$ que satisfacen
     \[
         y\in[c,d], \qquad \psi_1(y)\leq x\leq\psi_2(y),  
     \]
     donde $\psi_1(y)\leq\psi_2(y)\;\forall\;y\in[c,d].$
     \item[iii.]
-    $D$ se llama conjunto de \textit{tipo 3} si es \textit{tipo 1} y \textit{tipo 2} a la vez.
+    $D$ se llama conjunto elemental de \textit{tipo 3} si es \textit{tipo 1} y \textit{tipo 2} a la vez.\final
     \end{enumerate}
-    A \'estos conjuntos (\textit{tipo 1, 2, 3}) se los llama elementales.\final
 \end{definition}
 
 \begin{corollary} \label{col:fubini}
-    \textcolor{red}{corolario de que teorema es?}
     \begin{enumerate}
-        \item Sea $D\subseteq\Re^2$ un conjunto de tipo 1. Supongamos que $f:D\to\Re$ es continua y las $\phi_i$ son continuas. Entonces
+        \item Sea $D\subseteq\Re^2$ un conjunto de tipo 1. Y sea $f:D\to\Re$ continua. Entonces
         \[
-            \iint_D f=\int_a^b\left(\int_{y=\phi_1(x)}^{y=\phi_2(x)}f(x,y)\:dy\right)dx.  
+            \iint_D f=\int_a^b\left(\int_{\phi_1(x)}^{\phi_2(x)}f(x,y)\:dy\right)dx.  
         \]
-        \item Sea $D\subseteq\Re^2$ un conjunto de tipo 2. Supongamos que $f:D\to\Re$ es continua y las $\psi_i$ son continuas. Entonces
+        \item Sea $D\subseteq\Re^2$ un conjunto de tipo 2. Sea $f:D\to\Re$ continua.
+        % y las $\psi_i$ son continuas. 
+        Entonces
         \[
-            \iint_D f=\int_a^b\left(\int_{x=\psi_1(y)}^{x=\psi_2(y)}f(x,y)\:dx\right)dy.  
+            \iint_D f=\int_a^b\left(\int_{\psi_1(y)}^{\psi_2(y)}f(x,y)\:dx\right)dy.  
         \]
-        \item Si $D$ es de tipo 3 y $f,\;\phi_i,\psi_i\;$ son continuas, entonces 
+        \item Si $D$ es de tipo 3 y $f$
+        % ,\;\phi_i,\psi_i\;$ son 
+        continua, entonces 
         \[
             \iint_D f=\int_a^b\left(\int_{y=\phi_1(x)}^{y=\phi_2(x)}f(x,y)\:dy\right)dx=\int_a^b\left(\int_{x=\psi_1(y)}^{x=\psi_2(y)}f(x,y)\:dx\right)dy.\finalmath 
         \]
     \end{enumerate}
 \end{corollary}
 \begin{example}
-    Se quiere calcular la integral $\iint_D f$, donde $f(x,y)=x^2y$, mientras que $D$ es la regi\'on del plano encerrado entre $y=x^3$, $y=x^2$, con $x\in[0,1]$. 
+    Calcular $\iint_D f$, donde $f(x,y)=x^2y$, donde $D$ es la regi\'on del plano encerrado entre $y=x^3$, $y=x^2$, con $x\in[0,1]$. 
 
     \begin{center}
     \begin{tikzpicture}
@@ -72,33 +133,36 @@
     \[
         D=\{(x,y)\in\Re^2:0\leq x\leq1;\;x^3\leq y\leq x^2\}.  
     \]
-    Luego $D$ es de tipo 1. Notar que la \'unica manera de demostrar que un conjunto es elemental es dando su descrici\'on impl\'icita. Por el \autoref{col:fubini}
+    Luego $D$ es de tipo 1. Notar que la \'unica manera de demostrar que un conjunto es elemental es dando su descripci\'on impl\'icita. Por el \autoref{col:fubini}
     \begin{gather*}
         \iint_D x^2y\:dA=\int_0^1\left(\int_{x^3}^{x^2}\:dy\right)dx=\int_0^1\left(x^2\frac{1}{2}y^2\Big\lvert_{x^3}^{x^2}\right)dx\\
         =\int_0^1\frac{1}{2}x^2\left((x^2)^2-(x^3)^2\right)=\int_0^1\frac{1}{2}x^6-\frac{1}{2}x^8\;dx\\=\frac{1}{14}x^7-\frac{1}{18}x^9\Big\lvert_0^1=\frac{1}{14}-\frac{1}{18}.\finalmath
     \end{gather*}
 \end{example}
 \begin{definition} %cambie la palabra region --> conjunto
-    Se define el \'area de un conjunto $D\subset\Re^n$ como la integral, si existe, de la funci\'on 1. Es decir,
+    Se define el \'area de un conjunto $D\subset\Re^n$, y se nota $\text{A}(D)$ como la integral, si existe, de la funci\'on 1. Es decir,
     \[
         \text{A}(D)=\iint_D1\:dA.\finalmath
     \]
 \end{definition}
 \begin{theorem}
-    \textbf{Teorema del valor medio para integrales dobles}. Suponer que $f:D\to\Re$ es continua y $D$ es un conjunto elemental. Entonces para alg\'un punto $(x_0,y_0)$ en $D$, tenemos
+    \textbf{Teorema del valor medio para integrales dobles}. Sea $f:D\subseteq\Re^2\to\Re$ continua y $D$ es un conjunto elemental. Entonces existe $(x_0,y_0)$ en $D$ tal que
     \[
         \int_D f(x,y)\:dA=f(x_0,y_0)\text{A}(D).\finalmath
     \]
 \end{theorem}
+
+\begin{definition}
+    Sea $\mathbf{F}:A\subseteq\Re^n\to\Re^n$ un campo $C^1(A)$ y sea $\boldsymbol{D}_\mathbf{F}$ su matriz diferencial definida en $A$. Se define el \textbf{jacobiano}, o \textbf{determinante jacobiano}, y se lo nota $J_\mathbf{F}$ a 
+    \[
+        J_\mathbf{F}=\left|\text{det}(\boldsymbol{D}_\mathbf{F})\right|.\finalmath
+    \]
+    \textcolor{red}{\textit{quizas esta definicion convnga ponerla en la primera parte teorica.}}
+\end{definition}
+
 \begin{theorem} % lo escribi como lo tenia en mis apuntes
-    \textbf{Teorema del cambio de variables para integrales dobles}. Sea $f:D\subseteq\Re^2\to\Re^2$ un campo escalar integrable. Sea $\mathbf{T}:D^*\subseteq\Re^2\to D$ continua de clase $C^1$ en int($D^*$), inyectiva en int($D^*$) y $\mathbf{T}(D^*)=D$. Entonces
+    \textbf{Teorema del cambio de variables para integrales dobles}. Sea $f:D\subseteq\Re^2\to\Re^2$ un campo escalar integrable. Sea $\mathbf{T}:D^*\subseteq\Re^2\to D$ continua de clase $C^1$ en $\interior{D^*}$, inyectiva en $\interior{D^*}$ y $\mathbf{T}(D^*)=D$. Entonces
     \[
-        \iint_D f\:dA=\iint_{D^*}f\circ \mathbf{T}\:|\text{det}(\boldsymbol{D}_\mathbf{T})|.
+        \iint_D f\:dA=\iint_{D^*}(f\circ\mathbf{T})J_\mathbf{T}\:dV.\finalmath
     \]
-    % supuse que ya esta definida la matriz diferencial D_T
-    Se suele notar a 
-    \[
-        |\text{det}(\boldsymbol{D}_\mathbf{T})|=\boldsymbol{J}(\mathbf{T})
-    \]
-    y se lo llama \textbf{jacobiano} de la matriz diferencial $\boldsymbol{D}_\mathbf{T}$.\final
 \end{theorem}

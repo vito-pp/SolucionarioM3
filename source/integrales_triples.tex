@@ -1,97 +1,87 @@
-% segui la definicion del tromba
-Dada una funci\'on continua $f:B\to\Re$, donde $B$ es un paralelep\'ipedo rectangular (una caja) en $\Re^3$, se puede definir la integral de $f$ sobre $B$ como un l\'imite de sumas, o sea una integral de Reimann. Partiendo los tres lados de $B$ en $n$ partes iguales y formando la suma
+\begin{definition}
+Dada una funci\'on continua $f:U\to\Re$, donde $U$ es un paralelep\'ipedo rectangular (una caja) en $\Re^3$, se define la suma de Reimann de $f$ sobre $U$, partiendo los tres lados de $U$ en $n$ partes iguales, a
 \[
     S_n=\sum_{i=0}^{n-1}\sum_{j=0}^{n-1}\sum_{k=0}^{n-1}f(c_{ijk})\Delta V,
 \]  
-donde $c_{ijk}\in B_{ijk}$, el $ijk$-\'esimo paralelep\'ipedo rectangular en la partici\'on de $B$, y $\Delta V$ es el volumen de $B_{ijk}$
-\textcolor{red}{agregar dibujo caja en r3}
+donde $c_{ijk}\in U_{ijk}$, el $ijk$-\'esimo paralelep\'ipedo rectangular en la partici\'on de $U$, y $\Delta V$ es el volumen de $U_{ijk}$.\final
+\end{definition}
 
 \begin{definition} 
-    Sean $B=[a,b]\times[c,d]\times[p,q]$ y $f:B\to\Re$ una funci\'on acotada. Si existe el $\lim_{n\to\infty}S_n$, para cualquier $c_{ijk}$, llamamos \textbf{integral triple} de $f$ sobre $B$ a
+    Sean $U=[a,b]\times[c,d]\times[p,q]$ y $f:U\to\Re$ una funci\'on acotada.El l\'imite $\lim_{n\to\infty}S_n$ se llama \textbf{integral triple} de $f$ sobre $U$, y se nota $\iiint_U f\:dV$ a
     \[
-          \iiint_B f\:dV=\iiint_B f(x,y,z)\:dxdydz.\finalmath
+          \iiint_U f\:dV=\iiint_U f(x,y,z)\:dxdydz.\finalmath
     \]
 \end{definition}
 
-Para tener la extender esta noci\'on de integral a un conjunto acotado m\'as general $W\subset\Re^3$, esto es conjuntos que puedan ser encerrados por una caja. Dada $f:U\to\Re$, extender $f$ a una funci\'on $f^*$ tal que
+\textcolor{red}{\textit{Aclaramos que el} $\lim_{n\to\infty}B_{ijk}=dV$\textit{? Y que $dV=dxdydz$?}}
+
+Para extender esta noci\'on de integral a un conjunto acotado m\'as general, esto es, conjuntos que puedan ser encerrados por una caja, definimos lo siguiente. 
+
+\begin{definition}
+Dada $f:U\to\Re$, se define la funci\'on $f^*$ tal que
 \[
     f^*(x,y,z)=
     \begin{dcases*}
-        f(x,y,z) & si $(x,y,z)\in U$ \\[.2cm]
-        0        & si $(x,y,z)\notin U.$
+        f(x,y,z) & si $(x,y,z)\in W$ \\[.2cm]
+        0        & si $(x,y,z)\notin W.$
     \end{dcases*}
 \]
-Entonces si $B$ es una caja que contiene a $U$ y $\partial U$ est\'a formada por las gr\'aficas de un n\'umero finito de funciones continuas, % no se que significa esto ultimo
-$f^*$ ser\'a integrable y definimos
+Entonces si $U$ es una caja que contiene a $W$ y $\partial W$ est\'a formada por las gr\'aficas de un n\'umero finito de funciones continuas, $f^*$ ser\'a integrable. Luego, se define
 \[
-    \iiint_U f\:dV=\iiint_B f^*\:dV.  
+    \iiint_W f\:dV=\iiint_U f^*\:dV.  \finalmath
 \]
-Notar que \'esta integral es independiente de la selecci\'on de $B$.
+\end{definition}
+
+\textbf{Observaci\'on.} Notar que esta integral es independiente de la selecci\'on de $U$.
 
 \begin{propertie}
-    Sean $f,\;g$ dos funciones acotadas e integrables en una regi\'on $U\subset\Re^3$, entonces:
+    Sean $f,\;g$ dos funciones integrables en una regi\'on $W\subset\Re^3$, entonces:
     \begin{enumerate}
-        \item[i.] $\alpha f+\beta g$ es integrable en $U$, $\forall\;\alpha,\;\beta\in\Re$ y adem\'as
+        \item[i.] $\alpha f+\beta g$ es integrable en $W$, $\forall\;\alpha,\;\beta\in\Re$ y adem\'as
         \[
-            \iiint_U \alpha f+\beta g\:dV=\alpha\iiint_U f\:dV+\beta\iiint_U g\:dV.
+            \iiint_W \left(\alpha f+\beta g\right)dV=\alpha\iiint_W f\:dV+\beta\iiint_W g\:dV.
         \]
-        \item[ii.] El producto $fg$ es integrable en $U$.
-        \item[iii.] Si $|g(x,y,z)|\geq k>0\;\forall(x,y,z)\in U$, el conciente $f/g$ es integrable en $U$.
-        \item[iv.] Si $f\geq$ en $U$, $\iiint_U f\:dV\geq0$.
-        \item[v.]Si $f\leq g$ en $U$, $\iiint_U f\:dV\leq\iiint_U g\:dV.$
-        \item[vi.]Si $|f|$ es integrable en $U$, entonces 
+        \item[ii.] El producto $fg$ es integrable en $W$.
+        \item[iii.] Si $|g(x,y,z)|\geq k>0\;\forall(x,y,z)\in W$, el cociente $f/g$ es integrable en $W$.
+        \item[iv.] Si $f\geq$ en $W$, $\iiint_W f\:dV\geq0$.
+        \item[v.]Si $f\leq g$ en $W$, $\iiint_W f\:dV\leq\iiint_W g\:dV.$
+        \item[vi.]Si $|f|$ es integrable en $W$, entonces 
         \[
-            \left|\iiint_U f\:dv\right|\leq\iiint_U|f|\:dV.  
+            \left|\iiint_W f\:dV\right|\leq\iiint_W|f|\:dV.  
         \]    
-        \item[vii.] Si $U=D_1\cup D_2$ es una partici\'on de $U$, $f$ es integrable en $U$ $\iff$ $f$ es integrable en $D_1$ y $D_2$. En este caso 
+        \item[vii.] Si $W=W_1\cup W_2,\;W_1\cap W_2\neq\varnothing,$ es una partici\'on de $W$, $f$ es integrable en $W$ $\iff$ $f$ es integrable en $W_1$ y $W_2$. En este caso 
         \[
-            \iiint_U f\:dV=\iiint_{D_1} f\:dV+\iiint_{D_2}f\:dV. \finalmath   
+            \iiint_W f\:dV=\iiint_{W_1} f\:dV+\iiint_{W_2}f\:dV. \finalmath   
         \]
     \end{enumerate}
 \end{propertie}
 
+\begin{definition}
+    Se define el volumen de un conjunto $W\subset\Re^n$, y se nota $\text{Vol}(W)$, como la integral, si existe, de la funci\'on 1. Es decir,
+    \[
+        \text{Vol}(W)=\iiint_W1\:dV.\finalmath
+    \]
+\end{definition}
+
 \begin{theorem}
-    \textbf{Teorema del valor medio}. Si $f$ es continua en $U$, $\exists(x_0,y_0,z_0)\in U$ tal que 
+    \textbf{Teorema del valor medio}. Sea $f:W\subseteq\Re^3\to\Re^3$ continua y $W$ es un conjunto elemental. Entonces existe $(x_0,y_0,z_0)$ en $W$ tal que 
     \[
-        \iiint_U f\:dV=f(x_0,y_0,z_0)\text{Vol}\:(U),
-    \]
-    donde Vol$\:(U)$ es el volumen de $U$. \final
-    % no esta definido el volumen de un conjunto (\iiint_U 1 = vol(U)) 
-\end{theorem}
-
-% region o conjunto para las definiciones? 
-\begin{definition}
-    \textbf{Regi\'on elemental en }$\Re^3$.
-    Sea $U\subseteq\Re^3$.
-    \begin{enumerate}
-        \item[i.]
-        Decimos que la regi\'on $U$ es de \textit{tipo} \rom{1} si existen funciones continuas $\phi_1,\;\phi_2:[a,b]\to\Re$ tales que $U$ es el conjunto de puntos $(x,y,z)$ que satisfacen
-        \begin{equation} \label{eq:tipo i}
-            x\in[a,b], \qquad \phi_1(x)\leq y\leq\phi_2(x), \qquad \gamma_1(x,y)\leq z\leq\gamma_2(x,y) 
-        \end{equation}
-        donde $\phi_1(x)\leq\phi_2(x)\;\forall\;x\in[a,b]$ y $\gamma_1,\;\gamma_2:D\to\Re$, son funciones continuas, $D\subset\Re^2$ de tipo 1. Tambi\'en se llamar\'a de \textit{tipo} \rom{1} si puede expresarse como el conjunto de los $(x,y,z)$ tales que
-        \begin{equation} \label{eq:tipo ii}
-            y\in[c,d], \qquad \psi_1(y)\leq x\leq\psi_2(y), \qquad \gamma_1(x,y)\leq z\leq\gamma_2(x,y), 
-        \end{equation}
-        donde $\gamma_1,\;\gamma_2$ son como antes y $D$ es de tipo 2.
-        \item[ii.]
-        Decimos que la regi\'on $U$ es de \textit{tipo} \rom{2} si puede expresarse de la forma de \eqref{eq:tipo i} o \eqref{eq:tipo ii}, intercambiados los papeles de $x$ y $z$.
-        \item[iii.]
-        Decimos que la regi\'on $U$ es de \textit{tipo} \rom{3} si se puede expresar en la forma de \eqref{eq:tipo i} o \eqref{eq:tipo ii}, intercambiados los papeles de $y$ y $z$.\final
-        \end{enumerate}
-\end{definition}
-
-\begin{definition}
-    Se define el volumen de un conjunto $U\subset\Re^n$ como la integral, si existe, de la funci\'on 1. Es decir,
-    \[
-        \text{Vol}(U)=\text{volumen}(U)=\iiint_U1\:dV.  \finalmath
-    \]
-\end{definition}
-
-\begin{theorem} \textcolor{red}{lo escribi como lo tenia en mis apuntes}
-    \textbf{Teorema del cambio de variables para integrales triples}. Sea $f:U\subseteq\Re^3\to\Re^3$ un campo escalar integrable. Sea $\mathbf{T}:U^*\subseteq\Re^3\to U$ continua de clase $C^1$ en int($U^*$), inyectiva en int($U^*$) y $\mathbf{T}(U^*)=U$. Entonces
-    \[
-        \iiint_U f\:dV=\iiint_{U^*}f\circ \mathbf{T}\:|\text{det}(\boldsymbol{D}_\mathbf{T})|.\finalmath
+        \iiint_W f\:dV=f(x_0,y_0,z_0)\text{Vol}\:(W).\finalmath
     \]
 \end{theorem}
-\textcolor{red}{es la misma definicion que para integrales dobles, quizas conviene ponerlas juntas?}
+
+\begin{definition}
+    \textbf{Conjunto elemental en }$\Re^3$.
+    Sea $W\subseteq\Re^3$. Sean $\phi_1,\;\phi_2:[a,b]\to\Re$ funciones y sean $\gamma_1,\;\gamma_2:D\to\Re$ funciones continuas. Un conjunto $W\subseteq\Re^3$ se llama elemental, si puede ser escrito como el conjunto de puntos $(x,y,z)$ que satifacen
+    \begin{equation*}
+        x\in[a,b], \qquad \phi_1(x)\leq y\leq\phi_2(x), \qquad \gamma_1(x,y)\leq z\leq\gamma_2(x,y). 
+    \end{equation*}
+    O bien, intercambiando el orden de las variables.\final
+\end{definition}
+
+\begin{theorem}
+    \textbf{Teorema del cambio de variables para integrales triples}. Sea $f:W\subseteq\Re^3\to\Re^3$ un campo escalar integrable. Sea $\mathbf{T}:W^*\subseteq\Re^3\to W\subseteq\Re^3$ continua de clase $C^1$ en $\interior{W^*}$, inyectiva en $\interior{W^*}$ y $\mathbf{T}(W^*)=W$. Entonces
+    \[
+        \iiint_W f\:dV=\iiint_{W^*}(f\circ\mathbf{T})J_\mathbf{T}\:dV.\finalmath
+    \]
+\end{theorem}
