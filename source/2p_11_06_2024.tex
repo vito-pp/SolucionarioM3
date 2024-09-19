@@ -3,7 +3,7 @@
 \begin{question}
     Sean los campos $\psi (x,y) = \ln(\sqrt{x^2+y^2})$ y $\boldsymbol{F}(x,y)= \left(\psi_y(x,y), -\psi_x(x,y)\right)$
     \\y sea $C$ una curva regular, simple, y cerrada con orientación positiva contenida en el conjunto
-    $A=\left\{(x,y): 1 < x^2+y^2 \leq 9 \right\}$. Hallar los posibles valores de la integral de $\boldsymbol{F}$ sobre $C$.
+    $A=\left\{(x,y): 1 < x^2+y^2 < 9 \right\}$. Hallar los posibles valores de la integral de $\boldsymbol{F}$ sobre $C$.
 \end{question}
 
 %------------Ejercicio 2---------------------------------------
@@ -34,8 +34,141 @@
 \newpage
 \begin{solution}
 
-    FALTA FALTA FALTA FALTA FALTA FALTA FALTA
+    Antes que nada, se debe determinar cuál es la expresión del campo $\boldsymbol{F}$, en $\Re^3-\{(0,0)\}$.
+    \begin{align*}
+        \psi_x&=\partialx\left(\ln{\sqrt{x^2+y^2}}\right)\\
+        &=\frac{1}{\sqrt{x^2+y^2}} \cdot \frac{1}{2\sqrt{x^2+y^2}} \cdot 2x^2\\
+        &=\frac{x}{x^2+y^2}
+    \end{align*}
+    \begin{align*}
+        \psi_y&=\partialy\left(\ln{\sqrt{x^2+y^2}}\right)\\
+        &=\frac{1}{\sqrt{x^2+y^2}} \cdot \frac{1}{2\sqrt{x^2+y^2}} \cdot 2y^2\\
+        &=\frac{y}{x^2+y^2}
+    \end{align*}
+    \begin{equation*}
+        \therefore \boldsymbol{F}(x,y)= \left(\frac{y}{x^2+y^2}, -\frac{x}{x^2+y^2}\right)
+    \end{equation*}
+    Para comenzar a resolver el problema, se consideran todas las curvas $C_1$ regulares, simples y cerradas, orientadas positivamente
+    y contenidas en $A$ tal que su región encerrada $D_1$, a su vez, también esté contenida en $A$. 
+    \begin{center}
+        \begin{tikzpicture}
+            % Define the exterior boundary
+            \draw[thick, fill=blue!60!white!40] (0,0) circle (4);
+        
+            % Define the inner boundaries
+            \draw[thick, fill=white] (0,0) circle (1);
 
+            \draw[thick, red, fill=red!60!white!40] (1.5,-1.5) circle (0.5);
+            \foreach \angle in {0, 60, 120, 180, 240, 300} {
+                \draw[thick, red, ->] ({1.5+0.5*cos(\angle)}, {-1.5+0.5*sin(\angle)}) arc[start angle=\angle, end angle=\angle+360, radius=0.5];
+            }
+
+        
+            % Label the regions
+            \node at (0,4.3) {$A$};
+            \node at (1.5,-2.5) {$C_1$};
+            %\node at (0,1.4) {$C_0$};
+        
+        \end{tikzpicture}
+    \end{center}
+    En este caso, con A una función de clase
+    $C^1$ en $A$, valen las hipótesis del teorema de Green (tanto para la curva como para el campo). Entonces:
+    \begin{equation*}
+        \int_{C_1}\boldsymbol{F}\cdot d\boldsymbol{s} = \iint_{D_1}\left(\nabla \times \boldsymbol{F}\right)dA
+    \end{equation*}
+    Acto siguiente, se calcula el rotor de $\boldsymbol{F}$, para resolver la integral.
+    \begin{align*}
+        \nabla \times \boldsymbol{F} &= \partialx\left( -\frac{x}{x^2+y^2}\right) - \partialy\left(\frac{y}{x^2+y^2}\right)\\
+        &= \left(-\frac{(x^2+y^2)-2x^2}{\left(x^2+y^2\right)^2}\right) - \left(\frac{(x^2+y^2)-2y^2}{\left(x^2+y^2\right)^2}\right)\\
+        &= -\left(\frac{-x^2+y^2}{\left(x^2+y^2\right)^2}+\frac{x^2-y^2}{\left(x^2+y^2\right)^2}\right)\\
+        &= -\left(\frac{-x^2+y^2+x^2-y^2}{\left(x^2+y^2\right)^2}\right)\\
+        \nabla \times \boldsymbol{F}&= 0
+    \end{align*}
+    Por lo tanto, la integral del campo sobre $C_1$ resulta:
+    \begin{align*}
+        \int_{C_1}\boldsymbol{F}\cdot d\boldsymbol{s} &= \iint_{D_1}\left(0\right)dA\\
+        \Rightarrow \int_{C_1}\boldsymbol{F}\cdot d\boldsymbol{s} &= 0
+    \end{align*}
+    Ahora queda considerar los casos de todas las curvas $C_2$ regulares, simples y cerradas, orientadas positivamente
+    y contenidas en $A$ tal que su región encerrada $D_2$ no esté totalmente contenida dentro de $A$.
+    \begin{center}
+        \begin{tikzpicture}
+            % Define the exterior boundary
+            \draw[thick, fill=blue!60!white!40] (0,0) circle (4);
+        
+            % Define the inner boundaries
+            \draw[thick, fill=white] (0,0) circle (1);
+
+            \draw[thick, red, fill=red!60!white!40, opacity=0.5] (0,0) circle (1.5);
+            \foreach \angle in {0, 60, 120, 180, 240, 300} {
+                \draw[thick, red, ->] ({1.5*cos(\angle)}, {1.5*sin(\angle)}) arc[start angle=\angle, end angle=\angle+360, radius=1.5];
+            }
+
+        
+            % Label the regions
+            \node at (0,4.3) {$A$};
+            \node at (0,-2) {$C_2$};
+            %\node at (0,1.4) {$C_0$};
+        
+        \end{tikzpicture}
+    \end{center}
+    En este caso, ya no se cumplen las condiciones del teorema de Green, puesto que $\boldsymbol{F}$ no se encuentra definida en $(0,0) \in D_2$.
+    Sin embargo, es posible utilizar el teorema de Green generalizado. Definiendo previamente, con orientación positiva:
+    \begin{align*}
+        C_0&=\left\{(x,y): x^2+y^2=1 \right\}\\
+        C_0&=\partial D_0
+    \end{align*}
+    \begin{center}
+        \begin{tikzpicture}
+            % Define the exterior boundary
+            \draw[thick, fill=blue!60!white!40] (0,0) circle (4);
+        
+            \draw[thick, red, fill=red!60!white!40, opacity=0.5] (0,0) circle (1.5);
+            \foreach \angle in {0, 60, 120, 180, 240, 300} {
+                \draw[thick, red, ->] ({1.5*cos(\angle)}, {1.5*sin(\angle)}) arc[start angle=\angle, end angle=\angle+360, radius=1.5];
+            }
+
+            % Define the inner boundaries
+            \draw[thick, fill=white] (0,0) circle (1);
+            \foreach \angle in {0, 60, 120, 180, 240, 300} {
+                \draw[thick, ->] ({cos(\angle)}, {sin(\angle)}) arc[start angle=\angle, end angle=\angle+360, radius=1];
+            }
+
+
+        
+            % Label the regions
+            \node at (0,4.3) {$A$};
+            \node at (0,-2) {$C_2$};
+            \node at (0,-0.5) {$C_0$};
+        
+        \end{tikzpicture}
+    \end{center}
+    Luego, se puede utlizar el teorema de Green generalizado:
+    \begin{equation*}
+        \int_{C_2}\boldsymbol{F}\cdot d\boldsymbol{s} - \int_{C_0}\boldsymbol{F}\cdot d\boldsymbol{s} = \iint_{\left(D_2-D_0\right)}\left(\nabla \times \boldsymbol{F}\right)dA
+    \end{equation*}
+    Sobre el área entre ambas curvas, el rotor del campo vale cero, puesto que está definido en $\left(D_2-D_0\right)\subset A$. Entonces, el término de la derecha, se vuelve cero.
+    \begin{equation*}
+        \int_{C_2}\boldsymbol{F}\cdot d\boldsymbol{s} = \int_{C_0}\boldsymbol{F}\cdot d\boldsymbol{s}
+    \end{equation*}
+    Para realizar la integral de la derecha, se propone la parametrización:
+    \begin{equation*}
+        \sigma: B=[0;2\pi] \longrightarrow \Re^2 / \sigma(t) = (\cos(t),\sin(t))
+    \end{equation*}
+    \begin{equation*}
+        \sigma'(t)=(-\sin(t),\cos(t))
+    \end{equation*}
+    Por lo tanto:
+    \begin{align*}
+        \int_{C_0}\boldsymbol{F}\cdot d\boldsymbol{s}&=\int_{0}^{2\pi}\boldsymbol{F}\circ\sigma(t) \cdot \sigma'(t) dt\\
+        &=\int_{0}^{2\pi} (\sin(t),-\cos(t)) \cdot (-\sin(t),\cos(t)) dt\\
+        &=\int_{0}^{2\pi} \left(-\sin^2(t)-\cos^2(t)\right) dt\\
+        &=\int_{0}^{2\pi} -\left(\sin^2(t)+\cos^2(t)\right) dt\\
+        &=-\int_{0}^{2\pi} 1 dt\\
+        &=-\left.\left(t\right)\right|_{0}^{2\pi}\\
+        \int_{C_0}\boldsymbol{F}\cdot d\boldsymbol{s}&=-2\pi\\
+        \Rightarrow \int_{C_2}\boldsymbol{F}\cdot d\boldsymbol{s}&=-2\pi
+    \end{align*}
 \end{solution}
 
 %------------Solucion 2---------------------------------------
