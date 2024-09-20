@@ -1,40 +1,35 @@
-\textcolor{red}{No hace falta la parte de recuerdo de mate 1 con el teorema de valor medio?}
-
-\textcolor{red}{Falta definicion integral de linea sobre trayectorias}
-
 \begin{definition}
-    Sea $\Gamma$ una curva simple en $\Re^n$ y sea $\boldsymbol{\sigma}:I\subseteq\Re\to\Re^n$ una parametrizaci\'on regular de $\Gamma$. Entonces
+    Sea $\Gamma$ una curva simple en $\Re^n$ y sea $\boldsymbol{\sigma}:I\subseteq\Re\to\Re^n$ una parametrizaci\'on regular de $\Gamma$. Se define la \textbf{longitud de} $\Gamma$, y se nota por Long($\Gamma$), a 
     \[
-        \text{long}\:\Gamma=\text{L}(\Gamma)=\sum_{i=1}^{n}\int_{I_i}\|\boldsymbol{\sigma}'(t)\|dt,    
+        \text{Long}(\Gamma)=\sum_{i=1}^{n}\int_{I_i}\|\boldsymbol{\sigma}'(t)\|dt,    
     \]
     donde $\boldsymbol{\sigma}\lvert_{I_i}$ es de clase $C^1$.\final
 \end{definition}
 
 \begin{definition}
-    Sea $\Gamma$ una cirva simple en $\Re^n$ y sea $\boldsymbol{\sigma}:[a,b\subseteq\Re\to\Re^n]$ una parametrizaci\'on regular de $\Gamma$. Sea $f:A\subseteq\Re^n\to\Re$ continua sobre $\Gamma$. Se define la integral de l\'inea del campo $f$ sobre la curva $\Gamma$, y se nota por $\int_{\Gamma}f\:ds$ a
+    Sea $\boldsymbol{\sigma}:I=[a,b]\to\Re^n$, una trayectoria de clase $C^1(I)$ y sea $f$ un campo escalar tal que la funci\'on compuesta $f\circ\boldsymbol{\sigma}(t)$ sea continua en $I$. Se define la \textbf{integral de trayectoria}, o \textbf{integral de} $f$ \textbf{a lo largo de la trayectoria} $\boldsymbol{\sigma}$, y se la nota por $\int_{\boldsymbol{\sigma}}f\:ds$, a
+    \[
+        \int_{\boldsymbol{\sigma}}f\:ds=\int_a^b (f\circ\boldsymbol{\sigma})\|\boldsymbol{\sigma}'(t)\|\:dt.\finalmath
+    \]
+\end{definition}
+
+Si $\boldsymbol{\sigma}(t)$ es s\'olo $C^1$ a trozos o $f\circ\boldsymbol{\sigma}(t)$ es continua a trozos, se define $\int_{\boldsymbol{\sigma}}f\:ds$ sobre una partici\'on de $[a,b]$, donde sobre cada intervalo de la partici\'on $(f\circ\boldsymbol{\sigma})\|\boldsymbol{\sigma}'(t)\|$ sea continua, y sumando las integrales sobre cada intervalo de la partici\'on. 
+
+\begin{definition}
+    Sea $\Gamma$ una curva simple en $\Re^n$ y sea $\boldsymbol{\sigma}:[a,b\subseteq\Re\to\Re^n]$ una parametrizaci\'on regular de $\Gamma$. Sea $f:A\subseteq\Re^n\to\Re$ continua sobre $\Gamma$. Se define la integral de l\'inea del campo $f$ sobre la curva $\Gamma$, y se nota por $\int_{\Gamma}f\:ds$ a
     \[
         \int_{\Gamma}f\:ds=\sum_{i=1}^{n}\int_{I_i}f\circ\boldsymbol{\sigma}(t)\|\boldsymbol{\sigma}'(t)\|\:dt,  
     \]
     donde $\boldsymbol{\sigma}\lvert_{I_i}$ es de clase $C^1$.\final
 \end{definition}
 
-Una aplicaci\'on de esto es cuando $f(x,y)>0$, entonces esta integral tiene una interpretaci\'on geom\'etrica como el ``\'area de una valla". Podemos construir una ``valla" cuya base sea la imagen de $\boldsymbol{\sigma}$ y altura $f(x,y)$ en $(x,y)$. Si $\boldsymbol{\sigma}$ recorre s\'olo una vez la imagen de $\boldsymbol{\sigma}$, la integral $\int_{\boldsymbol{\sigma}}f(x,y)\:ds$ representa el \'area de una lado de la valla.
+\textbf{Observaci\'on.} Si $f(x,y)>0$, entonces la integral de l\'inea tiene una interpretaci\'on geom\'etrica como el ``\'area de una valla". Podemos construir una ``valla" cuya base sea la imagen de $\boldsymbol{\sigma}$ y altura $f(x,y)$ en $(x,y)$. Si $\boldsymbol{\sigma}$ recorre s\'olo una vez la imagen de $\boldsymbol{\sigma}$, la integral $\int_{\boldsymbol{\sigma}}f(x,y)\:ds$ representa el \'area de una lado de la valla.
 
 \textcolor{red}{ilustracion de la aplicacion}
 
 \begin{definition}
-    Integral de un campo vectorial a lo largo de una trayectoria.
-    Sean $\mathbf{F}:A\subseteq\Re^n\to\Re^n$ un campo vectorial y $\boldsymbol{\sigma}:[a,b]\to A\subseteq\Re^n$ una trayectorial $C^1$ a trozos tales que $\mathbf{F}\circ\boldsymbol{\sigma}:[a,b]\to\Re^n$ es una funci\'on continua. Se define la \textbf{integral de} $\mathbf{F}$ \textbf{a lo largo de} $\boldsymbol{\sigma}$ como
-    \[
-        \int_{\boldsymbol{\sigma}}\mathbf{F}\cdot d\mathbf{s}=\int_a^b\mathbf{F}\circ\boldsymbol{\sigma}(t)\cdot\boldsymbol{\sigma}'(t)\:dt.\finalmath 
-    \]
-\end{definition}
-
-Se usa la notaci\'on $\int_{\boldsymbol{\sigma}}\mathbf{F}\cdot d\mathbf{s}=\int_{\boldsymbol{\sigma}}\mathbf{F}\cdot\hat{\mathbf{t}}\:ds$, donde $\hat{\mathbf{t}}$ es versor tangencial al campo $\mathbf{F}$ en todo punto.
-
-\begin{definition}
     Integral de un campo vecrorial a lo largo de una curva simple.
-    Sea $\mathbf{F}:A\subseteq\Re^n\to\Re^n$ un campo vectorial continuo sobre una curva simple oriantada $\Gamma\subset A$. Sea $\boldsymbol{\sigma}:[a,b]\to A\subseteq\Re^n$ una parametrizaci\'on de $\Gamma$ que preserva su oriantaci\'on. Se define la \textbf{integral de} $\mathbf{F}$ \textbf{sobre la curva simple} $\boldsymbol{\Gamma}$ como
+    Sea $\mathbf{F}:A\subseteq\Re^n\to\Re^n$ un campo vectorial continuo sobre una curva simple orientada $\Gamma\subset A$. Sea $\boldsymbol{\sigma}:[a,b]\to A\subseteq\Re^n$ una parametrizaci\'on de $\Gamma$ que preserva su orientaci\'on. Se define la \textbf{integral de} $\mathbf{F}$ \textbf{sobre la curva simple} $\boldsymbol{\Gamma}$ como
     \[
         \int_{\Gamma}\mathbf{F}\cdot d\mathbf{s}=\int_{\boldsymbol{\sigma}}\mathbf{F}\cdot d\mathbf{s} \finalmath
     \]
@@ -45,3 +40,13 @@ Si $\Gamma$ es cerrada, se suele notar a la integral como
     \oint_{\Gamma}\mathbf{F}\cdot d\mathbf{s},  
 \]
 y se la llama integral de circulaci\'on de $\mathbf{F}$ sobre $\Gamma$.
+
+\begin{definition}
+    Sean $\mathbf{F}:A\subseteq\Re^n\to\Re^n$ un campo vectorial y $\boldsymbol{\sigma}:[a,b]\to A\subseteq\Re^n$ una trayectorial $C^1$ a trozos tales que $\mathbf{F}\circ\boldsymbol{\sigma}:[a,b]\to\Re^n$ es una funci\'on continua. Se define la \textbf{integral de de l\'inea del campo vecorial} $\mathbf{F}$ \textbf{a lo largo de la trayectoria} $\boldsymbol{\sigma}$ como
+    \[
+        \int_{\textcolor{red}{\Gamma}}\mathbf{F}\cdot d\mathbf{s}=\int_a^b\mathbf{F}\circ\boldsymbol{\sigma}(t)\cdot\boldsymbol{\sigma}'(t)\:dt.\finalmath 
+    \]
+\end{definition}
+\textcolor{red}{\textit{por que $\Gamma$ en vez de $\sigma$ en la integral?}}
+
+Se usa la notaci\'on $\int_{\boldsymbol{\sigma}}\mathbf{F}\cdot d\mathbf{s}=\int_{\boldsymbol{\sigma}}\mathbf{F}\cdot\hat{\mathbf{t}}\:ds$, donde $\hat{\mathbf{t}}$ es versor tangencial al campo $\mathbf{F}$ en todo punto.
