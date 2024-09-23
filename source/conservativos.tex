@@ -1,5 +1,5 @@
 \begin{definition}
-    \textcolor{red}{Definicion conjunto conexo...}\final
+    \textcolor{red}{Definicion conjunto conexo... (no la encuentro en el Tromba)}\final
 \end{definition}
 
 \begin{theorem} \label{thm:t1}
@@ -10,22 +10,25 @@
 \end{theorem}
 
 \begin{corollary}
-    En las condiciones del \autoref{thm:t1}, $\int_{\boldsymbol{\sigma}}\nabla f\cdot d\mathbf{s}$ no depende de $\boldsymbol{\sigma}$, s\'olo depende de los puntos inicla y final de la trayectoria. Si $\boldsymbol{\sigma}_1$, $\boldsymbol{\sigma}_2$ son trayectorias $C^1$ a trozos tales que $\boldsymbol{\sigma}_1:[a,b]\to A\subseteq\Re^n$ y $\boldsymbol{\sigma}_2:[a,b]\to A\subseteq\Re^n$, entonces
+    Sean $A\subseteq\Re^n$ abierto y conexo y $f:A\subseteq\Re^n\to\Re$ de clase $C^1$, entonces $\int_{\boldsymbol{\sigma}}\nabla f\cdot d\mathbf{s}$  s\'olo depende de los puntos inicial y final de la trayectoria. Por lo tanto, sean las trayectorias $\boldsymbol{\sigma}_1:[a_1,b_1]\to A_1\subseteq\Re^n$ y $\boldsymbol{\sigma}_2:[a_2,b_2]\to A_2\subseteq\Re^n$, tales que $\boldsymbol{\sigma}_1(a_1)=\boldsymbol{\sigma}_2(a_2)\;\land\;\boldsymbol{\sigma}_1(b_1)=\boldsymbol{\sigma}_2(b_2)$, entonces
     \[
     \int_{\boldsymbol{\sigma}_1}\nabla f\cdot d\mathbf{s}=\int_{\boldsymbol{\sigma}_2}\nabla f\cdot d\mathbf{s}.\finalmath
     \]
 \end{corollary}
 
 \begin{corollary}
-    En las condiciones del \autoref{thm:t1}, si $\mathbf{F}:A\subseteq\Re^n\to\Re^n$ es un campo vectorial para el cual $\exists f:A\subseteq\Re^n\to\Re$ clase $C^1$ tal que 
+    Sean $A\subseteq\Re^n$ abierto y conexo y $f:A\subseteq\Re^n\to\Re$ de clase $C^1$. Si $\mathbf{F}:A\subseteq\Re^n\to\Re^n$ es un campo vectorial para el cual $\exists f:A\subseteq\Re^n\to\Re$ clase $C^1$ tal que 
     $$\nabla f(\mathbf{x})=\mathbf{F}(\mathbf{x})\quad\forall\:\mathbf{x}\in A,$$
-    entonces para todo par de puntos $\mathbf{p}_0,\:\mathbf{p}_1\in A$
-    $$\int_{C_1}\mathbf{F}\cdot d\mathbf{s}=\int_{C_2}\mathbf{F}\cdot d\mathbf{s},$$
-    para cualquier par de curvas $C_1,\;C_2\subset A$ que vayan de $\mathbf{p}_0$ a $\mathbf{p}_1$ \final
+    entonces para todo par de curvas $C_1$ y $C_2$ en $A$, con los mismos extremos y misma orientaci\'on,
+    \[
+    \int_{C_1}\mathbf{F}\cdot d\mathbf{s}=\int_{C_2}\mathbf{F}\cdot d\mathbf{s}. \finalmath
+    \]
 \end{corollary}
 
+Estos \'ultimos dos corolarios nos demuestran que la integral de curva 
+
 \begin{corollary}
-    En las condiciones del \autoref{thm:t1}, si $\mathbf{F}=\nabla f$; entonces
+    Sean $A\subseteq\Re^n$ abierto y conexo y $f:A\subseteq\Re^n\to\Re$ de clase $C^1$. Si $\mathbf{F}=\nabla f$, entonces
     $$\oint_C\mathbf{F}\cdot d\mathbf{s}=0,$$
     para toda curva $C$ simple cerrada contenida en $A$.\final
 \end{corollary}
@@ -43,8 +46,10 @@
 \begin{theorem}
     Sean $A\subseteq\Re^n$ abierto y conexo, $\mathbf{F}:A\subseteq\Re^n\to\Re$ continuo. Las siguientes condiciones sobre $\mathbf{F}$ son equivalentes:
     \begin{enumerate}
-        \item $\exists f:A\subseteq\Re^n\to\Re$ de clase $C^1$ tal que $\mathbf{F}=\nabla f.$ 
+        \item $\exists f:A\subseteq\Re^n\to\Re$ de clase $C^1$ tal que $\mathbf{F}(\mathbf{x})=\nabla f(\mathbf{x}),\;\forall\mathbf{x}\in A.$ 
         \item La integral de $\mathbf{F}$ es independiente del camino en $A$.
         \item $\oint_C\mathbf{F}\cdot d\mathbf{s}=0$ para toda curva cerrada simple $C$ en $A$.\final
     \end{enumerate}
 \end{theorem}
+
+\textcolor{red}{\textit{esta seccion la copie textual del video Campos Conservativos de youtube. quizas para que quede definida la parte de ``La integral de $\mathbf{F}$ es independiente del camino en $A$'' convenga copiar los teoremas y corolarios del tromba?}}
