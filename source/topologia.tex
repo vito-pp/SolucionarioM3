@@ -1,0 +1,80 @@
+\begin{definition} [Bola de radio $\delta$ y centro $x_o$] \label{def:bola}
+    Sean $x_o \in \Re^n,\;\delta > 0$ y $\text{d}$ una distancia en $\Re^n$. La \emph{bola de radio $\delta$ y centro $x_o$}, que denotamos con $B_{\delta}(x_o)$, es el conjunto:
+    \[
+     B_{\delta}(x_o) = \left\lbrace x \in \Re^n : \text{d}(x,x_o) < \delta \right\rbrace.
+    \]
+    El conjunto
+    \[
+     B^*_{\delta}(x_o) = B_{\delta}(x_o) - \{ x_o \}
+    \]
+    es la \emph{bola reducida de radio $\delta$ y centro $x_o$}.
+   
+   \end{definition}
+   
+   \begin{definition} [Punto interior, interior de un conjunto] \label{def:interior}
+    Sean $A \subset \Re^n \text{ y } x_o \in A$. Decimos que $x_o$ es \emph{punto interior} de $A$ si
+    \[
+     \exists \delta > 0 / B_{\delta}(x_o) \subset A.
+    \]
+    El \emph{interior} de $A$, que denotamos con $\interior(A)$ o \AA{}, es el conjunto de todos los puntos interiores de $A$:
+    \[
+     \interior(A) = \left\lbrace x \in A : x \text{ es punto interior de } A \right\rbrace.
+    \]
+   \end{definition}
+   
+   \begin{definition} [Conjunto abierto] \label{def:abierto}
+       Sea $A \subset \Re^n$. Decimos que $A$ es \emph{abierto} si
+   \[
+        \forall x_o \in \exists \delta > 0 : B_{\delta}(x_o) \subset A.\footnote{\text{i.e.: $A$  es abierto si todos sus puntos son interiores.}}
+   \]
+   \end{definition}
+   
+   \begin{propertie} \label{prop:abierto_int} 
+     Un conjunto $A \subset \Re^n$ es abierto si y solo si $A = \interior(A)$.
+   \end{propertie}
+   
+   \begin{definition} [Conjunto cerrado] \label{def:cerrado}
+    Sea $A \subset \Re^n$. Decimos que $A$ es \emph{cerrado} si su complemento $A^c = \Re^n - A$ es abierto.
+   \end{definition}
+   
+   \begin{definition} [Frontera de un conjunto] \label{def:frontera}
+    Sea $A \subset \Re^n$. La \emph{frontera} de $A$, que denotamos con $\front A$ o $\frontera(A)$, es el conjunto:
+    \[
+     \front A = \left\lbrace x_o \in \Re^n : \forall \delta > 0 \,
+     B_{\delta}(x_o) \cap A \ne \emptyset \wedge
+     B_{\delta}(x_o) \cap A^c \ne \emptyset \right\rbrace.
+    \]
+   \end{definition}
+   
+   \begin{propertie} \label{prop:cerrado_front}
+    Un conjunto $A \subset \Re^n$ es cerrado si y solo si $\front A \subset A$.
+   \end{propertie}
+   
+   \begin{definition} [Punto de acumulaci\'on] \label{def:pto_acum}
+    Sean $A \subset \Re^n \text{ y } x_o \in \Re^n$. Decimos que $x_o$ es \emph{punto de acumulaci\'on} de $A$ si
+    \[
+     \forall \delta > 0 \left( B_{\delta}(x_o) - \{ x_o \} \right) \cap A \ne \emptyset. 
+    \]
+    Denotamos el conjunto de todos los puntos de acumulaci\'on de $A$ con $A'$:
+    \[
+     A' = \{ x \in \Re^n : x \text{ es punto de acumulaci\'on de } A \}.
+    \]
+   
+   \end{definition}
+   
+   \begin{definition} [Entorno de un punto] \label{def:entorno}
+    Sean $N \subset  \Re^n$ y $x_o \in \Re^n$. Decimos que $N$ es \emph{entorno} de $x_o$ si
+    \[
+     \exists \delta > 0 : B_{\delta}(x_o) \subset N.
+    \]
+   \end{definition}
+   
+   \begin{definition} [Punto aislado] \label{def:pto_ais}
+    Sean $A \subset  \Re^n$ y $x_o \in A$. Decimos que $x_o$ es \emph{punto aislado} de $A$ si $x_o$ no es punto de acumulaci\'on de $A$.
+   \end{definition}
+   
+   \begin{definition} [Conjunto acotado] \label{def:conj_acotado}
+    Sea $A \subset \Re^n$. Decimos que $A$ es un \emph{conjunto acotado} si existe $\delta > 0$ tal que la bola de radio $\delta$  centrada en el origen contiene al conjunto $A$, es decir, si $\exists \delta > 0 : A \subset B_{\delta}(\mathbf{0})$.\\
+    Equivalentemente, $A$ es un \emph{conjunto acotado} si $\exists \delta > 0, x_o \in \Re^n : A \subset B_{\delta}(x_o)$.
+   \end{definition}
+   
