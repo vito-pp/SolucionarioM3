@@ -1,0 +1,59 @@
+\label{sec:extremos}
+
+\begin{definition} [Extremos locales y globales] \label{def:extremos}
+ \mbox{}
+ 
+ Sean $f: A \subset \Rn{n} \to \R$ y $x_o \in A$. Decimos que:
+ \begin{itemize}
+  \item $f \text{ tiene un \emph{m\'aximo local} o \emph{relativo} en } x_o \text{ si } \exists \delta > 0 : f(x_o) \ge f(x) \forall x \in B_{\delta}(x_o) \cap A.$ 
+  \item $f \text{ tiene un \emph{m\'inimo local} o \emph{relativo} en } x_o \text{ si } \exists \delta > 0 : f(x_o) \le f(x) \forall x \in B_{\delta}(x_o) \cap A.$
+  \item $f \text{ tiene un \emph{m\'aximo global} o \emph{absoluto} en } x_o \text{ si } f(x_o) \ge f(x) \forall x \in A.$ 
+  \item $f \text{ tiene un \emph{m\'inimo global} o \emph{absoluto} en } x_o \text{ si } f(x_o) \le f(x) \forall x \in A.$
+ \end{itemize}
+ Decimos que $f$ tiene un \emph{extremo} en $x_o$ si $f$ tiene un m\'aximo o m\'inimo (absoluto o relativo) en $x_o$.
+ \begin{obs}
+  Notemos que todo extremo absoluto es \emph{tambi\'en} un extremo relativo. La rec\'iproca de esta afirmaci\'on es falsa (un extremo relativo no tiene por qu\'e ser absoluto).
+ \end{obs}
+\end{definition}
+
+\begin{theorem}[Condici\'on necesaria de extremo] \label{teo:grad_nulo}
+ Sea $f: A \subset \Rn{n} \to \R$ diferenciable en alg\'on entorno abierto de $x_o \in \interior{(A)}$. Supongamos que $f$ tiene un extremo en $x_o$. Entonces
+ \[
+  \grad f(x_o) = \mathbf{0}.
+ \]
+\end{theorem}
+
+\begin{definition} [Punto cr\'itico] \label{def:pto_crit}
+ Sean $f: A \subset \Rn{n} \to \R$ y $x_o \in \interior{(A)}$. Decimos que $x_o$ es un \emph{punto cr\'itico} de $f$ si $f$ no es diferenciable en $x_o$ o $\grad f_{(x_o)} = \mathbf{0}$.
+\end{definition}
+
+\begin{definition} [Punto silla] \label{def:pto_silla}
+ Sean $f: A \subset \Rn{n} \to \R$ y $x_o \in \interior{(A)}$. Si $x_o$ es un punto cr\'itico de $f$ y $f$ no tiene un extremo en $x_o$, decimos que $f$ tiene un \emph{punto silla} en $x_o$.
+\end{definition}
+
+
+\begin{theorem}[Criterio de la derivada segunda] \label{teo:derivada_2da}
+\mbox{}
+
+ Sean $A \subset \Rn{2}$ un conjunto abierto y $f: A \subset \Rn{2} \to \R$ una funci\'on de clase $\mathcal{C}^2$. Sea $(x_o,y_o) \in A$ y supongamos que $\grad f(x_o,y_o) = \mathbf{0}$. Entonces,  
+ \begin{enumerate} %[I.]
+    \item si $\det(\mathbf{H}_f (x_o,y_o)) > 0$ y
+    \begin{enumerate} %[(a)]
+        \item $\pdv[2]{f}{x} (x_o,y_o) > 0$, $f$ tiene un m\'inimo local en $(x_o,y_o)$;
+        \item $\pdv[2]{f}{x} (x_o,y_o) < 0$, $f$ tiene un m\'aximo local en $(x_o,y_o)$;
+    \end{enumerate}
+    \item si $\det(\mathbf{H}_f (x_o,y_o)) < 0$, $f$ tiene un \emph{punto silla} en $(x_o,y_o)$.
+ \end{enumerate}
+
+\end{theorem}
+
+\begin{theorem}[de los valores extremos de Weierstrass] \label{teo:weier}difDir
+  Sean $A \subset \Rn{n}$ un conjunto cerrado y acotado y $f: A \subset \Rn{n} \to \R$ una funci\'on continua. Entonces $f$ alcanza un m\'aximo y un m\'inimo absoluto en $A$.
+\end{theorem}
+
+\begin{theorem} [M\'etodo de multiplicadores de Lagrange] \label{teo:lagrange}
+    Sean $f:U \subset \Rn{n} \to \R$ y $g:U \subset \Rn{n} \to \R$ funciones de clase $\mathcal{C}^1$. Sea $x_o \in U$ y sea $c = g(x_o)$. Sea $S$ el conjunto de nivel $c$ de $g$. Supongamos que $\grad g (x_o) \ne \mathbf{0}$. Si $f|S$ (que denota a la restricci\'on de $f$ a $S$) tiene un extremo local en $x_o$, entonces $\exists \lambda \in \R$ tal que
+    \[
+     \grad f (x_o) = \lambda \grad g (x_o).
+    \]
+\end{theorem}
