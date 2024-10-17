@@ -1,0 +1,77 @@
+\begin{definition}
+    Se llama \textbf{función} a la relación $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}$ tal que a cada elemento de
+    $A$ le corresponde uno y solo un elemento de $B$.
+    Si tomamos como ejemplo a: $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R} / f(x)=2x-1$,
+    \begin{itemize}
+        \item $f$ es el nombre de la función.
+        \item $A$ es el dominio.
+        \item $B$ es el codominio.
+        \item $x$ es la variable.
+        \item $2x-1$ es la fórmula de la función.
+    \end{itemize}
+\end{definition}
+\begin{definition}
+    Se llama \textbf{imágen} de una función $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}$ 
+    al conjunto 
+    \begin{equation*}
+        \text{Im}(f) = \left\{ y\in B: \exists x\in A / f(x)=y \right\}    
+    \end{equation*}
+\end{definition}
+\begin{definition}
+    La \textbf{gráfica de una función} $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}$ es
+    el conjunto
+    \begin{equation*}
+        \text{Graf}(f) = \left\{ (x,y)\in \mathbb{R}: x \in A \land y=f(x)\right\}    
+    \end{equation*}
+\end{definition}
+\begin{example}
+    Si se tiene la función ejemplo $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R} / f(x)=2x-1$.
+    Se puede armar la siguiente tabla de valores:
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|}
+            \hline
+            $x$ & $y=f(x)$ \\ \hline
+            -2  & 4        \\ \hline
+            -1  & 1        \\ \hline
+            0   & 0        \\ \hline
+            1   & 1        \\ \hline
+            2   & 4        \\ \hline
+            \end{tabular}
+      \end{table}
+    Luego, el siguiente conjunto de puntos, se encuentran incluidos en la
+    gráfica de la función (que cabe aclarar, tiene infinitos elementos):
+    \begin{equation*}
+        \left\{ (-2,4),(-1,1),(0,0),(1,1),(2,4) \right\}\subset \text{Graf}(f)
+    \end{equation*}
+    De hecho, si se fuera a posicionar los puntos de $\text{Graf}(f)$, se obtendría
+    lo que se entiende normalmente si se habla de la gráfica de la función. De hecho,
+    graficando la función como uno lo haría normalmente, en realidad
+    se están dibujando los infinitos puntos pertenecientes
+    al $\text{Graf}(f)$ sobre el plano.
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                axis lines = middle,
+                xmin = -2.5, xmax = 2.5,
+                ymin = 0, ymax = 4.5,
+                xlabel = {$x$},
+                ylabel = {$y$},
+                domain = -2:2,
+                samples = 100,
+                xtick={-2,-1,1,2},
+                ytick={1,2,3,4},
+                clip=false,
+                ]
+            
+                % Define the curves
+                \addplot[name path=A, blue, thick, domain=-2:2] {x^2};
+                \fill[red] (0,0) circle (4pt);
+                \fill[red] (-2,4) circle (4pt);
+                \fill[red] (-1,1) circle (4pt);
+                \fill[red] (1,1) circle (4pt);
+                \fill[red] (2,4) circle (4pt);
+            \end{axis}
+        \end{tikzpicture}
+        \end{center}
+\end{example}
