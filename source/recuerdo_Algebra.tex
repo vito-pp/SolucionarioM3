@@ -1,13 +1,16 @@
-\begin{definition}
+\begin{definition}[Espacio Vectorial]
     Un espacio $\mathbb{R}^n$ es un espacio vectorial real al que pertenecen
     los vectores de $n$ componentes. Es decir:
     \begin{equation*}
         \mathbb{R}^n = \left\{ \boldsymbol{v} / \boldsymbol{v}=(x_1,x_2,x_3,...,x_n), \; x_i \in \mathbb{R} \;\forall i \in \mathbb{N}_{\leq n} \right\}
     \end{equation*}
 \end{definition}
-\begin{definition}
-    Una \textbf{Transformación Lineal} es una función $\boldsymbol{T}:A\subseteq \mathbb{V} \rightarrow A\subseteq \mathbb{W}$, con 
-    $\mathbb{V}$ y $\mathbb{W}$ espacios vectoriales, que cumple con la condición de linealidad:
+\begin{definition}[Transformación Lineal]
+    Una transformación lineal es una función 
+    \begin{equation*}
+        \boldsymbol{T}:A\subseteq \mathbb{V} \rightarrow A\subseteq \mathbb{W}
+    \end{equation*}
+    con $\mathbb{V}$ y $\mathbb{W}$ espacios vectoriales, que cumple con la condición de linealidad:
     \begin{equation*}
         \boldsymbol{T}(\alpha \cdot \boldsymbol{v_1} + \beta \cdot \boldsymbol{v_2})=\alpha \cdot \boldsymbol{T}(\boldsymbol{v_2}) + \beta \cdot \boldsymbol{T}(\boldsymbol{v_2})
     \end{equation*}
@@ -15,8 +18,8 @@
     $\mathbb{K} = \mathbb{R}$.
 \end{definition}
 A continuación, se detallan las ecuaciones de curvas y superficies comunes.
-\begin{definition}
-    (Ecuación de la recta en el espacio) La ecuación vectorial de una recta en $\mathbb{R}^3$ es:
+\begin{definition}[Ecuación de la recta en el espacio]
+    La ecuación vectorial de una recta en $\mathbb{R}^3$ es:
     \begin{equation*}
         (x,y,z) = \lambda \cdot \boldsymbol{v} + \boldsymbol{x_0}
     \end{equation*}
@@ -25,8 +28,8 @@ A continuación, se detallan las ecuaciones de curvas y superficies comunes.
     sobre la recta y el vector director se puede expresar como $\boldsymbol{v}=\boldsymbol{x_1}-\boldsymbol{x_2}$, 
     con $\boldsymbol{x_1}$ y $\boldsymbol{x_2}$ dos puntos distintos cualquiera sobre la recta.
 \end{definition}
-\begin{definition}
-    (Ecuación del plano) La ecuación canónica del plano (en $\mathbb{R}^3$) es $ax+by+cz=d$, que también puede expresarse,
+\begin{definition}[Ecuación del plano]
+    La ecuación canónica del plano (en $\mathbb{R}^3$) es $ax+by+cz=d$, que también puede expresarse,
     vectorialmente, como $(a,b,c)\cdot(x-x_0,y-y_0,z-z_0)=0$. Esto último equivale a:
     \begin{equation*}
         \boldsymbol{n}\cdot(\boldsymbol{x} - \boldsymbol{x_0})=0
@@ -35,8 +38,8 @@ A continuación, se detallan las ecuaciones de curvas y superficies comunes.
     un punto de perteneciente al plano. El vector normal, además, puede calcularse como el producto vectorial
     de dos vectores pertenecientes al plano.
 \end{definition}
-\begin{definition}
-    (Ecuación de la circunferencia) La ecuación de una circunferencia en el plano ($\mathbb{R}^2$)
+\begin{definition}[Ecuación de la circunferencia]
+    La ecuación de una circunferencia en el plano ($\mathbb{R}^2$)
     se expresa como 
     \begin{equation*}
         (x-x_0)^2+(y-y_0)^2=r^2
@@ -44,8 +47,8 @@ A continuación, se detallan las ecuaciones de curvas y superficies comunes.
     En este caso, $(x_0,y_0)$ es el centro
     de la circunferencia, y $r$ el radio de la misma.
 \end{definition}
-\begin{definition}
-    (Ecuación del círculo) Para representar un circulo en el plano ($\mathbb{R}^2$), se lo hace como el
+\begin{definition}[Ecuación del círculo]
+    Para representar un circulo en el plano ($\mathbb{R}^2$), se lo hace como el
     área dentro de una circunferencia. Por lo tanto, una región circular en el plano se expresa
     como
     \begin{equation*}
@@ -53,8 +56,8 @@ A continuación, se detallan las ecuaciones de curvas y superficies comunes.
     \end{equation*} 
     incluyendo su borde, la circunferencia exterior.
 \end{definition}
-\begin{definition}
-    (Ecuación de la esfera) La cáscara de una esfera (es decir, sólo su superficie exterior, hueca) 
+\begin{definition}[Ecuación de la esfera]
+    La cáscara de una esfera (es decir, sólo su superficie exterior, hueca) 
     en $\mathbb{R}^3$ se expresa con la ecuación
     \begin{equation*}
         (x-x_0)^2+(y-y_0)^2+(z-z_0)^2=r^2

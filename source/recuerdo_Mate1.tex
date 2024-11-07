@@ -1,5 +1,5 @@
-\begin{definition}
-    Se llama \textbf{función} a la relación $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}$ tal que a cada elemento de
+\begin{definition}[Función en $\mathbb{R}$]
+    Se llama función a la relación $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}$ tal que a cada elemento de
     $A$ le corresponde uno y solo un elemento de $B$.
     Si tomamos como ejemplo a: $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R} / f(x)=2x-1$,
     \begin{itemize}
@@ -10,15 +10,24 @@
         \item $2x-1$ es la fórmula de la función.
     \end{itemize}
 \end{definition}
-\begin{definition}
-    Se llama \textbf{imágen} de una función $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}$ 
+\begin{definition}[Dominio de una función en $\mathbb{R}$]
+    Se llama dominio de una función \newline$f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}$
+    al conjunto de entrada del mismo. Es decir, $\text{Dom}(f)=A$.
+\end{definition}
+\begin{definition}[Codominio de una función en $\mathbb{R}$]
+    Se llama codominio de una función \newline $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}$
+    al conjunto al que se restringen las salidas del mismo. Es decir que $\text{Cod}(f)=B$.
+    Puede que no todos los elementos de $B$ correspondan a una evaluación de la función.
+\end{definition}
+\begin{definition}[Imagen de una función en $\mathbb{R}$]
+    Se llama imagen de una función \newline $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}$ 
     al conjunto 
     \begin{equation*}
         \text{Im}(f) = \left\{ y\in B: \exists x\in A / f(x)=y \right\}    
     \end{equation*}
 \end{definition}
-\begin{definition}
-    La \textbf{gráfica de una función} $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}$ es
+\begin{definition}[Gráfica de una función en $\mathbb{R}$]
+    La gráfica de una función $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}$ es
     el conjunto
     \begin{equation*}
         \text{Graf}(f) = \left\{ (x,y)\in \mathbb{R}: x \in A \land y=f(x)\right\}    
@@ -75,3 +84,24 @@
         \end{tikzpicture}
         \end{center}
 \end{example}
+\begin{definition}[Sobreyectividad, Inyectividad y Biyectividad]
+    Se tiene una función:
+    \begin{equation*}
+        f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}
+    \end{equation*}
+    La función se dice sobreyectiva si se cumple que su codominio es igual a su imagen: 
+    \begin{equation*}
+        \text{Cod}(f)=\text{Img}(f)
+    \end{equation*}
+    Es decir que cada elemento del conjunto de salida es la evaluación de la función en al menos un elemento del
+    dominio.
+
+    La función se dice inyectiva si a cada elemento en el conjunto imagen le corresponde un único
+    valor del dominio. Es decir, que la función es inyectiva cuando se cumple:
+    \begin{equation*}
+        a=b \Leftrightarrow f(a)=f(b)
+    \end{equation*}
+    Tal que $a,b\in \text{Dom}(f)$.
+
+    Finalmente, la función es sobreyectiva cuando es simultáneamente sobreyectiva e inyectiva.
+\end{definition}
