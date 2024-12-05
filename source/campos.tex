@@ -57,13 +57,17 @@
     \end{equation*}
 \end{definition}
 \begin{definition}[Parametrización]
-    Se llaman parametrizaciones a las funciones de la forma $\boldsymbol{\sigma}:A\subseteq\mathbb{R}\rightarrow B\subseteq\mathbb{R}^n$
-    donde $n\geq2$. Es decir, a las funciones que asignan a cada escalar real en el conjunto $A$
-    un vector perteneciente a $\mathbb{R}^n$.
-    Una parametrización se los suele notar con una letra griega.
-
+    Se llaman parametrizaciones a las funciones de la forma $\boldsymbol{\sigma}:A\subseteq\mathbb{R}^m\rightarrow B\subseteq\mathbb{R}^n$
+    donde $n\geq2 \land n\geq m>0$. El vector de entrada es un escalar real, o un conjunto de escalares reales, denominados parámetros.
+    Luego, las parametrizaciones son funciones que asignan a cada parámetro o conjunto de parámetros en el conjunto $A$
+    un vector perteneciente a $\mathbb{R}^n$. 
+    
+    Las parametrizaciones suelen ser de curvas (donde $m=1$ y $n=2$ en $\mathbb{R}^2$ o $n=3$ en $\mathbb{R}^3$),
+    áreas en el plano (donde $m=2$ y $n=2$), superficies (donde $m=2$ y $n=3$) o volumenes (donde $m=3$ y $n=3$).
     Si se piensa a los vectores de salida como puntos en el plano ($\mathbb{R}^2$) o en el espacio ($\mathbb{R}^3$),
-    la imágen de una parametrización es un conjunto de puntos que conforman una curva.
+    la imágen de una parametrización es un conjunto de puntos que conforman una curva, area, superficie o volumen, según se parametrice.
+
+    A una parametrización se la suele notar con una letra griega.
 
     \begin{example}[Parametrización de la circunferencia]
         Para parametrizar una circunferencia, primero pensemos en el circulo unitario.
