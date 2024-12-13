@@ -1,6 +1,6 @@
 \label{sec:limites}
 \begin{definition} [L\'imite] \label{def:limite}
-Sean $f:A \subset \Rn{n} \to \Rn{m}$ una funci\'on, $L \in \Rn{m}$ y $x_0$ un punto de acumulaci\'on de $A$. Decimos que \emph{el l\'imite de $f$ para $x$ tendiendo a $x_o$ es $L$} o que \emph{$f$ tiende a $L$ cuando $x$ tiende a $x_o$}
+Sean $f:A \subset \Re^n \to \Rn{m}$ una funci\'on, $L \in \Rn{m}$ y $x_0$ un punto de acumulaci\'on de $A$. Decimos que \emph{el l\'imite de $f$ para $x$ tendiendo a $x_o$ es $L$} o que \emph{$f$ tiende a $L$ cuando $x$ tiende a $x_o$}
 si
 \[
  \forall \varepsilon > 0 \, \exists \delta > 0 / f(x) \in B_{\varepsilon}(L) \, \forall 
@@ -25,19 +25,19 @@ es equivalente a
 
 \begin{obs} La definici\'on de l\'imite puede expresarse equivalentemente en t\'erminos de distancias o de normas:
 \begin{itemize} 
- \item Sean $f:A \subset \Rn{n} \to \Rn{m}$ una funci\'on, $L \in \Rn{m}$ y $x_0$ un punto de acumulaci\'on de $A$. Decimos que \emph{el l\'imite de $f$ para $x$ tendiendo a $x_o$ es $L$} o que \emph{$f$ tiende a $L$ cuando $x$ tiende a $x_o$} si
+ \item Sean $f:A \subset \Re^n \to \Rn{m}$ una funci\'on, $L \in \Rn{m}$ y $x_0$ un punto de acumulaci\'on de $A$. Decimos que \emph{el l\'imite de $f$ para $x$ tendiendo a $x_o$ es $L$} o que \emph{$f$ tiende a $L$ cuando $x$ tiende a $x_o$} si
 \[
  \forall \varepsilon > 0 \, \exists \delta > 0 / \dis_m {(f(x),L)} < \varepsilon \, \forall 
  x\in A : 0 < \dis_n {(x,x_o)} < \delta,
 \] 
-donde $\dis_n$ y $\dis_m$ son las distancias en $\Rn{n}$ y $\Rn{m}$, respectivamente.
+donde $\dis_n$ y $\dis_m$ son las distancias en $\Re^n$ y $\Rn{m}$, respectivamente.
 
- \item Sean $f:A \subset \Rn{n} \to \Rn{m}$ una funci\'on, $L \in \Rn{m}$ y $x_0$ un punto de acumulaci\'on de $A$. Decimos que \emph{el l\'imite de $f$ para $x$ tendiendo a $x_o$ es $L$} o que \emph{$f$ tiende a $L$ cuando $x$ tiende a $x_o$} si
+ \item Sean $f:A \subset \Re^n \to \Rn{m}$ una funci\'on, $L \in \Rn{m}$ y $x_0$ un punto de acumulaci\'on de $A$. Decimos que \emph{el l\'imite de $f$ para $x$ tendiendo a $x_o$ es $L$} o que \emph{$f$ tiende a $L$ cuando $x$ tiende a $x_o$} si
 \[
  \forall \varepsilon > 0 \, \exists \delta > 0 / \norm{f(x) - L}_m < \varepsilon \, \forall 
  x\in A : 0 < \norm{x - x_o}_n < \delta,
 \] 
-donde $\norm{\cdot}_n$ y $\norm{\cdot}_m$ son las normas en $\Rn{n}$ y $\Rn{m}$, respectivamente.
+donde $\norm{\cdot}_n$ y $\norm{\cdot}_m$ son las normas en $\Re^n$ y $\Rn{m}$, respectivamente.
 \end{itemize}
 \end{obs}
 
@@ -46,7 +46,7 @@ donde $\norm{\cdot}_n$ y $\norm{\cdot}_m$ son las normas en $\Rn{n}$ y $\Rn{m}$,
 \begin{theorem}[Unicidad del l\'imite] \label{teo:unicidad_limite}
 \mbox{}
 
-Sean $f:A \subset \Rn{n} \to \Rn{m}$ una funci\'on, $x_0$ un punto de acumulaci\'on de $A$ y $L_1, L_2 \in \Rn{m}$ tales que 
+Sean $f:A \subset \Re^n \to \Rn{m}$ una funci\'on, $x_0$ un punto de acumulaci\'on de $A$ y $L_1, L_2 \in \Rn{m}$ tales que 
 \[
  f(x) \xrightarrow[x \to x_o]{} L_1 \quad \wedge \quad f(x) \xrightarrow[x \to x_o]{} L_2.
 \]
@@ -113,7 +113,7 @@ Como
 \end{proof}
 
 \end{theorem}
-\begin{propertie}[\'algebra de l\'imites] \label{prop:alg_lim} Sean $f,g:A \subset \Rn{n} \to \Rn{m}$ funciones y $x_0$ un punto de acumulaci\'on de $A$. Supongamos que 
+\begin{propertie}[\'algebra de l\'imites] \label{prop:alg_lim} Sean $f,g:A \subset \Re^n \to \Rn{m}$ funciones y $x_0$ un punto de acumulaci\'on de $A$. Supongamos que 
   \begin{align*}
    &\lim_{x \to x_o} f(x) = L_1 \in \Rn{m} \\
    &\lim_{x \to x_o} g(x) = L_2 \in \Rn{m}.
@@ -134,9 +134,9 @@ Como
 \end{propertie}
 
 \begin{propertie} \label{prop:lim_x_comp}
- Sea $F: A \subset \Rn{n} \to \Rn{m}$ un campo vectorial y $x_0$ un punto de acumulaci\'on de $A$. Sean $f_j: A \subset \Rn{n} \to \R \, (j = 1,2, \dots, m)$ campos escalares tales que $F(x) = \left( f_1(x), f_2(x), \dots, f_m(x) \right) \, \forall x \in A$\footnote{Los campos escalares $f_j$ quedan determinados un\'ivocamente por $F$ de la siguiente manera: 
+ Sea $F: A \subset \Re^n \to \Rn{m}$ un campo vectorial y $x_0$ un punto de acumulaci\'on de $A$. Sean $f_j: A \subset \Re^n \to \R \, (j = 1,2, \dots, m)$ campos escalares tales que $F(x) = \left( f_1(x), f_2(x), \dots, f_m(x) \right) \, \forall x \in A$\footnote{Los campos escalares $f_j$ quedan determinados un\'ivocamente por $F$ de la siguiente manera: 
  \begin{align*}
-     f_j &: A \subset \Rn{n} \to \R \\
+     f_j &: A \subset \Re^n \to \R \\
      &f_j(x) = F(x) \cdot e_j,
  \end{align*} donde $e_j$ es el $j$-\'esimo vector can\'onico de $\Rn{m}$.}.\\
  Sea $L = \left( L_1, L_2, \dots, L_m \right) \in \Rn{m}$, $L_j \in \R \, \forall j = 1,2, \dots, m$. Entonces:
@@ -148,7 +148,7 @@ Como
 
 
   \begin{propertie} \label{prop:lim_1}
-    Sean $f:A \subset \Rn{n} \to \R$ una funci\'on y $x_0$ un punto de acumulaci\'on de $A$. Las siguientes proposiciones son equivalentes:
+    Sean $f:A \subset \Re^n \to \R$ una funci\'on y $x_0$ un punto de acumulaci\'on de $A$. Las siguientes proposiciones son equivalentes:
  \begin{enumerate} %[i.]
   \item $\lim_{x \to x_o} f(x) = 0$.
   \item $\lim_{x \to x_o} | f(x) | = 0$.
@@ -199,7 +199,7 @@ Como
 \end{propertie} 
 
 \begin{propertie} \label{prop:sandwich} %[Principio de intercalaci\'on]
-Sean $f, g, h : A \subset \Rn{n} \to \R$ funciones y $x_0$ un punto de acumulaci\'on de $A$. Supongamos que $\exists \delta_o > 0$ tal que 
+Sean $f, g, h : A \subset \Re^n \to \R$ funciones y $x_0$ un punto de acumulaci\'on de $A$. Supongamos que $\exists \delta_o > 0$ tal que 
 \[
  f(x) \le g(x) \le h(x) \, \forall x \in B_{\delta_o}(x_o) \cap A.
 \]
@@ -211,7 +211,7 @@ Si $\lim_{x \to x_o}f(x) = \lim_{x \to x_o}h(x) = L$, entonces
 \end{propertie}
 
 \begin{propertie} \label{prop:cero_x_acotada}
- Sean $f, g : A \subset \Rn{n} \to \R$ funciones y $x_0$ un punto de acumulaci\'on de $A$. Si $\exists \delta_o > 0$ tal que $f$ es acotada en $B_{\delta_o}(x_o) \cap A$ (i.e.: $\exists M > 0 \text{ tal que } \abs{f(x)} \le M \forall x \in  B_{\delta_o}(x_o) \cap A$) y $\lim_{x \to x_o}g(x) = 0$, entonces
+ Sean $f, g : A \subset \Re^n \to \R$ funciones y $x_0$ un punto de acumulaci\'on de $A$. Si $\exists \delta_o > 0$ tal que $f$ es acotada en $B_{\delta_o}(x_o) \cap A$ (i.e.: $\exists M > 0 \text{ tal que } \abs{f(x)} \le M \forall x \in  B_{\delta_o}(x_o) \cap A$) y $\lim_{x \to x_o}g(x) = 0$, entonces
 \[
  \lim_{x \to x_o}(f \cdot g)_{(x)} = 0.
 \]
@@ -247,7 +247,7 @@ Por lo tanto, por definici\'on de l\'imite,
 
 Sean $f, g$ funciones 
 \begin{align*}
- g &:A \subset \Rn{n} \to B \subset \Rn{m} \\
+ g &:A \subset \Re^n \to B \subset \Rn{m} \\
  f &:B \subset \Rn{m} \to \Rn{p},
 \end{align*}
 y puntos $a \in A', b \in B'$ tales que 
@@ -360,15 +360,15 @@ Una consecuencia directa de la propiedad \eqref{prop:lim_comp} es el siguiente c
 % }
 
 \begin{propertie}[L\'imites por conjuntos] \label{prop:lim_x_conj}
-   Sea $f : A \subset \Rn{n} \to \Rn{m}$ una funci\'on, con $A = A_1 \cup A_2$.\\
+   Sea $f : A \subset \Re^n \to \Rn{m}$ una funci\'on, con $A = A_1 \cup A_2$.\\
    Sea $f_1$ la \emph{restricci\'on de $f$ a $A_1$}:
  \begin{align*}
-  f_1 &: A_1 \subset \Rn{n} \to \Rn{m} \\
+  f_1 &: A_1 \subset \Re^n \to \Rn{m} \\
   &f_1(x) = f(x).
  \end{align*}
 Sea $f_2$ la \emph{restricci\'on de $f$ a $A_2$}:
  \begin{align*}
-  f_2 &: A_2 \subset \Rn{n} \to \Rn{m} \\
+  f_2 &: A_2 \subset \Re^n \to \Rn{m} \\
   &f_2(x) = f(x).
  \end{align*}
  Sean $x_o \in A_1' \cap A_2'$ y $L \in \Rn{m}$. Entonces
@@ -415,7 +415,7 @@ Como adem\'as $\lim_{(x,y) \to (0,0)} f_2(x,y) = 1$ y $A_1 \cup A_2 = \Rn{2}$, p
 \end{example}
 
 \begin{definition}[L\'imite infinito] \label{def:lim_inf}
-  Sean $f : A \subset \Rn{n} \to \R$ una funci\'on y $x_0$ un punto de acumulaci\'on de $A$. 
+  Sean $f : A \subset \Re^n \to \R$ una funci\'on y $x_0$ un punto de acumulaci\'on de $A$. 
   \begin{enumerate} %[I.]
    \item Decimos que \emph{el l\'imite de $f$ para $x$ tendiendo a $x_o$ es $+\infty$} o que \emph{$f$ tiende a $+\infty$ cuando $x$ tiende a $x_o$} si
     \[
@@ -448,7 +448,7 @@ Como adem\'as $\lim_{(x,y) \to (0,0)} f_2(x,y) = 1$ y $A_1 \cup A_2 = \Rn{2}$, p
 \end{definition}
 
 \begin{definition}[L\'imite en el infinito] \label{def:lim_x_inf}
-Sean $f : \Rn{n} \to \R$ una funci\'on y $L \in \R$. Decimos que
+Sean $f : \Re^n \to \R$ una funci\'on y $L \in \R$. Decimos que
 %la manera de presentar esta definici\'on no es consistente con las anteriores
 \[
  f(x) \xrightarrow[\norm{x} \to +\infty]{} L \quad \text{o} \quad \lim_{\norm{x} \to +\infty} f(x) = L
