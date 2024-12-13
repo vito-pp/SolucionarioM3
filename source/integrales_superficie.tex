@@ -1,0 +1,60 @@
+\begin{definition}
+    Sean $D\subseteq\Re^2$ y $\boldsymbol{\Sigma}:D\to\Re^3$ de clase $C^1$ y continua en todo $D$. Sea define la \textbf{superficie} de $S$ como $S=\text{Im}(\boldsymbol{\Sigma})$ y se dice que $\boldsymbol{\Sigma}$ es una \textbf{parametrizaci\'on} de $S$.
+\end{definition}
+
+\begin{definition}
+    Sea $\boldsymbol{\Sigma}:D\to\Re^3$ una parametrizaci\'on de $S$. Se define a $\Sigma$ como una \textbf{parametrizaci\'on regular} en $(u_0, v_0)$ si
+    \[
+        \boldsymbol{\Sigma}_u(u_0,v_0)\times\boldsymbol{\Sigma}(u_0,v_0)\neq \boldsymbol{0}.
+    \]
+    En tal caso, $S$ se llama superficie regular en $\boldsymbol{\Sigma}(u_0,v_0)$. Si $S$ es regular entonces admite una parametrizaci\'on regular en todo el interior de su dominio.
+\end{definition}
+
+\begin{definition}
+    Sea $S\subseteq\Rn{3}$. Se define a $S$ como \textbf{orientable} si existe un campo vectorial $\boldsymbol{\eta}:S\to\Rn{3}$, continuo talque $\boldsymbol{\eta}(p)$ es ortogonal a $S$ en $p$ y $\norm{\boldsymbol{\eta}(p)}=1\;\forall p\in S$. Al campo $\boldsymbol{\eta}$ se lo llama \textbf{orientaci\'on} de $S$.
+\end{definition}
+
+\textcolor{red}{Grafico superficie orientable y no orientable (cinta Möbius)}
+
+\begin{obs}
+    Sea $S$ una superficie orientable. Entonces $S$ admite dos orientaciones posibles: $\boldsymbol{\eta}$ y $-\boldsymbol{\eta}$.
+\end{obs}
+
+\begin{definition}
+    Sea $S\subseteq\Rn{3}$ una superficie orientada por $\boldsymbol{\eta}$. Sea $\boldsymbol{\Sigma}:D\subseteq\Rn{2}\to S$ una parametrizaci\'on continua de clase $C^1$ y regular de $S$.
+    \begin{itemize}
+        \item Si \[
+            \frac{\boldsymbol{\Sigma}_u\times\boldsymbol{\Sigma}_v}{\norm{\boldsymbol{\Sigma}_u\times\boldsymbol{\Sigma}_v}}(u,v)=\boldsymbol{\eta}\left(\boldsymbol{\Sigma}(u,v)\right),
+        \]  
+        decimos que $\boldsymbol{\Sigma}$ \textbf{preserva} la orientaci\'on de $S$.
+        \item Si \[
+            \frac{\boldsymbol{\Sigma}_u\times\boldsymbol{\Sigma}_v}{\norm{\boldsymbol{\Sigma}_u\times\boldsymbol{\Sigma}_v}}(u,v)=-\boldsymbol{\eta}\left(\boldsymbol{\Sigma}(u,v)\right),
+        \]
+        decimos que $\boldsymbol{\Sigma}$ \textbf{invierte} la orientaci\'on de $S$.  
+    \end{itemize}
+\end{definition}
+
+\begin{definition}
+    Sea $S\subseteq\Rn{3}$ una superficie orientada por $\boldsymbol{\eta}$. Sea $\mathbf{F}:S\to\Rn{3}$ un campo continuo en $S$. Se define la integral de superficie de $\mathbf{F}$ sobre $S$ y se onta por $\iint_S\mathbf{F}\;d\mathbf{S}$ a
+    \[
+        \iint_S \mathbf{F}\;d\mathbf{S}=\iint_S \mathbf{F}\cdot\boldsymbol{\eta}\;dS.
+    \]
+\end{definition}
+
+\textcolor{red}{Propiedad?} Sea $\boldsymbol{\Sigma}:D\subseteq\Rn{2}\to S\subseteq\Rn{3}$ una parametrizaci\'on de $S$ tal que $\boldsymbol{\Sigma}$ preserve la orientaci\'on, es decir
+\[
+    \frac{\boldsymbol{\Sigma}_u\times\boldsymbol{\Sigma}_v}{\norm{\boldsymbol{\Sigma}_u\times\boldsymbol{\Sigma}_v}}(u,v)=\boldsymbol{\eta}\left(\boldsymbol{\Sigma}(u,v)\right).
+\]
+Entonces, por definici\'on, 
+\begin{align*}
+    \iint_S \mathbf{F}\cdot d\mathbf{S}&=\iint_S \mathbf{F}\cdot\boldsymbol{\eta}\;dS=\iint_D (\mathbf{F}\cdot\boldsymbol{\eta})\circ\boldsymbol{\Sigma}\:\norm{\boldsymbol{\Sigma}_u\times\boldsymbol{\Sigma}_v}\;dudv\\[.2cm]
+    &=\iint_D (\mathbf{F}\circ\boldsymbol{\Sigma})\cdot(\boldsymbol{\eta}\circ\boldsymbol{\Sigma})\norm{\boldsymbol{\Sigma}_u\times\boldsymbol{\Sigma}_v}\;dudv=\iint_D \mathbf{F}\circ\boldsymbol{\Sigma}\cdot\left(\boldsymbol{\Sigma}_u\times\boldsymbol{\Sigma}_v\right)dudv.
+\end{align*}
+
+\begin{obs}
+    Sea $S$ una superficie con orientaci\'on $\boldsymbol{\eta}$. Sea $\boldsymbol{\Sigma}:D\subseteq\Rn{2}\to S\subseteq\Rn{3}$, una parametrizaci\'on de $S$ que invierte la orientaci\'on. Entonces
+    \[
+        \iint_S \mathbf{F}\cdot d\mathbf{S} = \iint_S \mathbf{F}\cdot\eta\;dS=-\iint_D \mathbf{F}\circ\boldsymbol{\Sigma}\cdot(\boldsymbol{\Sigma}_u\times\boldsymbol{\Sigma}_v)\:dudv.
+    \]
+\end{obs}
+

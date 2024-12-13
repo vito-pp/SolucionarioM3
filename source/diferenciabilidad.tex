@@ -2,7 +2,7 @@
 
 \begin{definition}[Diferenciabilidad de campos escalares] \label{def:dif_escalar}
 \mbox{}
-Sean $f: A \subset \Rn{n} \to \R$ y $x_o \in \interior{(A)}$. Decimos que $f$ es \emph{diferenciable en $x_o$} si $\exists m \in \Rn{n}$ tal que
+Sean $f: A \subset \Re^n \to \R$ y $x_o \in \interior{(A)}$. Decimos que $f$ es \emph{diferenciable en $x_o$} si $\exists m \in \Re^n$ tal que
 \[
   \lim_{x \to x_o} \frac{f(x) - f(x_o) - m \cdot (x - x_o)}{\norm{x - x_o}} = 0.
 \]
@@ -12,7 +12,7 @@ Si $A$ es un conjunto abierto, decimos que $f$ es \emph{diferenciable} si es dif
 \begin{definition}[Diferenciabilidad, caso general] \label{def:dif_general}
 \mbox{}
 
-Sean $f: A \subset \Rn{n} \to \Rn{m}$ y $x_o \in \interior{(A)}$. Decimos que $f$ es \emph{diferenciable en $x_o$} si $\exists M \in \Rnp{m}{n}$ tal que
+Sean $f: A \subset \Re^n \to \Rn{m}$ y $x_o \in \interior{(A)}$. Decimos que $f$ es \emph{diferenciable en $x_o$} si $\exists M \in \Rnp{m}{n}$ tal que
 \[
   \lim_{x \to x_o} \frac{\norm{f(x) - f(x_o) - M \cdot (x - x_o)}}{\norm{x - x_o}} = 0.
 \]
@@ -22,11 +22,11 @@ Si $A$ es un conjunto abierto, decimos que $f$ es \emph{diferenciable} si es dif
 \begin{theorem}[Diferenciabilidad y continuidad] \label{teo:difCont}
 \mbox{}
 
-Sean $f: A \subset \Rn{n} \to \R$ y $x_o \in \interior{(A)}$. Si $f$ es diferenciable en $x_o$, entonces $f$ es continua en $x_o$.
+Sean $f: A \subset \Re^n \to \R$ y $x_o \in \interior{(A)}$. Si $f$ es diferenciable en $x_o$, entonces $f$ es continua en $x_o$.
  \begin{proof}
  \mbox{}
  
- Como $f$ es diferenciable en $x_o, \exists m \in \Rn{n}$ tal que
+ Como $f$ es diferenciable en $x_o, \exists m \in \Re^n$ tal que
  \[
   \lim_{x \to x_o} \frac{f(x) - f(x_o) - m \cdot (x - x_o)}{\norm{x - x_o}} = 0.
  \]
@@ -136,7 +136,7 @@ Entonces, por la propiedad \eqref{prop:lim_2}, tenemos que
  \lim_{h \to 0} \frac{ f(x_o + h,y_o) - f(x_o,y_o) }{h} = \alpha,
 \]
 \fi
-Sean $f: A \subset \Rn{n} \to \R$ y $x_o \in \interior{(A)}$, tales que $\exists m = (m_1, m_2, \cdots, m_n) \in \Rn{n} \, /$
+Sean $f: A \subset \Re^n \to \R$ y $x_o \in \interior{(A)}$, tales que $\exists m = (m_1, m_2, \cdots, m_n) \in \Re^n \, /$
 \[
  \lim_{x \to x_o} \frac{f(x) - f(x_o) - m \cdot (x - x_o)}
                                  {\norm{x - x_o}} = 0
@@ -149,7 +149,7 @@ Sean $f: A \subset \Rn{n} \to \R$ y $x_o \in \interior{(A)}$, tales que $\exists
  \begin{proof}
  \mbox{}
  
-Sea $x = x_o + h e_j$, siendo $h \in \R$ y $e_j$ el $j$-\'esimo vector can\'onico (el vector de $\Rn{n}$ que tiene un $1$ en la posici\'on $j$ y ceros en todas las dem\'as). Es decir, definimos una funci\'on $g:(-\delta,\delta) \to \Rn{n} / g(h) = x_o + h e_j$, con $\delta > 0$, lo suficientemente peque\~{n}o como para que $\im(g) \subset A$ \footnote{¿Cul\'al de las hip\'otesis asegura la existencia de un tal $\delta$?}, y llamamos $x = g(h)$. Notemos que $g(h) \to x_o$ cuando $h \to 0$. 
+Sea $x = x_o + h e_j$, siendo $h \in \R$ y $e_j$ el $j$-\'esimo vector can\'onico (el vector de $\Re^n$ que tiene un $1$ en la posici\'on $j$ y ceros en todas las dem\'as). Es decir, definimos una funci\'on $g:(-\delta,\delta) \to \Re^n / g(h) = x_o + h e_j$, con $\delta > 0$, lo suficientemente peque\~{n}o como para que $\im(g) \subset A$ \footnote{¿Cul\'al de las hip\'otesis asegura la existencia de un tal $\delta$?}, y llamamos $x = g(h)$. Notemos que $g(h) \to x_o$ cuando $h \to 0$. 
 
 Por la diferenciabilidad, tenemos que 
 \[
@@ -240,7 +240,7 @@ Se deja como ejercicio para el lector la demostraci\'on de esta afirmaci\'on.
 
 Una consecuencia directa del teorema \eqref{teo:difDer} es el siguiente corolario:
 \begin{corollary}
- Sean $f: A \subset \Rn{n} \to \R$ y $x_o \in \interior{(A)}$. Son equivalentes:
+ Sean $f: A \subset \Re^n \to \R$ y $x_o \in \interior{(A)}$. Son equivalentes:
  \begin{enumerate} %[I.]
   \item $f$ es diferenciable en $x_o$;
   \item existen todas las derivadas parciales de $f$ en $x_o$ y 
@@ -254,7 +254,7 @@ Una consecuencia directa del teorema \eqref{teo:difDer} es el siguiente corolari
 % La idea es incluir tres demostraciones, una usando la misma idea que para la demo de las derivadas parciales, otra usando que el delta f se puede escribir de una determinada manera y construyendo el cociente incremental, una tercera utilizando la regla de la cadena
 \mbox{}
 
-Sea $f: A \subset \Rn{n} \to \R$ diferenciable en $x_o \in \interior{(A)}$. Entonces, $\forall \check{u} \in \Rn{n} \text{tal que } \norm{\check{u}} = 1$ existe en $x_o$ la derivada de $f$ en la direcci\'on de $\check{u}$ y, adem\'as,
+Sea $f: A \subset \Re^n \to \R$ diferenciable en $x_o \in \interior{(A)}$. Entonces, $\forall \check{u} \in \Re^n \text{tal que } \norm{\check{u}} = 1$ existe en $x_o$ la derivada de $f$ en la direcci\'on de $\check{u}$ y, adem\'as,
 \[
  \frac{\partial f}{\partial \check{u}} (x_o) = \grad f (x_o) \cdot \check{u}.
 \]
@@ -264,7 +264,7 @@ Sea $f: A \subset \Rn{n} \to \R$ diferenciable en $x_o \in \interior{(A)}$. Ento
  
  Sea $x = x_o + h \check{u}$, siendo $h \in \R$. Es decir, definimos una funci\'on 
  \begin{align*}
-      g & :(-\delta,\delta) \to \Rn{n} \\
+      g & :(-\delta,\delta) \to \Re^n \\
         & g(h) = x_o + h \check{u}
  \end{align*}
 
@@ -305,7 +305,7 @@ y por lo tanto, por definici\'on,
 \begin{theorem}[Valores extremos de la derivada direccional] \label{teo:max_deriv}
 \mbox{}
 
- Sean $f: A \subset \Rn{n} \to \R$ diferenciable en un punto $x_o \in \interior{(A)}$. Entonces 
+ Sean $f: A \subset \Re^n \to \R$ diferenciable en un punto $x_o \in \interior{(A)}$. Entonces 
  \[
   \max_{\norm{\check{u}} = 1} \frac{\partial f}{\partial \check{u}} (x_o) = \norm{\grad f (x_o)}, \quad 
   \min_{\norm{\check{u}} = 1} \frac{\partial f}{\partial \check{u}} (x_o) = -\norm{\grad f (x_o)}
@@ -321,7 +321,7 @@ y
 \begin{proof}
 \mbox{}
 
- Como $f$ es diferenciable en $x_o$, por el teorema \eqref{teo:difDir}, $\forall \check{u} \in \Rn{n} \text{tal que } \norm{\check{u}} = 1$ existe en $x_o$ la derivada de $f$ en la direcci\'on de $\check{u}$ y, adem\'as,
+ Como $f$ es diferenciable en $x_o$, por el teorema \eqref{teo:difDir}, $\forall \check{u} \in \Re^n \text{tal que } \norm{\check{u}} = 1$ existe en $x_o$ la derivada de $f$ en la direcci\'on de $\check{u}$ y, adem\'as,
 \[
  \frac{\partial f}{\partial \check{u}} (x_o) = \grad f (x_o) \cdot \check{u}.
 \]
@@ -360,7 +360,7 @@ y el m\'onimo se realiza en $\check{u}_2 = -\frac{\grad f(x_o)}{\norm{\grad f(x_
 
 Finalmente, observemos que, si $\grad f(x_o) = \mathbf{0}$, 
 \[
- \frac{\partial f}{\partial \check{u}} (x_o) = \grad f (x_o) \cdot \check{u} = 0 = \norm{\grad f(x_o)} \quad \forall \check{u} \in \Rn{n},
+ \frac{\partial f}{\partial \check{u}} (x_o) = \grad f (x_o) \cdot \check{u} = 0 = \norm{\grad f(x_o)} \quad \forall \check{u} \in \Re^n,
 \]
 y por lo tanto:
 \[
@@ -380,7 +380,7 @@ y
 
   Sean $f, g$ funciones 
     \begin{align*}
-    g &:A \subset \Rn{n} \to B \subset \Rn{m} \\
+    g &:A \subset \Re^n \to B \subset \Rn{m} \\
     f &:B \subset \Rn{m} \to \Rn{p},
     \end{align*}
   y un punto $x_o \in \interior{A} \text{ tal que } g(x_o) \in \interior{B}$. Supongamos que $g$ es diferenciable en $x_o$ y que $f$ es diferenciable en $yo = g(x_o)$. Entonces la composic\'on $f \circ g$ es diferenciable en $x_o$ y, adem\'as,
@@ -393,7 +393,7 @@ y
 \begin{theorem}[Teorema de la Funci\'on Inversa] \label{teo:inversa}
 \mbox{}
 
- Sean $A \subset \Rn{n}$ un conjunto abierto y $F: A \subset \Rn{n} \to \Rn{n}$ una funci\'on de clase $\mathcal{C}^1$. Sea $x_o \in A$ y supongamos que $\det(\mathbf{D}F_{(x_o)}) \ne 0$. Entonces existen un entorno abierto $U \subset A$ de $x_o$ y un entorno abierto $V \subset \Rn{n}$ de $F(x_o)$ tal que $F:U \to V$ (la restricci\'on de $F$ a $U$) tiene inversa $F^{-1}:V \to U$. Esta funci\'on $F^{-1}$ es de clase $\mathcal{C}^1$ y, adem\'as,
+ Sean $A \subset \Re^n$ un conjunto abierto y $F: A \subset \Re^n \to \Re^n$ una funci\'on de clase $\mathcal{C}^1$. Sea $x_o \in A$ y supongamos que $\det(\mathbf{D}F_{(x_o)}) \ne 0$. Entonces existen un entorno abierto $U \subset A$ de $x_o$ y un entorno abierto $V \subset \Re^n$ de $F(x_o)$ tal que $F:U \to V$ (la restricci\'on de $F$ a $U$) tiene inversa $F^{-1}:V \to U$. Esta funci\'on $F^{-1}$ es de clase $\mathcal{C}^1$ y, adem\'as,
  \[
   \mathbf{D}F^{-1}_{(F(x_o))} = \left[ \mathbf{D}F_{(x_o)} \right]^{-1}.
  \]
@@ -426,7 +426,7 @@ Sean $A \subset \Rn{3}$ un conjunto abierto y $F: A \to \R$ una funci\'on de cla
 \begin{theorem}[Teorema de la Funci\'on Impl\'icita] \label{teo:implicit}
 \mbox{}
 
- Sean $A \subset \Rn{n} \times \Rn{m}$ un conjunto abierto y $F: A \to \Rn{m}$ una funci\'on de clase $\mathcal{C}^1$. Sea $(x_o,z_o) \in A$ tal que $F(x_o,z_o) = \mathbf{0}$. Formemos el determinante
+ Sean $A \subset \Re^n \times \Rn{m}$ un conjunto abierto y $F: A \to \Rn{m}$ una funci\'on de clase $\mathcal{C}^1$. Sea $(x_o,z_o) \in A$ tal que $F(x_o,z_o) = \mathbf{0}$. Formemos el determinante
  \[
   \Delta = \det \begin{bmatrix*}[r]
                 \dif{f_1}{z_1} & \dif{f_1}{z_2} & \cdots & \dif{f_1}{z_m} \\
@@ -438,7 +438,7 @@ Sean $A \subset \Rn{3}$ un conjunto abierto y $F: A \to \R$ una funci\'on de cla
                 \dif{f_m}{z_1} & \dif{f_m}{z_2} & \cdots & \dif{f_m}{z_m}
                 \end{bmatrix*},
  \]
- donde $F = (f_1, f_2, \cdots , f_m)$ y todas las derivadas est\'on evaluadas en $(x_o,z_o)$. Si $\Delta \ne 0$, entonces existen un entorno abierto $U \subset \Rn{n}$ de $x_o$
+ donde $F = (f_1, f_2, \cdots , f_m)$ y todas las derivadas est\'on evaluadas en $(x_o,z_o)$. Si $\Delta \ne 0$, entonces existen un entorno abierto $U \subset \Re^n$ de $x_o$
  %, un entorno abierto $V \subset \Rn{m}$ de $z_o$ 
  y una \'onica funci\'on $g: U \to \Rn{m}$ tales que $g(x_o) = z_o$ y
  \[
