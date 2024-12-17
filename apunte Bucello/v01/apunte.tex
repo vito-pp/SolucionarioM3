@@ -15,9 +15,9 @@
 \section{Nociones de Topolog�a.} \label{sec:topo}
 
  \begin{definition} [Bola de radio $\delta$ y centro $x_o$] \label{def:bola}
- Sean $x_o \in \Re^n, \delta > 0$ y $\dis$ una distancia en $\Re^n$. La \emph{bola de radio $\delta$ y centro $x_o$}, que denotamos con $B_{\delta}(x_o)$, es el conjunto:
+ Sean $x_o \in \Rn{n}, \delta > 0$ y $\dis$ una distancia en $\Rn{n}$. La \emph{bola de radio $\delta$ y centro $x_o$}, que denotamos con $B_{\delta}(x_o)$, es el conjunto:
  \[
-  B_{\delta}(x_o) = \left\lbrace x \in \Re^n : \dis(x,x_o) < \delta \right\rbrace.
+  B_{\delta}(x_o) = \left\lbrace x \in \Rn{n} : \dis(x,x_o) < \delta \right\rbrace.
  \]
  El conjunto
  \[
@@ -28,7 +28,7 @@
 \end{definition}
 
 \begin{definition} [Punto interior, interior de un conjunto] \label{def:interior}
- Sean $A \subset \Re^n \text{ y } x_o \in A$. Decimos que $x_o$ es \emph{punto interior} de $A$ si
+ Sean $A \subset \Rn{n} \text{ y } x_o \in A$. Decimos que $x_o$ es \emph{punto interior} de $A$ si
  \[
   \exists \delta > 0 / B_{\delta}(x_o) \subset A.
  \]
@@ -39,65 +39,65 @@
 \end{definition}
 
 \begin{definition} [Conjunto abierto] \label{def:abierto}
-    Sea $A \subset \Re^n$. Decimos que $A$ es \emph{abierto} si
+    Sea $A \subset \Rn{n}$. Decimos que $A$ es \emph{abierto} si
 \[
      \forall x_o \in \exists \delta > 0 : B_{\delta}(x_o) \subset A.\footnote{\text{i.e.: $A$  es abierto si todos sus puntos son interiores.}}
 \]
 \end{definition}
 
 \begin{propiedad} \label{prop:abierto_int} 
-  Un conjunto $A \subset \Re^n$ es abierto si y solo si $A = \interior(A)$.
+  Un conjunto $A \subset \Rn{n}$ es abierto si y solo si $A = \interior(A)$.
 \end{propiedad}
 
 \begin{definition} [Conjunto cerrado] \label{def:cerrado}
- Sea $A \subset \Re^n$. Decimos que $A$ es \emph{cerrado} si su complemento $A^c = \Re^n - A$ es abierto.
+ Sea $A \subset \Rn{n}$. Decimos que $A$ es \emph{cerrado} si su complemento $A^c = \Rn{n} - A$ es abierto.
 \end{definition}
 
 \begin{definition} [Frontera de un conjunto] \label{def:frontera}
- Sea $A \subset \Re^n$. La \emph{frontera} de $A$, que denotamos con $\front A$ o $\frontera(A)$, es el conjunto:
+ Sea $A \subset \Rn{n}$. La \emph{frontera} de $A$, que denotamos con $\front A$ o $\frontera(A)$, es el conjunto:
  \[
-  \front A = \left\lbrace x_o \in \Re^n : \forall \delta > 0 \,
+  \front A = \left\lbrace x_o \in \Rn{n} : \forall \delta > 0 \,
   B_{\delta}(x_o) \cap A \ne \emptyset \wedge
   B_{\delta}(x_o) \cap A^c \ne \emptyset \right\rbrace.
  \]
 \end{definition}
 
 \begin{propiedad} \label{prop:cerrado_front}
- Un conjunto $A \subset \Re^n$ es cerrado si y solo si $\front A \subset A$.
+ Un conjunto $A \subset \Rn{n}$ es cerrado si y solo si $\front A \subset A$.
 \end{propiedad}
 
 \begin{definition} [Punto de acumulaci�n] \label{def:pto_acum}
- Sean $A \subset \Re^n \text{ y } x_o \in \Re^n$. Decimos que $x_o$ es \emph{punto de acumulaci�n} de $A$ si
+ Sean $A \subset \Rn{n} \text{ y } x_o \in \Rn{n}$. Decimos que $x_o$ es \emph{punto de acumulaci�n} de $A$ si
  \[
   \forall \delta > 0 \left( B_{\delta}(x_o) - \{ x_o \} \right) \cap A \ne \emptyset. 
  \]
  Denotamos el conjunto de todos los puntos de acumulaci�n de $A$ con $A'$:
  \[
-  A' = \{ x \in \Re^n : x \text{ es punto de acumulaci�n de } A \}.
+  A' = \{ x \in \Rn{n} : x \text{ es punto de acumulaci�n de } A \}.
  \]
 
 \end{definition}
 
 \begin{definition} [Entorno de un punto] \label{def:entorno}
- Sean $N \subset  \Re^n$ y $x_o \in \Re^n$. Decimos que $N$ es \emph{entorno} de $x_o$ si
+ Sean $N \subset  \Rn{n}$ y $x_o \in \Rn{n}$. Decimos que $N$ es \emph{entorno} de $x_o$ si
  \[
   \exists \delta > 0 : B_{\delta}(x_o) \subset N.
  \]
 \end{definition}
 
 \begin{definition} [Punto aislado] \label{def:pto_ais}
- Sean $A \subset  \Re^n$ y $x_o \in A$. Decimos que $x_o$ es \emph{punto aislado} de $A$ si $x_o$ no es punto de acumulaci�n de $A$.
+ Sean $A \subset  \Rn{n}$ y $x_o \in A$. Decimos que $x_o$ es \emph{punto aislado} de $A$ si $x_o$ no es punto de acumulaci�n de $A$.
 \end{definition}
 
 \begin{definition} [Conjunto acotado] \label{def:conj_acotado}
- Sea $A \subset \Re^n$. Decimos que $A$ es un \emph{conjunto acotado} si existe $\delta > 0$ tal que la bola de radio $\delta$  centrada en el origen contiene al conjunto $A$, es decir, si $\exists \delta > 0 : A \subset B_{\delta}(\mathbf{0})$.\\
- Equivalentemente, $A$ es un \emph{conjunto acotado} si $\exists \delta > 0, x_o \in \Re^n : A \subset B_{\delta}(x_o)$.
+ Sea $A \subset \Rn{n}$. Decimos que $A$ es un \emph{conjunto acotado} si existe $\delta > 0$ tal que la bola de radio $\delta$  centrada en el origen contiene al conjunto $A$, es decir, si $\exists \delta > 0 : A \subset B_{\delta}(\mathbf{0})$.\\
+ Equivalentemente, $A$ es un \emph{conjunto acotado} si $\exists \delta > 0, x_o \in \Rn{n} : A \subset B_{\delta}(x_o)$.
 \end{definition}
 
 
 \section{L�mite de funciones.} \label{sec:limites}
 \begin{definition} [L�mite] \label{def:limite}
-Sean $f:A \subset \Re^n \to \Rn{m}$ una funci�n, $L \in \Rn{m}$ y $x_0$ un punto de acumulaci�n de $A$. Decimos que \emph{el l�mite de $f$ para $x$ tendiendo a $x_o$ es $L$} o que \emph{$f$ tiende a $L$ cuando $x$ tiende a $x_o$}
+Sean $f:A \subset \Rn{n} \to \Rn{m}$ una funci�n, $L \in \Rn{m}$ y $x_0$ un punto de acumulaci�n de $A$. Decimos que \emph{el l�mite de $f$ para $x$ tendiendo a $x_o$ es $L$} o que \emph{$f$ tiende a $L$ cuando $x$ tiende a $x_o$}
 si
 \[
  \forall \varepsilon > 0 \, \exists \delta > 0 / f(x) \in B_{\varepsilon}(L) \, \forall 
@@ -122,19 +122,19 @@ es equivalente a
 
 \begin{obs} La definici�n de l�mite puede expresarse equivalentemente en t�rminos de distancias o de normas:
 \begin{itemize} 
- \item Sean $f:A \subset \Re^n \to \Rn{m}$ una funci�n, $L \in \Rn{m}$ y $x_0$ un punto de acumulaci�n de $A$. Decimos que \emph{el l�mite de $f$ para $x$ tendiendo a $x_o$ es $L$} o que \emph{$f$ tiende a $L$ cuando $x$ tiende a $x_o$} si
+ \item Sean $f:A \subset \Rn{n} \to \Rn{m}$ una funci�n, $L \in \Rn{m}$ y $x_0$ un punto de acumulaci�n de $A$. Decimos que \emph{el l�mite de $f$ para $x$ tendiendo a $x_o$ es $L$} o que \emph{$f$ tiende a $L$ cuando $x$ tiende a $x_o$} si
 \[
  \forall \varepsilon > 0 \, \exists \delta > 0 / \dis_m {(f(x),L)} < \varepsilon \, \forall 
  x\in A : 0 < \dis_n {(x,x_o)} < \delta,
 \] 
-donde $\dis_n$ y $\dis_m$ son las distancias en $\Re^n$ y $\Rn{m}$, respectivamente.
+donde $\dis_n$ y $\dis_m$ son las distancias en $\Rn{n}$ y $\Rn{m}$, respectivamente.
 
- \item Sean $f:A \subset \Re^n \to \Rn{m}$ una funci�n, $L \in \Rn{m}$ y $x_0$ un punto de acumulaci�n de $A$. Decimos que \emph{el l�mite de $f$ para $x$ tendiendo a $x_o$ es $L$} o que \emph{$f$ tiende a $L$ cuando $x$ tiende a $x_o$} si
+ \item Sean $f:A \subset \Rn{n} \to \Rn{m}$ una funci�n, $L \in \Rn{m}$ y $x_0$ un punto de acumulaci�n de $A$. Decimos que \emph{el l�mite de $f$ para $x$ tendiendo a $x_o$ es $L$} o que \emph{$f$ tiende a $L$ cuando $x$ tiende a $x_o$} si
 \[
  \forall \varepsilon > 0 \, \exists \delta > 0 / \norm{f(x) - L}_m < \varepsilon \, \forall 
  x\in A : 0 < \norm{x - x_o}_n < \delta,
 \] 
-donde $\norm{\cdot}_n$ y $\norm{\cdot}_m$ son las normas en $\Re^n$ y $\Rn{m}$, respectivamente.
+donde $\norm{\cdot}_n$ y $\norm{\cdot}_m$ son las normas en $\Rn{n}$ y $\Rn{m}$, respectivamente.
 \end{itemize}
 \end{obs}
 
@@ -143,7 +143,7 @@ donde $\norm{\cdot}_n$ y $\norm{\cdot}_m$ son las normas en $\Re^n$ y $\Rn{m}$, 
 \begin{theorem}[Unicidad del l�mite] \label{teo:unicidad_limite}
 \mbox{}
 
-Sean $f:A \subset \Re^n \to \Rn{m}$ una funci�n, $x_0$ un punto de acumulaci�n de $A$ y $L_1, L_2 \in \Rn{m}$ tales que 
+Sean $f:A \subset \Rn{n} \to \Rn{m}$ una funci�n, $x_0$ un punto de acumulaci�n de $A$ y $L_1, L_2 \in \Rn{m}$ tales que 
 \[
  f(x) \xrightarrow[x \to x_o]{} L_1 \quad \wedge \quad f(x) \xrightarrow[x \to x_o]{} L_2.
 \]
@@ -211,7 +211,7 @@ Como
 \end{proof}
 
 \end{theorem}
-\begin{propiedad}[�lgebra de l�mites] \label{prop:alg_lim} Sean $f,g:A \subset \Re^n \to \Rn{m}$ funciones y $x_0$ un punto de acumulaci�n de $A$. Supongamos que 
+\begin{propiedad}[�lgebra de l�mites] \label{prop:alg_lim} Sean $f,g:A \subset \Rn{n} \to \Rn{m}$ funciones y $x_0$ un punto de acumulaci�n de $A$. Supongamos que 
   \begin{align*}
    &\lim_{x \to x_o} f(x) = L_1 \in \Rn{m} \\
    &\lim_{x \to x_o} g(x) = L_2 \in \Rn{m}.
@@ -232,9 +232,9 @@ Como
 \end{propiedad}
 
 \begin{propiedad} \label{prop:lim_x_comp}
- Sea $F: A \subset \Re^n \to \Rn{m}$ un campo vectorial y $x_0$ un punto de acumulaci�n de $A$. Sean $f_j: A \subset \Re^n \to \R \, (j = 1,2, \dots, m)$ campos escalares tales que $F(x) = \left( f_1(x), f_2(x), \dots, f_m(x) \right) \, \forall x \in A$\footnote{Los campos escalares $f_j$ quedan determinados un�vocamente por $F$ de la siguiente manera: 
+ Sea $F: A \subset \Rn{n} \to \Rn{m}$ un campo vectorial y $x_0$ un punto de acumulaci�n de $A$. Sean $f_j: A \subset \Rn{n} \to \R \, (j = 1,2, \dots, m)$ campos escalares tales que $F(x) = \left( f_1(x), f_2(x), \dots, f_m(x) \right) \, \forall x \in A$\footnote{Los campos escalares $f_j$ quedan determinados un�vocamente por $F$ de la siguiente manera: 
  \begin{align*}
-     f_j &: A \subset \Re^n \to \R \\
+     f_j &: A \subset \Rn{n} \to \R \\
      &f_j(x) = F(x) \cdot e_j,
  \end{align*} donde $e_j$ es el $j$-�simo vector can�nico de $\Rn{m}$.}.\\
  Sea $L = \left( L_1, L_2, \dots, L_m \right) \in \Rn{m}$, $L_j \in \R \, \forall j = 1,2, \dots, m$. Entonces:
@@ -246,7 +246,7 @@ Como
 
 
   \begin{propiedad} \label{prop:lim_1}
-    Sean $f:A \subset \Re^n \to \R$ una funci�n y $x_0$ un punto de acumulaci�n de $A$. Las siguientes proposiciones son equivalentes:
+    Sean $f:A \subset \Rn{n} \to \R$ una funci�n y $x_0$ un punto de acumulaci�n de $A$. Las siguientes proposiciones son equivalentes:
  \begin{enumerate} [i.]
   \item $\lim_{x \to x_o} f(x) = 0$.
   \item $\lim_{x \to x_o} \abs{ f(x) } = 0$.
@@ -297,7 +297,7 @@ Como
 \end{propiedad} 
 
 \begin{propiedad} \label{prop:sandwich} %[Principio de intercalaci�n]
-Sean $f, g, h : A \subset \Re^n \to \R$ funciones y $x_0$ un punto de acumulaci�n de $A$. Supongamos que $\exists \delta_o > 0$ tal que 
+Sean $f, g, h : A \subset \Rn{n} \to \R$ funciones y $x_0$ un punto de acumulaci�n de $A$. Supongamos que $\exists \delta_o > 0$ tal que 
 \[
  f(x) \le g(x) \le h(x) \, \forall x \in B_{\delta_o}(x_o) \cap A.
 \]
@@ -309,7 +309,7 @@ Si $\lim_{x \to x_o}f(x) = \lim_{x \to x_o}h(x) = L$, entonces
 \end{propiedad}
 
 \begin{propiedad} \label{prop:cero_x_acotada}
- Sean $f, g : A \subset \Re^n \to \R$ funciones y $x_0$ un punto de acumulaci�n de $A$. Si $\exists \delta_o > 0$ tal que $f$ es acotada en $B_{\delta_o}(x_o) \cap A$ (i.e.: $\exists M > 0 \text{ tal que } \abs{f(x)} \le M \forall x \in  B_{\delta_o}(x_o) \cap A$) y $\lim_{x \to x_o}g(x) = 0$, entonces
+ Sean $f, g : A \subset \Rn{n} \to \R$ funciones y $x_0$ un punto de acumulaci�n de $A$. Si $\exists \delta_o > 0$ tal que $f$ es acotada en $B_{\delta_o}(x_o) \cap A$ (i.e.: $\exists M > 0 \text{ tal que } \abs{f(x)} \le M \forall x \in  B_{\delta_o}(x_o) \cap A$) y $\lim_{x \to x_o}g(x) = 0$, entonces
 \[
  \lim_{x \to x_o}(f \cdot g)_{(x)} = 0.
 \]
@@ -345,7 +345,7 @@ Por lo tanto, por definici�n de l�mite,
 
 Sean $f, g$ funciones 
 \begin{align*}
- g &:A \subset \Re^n \to B \subset \Rn{m} \\
+ g &:A \subset \Rn{n} \to B \subset \Rn{m} \\
  f &:B \subset \Rn{m} \to \Rn{p},
 \end{align*}
 y puntos $a \in A', b \in B'$ tales que 
@@ -458,15 +458,15 @@ Una consecuencia directa de la propiedad \eqref{prop:lim_comp} es el siguiente c
 % }
 
 \begin{propiedad}[L�mites por conjuntos] \label{prop:lim_x_conj}
-   Sea $f : A \subset \Re^n \to \Rn{m}$ una funci�n, con $A = A_1 \cup A_2$.\\
+   Sea $f : A \subset \Rn{n} \to \Rn{m}$ una funci�n, con $A = A_1 \cup A_2$.\\
    Sea $f_1$ la \emph{restricci�n de $f$ a $A_1$}:
  \begin{align*}
-  f_1 &: A_1 \subset \Re^n \to \Rn{m} \\
+  f_1 &: A_1 \subset \Rn{n} \to \Rn{m} \\
   &f_1(x) = f(x).
  \end{align*}
 Sea $f_2$ la \emph{restricci�n de $f$ a $A_2$}:
  \begin{align*}
-  f_2 &: A_2 \subset \Re^n \to \Rn{m} \\
+  f_2 &: A_2 \subset \Rn{n} \to \Rn{m} \\
   &f_2(x) = f(x).
  \end{align*}
  Sean $x_o \in A_1' \cap A_2'$ y $L \in \Rn{m}$. Entonces
@@ -513,7 +513,7 @@ Como adem�s $\lim_{(x,y) \to (0,0)} f_2(x,y) = 1$ y $A_1 \cup A_2 = \Rn{2}$, p
 \end{exmp}
 
 \begin{definition}[L�mite infinito] \label{def:lim_inf}
-  Sean $f : A \subset \Re^n \to \R$ una funci�n y $x_0$ un punto de acumulaci�n de $A$. 
+  Sean $f : A \subset \Rn{n} \to \R$ una funci�n y $x_0$ un punto de acumulaci�n de $A$. 
   \begin{enumerate} [I.]
    \item Decimos que \emph{el l�mite de $f$ para $x$ tendiendo a $x_o$ es $+\infty$} o que \emph{$f$ tiende a $+\infty$ cuando $x$ tiende a $x_o$} si
     \[
@@ -546,7 +546,7 @@ Como adem�s $\lim_{(x,y) \to (0,0)} f_2(x,y) = 1$ y $A_1 \cup A_2 = \Rn{2}$, p
 \end{definition}
 
 \begin{definition}[L�mite en el infinito] \label{def:lim_x_inf}
-Sean $f : \Re^n \to \R$ una funci�n y $L \in \R$. Decimos que
+Sean $f : \Rn{n} \to \R$ una funci�n y $L \in \R$. Decimos que
 %la manera de presentar esta definici�n no es consistente con las anteriores
 \[
  f(x) \xrightarrow[\norm{x} \to +\infty]{} L \quad \text{o} \quad \lim_{\norm{x} \to +\infty} f(x) = L
@@ -573,7 +573,7 @@ si
 
 \begin{definition}[Diferenciabilidad de campos escalares] \label{def:dif_escalar}
 \mbox{}
-Sean $f: A \subset \Re^n \to \R$ y $x_o \in \interior{(A)}$. Decimos que $f$ es \emph{diferenciable en $x_o$} si $\exists m \in \Re^n$ tal que
+Sean $f: A \subset \Rn{n} \to \R$ y $x_o \in \interior{(A)}$. Decimos que $f$ es \emph{diferenciable en $x_o$} si $\exists m \in \Rn{n}$ tal que
 \[
   \lim_{x \to x_o} \frac{f(x) - f(x_o) - m \cdot (x - x_o)}{\norm{x - x_o}} = 0.
 \]
@@ -583,7 +583,7 @@ Si $A$ es un conjunto abierto, decimos que $f$ es \emph{diferenciable} si es dif
 \begin{definition}[Diferenciabilidad, caso general] \label{def:dif_general}
 \mbox{}
 
-Sean $f: A \subset \Re^n \to \Rn{m}$ y $x_o \in \interior{(A)}$. Decimos que $f$ es \emph{diferenciable en $x_o$} si $\exists M \in \Rnp{m}{n}$ tal que
+Sean $f: A \subset \Rn{n} \to \Rn{m}$ y $x_o \in \interior{(A)}$. Decimos que $f$ es \emph{diferenciable en $x_o$} si $\exists M \in \Rnp{m}{n}$ tal que
 \[
   \lim_{x \to x_o} \frac{\norm{f(x) - f(x_o) - M \cdot (x - x_o)}}{\norm{x - x_o}} = 0.
 \]
@@ -593,11 +593,11 @@ Si $A$ es un conjunto abierto, decimos que $f$ es \emph{diferenciable} si es dif
 \begin{theorem}[Diferenciabilidad y continuidad] \label{teo:difCont}
 \mbox{}
 
-Sean $f: A \subset \Re^n \to \R$ y $x_o \in \interior{(A)}$. Si $f$ es diferenciable en $x_o$, entonces $f$ es continua en $x_o$.
+Sean $f: A \subset \Rn{n} \to \R$ y $x_o \in \interior{(A)}$. Si $f$ es diferenciable en $x_o$, entonces $f$ es continua en $x_o$.
  \begin{proof}
  \mbox{}
  
- Como $f$ es diferenciable en $x_o, \exists m \in \Re^n$ tal que
+ Como $f$ es diferenciable en $x_o, \exists m \in \Rn{n}$ tal que
  \[
   \lim_{x \to x_o} \frac{f(x) - f(x_o) - m \cdot (x - x_o)}{\norm{x - x_o}} = 0.
  \]
@@ -707,7 +707,7 @@ Entonces, por la propiedad \eqref{prop:lim_2}, tenemos que
  \lim_{h \to 0} \frac{ f(x_o + h,y_o) - f(x_o,y_o) }{h} = \alpha,
 \]
 \fi
-Sean $f: A \subset \Re^n \to \R$ y $x_o \in \interior{(A)}$, tales que $\exists m = (m_1, m_2, \cdots, m_n) \in \Re^n \, /$
+Sean $f: A \subset \Rn{n} \to \R$ y $x_o \in \interior{(A)}$, tales que $\exists m = (m_1, m_2, \cdots, m_n) \in \Rn{n} \, /$
 \[
  \lim_{x \to x_o} \frac{f(x) - f(x_o) - m \cdot (x - x_o)}
                                  {\norm{x - x_o}} = 0
@@ -720,7 +720,7 @@ Sean $f: A \subset \Re^n \to \R$ y $x_o \in \interior{(A)}$, tales que $\exists 
  \begin{proof}
  \mbox{}
  
-Sea $x = x_o + h e_j$, siendo $h \in \R$ y $e_j$ el $j$-�simo vector can�nico (el vector de $\Re^n$ que tiene un $1$ en la posici�n $j$ y ceros en todas las dem�s). Es decir, definimos una funci�n $g:(-\delta,\delta) \to \Re^n / g(h) = x_o + h e_j$, con $\delta > 0$, lo suficientemente peque�o como para que $\im(g) \subset A$ \footnote{�Cu�l de las hip�teis asegura la existencia de un tal $\delta$?}, y llamamos $x = g(h)$. Notemos que $g(h) \to x_o$ cuando $h \to 0$. 
+Sea $x = x_o + h e_j$, siendo $h \in \R$ y $e_j$ el $j$-�simo vector can�nico (el vector de $\Rn{n}$ que tiene un $1$ en la posici�n $j$ y ceros en todas las dem�s). Es decir, definimos una funci�n $g:(-\delta,\delta) \to \Rn{n} / g(h) = x_o + h e_j$, con $\delta > 0$, lo suficientemente peque�o como para que $\im(g) \subset A$ \footnote{�Cu�l de las hip�teis asegura la existencia de un tal $\delta$?}, y llamamos $x = g(h)$. Notemos que $g(h) \to x_o$ cuando $h \to 0$. 
 
 Por la diferenciabilidad, tenemos que 
 \[
@@ -811,7 +811,7 @@ Se deja como ejercicio para el lector la demostraci�n de esta afirmaci�n.
 
 Una consecuencia directa del teorema \eqref{teo:difDer} es el siguiente corolario:
 \begin{corolario}
- Sean $f: A \subset \Re^n \to \R$ y $x_o \in \interior{(A)}$. Son equivalentes:
+ Sean $f: A \subset \Rn{n} \to \R$ y $x_o \in \interior{(A)}$. Son equivalentes:
  \begin{enumerate} [I.]
   \item $f$ es diferenciable en $x_o$;
   \item existen todas las derivadas parciales de $f$ en $x_o$ y 
@@ -825,7 +825,7 @@ Una consecuencia directa del teorema \eqref{teo:difDer} es el siguiente corolari
 % La idea es incluir tres demostraciones, una usando la misma idea que para la demo de las derivadas parciales, otra usando que el delta f se puede escribir de una determinada manera y construyendo el cociente incremental, una tercera utilizando la regla de la cadena
 \mbox{}
 
-Sea $f: A \subset \Re^n \to \R$ diferenciable en $x_o \in \interior{(A)}$. Entonces, $\forall \check{u} \in \Re^n \text{tal que } \norm{\check{u}} = 1$ existe en $x_o$ la derivada de $f$ en la direcci�n de $\check{u}$ y, adem�s,
+Sea $f: A \subset \Rn{n} \to \R$ diferenciable en $x_o \in \interior{(A)}$. Entonces, $\forall \check{u} \in \Rn{n} \text{tal que } \norm{\check{u}} = 1$ existe en $x_o$ la derivada de $f$ en la direcci�n de $\check{u}$ y, adem�s,
 \[
  \frac{\partial f}{\partial \check{u}} (x_o) = \grad f (x_o) \cdot \check{u}.
 \]
@@ -835,7 +835,7 @@ Sea $f: A \subset \Re^n \to \R$ diferenciable en $x_o \in \interior{(A)}$. Enton
  
  Sea $x = x_o + h \check{u}$, siendo $h \in \R$. Es decir, definimos una funci�n 
  \begin{align*}
-      g & :(-\delta,\delta) \to \Re^n \\
+      g & :(-\delta,\delta) \to \Rn{n} \\
         & g(h) = x_o + h \check{u}
  \end{align*}
 
@@ -876,7 +876,7 @@ y por lo tanto, por definici�n,
 \begin{theorem}[Valores extremos de la derivada direccional] \label{teo:max_deriv}
 \mbox{}
 
- Sean $f: A \subset \Re^n \to \R$ diferenciable en un punto $x_o \in \interior{(A)}$. Entonces 
+ Sean $f: A \subset \Rn{n} \to \R$ diferenciable en un punto $x_o \in \interior{(A)}$. Entonces 
  \[
   \max_{\norm{\check{u}} = 1} \frac{\partial f}{\partial \check{u}} (x_o) = \norm{\grad f (x_o)}, \quad 
   \min_{\norm{\check{u}} = 1} \frac{\partial f}{\partial \check{u}} (x_o) = -\norm{\grad f (x_o)}
@@ -892,7 +892,7 @@ y
 \begin{proof}
 \mbox{}
 
- Como $f$ es diferenciable en $x_o$, por el teorema \eqref{teo:difDir}, $\forall \check{u} \in \Re^n \text{tal que } \norm{\check{u}} = 1$ existe en $x_o$ la derivada de $f$ en la direcci�n de $\check{u}$ y, adem�s,
+ Como $f$ es diferenciable en $x_o$, por el teorema \eqref{teo:difDir}, $\forall \check{u} \in \Rn{n} \text{tal que } \norm{\check{u}} = 1$ existe en $x_o$ la derivada de $f$ en la direcci�n de $\check{u}$ y, adem�s,
 \[
  \frac{\partial f}{\partial \check{u}} (x_o) = \grad f (x_o) \cdot \check{u}.
 \]
@@ -931,7 +931,7 @@ y el m�nimo se realiza en $\check{u}_2 = -\frac{\grad f(x_o)}{\norm{\grad f(x_
 
 Finalmente, observemos que, si $\grad f(x_o) = \mathbf{0}$, 
 \[
- \frac{\partial f}{\partial \check{u}} (x_o) = \grad f (x_o) \cdot \check{u} = 0 = \norm{\grad f(x_o)} \quad \forall \check{u} \in \Re^n,
+ \frac{\partial f}{\partial \check{u}} (x_o) = \grad f (x_o) \cdot \check{u} = 0 = \norm{\grad f(x_o)} \quad \forall \check{u} \in \Rn{n},
 \]
 y por lo tanto:
 \[
@@ -951,7 +951,7 @@ y
 
   Sean $f, g$ funciones 
     \begin{align*}
-    g &:A \subset \Re^n \to B \subset \Rn{m} \\
+    g &:A \subset \Rn{n} \to B \subset \Rn{m} \\
     f &:B \subset \Rn{m} \to \Rn{p},
     \end{align*}
   y un punto $x_o \in \interior{A} \text{ tal que } g(x_o) \in \interior{B}$. Supongamos que $g$ es diferenciable en $x_o$ y que $f$ es diferenciable en $yo = g(x_o)$. Entonces la composic�n $f \circ g$ es diferenciable en $x_o$ y, adem�s,
@@ -964,7 +964,7 @@ y
 \begin{theorem}[Teorema de la Funci�n Inversa] \label{teo:inversa}
 \mbox{}
 
- Sean $A \subset \Re^n$ un conjunto abierto y $F: A \subset \Re^n \to \Re^n$ una funci�n de clase $\mathcal{C}^1$. Sea $x_o \in A$ y supongamos que $\det(\mathbf{D}F_{(x_o)}) \ne 0$. Entonces existen un entorno abierto $U \subset A$ de $x_o$ y un entorno abierto $V \subset \Re^n$ de $F(x_o)$ tal que $F:U \to V$ (la restricci�n de $F$ a $U$) tiene inversa $F^{-1}:V \to U$. Esta funci�n $F^{-1}$ es de clase $\mathcal{C}^1$ y, adem�s,
+ Sean $A \subset \Rn{n}$ un conjunto abierto y $F: A \subset \Rn{n} \to \Rn{n}$ una funci�n de clase $\mathcal{C}^1$. Sea $x_o \in A$ y supongamos que $\det(\mathbf{D}F_{(x_o)}) \ne 0$. Entonces existen un entorno abierto $U \subset A$ de $x_o$ y un entorno abierto $V \subset \Rn{n}$ de $F(x_o)$ tal que $F:U \to V$ (la restricci�n de $F$ a $U$) tiene inversa $F^{-1}:V \to U$. Esta funci�n $F^{-1}$ es de clase $\mathcal{C}^1$ y, adem�s,
  \[
   \mathbf{D}F^{-1}_{(F(x_o))} = \left[ \mathbf{D}F_{(x_o)} \right]^{-1}.
  \]
@@ -997,7 +997,7 @@ Sean $A \subset \Rn{3}$ un conjunto abierto y $F: A \to \R$ una funci�n de cla
 \begin{theorem}[Teorema de la Funci�n Impl�cita] \label{teo:implicit}
 \mbox{}
 
- Sean $A \subset \Re^n \times \Rn{m}$ un conjunto abierto y $F: A \to \Rn{m}$ una funci�n de clase $\mathcal{C}^1$. Sea $(x_o,z_o) \in A$ tal que $F(x_o,z_o) = \mathbf{0}$. Formemos el determinante
+ Sean $A \subset \Rn{n} \times \Rn{m}$ un conjunto abierto y $F: A \to \Rn{m}$ una funci�n de clase $\mathcal{C}^1$. Sea $(x_o,z_o) \in A$ tal que $F(x_o,z_o) = \mathbf{0}$. Formemos el determinante
  \[
   \Delta = \det \begin{bmatrix*}[r]
                 \dif{f_1}{z_1} & \dif{f_1}{z_2} & \cdots & \dif{f_1}{z_m} \\
@@ -1009,7 +1009,7 @@ Sean $A \subset \Rn{3}$ un conjunto abierto y $F: A \to \R$ una funci�n de cla
                 \dif{f_m}{z_1} & \dif{f_m}{z_2} & \cdots & \dif{f_m}{z_m}
                 \end{bmatrix*},
  \]
- donde $F = (f_1, f_2, \cdots , f_m)$ y todas las derivadas est�n evaluadas en $(x_o,z_o)$. Si $\Delta \ne 0$, entonces existen un entorno abierto $U \subset \Re^n$ de $x_o$
+ donde $F = (f_1, f_2, \cdots , f_m)$ y todas las derivadas est�n evaluadas en $(x_o,z_o)$. Si $\Delta \ne 0$, entonces existen un entorno abierto $U \subset \Rn{n}$ de $x_o$
  %, un entorno abierto $V \subset \Rn{m}$ de $z_o$ 
  y una �nica funci�n $g: U \to \Rn{m}$ tales que $g(x_o) = z_o$ y
  \[
@@ -1054,7 +1054,7 @@ Si $F$ es de clase $\mathcal{C}^p, p \ge 1,$ entonces $g$ tambi�n.
 \begin{definition} [Extremos locales y globales] \label{def:extremos}
  \mbox{}
  
- Sean $f: A \subset \Re^n \to \R$ y $x_o \in A$. Decimos que:
+ Sean $f: A \subset \Rn{n} \to \R$ y $x_o \in A$. Decimos que:
  \begin{itemize}
   \item $f \text{ tiene un \emph{m�ximo local} o \emph{relativo} en } x_o \text{ si } \exists \delta > 0 : f(x_o) \ge f(x) \forall x \in B_{\delta}(x_o) \cap A.$ 
   \item $f \text{ tiene un \emph{m�nimo local} o \emph{relativo} en } x_o \text{ si } \exists \delta > 0 : f(x_o) \le f(x) \forall x \in B_{\delta}(x_o) \cap A.$
@@ -1068,18 +1068,18 @@ Si $F$ es de clase $\mathcal{C}^p, p \ge 1,$ entonces $g$ tambi�n.
 \end{definition}
 
 \begin{theorem}[Condici�n necesaria de extremo] \label{teo:grad_nulo}
- Sea $f: A \subset \Re^n \to \R$ diferenciable en alg�n entorno abierto de $x_o \in \interior{(A)}$. Supongamos que $f$ tiene un extremo en $x_o$. Entonces
+ Sea $f: A \subset \Rn{n} \to \R$ diferenciable en alg�n entorno abierto de $x_o \in \interior{(A)}$. Supongamos que $f$ tiene un extremo en $x_o$. Entonces
  \[
   \grad f(x_o) = \mathbf{0}.
  \]
 \end{theorem}
 
 \begin{definition} [Punto cr�tico] \label{def:pto_crit}
- Sean $f: A \subset \Re^n \to \R$ y $x_o \in \interior{(A)}$. Decimos que $x_o$ es un \emph{punto cr�tico} de $f$ si $f$ no es diferenciable en $x_o$ o $\grad f_{(x_o)} = \mathbf{0}$.
+ Sean $f: A \subset \Rn{n} \to \R$ y $x_o \in \interior{(A)}$. Decimos que $x_o$ es un \emph{punto cr�tico} de $f$ si $f$ no es diferenciable en $x_o$ o $\grad f_{(x_o)} = \mathbf{0}$.
 \end{definition}
 
 \begin{definition} [Punto silla] \label{def:pto_silla}
- Sean $f: A \subset \Re^n \to \R$ y $x_o \in \interior{(A)}$. Si $x_o$ es un punto cr�tico de $f$ y $f$ no tiene un extremo en $x_o$, decimos que $f$ tiene un \emph{punto silla} en $x_o$.
+ Sean $f: A \subset \Rn{n} \to \R$ y $x_o \in \interior{(A)}$. Si $x_o$ es un punto cr�tico de $f$ y $f$ no tiene un extremo en $x_o$, decimos que $f$ tiene un \emph{punto silla} en $x_o$.
 \end{definition}
 
 
@@ -1099,11 +1099,11 @@ Si $F$ es de clase $\mathcal{C}^p, p \ge 1,$ entonces $g$ tambi�n.
 \end{theorem}
 
 \begin{theorem}[de los valores extremos de Weierstrass] \label{teo:weier}difDir
-  Sean $A \subset \Re^n$ un conjunto cerrado y acotado y $f: A \subset \Re^n \to \R$ una funci�n continua. Entonces $f$ alcanza un m�ximo y un m�nimo absoluto en $A$.
+  Sean $A \subset \Rn{n}$ un conjunto cerrado y acotado y $f: A \subset \Rn{n} \to \R$ una funci�n continua. Entonces $f$ alcanza un m�ximo y un m�nimo absoluto en $A$.
 \end{theorem}
 
 \begin{theorem} [M�todo de multiplicadores de Lagrange] \label{teo:lagrange}
-    Sean $f:U \subset \Re^n \to \R$ y $g:U \subset \Re^n \to \R$ funciones de clase $\mathcal{C}^1$. Sea $x_o \in U$ y sea $c = g(x_o)$. Sea $S$ el conjunto de nivel $c$ de $g$. Supongamos que $\grad g (x_o) \ne \mathbf{0}$. Si $f|S$ (que denota a la restricci�n de $f$ a $S$) tiene un extremo local en $x_o$, entonces $\exists \lambda \in \R$ tal que
+    Sean $f:U \subset \Rn{n} \to \R$ y $g:U \subset \Rn{n} \to \R$ funciones de clase $\mathcal{C}^1$. Sea $x_o \in U$ y sea $c = g(x_o)$. Sea $S$ el conjunto de nivel $c$ de $g$. Supongamos que $\grad g (x_o) \ne \mathbf{0}$. Si $f|S$ (que denota a la restricci�n de $f$ a $S$) tiene un extremo local en $x_o$, entonces $\exists \lambda \in \R$ tal que
     \[
      \grad f (x_o) = \lambda \grad g (x_o).
     \]

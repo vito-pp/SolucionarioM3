@@ -26,7 +26,7 @@
 %------------Ejercicio 3---------------------------------------
 
 \begin{question}
-    Sea $S$ el conjunto de puntos en  $\Re^{3}$  que forman la esfera de centro $(3,4,5)$ tal que el $(0,0,0) \in S$.
+    Sea $S$ el conjunto de puntos en  $\Rn{3}$  que forman la esfera de centro $(3,4,5)$ tal que el $(0,0,0) \in S$.
     \begin{itemize}
         \item [a.] Hallar el plano tangente a $S$ en $(0,0,0)$.
         \item [b.] Hallar otro plano que sea tangente a $S$ y paralelo al del ítem a.
@@ -62,7 +62,7 @@
         f_y(0,0)  =  \lim_{h\to0} \frac{f(0,h) - f(0,0)}{h} = 0
     \]
 
-    Ya tenemos definidas las derivadas parciales de $f$ en todo $\Re^{2}.$
+    Ya tenemos definidas las derivadas parciales de $f$ en todo $\Rn{2}.$
     \[
         f_x(x,y) =
         \begin{cases}
@@ -107,7 +107,7 @@
 \begin{solution}
     Para resolverlo debemos intuir que está conformado por el límite de buena aproximación de un polinomio de Taylor de segundo orden centrado en el origen de una función. Buscamos una expresión para dicho polinomio y para la función.
 
-    Llamemos $f(x,y) = e^{2x}e^{3y}$, notemos que $f$ es de clase $C^3(\Re^{2}).$  Entonces, podemos definir su polinomio de Taylor de segundo orden centrado en el origen, $ P_2(x,y)$, y adem\'as vale el teorema de resto de Taylor
+    Llamemos $f(x,y) = e^{2x}e^{3y}$, notemos que $f$ es de clase $C^3(\Rn{2}).$  Entonces, podemos definir su polinomio de Taylor de segundo orden centrado en el origen, $ P_2(x,y)$, y adem\'as vale el teorema de resto de Taylor
     \[
         P_2(x,y) = f(0,0) + \nabla f(0,0)\cdot(x,y) + \frac{1}{2}(x,y)\boldsymbol{H}_f(0,0)(x,y)^\mathrm{T},
     \]

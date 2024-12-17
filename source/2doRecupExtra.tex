@@ -78,9 +78,9 @@
 
     Aplicando la transformaci\'on $V \rightarrow V^*$ queda
     \begin{align*}
-        V^*      & =\{(\rho, \phi, z)\in\Re^3: \rho\cos\phi \leq 0,\;
+        V^*      & =\{(\rho, \phi, z)\in\Rn{3}: \rho\cos\phi \leq 0,\;
         \rho\sen\phi \leq 0,\; 0 \leq z \leq 1-\rho^2\}               \\
-        \iff V^* & =\{(\rho, \phi, z)\in\Re^3: \pi \leq \phi \leq
+        \iff V^* & =\{(\rho, \phi, z)\in\Rn{3}: \pi \leq \phi \leq
         \frac{3}{2}\pi,\; 0 \leq z \leq 1,\; 0 \leq \rho \leq
         \sqrt{1-z} \}.
     \end{align*}
@@ -94,12 +94,12 @@
 
     Para parametrizar $S$, llamamos
     \[
-        D = \{(\rho, \phi)\in\Re^2 : \pi\leq\phi\leq\frac{3}{2}\pi,\;
+        D = \{(\rho, \phi)\in\Rn{2} : \pi\leq\phi\leq\frac{3}{2}\pi,\;
         0\leq\rho\leq 1\}.
     \]
     y
     \[
-        \boldsymbol{\Sigma}:D\subset\Re^2\rightarrow\Re^3\text{ tal que }
+        \boldsymbol{\Sigma}:D\subset\Rn{2}\rightarrow\Rn{3}\text{ tal que }
         \boldsymbol{\Sigma}(\rho,\phi)=(\rho\cos\phi,\;\rho\sen\phi,\;\rho^2).
     \]
     Calculamos las derivadas paraciales de $\boldsymbol{\Sigma}$.
@@ -132,7 +132,7 @@
 %------------------Solucion 2--------------------------------
 
 \begin{solution}
-    Tenemos que $S=\{(x,y,z)\in\Re^3:
+    Tenemos que $S=\{(x,y,z)\in\Rn{3}:
         (x-x_0)^2+(y-y_0)^2+(z-z_0)^2=R^2\}$, con $R>0$ y
     $(x_0,y_0,z_0)$ en el primer octante.
     Por el teorema de la divergencia
@@ -151,7 +151,7 @@
     \end{align*}
     nos queda el conjunto $S^*$
     \[
-        S^*=\{(\rho,\phi,\theta)\in\Re^3:0\leq\rho\leq R,\;
+        S^*=\{(\rho,\phi,\theta)\in\Rn{3}:0\leq\rho\leq R,\;
         0\leq\theta\leq2\pi,\;0\leq\phi\leq\pi\}.
     \]
     De la ecuaci\'on \eqref{eq: divEj2} y usando el teorema
@@ -241,7 +241,7 @@
     \]
     Mirando cada t\'ermino detenidamente se puede llegar a
     la conclusi\'on de que $$f(x,y) = e^{xy} + \sen{(xy)} + C,
-        \mbox{ con } C\in\Re$$ es soluci\'on del sistema. Lo que
+        \mbox{ con } C\in\R$$ es soluci\'on del sistema. Lo que
     significa que $\mathbf{F}$ es un campo conservativo.
 
     Luego para calcular $\int_C \mathbf{F}\cdot d\mathbf{s}$

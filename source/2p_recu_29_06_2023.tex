@@ -55,11 +55,11 @@
 
   Escribimos el conjunto $S$ como
   \[
-    S=\{(x,y,z)\in \Re^3: x^2+y^2=z;\;2\leq z\leq 9 \}.
+    S=\{(x,y,z)\in \Rn{3}: x^2+y^2=z;\;2\leq z\leq 9 \}.
   \]
   Queremos calcular \[ \textcolor{red}{A}(S) = \iint_S dA.\]
   Para ello necesitaremos una parametrizaci\'on de $S$. Sea
-  $$D=\{(\rho, \phi) \in\Re^2:    \sqrt{2}\leq \rho \leq 3;\;0\leq  \phi \leq 2\pi \}$$  y  sea  $$\boldsymbol{\Sigma}:D \subset\Re^2\to\Re^3  \mbox{ tal que }   \boldsymbol{\Sigma}(\rho, \phi)=(\rho \cos\phi, \rho \sen\phi , \rho^{2}).$$
+  $$D=\{(\rho, \phi) \in\Rn{2}:    \sqrt{2}\leq \rho \leq 3;\;0\leq  \phi \leq 2\pi \}$$  y  sea  $$\boldsymbol{\Sigma}:D \subset\Rn{2}\to\Rn{3}  \mbox{ tal que }   \boldsymbol{\Sigma}(\rho, \phi)=(\rho \cos\phi, \rho \sen\phi , \rho^{2}).$$
 
   Primero calculamos las derivadas parciales de la parametrizaci\'on.
   \begin{align*}
@@ -116,16 +116,16 @@ La curva de la intersecci\'on se muestra en el siguiente gr\'afico.
 \end{center}
 
   Notemos que $C$ es una curva no cerrada. Para cerrarla, llamemos $C=C_1$, 
-  $C_2=\{(x,y,z)\in\Re^3:z=0\;\land\;y=4\;\land\;|x|\leq4\}$, en palabras, $C_2$ es la recta que une la curva; y $C_0=C_1+C_2$. Y sea $\text{int}(C_0)=D$. Ahora $C_0$ es una curva simple cerrada. Entonces podemos aplicar el teorema de Stokes, eligiendo la orientaci\'on de $C_0$ tal que se cumpla la regla de la mano derecha.
+  $C_2=\{(x,y,z)\in\Rn{3}:z=0\;\land\;y=4\;\land\;|x|\leq4\}$, en palabras, $C_2$ es la recta que une la curva; y $C_0=C_1+C_2$. Y sea $\text{int}(C_0)=D$. Ahora $C_0$ es una curva simple cerrada. Entonces podemos aplicar el teorema de Stokes, eligiendo la orientaci\'on de $C_0$ tal que se cumpla la regla de la mano derecha.
   \[
       \oint_{C_0}\mathbf{F}\cdot d\mathbf{s}= \int_{C_1}\mathbf{F}\cdot d\mathbf{s} + \int_{C_2}\mathbf{F}\cdot d\mathbf{s} = \iint_D \nabla\times\mathbf{F}\cdot d\mathbf{A},
   \]
-  ya que $\mathbf{F}$ es $C^1(\Re)$, pues sus componentes son $C^1(\Re)$, y $D\in\text{dom}(\mathbf{F})$.
+  ya que $\mathbf{F}$ es $C^1(\R)$, pues sus componentes son $C^1(\R)$, y $D\in\text{dom}(\mathbf{F})$.
   Notemos que $\nabla\times\mathbf{F}\equiv0\implies$
   \[
      \int_{C_1}\mathbf{F}\cdot d\mathbf{s} =- \int_{C_2}\mathbf{F}\cdot d\mathbf{s}.
   \]
-  Ahora busquemos una trayectoria de $C_2$ que respete su orientaci\'on. Sea $\boldsymbol{\sigma}:[-4,4]\rightarrow\Re^3$
+  Ahora busquemos una trayectoria de $C_2$ que respete su orientaci\'on. Sea $\boldsymbol{\sigma}:[-4,4]\rightarrow\Rn{3}$
   tal que $\boldsymbol{\sigma}(t)=(t,4,0)$. Entonces $\boldsymbol{\sigma}'(t)=(1,0,0)$. Luego la integral de curva de $C_2$ es
   \begin{gather*}
     \int_{C_2}\mathbf{F}\cdot d\mathbf{s}
@@ -219,7 +219,7 @@ La curva de la intersecci\'on se muestra en el siguiente gr\'afico.
     \iff a\int_0^a \left(\frac{x^2}{2}-3yx\right)\Bigg|_0^a\;dy=a\int_0^a \frac{a^2}{2}-3ya\;dy\\[.2cm]
     \iff a\left( \frac{a^2}{2}y-3a\frac{y^2}{2} \right)=\frac{a^4}{2}-3\frac{a^4}{2}=-a^4
   \end{gather*}
-  Segundo, el flujo sobre la tapa. Sea $\boldsymbol{\Sigma} : D\subset\Re^2\to S'\subset\Re^3$, una paremetrizaci\'on de $S'$ tal que $\boldsymbol{\Sigma}(u,v)=(u,v,a)$. Donde $D = \{(u,v)\in\Re^2:0\leq u\leq a;\;0\leq v \leq a\}$. Entonces
+  Segundo, el flujo sobre la tapa. Sea $\boldsymbol{\Sigma} : D\subset\Rn{2}\to S'\subset\Rn{3}$, una paremetrizaci\'on de $S'$ tal que $\boldsymbol{\Sigma}(u,v)=(u,v,a)$. Donde $D = \{(u,v)\in\Rn{2}:0\leq u\leq a;\;0\leq v \leq a\}$. Entonces
   \[
     \iint_{S'} \mathbf{F}\cdot d\mathbf{A}=\iint_D \mathbf{F}\circ\boldsymbol{\Sigma} \cdot (\boldsymbol{\Sigma}_u\times\boldsymbol{\Sigma}_v)\;dA.
   \]
@@ -236,7 +236,7 @@ La curva de la intersecci\'on se muestra en el siguiente gr\'afico.
 %------------------Solucion 4--------------------------------
 
 \begin{solution}
-  La distancia $d$ de un punto $(x_0,y_0,z_0)$ en el primer octante a el plano $z=0$ est\'a dada por $$d\Big(  (x_0,y_0,z_0); (x_0,y_0, 0) \Big)= \sqrt{(x_0-x_0)^2+(y_0-y_0)^2+z_0^2}=z_0.$$ Luego  la funci\'on de densidad del s\'olido es $\delta(z)=kz$,  con $k\in\Re$. Adem\'as  sea $$\Omega=\{(x,y,z)\in\Re^3:z\leq\sqrt{x^2+y^2}\:\land\:x^2+y^2+z^2\leq32\:\land\: x,y,z\geq0\}.$$
+  La distancia $d$ de un punto $(x_0,y_0,z_0)$ en el primer octante a el plano $z=0$ est\'a dada por $$d\Big(  (x_0,y_0,z_0); (x_0,y_0, 0) \Big)= \sqrt{(x_0-x_0)^2+(y_0-y_0)^2+z_0^2}=z_0.$$ Luego  la funci\'on de densidad del s\'olido es $\delta(z)=kz$,  con $k\in\R$. Adem\'as  sea $$\Omega=\{(x,y,z)\in\Rn{3}:z\leq\sqrt{x^2+y^2}\:\land\:x^2+y^2+z^2\leq32\:\land\: x,y,z\geq0\}.$$
   Trabajaremos  en coordenadas esf\'ericas.  En este sentido,  recordemos lo siguiente.
   \[
     \begin{dcases}
@@ -251,7 +251,7 @@ La curva de la intersecci\'on se muestra en el siguiente gr\'afico.
   Por otro lado,  $$ \rho^2\leq32  \; \land \;  \rho \geq 0 \iff     0\leq  \rho\leq\sqrt{32}= 4 \sqrt{2}.$$
   Escribimos nuestro nuevo volumen $\Omega^*$  y usamos el teorema de cambio de variables.
   \[
-    \Omega^*=\{(\rho,\phi,\theta)\in\Re^3:0\leq\rho\leq4\sqrt{2}\:\land\:0\leq\phi\leq\frac{\pi}{4}\:\land\:0\leq\theta\leq\frac{\pi}{2}\}
+    \Omega^*=\{(\rho,\phi,\theta)\in\Rn{3}:0\leq\rho\leq4\sqrt{2}\:\land\:0\leq\phi\leq\frac{\pi}{4}\:\land\:0\leq\theta\leq\frac{\pi}{2}\}
   \]
   Y la masa del s\'olido $\Omega$ queda
   \begin{align*}

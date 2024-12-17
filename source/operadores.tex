@@ -1,24 +1,24 @@
 \begin{definition}
-    Sea $f:U\subset\Re^n\to\Re$, $U$ abierto, diferenciable en $U$. Se define el \textbf{gradiente} de $f$, y si nota $\nabla f(\mathbf{x})$, evaluado en $\mathbf{x}$ como el vector en el espacio $\Re^n$ dado por 
+    Sea $f:U\subset\Rn{n}\to\R$, $U$ abierto, diferenciable en $U$. Se define el \textbf{gradiente} de $f$, y si nota $\nabla f(\mathbf{x})$, evaluado en $\mathbf{x}$ como el vector en el espacio $\Rn{n}$ dado por 
     \[
         \nabla f(\mathbf{x})=\left(\frac{\partial f(\mathbf{x})}{\partial x_1},\frac{\partial f(\mathbf{x})}{\partial x_2},\:\ldots,\: \frac{\partial f(\mathbf{x})}{\partial x_n}\right),
     \]
     donde $\mathbf{x}=(x_1, x_2,\ldots, x_n)$.\final   
 \end{definition}
 \begin{definition}
-    Sea $\mathbf{F}:U\subset\Re^n\to\Re^n$, $U$ abierto, de clase $C^1(U)$. Se define la \textbf{divergencia} de $\mathbf{F}$ como
+    Sea $\mathbf{F}:U\subset\Rn{n}\to\Rn{n}$, $U$ abierto, de clase $C^1(U)$. Se define la \textbf{divergencia} de $\mathbf{F}$ como
     \[
         \nabla\cdot \mathbf{F}(\mathbf{x})=\frac{\partial f_1(\mathbf{x})}{\partial x_1}+\frac{\partial f_2(\mathbf{x})}{\partial x_2}+\:\ldots+\: \frac{\partial f_n(\mathbf{x})}{\partial x_n},
     \]
-    donde $\mathbf{F}=(f_1,f_2,\ldots,f_n),$ con cada $f_i:\Re^n\to\Re\;(i=1,\ldots,n).$\final
+    donde $\mathbf{F}=(f_1,f_2,\ldots,f_n),$ con cada $f_i:\Rn{n}\to\R\;(i=1,\ldots,n).$\final
 \end{definition}
 \begin{definition}
-    Sea $\mathbf{F}:U\subset\Re^3\to\Re^3$, $U$ abierto, de clase $C^1(U)$. Se define el \textbf{rotor} de $\mathbf{F}$ como 
+    Sea $\mathbf{F}:U\subset\Rn{3}\to\Rn{3}$, $U$ abierto, de clase $C^1(U)$. Se define el \textbf{rotor} de $\mathbf{F}$ como 
     \[
         \nabla\times\mathbf{F}(\mathbf{x})=\left(\frac{\partial f_3(\mathbf{x})}{\partial y}-\frac{\partial f_2(\mathbf{x})}{\partial z},\;\frac{\partial f_1(\mathbf{x})}{\partial z}-\frac{\partial f_3(\mathbf{x})}{\partial x},\;\frac{\partial f_2(\mathbf{x})}{\partial x}-\frac{\partial f_1(\mathbf{x})}{\partial y}\right),
     \]   
     donde $\mathbf{F}(x,y,z)=(f_1(x,y,z),\:f_2(x,y,z),\:f_3(x,y,z))$.
-    Y para el caso en el que $\mathbf{F}:U\subset\Re^2\to\Re^n$, con las mismas condiciones, el \textbf{rotor} es
+    Y para el caso en el que $\mathbf{F}:U\subset\Rn{2}\to\Rn{n}$, con las mismas condiciones, el \textbf{rotor} es
     \[
         \nabla\times\mathbf{F}(\mathbf{x})=\left(\frac{\partial f_2(\mathbf{x})}{\partial x}-\frac{\partial f_1(\mathbf{x})}{\partial y}\right).\finalmath
     \]
@@ -27,7 +27,7 @@
     \[
         \nabla = (\frac{\partial}{\partial x_1},\frac{\partial}{\partial x_2},\:\ldots,\: \frac{\partial}{\partial x_n}).  
     \]
-    Por lo que, pensando a $\nabla$ como un vector, la divergencia es el producto escalar de $\nabla$ con un campo vectorial y para el caso en $\Re^3$ es el producto vectorial. Esto \'ultimo es
+    Por lo que, pensando a $\nabla$ como un vector, la divergencia es el producto escalar de $\nabla$ con un campo vectorial y para el caso en $\Rn{3}$ es el producto vectorial. Esto \'ultimo es
     \begin{align*}
         \nabla\times\mathbf{F}&= 
         \begin{vmatrix}
@@ -38,11 +38,11 @@
         &=\left(\frac{\partial f_3}{\partial y}-\frac{\partial f_2}{\partial z},\;\frac{\partial f_1}{\partial z}-\frac{\partial f_3}{\partial x},\;\frac{\partial f_2}{\partial x}-\frac{\partial f_1}{\partial y}\right).
     \end{align*}
 \begin{definition}
-    Sea $f:U\subset\Re^n\to\Re$, $U$ abierto, un campo escalar de clase $C^2(U)$. Se define el \textbf{laplaciano} de $f$, y se lo nota, como
+    Sea $f:U\subset\Rn{n}\to\R$, $U$ abierto, un campo escalar de clase $C^2(U)$. Se define el \textbf{laplaciano} de $f$, y se lo nota, como
     \[
         \Delta f=\nabla^2f=\nabla\cdot(\nabla f)=\text{div}\:\text{grad}\:\mathbf{F}.  
     \]
-    Y para el caso de un campo vectorial $\mathbf{F}:U\subset\Re^n\to\Re^n$ de clase $C^2(\Re^n)$, el \textbf{laplaciano} escalar
+    Y para el caso de un campo vectorial $\mathbf{F}:U\subset\Rn{n}\to\Rn{n}$ de clase $C^2(\Rn{n})$, el \textbf{laplaciano} escalar
     \[
         \Delta\mathbf{F}=(\Delta f_1,\Delta f_2,\ldots,\Delta f_n).\finalmath 
     \]
@@ -57,7 +57,7 @@
     Sea un campo escalar $f$ o vectorial $\mathbf{F}$ vectorial, lo llamamos \textbf{arm\'onico} si $\Delta f=0$ o $\Delta \mathbf{F}=0$.\final
 \end{definition}
 \begin{propertie}
-    Los operadores vectoriales son aplicaciones lineales. Sean $f:U\subseteq\Re^n\to\Re$ diferenciable y $\mathbf{F}:U\subseteq\Re^n\to\Re^n$ diferenciable. Sean $\alpha,\;\beta\in\Re$:
+    Los operadores vectoriales son aplicaciones lineales. Sean $f:U\subseteq\Rn{n}\to\R$ diferenciable y $\mathbf{F}:U\subseteq\Rn{n}\to\Rn{n}$ diferenciable. Sean $\alpha,\;\beta\in\R$:
     \begin{enumerate}
         \item \(\nabla(\alpha f(\mathbf{x})+\beta g(\mathbf{x}))=\alpha\nabla f(\mathbf{x})+\beta\nabla g(\mathbf{x}),\quad\forall\mathbf{x}\in U\)
         \item \(\nabla\cdot(\alpha \mathbf{F}(\mathbf{x})+\beta \mathbf{G}(\mathbf{x}))=\alpha\nabla\cdot\mathbf{F}(\mathbf{x})+\beta\nabla\cdot\mathbf{G}(\mathbf{x}),\quad\forall\mathbf{x}\in U\)
@@ -65,10 +65,10 @@
     \end{enumerate}
 \end{propertie}
 \begin{propertie}
-    \textbf{Regla de Leibniz para el producto}. Sea $h:\Re^n\to\Re$ un campo escalar tal que $h\in C^1$.
+    \textbf{Regla de Leibniz para el producto}. Sea $h:\Rn{n}\to\R$ un campo escalar tal que $h\in C^1$.
     \begin{enumerate}
-        \item Sea $\mathbf{F}:U\subseteq\Re^n\to\Re^n$ de clase $C^1(U)$, entonces $\nabla\cdot(h\mathbf{F})=h\nabla\cdot\mathbf{F}+\nabla h\cdot\mathbf{F}$
-        \item Sea $\mathbf{F}:U\subseteq\Re^3\to\Re^3$ (o $\Re^2$) de clase $C^1(U)$, entonces $\nabla\times(h\mathbf{F})=h\nabla\times\mathbf{F}+\nabla h\times\mathbf{F}$\final
+        \item Sea $\mathbf{F}:U\subseteq\Rn{n}\to\Rn{n}$ de clase $C^1(U)$, entonces $\nabla\cdot(h\mathbf{F})=h\nabla\cdot\mathbf{F}+\nabla h\cdot\mathbf{F}$
+        \item Sea $\mathbf{F}:U\subseteq\Rn{3}\to\Rn{3}$ (o $\Rn{2}$) de clase $C^1(U)$, entonces $\nabla\times(h\mathbf{F})=h\nabla\times\mathbf{F}+\nabla h\times\mathbf{F}$\final
     \end{enumerate}
 \end{propertie}
 \begin{propertie}

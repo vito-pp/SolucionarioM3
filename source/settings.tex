@@ -11,22 +11,20 @@
 \usepackage[spanish, shorthands=off]{babel} % Disable shorthands to prevent conflicts
 \usepackage{chngcntr} % para cambiar los contadores
 \usepackage{hyperref} % para hyperlinks asociados al documento
+\usepackage{float} 
 \usepackage{pgfplots} % para graficos 
-\pgfplotsset{compat=1.18}
+  \pgfplotsset{compat=1.18}
 \usepackage{tikz} % ambiente para graficar 
-
+  \usepgfplotslibrary{fillbetween}
+  \usetikzlibrary{patterns, shapes}
+  \usetikzlibrary{arrows.meta, decorations.pathmorphing, positioning}
 % estas lineas estan para acelerar la compilacion, pero antes se debe activar 
 % el flag --shell-escape de compilacion. en cada editor de texto/compilador de 
 % latex es distinto. si usan overleaf no le den bola. checkear:
 % https://tex.stackexchange.com/questions/482557/how-to-externalize-tikz-pictures
-% \usetikzlibrary{external}
-%   \tikzexternalize[prefix=tikz/] % Activate externalization and set dirctory
+  \usetikzlibrary{external}
+    \tikzexternalize[prefix=tikz/] % Activate externalization and set dirctory
   % prefix=tikz/: Specifies that all externalized files should be saved in a subfolder named tikz. You can change this to any folder you prefer.
-
-  \usepackage{float} 
-\usepgfplotslibrary{fillbetween}
-\usetikzlibrary{patterns, shapes}
-\usetikzlibrary{arrows.meta, decorations.pathmorphing, positioning}
 
 % para graficar flechas en curvas cerradas
 \xdef\Rad{2}

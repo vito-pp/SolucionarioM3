@@ -1,5 +1,5 @@
 \begin{definition}
-Dada una funci\'on continua $f:U\to\Re$, donde $U$ es un paralelep\'ipedo rectangular (una caja) en $\Re^3$, se define la suma de Reimann de $f$ sobre $U$, partiendo los tres lados de $U$ en $n$ partes iguales, a
+Dada una funci\'on continua $f:U\to\R$, donde $U$ es un paralelep\'ipedo rectangular (una caja) en $\Rn{3}$, se define la suma de Reimann de $f$ sobre $U$, partiendo los tres lados de $U$ en $n$ partes iguales, a
 \[
     S_n=\sum_{i=0}^{n-1}\sum_{j=0}^{n-1}\sum_{k=0}^{n-1}f(c_{ijk})\Delta V,
 \]  
@@ -7,7 +7,7 @@ donde $c_{ijk}\in U_{ijk}$, el $ijk$-\'esimo paralelep\'ipedo rectangular en la 
 \end{definition}
 
 \begin{definition} 
-    Sean $U=[a,b]\times[c,d]\times[p,q]$ y $f:U\to\Re$ una funci\'on acotada.El l\'imite $\lim_{n\to\infty}S_n$ se llama \textbf{integral triple} de $f$ sobre $U$, y se nota $\iiint_U f\:dV$ a
+    Sean $U=[a,b]\times[c,d]\times[p,q]$ y $f:U\to\R$ una funci\'on acotada.El l\'imite $\lim_{n\to\infty}S_n$ se llama \textbf{integral triple} de $f$ sobre $U$, y se nota $\iiint_U f\:dV$ a
     \[
           \iiint_U f\:dV=\iiint_U f(x,y,z)\:dxdydz.\finalmath
     \]
@@ -18,7 +18,7 @@ donde $c_{ijk}\in U_{ijk}$, el $ijk$-\'esimo paralelep\'ipedo rectangular en la 
 Para extender esta noci\'on de integral a un conjunto acotado m\'as general, esto es, conjuntos que puedan ser encerrados por una caja, definimos lo siguiente. 
 
 \begin{definition}
-Dada $f:U\to\Re$, se define la funci\'on $f^*$ tal que
+Dada $f:U\to\R$, se define la funci\'on $f^*$ tal que
 \[
     f^*(x,y,z)=
     \begin{dcases*}
@@ -37,9 +37,9 @@ Entonces si $U$ es una caja que contiene a $W$ y $\partial W$ est\'a formada por
 \end{obs}
 
 \begin{propertie}
-    Sean $f,\;g$ dos funciones integrables en una regi\'on $W\subset\Re^3$, entonces:
+    Sean $f,\;g$ dos funciones integrables en una regi\'on $W\subset\Rn{3}$, entonces:
     \begin{enumerate}
-        \item[i.] $\alpha f+\beta g$ es integrable en $W$, $\forall\;\alpha,\;\beta\in\Re$ y adem\'as
+        \item[i.] $\alpha f+\beta g$ es integrable en $W$, $\forall\;\alpha,\;\beta\in\R$ y adem\'as
         \[
             \iiint_W \left(\alpha f+\beta g\right)dV=\alpha\iiint_W f\:dV+\beta\iiint_W g\:dV.
         \]
@@ -59,22 +59,22 @@ Entonces si $U$ es una caja que contiene a $W$ y $\partial W$ est\'a formada por
 \end{propertie}
 
 \begin{definition}
-    Se define el volumen de un conjunto $W\subset\Re^n$, y se nota $\text{Vol}(W)$, como la integral, si existe, de la funci\'on 1. Es decir,
+    Se define el volumen de un conjunto $W\subset\Rn{n}$, y se nota $\text{Vol}(W)$, como la integral, si existe, de la funci\'on 1. Es decir,
     \[
         \text{Vol}(W)=\iiint_W1\:dV.\finalmath
     \]
 \end{definition}
 
 \begin{theorem}
-    \textbf{Teorema del valor medio}. Sea $f:W\subseteq\Re^3\to\Re^3$ continua y $W$ es un conjunto elemental. Entonces existe $(x_0,y_0,z_0)$ en $W$ tal que 
+    \textbf{Teorema del valor medio}. Sea $f:W\subseteq\Rn{3}\to\Rn{3}$ continua y $W$ es un conjunto elemental. Entonces existe $(x_0,y_0,z_0)$ en $W$ tal que 
     \[
         \iiint_W f\:dV=f(x_0,y_0,z_0)\text{Vol}(W).\finalmath
     \]
 \end{theorem}
 
 \begin{definition}
-    \textbf{Conjunto elemental en }$\Re^3$.
-    Sea $W\subseteq\Re^3$. Sean $\phi_1,\;\phi_2:[a,b]\to\Re$ funciones y sean $\gamma_1,\;\gamma_2:D\to\Re$ funciones continuas. Un conjunto $W\subseteq\Re^3$ se llama elemental, si puede ser escrito como el conjunto de puntos $(x,y,z)$ que satifacen
+    \textbf{Conjunto elemental en }$\Rn{3}$.
+    Sea $W\subseteq\Rn{3}$. Sean $\phi_1,\;\phi_2:[a,b]\to\R$ funciones y sean $\gamma_1,\;\gamma_2:D\to\R$ funciones continuas. Un conjunto $W\subseteq\Rn{3}$ se llama elemental, si puede ser escrito como el conjunto de puntos $(x,y,z)$ que satifacen
     \begin{equation*}
         x\in[a,b], \qquad \phi_1(x)\leq y\leq\phi_2(x), \qquad \gamma_1(x,y)\leq z\leq\gamma_2(x,y). 
     \end{equation*}
@@ -82,7 +82,7 @@ Entonces si $U$ es una caja que contiene a $W$ y $\partial W$ est\'a formada por
 \end{definition}
 
 \begin{theorem}
-    \textbf{Teorema del cambio de variables para integrales triples}. Sea $f:W\subseteq\Re^3\to\Re^3$ un campo escalar integrable. Sea $\mathbf{T}:W^*\subseteq\Re^3\to W\subseteq\Re^3$ continua de clase $C^1$ en $\interior{W^*}$, inyectiva en $\interior{W^*}$ y $\mathbf{T}(W^*)=W$. Entonces
+    \textbf{Teorema del cambio de variables para integrales triples}. Sea $f:W\subseteq\Rn{3}\to\Rn{3}$ un campo escalar integrable. Sea $\mathbf{T}:W^*\subseteq\Rn{3}\to W\subseteq\Rn{3}$ continua de clase $C^1$ en $\interior{W^*}$, inyectiva en $\interior{W^*}$ y $\mathbf{T}(W^*)=W$. Entonces
     \[
         \iiint_W f\:dV=\iiint_{W^*}(f\circ\mathbf{T})J_\mathbf{T}\:dV.\finalmath
     \]
