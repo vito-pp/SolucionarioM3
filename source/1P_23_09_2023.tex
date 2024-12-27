@@ -20,11 +20,11 @@
 
 %---------------------------------------------------------------------
 \begin{question}
-    Sean $f:\Rn{2}\to\R$ diferenciable, $g(x,y)=(xy^2,x^2-2y)$ y $h=f\circ g$. Sabiendo que $h(1,-1) = 2$ y que $\nabla h(1,-1)=(2,-4)$, halle el plano tangente al gráfico de $f$ en el punto $(1,3,f(1,3))$.
+    Sean $f:\Rn{2}\to\R$ diferenciable, $g(x,y)=(xy^2,x^2-2y)$ y $h=f\circ g$. Sabiendo que $h(1,-1) = 2$ y que $\grad h(1,-1)=(2,-4)$, halle el plano tangente al gráfico de $f$ en el punto $(1,3,f(1,3))$.
 \end{question}
 %------------------------------------------------
 \begin{question}
-    Sean $f$ y $g$ dos campos escalares de clase $C^2$ tales que $f(1,2)=g(x,y)$, $\nabla f(1,-1)=\nabla g(2,-4)$ y $H_f(1,2)=H_g(1,2)$, calcular 
+    Sean $f$ y $g$ dos campos escalares de clase $C^2$ tales que $f(1,2)=g(x,y)$, $\grad f(1,-1)=\grad g(2,-4)$ y $H_f(1,2)=H_g(1,2)$, calcular 
     
 \[
         \lim_{(x,y)\to(1,2)} \
@@ -109,12 +109,12 @@ Tomando límites laterales
 
     Como   $f:\Rn{2}\to\R$ es diferenciable en todo su dominio por ser composición de funciones diferenciables,  la ecuaci\'on de su plano tangente en el punto $(1,3)$ est\'a dada por
     \begin{equation}
-        z= f(1,3) + \nabla f(1,3) (x-1,y-3),  \label{eq:zNabla}
-    \end{equation}   luego ser\'a  suficente con encontar $ f(1,3)$ y $\nabla f(1,3).$
+        z= f(1,3) + \grad f(1,3) (x-1,y-3),  \label{eq:zNabla}
+    \end{equation}   luego ser\'a  suficente con encontar $ f(1,3)$ y $\grad f(1,3).$
 
     Por un lado,      $h(1,-1)= f\circ g (1,-1) =  f(1,3)=2$  y por otro lado,  como $f$ y $g$ son ambas diferenciables,  por la regla de la cadena,  tenemos que
     \begin{equation}
-        \nabla h(1,-1)=\nabla (f\circ g)(1,-1)=\nabla f(g(1,-1)) \:\boldsymbol{D}_g(1,-1) = \nabla f (1,3) \:\boldsymbol{D}_g(1,-1),  \label{eq:hNabla}
+        \grad h(1,-1)=\grad (f\circ g)(1,-1)=\grad f(g(1,-1)) \:\boldsymbol{D}_g(1,-1) = \grad f (1,3) \:\boldsymbol{D}_g(1,-1),  \label{eq:hNabla}
     \end{equation}    donde $\boldsymbol{D}_g$ es la matriz diferencial o  jacobiana de $g$.
 
     \noindent  Hallemos $\boldsymbol{D}_g$
@@ -135,7 +135,7 @@ Tomando límites laterales
     \end{align*}
     Luego, reemplazando en  a   \eqref{eq:hNabla}
     \[
-        \nabla h(1,-1) = \nabla f(1,3)\left(\begin{array}{cc}
+        \grad h(1,-1) = \grad f(1,3)\left(\begin{array}{cc}
                 1   & -2    \\
                 2 & -2
             \end{array}\right) = \left(f_x(1,3) + 2f_y(1,3),\;-2f_x(1,3)-2f_y(1,3)\right)
@@ -152,7 +152,7 @@ Tomando límites laterales
             \;f_y(1,3)=0
         \end{cases}
     \]
-    $\therefore\quad\nabla f(1,3)=(2,0)$.
+    $\therefore\quad\grad f(1,3)=(2,0)$.
 
        Reemplazando en \eqref{eq:zNabla}
       \[
@@ -176,10 +176,10 @@ Tomando límites laterales
     \]
     Dado que $f$  y $g$ son dos campos escalares de clase  $C^2(\mathbb{R}^2)$,  se define  el polinomio de Taylor de primer orden centrado en $(1,2)$ de ambas funciones, que noteremos por $P_2[f,(1,2)]$ , $P_2[g,(1,2)]$ como,
     \begin{equation}
-        P_2[f,(1,2)](x,y)=f(1,2)+\nabla f(1,2)\cdot(x-1,y-2)+ \frac{1}{2}(x,y)\boldsymbol{H}_f(c_1,c_2)\begin{pmatrix}x-1\\y-2\end{pmatrix}, \label{eq:polTay2}
+        P_2[f,(1,2)](x,y)=f(1,2)+\grad f(1,2)\cdot(x-1,y-2)+ \frac{1}{2}(x,y)\boldsymbol{H}_f(c_1,c_2)\begin{pmatrix}x-1\\y-2\end{pmatrix}, \label{eq:polTay2}
     \end{equation}
     \begin{equation}
-        P_2[g,(1,2)](x,y)=f(1,2)+\nabla f(1,2)\cdot(x-1,y-2)+ \frac{1}{2}(x,y)\boldsymbol{H}_f(c_1',c_2')\begin{pmatrix}x-1\\y-2\end{pmatrix}, \label{eq:polTay2}
+        P_2[g,(1,2)](x,y)=f(1,2)+\grad f(1,2)\cdot(x-1,y-2)+ \frac{1}{2}(x,y)\boldsymbol{H}_f(c_1',c_2')\begin{pmatrix}x-1\\y-2\end{pmatrix}, \label{eq:polTay2}
     \end{equation}
 Sabemos que
 \[
@@ -189,7 +189,7 @@ Sabemos que
 
 Utilizando los datos de enunciado, podemos ver que
 \[
-       P_2[(f-g),(1,2)](x,y)= (f-g)_{(1,2)}+\nabla (f-g)_{(1,2)}\cdot(x-1,y-2)+ \frac{1}{2}(x-1, y-2)^t\boldsymbol{H}_(f-g)_{(C)}\begin{pmatrix}x-1\\y-2\end{pmatrix} =0
+       P_2[(f-g),(1,2)](x,y)= (f-g)_{(1,2)}+\grad (f-g)_{(1,2)}\cdot(x-1,y-2)+ \frac{1}{2}(x-1, y-2)^t\boldsymbol{H}_(f-g)_{(C)}\begin{pmatrix}x-1\\y-2\end{pmatrix} =0
     \]
     \[
       \Rightarrow 
@@ -219,7 +219,7 @@ Utilizando los datos recien mencionados, y sabiendo que $ \lim_{(x,y)\to(1,2)} \
 \begin{solution}
     En este ejercicio debemos hallar los puntos mas lejanos y mas cercanos al origen de la funcion que denominaremos $g(x,y,z)=\frac{x^2}{64}+\frac{y^2}{36}+\frac{z^2}{25}-1$ , para lo cual utilizaremos la funcion distancia: $f(x,y)=\sqrt{x^2+y^2+z^2}$ \newline Busco los minimos de $f$ restringidos al conjunto de nivel $g(x,y,z)=0$ utilizando los multiplicadores de lagrange
 \[
-        \nabla f(x,y)=\lambda \nabla g(x,y,z)
+        \grad f(x,y)=\lambda \grad g(x,y,z)
     \]
     \[
         (2x,2y,2z)=\lambda (\frac{2x}{64},\frac{2y}{36},\frac{2z}{25}) \iff \begin{cases}

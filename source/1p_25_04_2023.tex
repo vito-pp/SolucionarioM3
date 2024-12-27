@@ -130,12 +130,12 @@
 
     Dado que $f$ es  de  clase \(C^1(\mathbb{R}^2)\) luego $g$  resulta de la misma clase.  Usando la regla de la cadena  y el hecho de que $f(0,0)=0$ obtenemos
     \begin{align*}
-        \nabla g(x,y)\Big\rvert_{(0,0)}= & \left( \;2xy+\cos\:(f(x,y))f_x(x,y),\;\; x^2+\cos\:(f(x,y))f_y(x,y)\; \right) \Big\rvert_{(0,0)} \\
+        \grad g(x,y)\Big\rvert_{(0,0)}= & \left( \;2xy+\cos\:(f(x,y))f_x(x,y),\;\; x^2+\cos\:(f(x,y))f_y(x,y)\; \right) \Big\rvert_{(0,0)} \\
         =                                & \left( f_x(0,0),\;\; f_y(0,0) \right).
     \end{align*}
     Como $g(0,0)=0$ podemos reescribir el límite como
     \begin{align*}
-         & \lim_{(x,y)\to(0,0)} \left(\frac{g(x,y)-\nabla g(0,0)\cdot(x,y)-g(0,0)}{\sqrt{x^2+y^2}}+\frac{x^2+y^2}{\sqrt{x^2+y^2}}\right).
+         & \lim_{(x,y)\to(0,0)} \left(\frac{g(x,y)-\grad g(0,0)\cdot(x,y)-g(0,0)}{\sqrt{x^2+y^2}}+\frac{x^2+y^2}{\sqrt{x^2+y^2}}\right).
     \end{align*}
     El primer término tiende a cero dado que $g$ es  de  clase \(C^1(\mathbb{R}^2)\)  entonces es diferenciable en todo $\mathbb{R}^{2}$ y,  en particular, lo es en el origen.  Para el segundo término hacemos un cálculo auxiliar.
     \[
@@ -143,7 +143,7 @@
     \]
     Estamos en condiciones de usar \'algebra de l\'imites,
     \[
-        \therefore \lim_{(x,y)\to(0,0)} \left(\frac{g(x,y)-\nabla g(0,0)\cdot(x,y)-g(0,0)}{\sqrt{x^2+y^2}}+\frac{x^2+y^2}{\sqrt{x^2+y^2}}\right)=0.
+        \therefore \lim_{(x,y)\to(0,0)} \left(\frac{g(x,y)-\grad g(0,0)\cdot(x,y)-g(0,0)}{\sqrt{x^2+y^2}}+\frac{x^2+y^2}{\sqrt{x^2+y^2}}\right)=0.
     \]
 \end{solution}
 
@@ -152,7 +152,7 @@
 \begin{solution}
     Dado que $f$ es diferenciable en todo $\Rn{2}$    para hallar los puntos cr\'iticos  basta con buscar cuando su  gradiente se anula.
     \[
-        \nabla f(x,y)= \left( ye^{xy-1}-x,\; xe^{xy-1}-y \right)
+        \grad f(x,y)= \left( ye^{xy-1}-x,\; xe^{xy-1}-y \right)
     \]
     Igualando el gradiente a cero, nos queda el siguiente sistema de ecuaciones.
     \[

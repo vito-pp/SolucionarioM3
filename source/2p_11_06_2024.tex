@@ -74,15 +74,15 @@
     En este caso, con $boldsymbol{F}$ una función de clase
     $C^1$ en $A$, valen las hipótesis del teorema de Green (tanto para la curva como para el campo). Entonces:
     \begin{equation*}
-        \int_{C_1}\boldsymbol{F}\cdot d\boldsymbol{s} = \iint_{D_1}\left(\nabla \times \boldsymbol{F}\right)dA
+        \int_{C_1}\boldsymbol{F}\cdot d\boldsymbol{s} = \iint_{D_1}\left(\grad \times \boldsymbol{F}\right)dA
     \end{equation*}
     Acto siguiente, se calcula el rotor de $\boldsymbol{F}$, para resolver la integral.
     \begin{align*}
-        \nabla \times \boldsymbol{F} &= \partialx\left( -\frac{x}{x^2+y^2}\right) - \partialy\left(\frac{y}{x^2+y^2}\right)\\
+        \grad \times \boldsymbol{F} &= \partialx\left( -\frac{x}{x^2+y^2}\right) - \partialy\left(\frac{y}{x^2+y^2}\right)\\
         &= \left(-\frac{(x^2+y^2)-2x^2}{\left(x^2+y^2\right)^2}\right) - \left(\frac{(x^2+y^2)-2y^2}{\left(x^2+y^2\right)^2}\right)\\
         &= -\left(\frac{-x^2+y^2}{\left(x^2+y^2\right)^2}+\frac{x^2-y^2}{\left(x^2+y^2\right)^2}\right)\\
         &= -\left(\frac{-x^2+y^2+x^2-y^2}{\left(x^2+y^2\right)^2}\right)\\
-        \nabla \times \boldsymbol{F}&= 0
+        \grad \times \boldsymbol{F}&= 0
     \end{align*}
     Por lo tanto, la integral del campo sobre $C_1$ resulta:
     \begin{align*}
@@ -145,7 +145,7 @@
     \end{center}
     Luego, se puede utlizar el teorema de Green generalizado:
     \begin{equation*}
-        \int_{C_2}\boldsymbol{F}\cdot d\boldsymbol{s} - \int_{C_0}\boldsymbol{F}\cdot d\boldsymbol{s} = \iint_{\left(D_2-D_0\right)}\left(\nabla \times \boldsymbol{F}\right)dA
+        \int_{C_2}\boldsymbol{F}\cdot d\boldsymbol{s} - \int_{C_0}\boldsymbol{F}\cdot d\boldsymbol{s} = \iint_{\left(D_2-D_0\right)}\left(\grad \times \boldsymbol{F}\right)dA
     \end{equation*}
     Sobre el área entre ambas curvas, el rotor del campo vale cero, puesto que está definido en $\left(D_2-D_0\right)\subset A$. Entonces, el término de la derecha, se vuelve cero.
     \begin{equation*}
@@ -243,9 +243,9 @@
     Así $S_C = S_1 \bigcup S_2 \bigcup S_T$ encierra el volumen del cilindro ($\Omega$). Esta superficie $S_C = \partial\Omega$, si se
     orienta de saliente, cumple las condiciones del teorema de la divergencia. Con $\boldsymbol{F} \in C^1$:
     \begin{align*}
-        \iint_{S_C} \boldsymbol{F} \cdot d\boldsymbol{S} &= \iiint_{\Omega} \nabla \cdot \boldsymbol{F} dV\\
-        \iint_{S_1 \bigcup S_2} \boldsymbol{F} \cdot d\boldsymbol{S} + \iint_{S_T} \boldsymbol{F} \cdot d\boldsymbol{S}&= \iiint_{\Omega} \nabla \cdot \boldsymbol{F} dV\\
-        \iint_{S_1 \bigcup S_2} \boldsymbol{F} \cdot d\boldsymbol{S} &= \iiint_{\Omega} \nabla \cdot \boldsymbol{F} dV - \iint_{S_T} \boldsymbol{F} \cdot d\boldsymbol{S}
+        \iint_{S_C} \boldsymbol{F} \cdot d\boldsymbol{S} &= \iiint_{\Omega} \grad \cdot \boldsymbol{F} dV\\
+        \iint_{S_1 \bigcup S_2} \boldsymbol{F} \cdot d\boldsymbol{S} + \iint_{S_T} \boldsymbol{F} \cdot d\boldsymbol{S}&= \iiint_{\Omega} \grad \cdot \boldsymbol{F} dV\\
+        \iint_{S_1 \bigcup S_2} \boldsymbol{F} \cdot d\boldsymbol{S} &= \iiint_{\Omega} \grad \cdot \boldsymbol{F} dV - \iint_{S_T} \boldsymbol{F} \cdot d\boldsymbol{S}
     \end{align*}
     Ahora, se deben calcular las dos integrales del miembro derecho. Para la primera, se debe representar el $\Omega$ 
     como un conjunto elemental, lo que resulta fácil en coordenadas cilíndricas:
@@ -254,7 +254,7 @@
     \end{equation*}
     Por lo tanto:
     \begin{align*}
-        \iiint_{\Omega} \nabla \cdot \boldsymbol{F} dV &= \iiint_{\Omega} \left(z-2y+x\right)dxdydz\\
+        \iiint_{\Omega} \grad \cdot \boldsymbol{F} dV &= \iiint_{\Omega} \left(z-2y+x\right)dxdydz\\
         &=\iiint_{\Omega} \left(z-2\rho\sin{\phi}+\rho\cos{\phi}\right)\rho d\phi dz d\rho\\
         &=\int_{0}^{1} \int_{0}^{3} \int_{0}^{2\pi} \left(z\rho-2\rho^2\sin{\phi}+\rho^2\cos{\phi}\right) d\phi dz d\rho\\
         &= \int_{0}^{1} \int_{0}^{3}  \left.\left(z\rho\phi+2\rho^2\cos{\phi}+\rho^2\sin{\phi}\right)\right|_{\phi=0}^{\phi=2\pi} dz d\rho\\
@@ -262,7 +262,7 @@
         &= \pi\int_{0}^{1}  \left.\left(z^2\rho\right)\right|_{z=0}^{z=3} d\rho\\
         &= \pi\int_{0}^{1}  \left(9\rho\right) d\rho\\
         &= 9\pi \left.\left(\frac{\rho^2}{2}\right)\right|_{\rho=0}^{\rho=1}\\
-        \iiint_{\Omega} \nabla \cdot \boldsymbol{F} dV&= \frac{9}{2}\pi
+        \iiint_{\Omega} \grad \cdot \boldsymbol{F} dV&= \frac{9}{2}\pi
     \end{align*}
     Para la segunda integral a resolver, primero es necesaria la parametrización de $S_T$. Para ello, se propone 
     $D=\left\{(\rho,\phi) \in \mathbb{R}^2 : 0\leq\rho\leq1 \land 0\leq\phi\leq2\pi\right\}$ y la parametrización:
@@ -281,7 +281,7 @@
     \end{align*}
     Con estos dos resultados, ya es posible calcular la integral que pide la consigna, recordando que la orientación de las superficies se definió saliente.
     \begin{align*}
-        \iint_{S_1 \bigcup S_2} \boldsymbol{F} \cdot d\boldsymbol{S} &= \iiint_{\Omega} \nabla \cdot \boldsymbol{F} dV - \iint_{S_T} \boldsymbol{F} \cdot d\boldsymbol{S}\\
+        \iint_{S_1 \bigcup S_2} \boldsymbol{F} \cdot d\boldsymbol{S} &= \iiint_{\Omega} \grad \cdot \boldsymbol{F} dV - \iint_{S_T} \boldsymbol{F} \cdot d\boldsymbol{S}\\
         &= \frac{9}{2}\pi - 0\\
         \therefore \iint_{S_1 \bigcup S_2} \boldsymbol{F} \cdot d\boldsymbol{S} &= \frac{9}{2}\pi
     \end{align*}
@@ -295,7 +295,7 @@
     Por lo tanto, con $S = \partial \Omega$ orientada saliente, se cumplen las hipótesis del
     teorema de la divergencia, tal que:
     \begin{equation*}
-        \iint_S \boldsymbol{F} \cdot d\boldsymbol{S} = \iiint_\Omega \nabla \cdot \boldsymbol{F} dV
+        \iint_S \boldsymbol{F} \cdot d\boldsymbol{S} = \iiint_\Omega \grad \cdot \boldsymbol{F} dV
     \end{equation*}
     Por lo tanto, la condición que plantea la consigna:
     \begin{equation*}
@@ -303,11 +303,11 @@
     \end{equation*}
     se puede reescribir como:
     \begin{equation*}
-        \iiint_\Omega \nabla \cdot \boldsymbol{F} dV = \iiint_\Omega dV
+        \iiint_\Omega \grad \cdot \boldsymbol{F} dV = \iiint_\Omega dV
     \end{equation*}
     Para que se cumple lo anterior, es suficiente con pedir que la divergencia del campo resulte $1$.
     \begin{align*}
-        \nabla \cdot \boldsymbol{F} &= 1 \\
+        \grad \cdot \boldsymbol{F} &= 1 \\
         \partialx(ax) + \partialy(2y) + \partialz(z) &= 1 \\
         a + 2 + 1 &= 1 \\
         \therefore a &= -2

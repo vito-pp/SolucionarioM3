@@ -13,7 +13,7 @@
 \begin{question}
     Sean  $S$ una superficie  esf\'erica de radio $R$ con
     centro en el primer octante  y  $\mathbf{F}$ un campo de
-    clase $C^{1}$  con $\nabla\cdot\mathbf{F}(x,y,z) = x+y+z$.
+    clase $C^{1}$  con $\grad\cdot\mathbf{F}(x,y,z) = x+y+z$.
     Probar que  el flujo saliente de $\mathbf{F}$ a trav\'es de
     $S$  es no negativo.
 \end{question}
@@ -138,7 +138,7 @@
     Por el teorema de la divergencia
     \begin{equation}
         \iint_S \mathbf{F}\cdot\:d\mathbf{A} = \iiint_\Omega
-        \nabla\cdot\mathbf{F}\:dV
+        \grad\cdot\mathbf{F}\:dV
         = \iiint_\Omega (x+y+z)\:dxdydz, \label{eq: divEj2}
     \end{equation}
     tomando la orientaci\'on de $S$ como exterior.
@@ -217,9 +217,9 @@
     por el teorema de Green
     \[
         \oint_C \mathbf{F}\cdot d\mathbf{s} = \iint_T
-        \nabla\times\mathbf{F}\:dA.
+        \grad\times\mathbf{F}\:dA.
     \]
-    Como $\nabla\times\mathbf{F} = 1$, queda que \[\oint_C
+    Como $\grad\times\mathbf{F} = 1$, queda que \[\oint_C
         \mathbf{F}\cdot d\mathbf{s} = \iint_T dA = \textcolor{red}{Area}(T)
         = \frac{2\cdot1}{2} = 1.\]
 \end{solution}
@@ -231,7 +231,7 @@
     y calcular una integral de l\'inea sobre una curva no
     cerrada nos conviene buscar, si es que existe, la funci\'on
     potencial de $\mathbf{F}$. Nos encontramos con la ecuaci\'on
-    $\nabla f = \mathbf{F}$, la cual describe el siguiente
+    $\grad f = \mathbf{F}$, la cual describe el siguiente
     sistema de ecuaciones diferenciales.
     \[
         \begin{dcases}
@@ -247,7 +247,7 @@
     Luego para calcular $\int_C \mathbf{F}\cdot d\mathbf{s}$
     utilizamos el siguiente teorema.
     \[
-        \int_C \nabla f\cdot d\mathbf{s} =
+        \int_C \grad f\cdot d\mathbf{s} =
         f(\boldsymbol{\alpha}(1)) - f(\boldsymbol{\alpha}(0)) =
         f((1,1)) - f((0,0)) = e + \sen1 - 1.
     \]

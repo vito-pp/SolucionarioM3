@@ -109,14 +109,14 @@
 
     Llamemos $f(x,y) = e^{2x}e^{3y}$, notemos que $f$ es de clase $C^3(\Rn{2}).$  Entonces, podemos definir su polinomio de Taylor de segundo orden centrado en el origen, $ P_2(x,y)$, y adem\'as vale el teorema de resto de Taylor
     \[
-        P_2(x,y) = f(0,0) + \nabla f(0,0)\cdot(x,y) + \frac{1}{2}(x,y)\boldsymbol{H}_f(0,0)(x,y)^\mathrm{T},
+        P_2(x,y) = f(0,0) + \grad f(0,0)\cdot(x,y) + \frac{1}{2}(x,y)\boldsymbol{H}_f(0,0)(x,y)^\mathrm{T},
     \]
     siendo $\boldsymbol{H}_f(0,0)$ la matriz hessiana de $f$ evaluada en el origen.
 
     Tenemos que
     \begin{gather*}
         f(0,0) = 1,\\[.2cm]
-        \nabla f(x,y) = \left(2e^{2x}e^{3y}, 3e^{2x}e^{3y}\right) \implies \nabla f(0,0) = (2,3),\\[.25cm]
+        \grad f(x,y) = \left(2e^{2x}e^{3y}, 3e^{2x}e^{3y}\right) \implies \grad f(0,0) = (2,3),\\[.25cm]
         \boldsymbol{H}_f(x,y) = \left(\begin{array}{cc}
                 4e^{2x}e^{3y} & 6e^{2x}e^{3y} \\[10pt]
                 6e^{2x}e^{3y} & 9e^{2x}e^{3y}
@@ -199,9 +199,9 @@
     tenemos que $$S=C(f,0). $$
     Buscamos el plano $\Pi$, tangente a $C(f,0)$ y que pase por $(0,0,0)$. Sabemos que la ecuación de  $\Pi$  es  de la forma
     \[
-        \Pi:\nabla f(0,0,0) \cdot (x-0,y-0,z-0) = 0.
+        \Pi:\grad f(0,0,0) \cdot (x-0,y-0,z-0) = 0.
     \]
-    Es f\'acil ver que $\nabla f(0,0,0) = (-6,-8,-10).$  Luego, una posible ecuaci\'on es
+    Es f\'acil ver que $\grad f(0,0,0) = (-6,-8,-10).$  Luego, una posible ecuaci\'on es
     \[\\[1pt]
         \Pi: 3x + 4y + 5y = 0.
     \]
@@ -292,9 +292,9 @@
     \]
     luego $A=C(g,0) $.
 
-    Como $f,g \in C^1( \mathbb{R}^1),$  el teorema de los multiplicadores de Lagrange nos dice que si $f \big\rvert _A$ tiene un extremo local en un punto \textbf{x} entonces necesariamente los vectores $\nabla f(\textbf{x})$ y $\nabla g(\textbf{x})$ son paralelos si $\nabla g(\textbf{x}) \neq 0$.   Además como $f$ es continua sobre el conjunto $A$ que es cerrado y acotado, por el teorema de Weierstrass, sabemos que $f$ alcanza m\'aximo y m\'inimo en $A$. Luego planteamos el siguiente sistema de ecuaciones
+    Como $f,g \in C^1( \mathbb{R}^1),$  el teorema de los multiplicadores de Lagrange nos dice que si $f \big\rvert _A$ tiene un extremo local en un punto \textbf{x} entonces necesariamente los vectores $\grad f(\textbf{x})$ y $\grad g(\textbf{x})$ son paralelos si $\grad g(\textbf{x}) \neq 0$.   Además como $f$ es continua sobre el conjunto $A$ que es cerrado y acotado, por el teorema de Weierstrass, sabemos que $f$ alcanza m\'aximo y m\'inimo en $A$. Luego planteamos el siguiente sistema de ecuaciones
     \[
-        \nabla f(x,y) = \lambda \nabla g(x,y), \; \lambda \in \mathbb{R}, \; (x,y) \in A \\
+        \grad f(x,y) = \lambda \grad g(x,y), \; \lambda \in \mathbb{R}, \; (x,y) \in A \\
         \iff \begin{cases}
             2x = 2\lambda(x-1) \\
             2y = 2\lambda(y-1) \\

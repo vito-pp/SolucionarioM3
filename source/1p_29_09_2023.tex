@@ -48,12 +48,12 @@
 
     Como   $h:\Rn{2}\to\R$ es diferenciable en todo su dominio por ser composición de funciones diferenciables,  la ecuaci\'on de su plano tangente en el punto $(1,0)$ est\'a dada por
     \begin{equation}
-        z= h(1,0) + \nabla h(1,0) (x-1,y),  \label{eq:zNabla}
-    \end{equation}   luego ser\'a  suficente con encontar $ h(1,0)$ y $\nabla h(1,0).$
+        z= h(1,0) + \grad h(1,0) (x-1,y),  \label{eq:zNabla}
+    \end{equation}   luego ser\'a  suficente con encontar $ h(1,0)$ y $\grad h(1,0).$
 
     Por un lado,      $h(1,0)= f\circ g (1,0) =  f(0,0)$  y por otro lado,  como $f$ y $g$ son ambas diferenciables,  por la regla de la cadena,  tenemos que
     \begin{equation}
-        \nabla h(1,0)=\nabla (f\circ g)(1,0)=\nabla f(g(1,0)) \:\boldsymbol{D}_g(1,0) = \nabla f (0,0) \:\boldsymbol{D}_g(1,0),  \label{eq:hNabla}
+        \grad h(1,0)=\grad (f\circ g)(1,0)=\grad f(g(1,0)) \:\boldsymbol{D}_g(1,0) = \grad f (0,0) \:\boldsymbol{D}_g(1,0),  \label{eq:hNabla}
     \end{equation}    donde $\boldsymbol{D}_g$ es la matriz diferencial o  jacobiana de $g$.
 
     \noindent  Hallemos $\boldsymbol{D}_g$
@@ -74,7 +74,7 @@
     \end{align*}
     Luego, reemplazando en  a   \eqref{eq:hNabla}
     \[
-        \nabla h(1,0) = \nabla f(0,0)\left(\begin{array}{cc}
+        \grad h(1,0) = \grad f(0,0)\left(\begin{array}{cc}
                 0    & 1    \\
                 -\pi & -\pi
             \end{array}\right) = \left(-\pi f_y(0,0),\;f_x(0,0)-\pi f_y(0,0)\right)
@@ -96,9 +96,9 @@
             \;f_x(0,0)=1
         \end{cases}
     \]
-    $\therefore\quad\nabla f(0,0)=(1,-1)$.
+    $\therefore\quad\grad f(0,0)=(1,-1)$.
 
-    Como $f$ es diferenciable en todo su dominio, en particular lo es en $(0,0)$, vale que  $$f_{\mathbf{v}}(0,0)=\nabla f(0,0)\cdot{\mathbf{v}}\;\;\;\;\;  \forall \; {\mathbf{v}} \in \mathbb{R}^{2}  \mbox{ con } \|{\mathbf{v}}\|=1. $$ Luego,  tomando  $ {\mathbf{v}} = (\frac{1}{\sqrt{2}},\frac{-1}{\sqrt{2}})$, obtenemos lo pedido, es decir,
+    Como $f$ es diferenciable en todo su dominio, en particular lo es en $(0,0)$, vale que  $$f_{\mathbf{v}}(0,0)=\grad f(0,0)\cdot{\mathbf{v}}\;\;\;\;\;  \forall \; {\mathbf{v}} \in \mathbb{R}^{2}  \mbox{ con } \|{\mathbf{v}}\|=1. $$ Luego,  tomando  $ {\mathbf{v}} = (\frac{1}{\sqrt{2}},\frac{-1}{\sqrt{2}})$, obtenemos lo pedido, es decir,
     \[
         f_{{\mathbf{v}}} (0,0)=(1,-1)\cdot {\mathbf{v}}= \sqrt{2}.
     \]
@@ -107,7 +107,7 @@
 \begin{solution}
     Dado que $f$ es de clase  $C^2(\mathbb{R}^2)$,  se definine  el polinomio de Taylor de segundo orden centrado en $(0,0)$ de $f$, que noateremos por $P_2[f,(0,0)]$ como,
     \begin{equation}
-        P_2[f,(0,0)](x,y)=f(0,0)+\nabla f(0,0)\cdot(x,y)+\frac{1}{2}(x,y)\boldsymbol{H}_f(0,0)\begin{pmatrix}x\\y\end{pmatrix}, \label{eq:polTay2}
+        P_2[f,(0,0)](x,y)=f(0,0)+\grad f(0,0)\cdot(x,y)+\frac{1}{2}(x,y)\boldsymbol{H}_f(0,0)\begin{pmatrix}x\\y\end{pmatrix}, \label{eq:polTay2}
     \end{equation}
     donde $\boldsymbol{H}_f$ es la matriz hessiana de $f$.
 
@@ -115,7 +115,7 @@
 
     \begin{itemize}
         \item[1.] $f(0,0)=1.$
-        \item[2.] $ \nabla f(0,0) = \left(e^{\sen(x)+y^2}\cos\:(x),\;e^{\sen(x)+y^2}2y\right)\Big\rvert_{(0,0)}=(1,0).$
+        \item[2.] $ \grad f(0,0) = \left(e^{\sen(x)+y^2}\cos\:(x),\;e^{\sen(x)+y^2}2y\right)\Big\rvert_{(0,0)}=(1,0).$
         \item[3.] \begin{align*}
                   \boldsymbol{H}_f(0,0) & =\left(
                   \renewcommand{\arraystretch}{2} % Increase row spacing
@@ -142,12 +142,12 @@
 
 \begin{solution}
     En este ejercicio debemos hallar y clasificar los extremos de la función $f$ sobre $\Omega$,  un conjunto acotado y abierto.
-    Para ello,    primero buscamos los puntos críticos de $f$ en $\Omega$. Como $f$ es diferenciable en  $\Omega$, basta con hallar todos los $(x_0,y_0) \in  \Omega$ tal que $\nabla f(x_0,y_0)=(0,0).$
+    Para ello,    primero buscamos los puntos críticos de $f$ en $\Omega$. Como $f$ es diferenciable en  $\Omega$, basta con hallar todos los $(x_0,y_0) \in  \Omega$ tal que $\grad f(x_0,y_0)=(0,0).$
     \[
-        \nabla f(x,y)=\left(\cos(x),\;-\sen(y)\right)
+        \grad f(x,y)=\left(\cos(x),\;-\sen(y)\right)
     \]
     \[
-        \nabla f(x_0,y_0) =0 \iff \begin{cases}
+        \grad f(x_0,y_0) =0 \iff \begin{cases}
             \cos(x_0)=0 \\ \sen(y_0)=0
         \end{cases} \iff \begin{cases}
             x_0 = \frac{\pi}{2}+k\pi \\

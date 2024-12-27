@@ -180,11 +180,11 @@ La ecuación del plano tangente de este punto sobre la curva $S$ es:
 
     Ya que $g \in C^1(\R)$, $\boldsymbol{F}$ queda definida de $\boldsymbol{F}:\Rn{3}\rightarrow\Rn{3}$. Así, con el campo definido en un conjunto simplemente conexo, se puede usar que:
     \begin{equation*}
-        \nabla \times \boldsymbol{F} = 0 \Leftrightarrow \boldsymbol{F} \text{ es un campo conservativo}
+        \grad \times \boldsymbol{F} = 0 \Leftrightarrow \boldsymbol{F} \text{ es un campo conservativo}
     \end{equation*}
     Así, se calcula el rotor del campo:
     \begin{align*}
-        \nabla \times \boldsymbol{F}(x,y,z) &= \nabla \times (y^2-2xz+g(x),2xy+z^3-g(y),3yz^2-x^2)\\[10pt]
+        \grad \times \boldsymbol{F}(x,y,z) &= \grad \times (y^2-2xz+g(x),2xy+z^3-g(y),3yz^2-x^2)\\[10pt]
         &=  \renewcommand{\arraystretch}{1.5} \begin{vmatrix}
                 \mathbf{i} & \mathbf{j} & \mathbf{k} \\
                 \partialx & \partialy & \partialz \\
@@ -196,7 +196,7 @@ La ecuación del plano tangente de este punto sobre la curva $S$ es:
         \partialx(2xy+z^3-g(y)) - \partialy(y^2-2xz+g(x))
         \end{pmatrix}\\[10pt]
     &= \left(3z^2-3z^2,-2x+2x,2y-2y\right)\\[10pt]
-    \nabla \times \boldsymbol{F}(x,y,z) &= (0,0,0) \Rightarrow \boldsymbol{F} \text{ es un campo conservativo.}
+    \grad \times \boldsymbol{F}(x,y,z) &= (0,0,0) \Rightarrow \boldsymbol{F} \text{ es un campo conservativo.}
     \end{align*}
 
     Por lo tanto, con $\boldsymbol{F}$ un campo conservativo, podemos usar el corolario antes mencionado y calcular el valor de la integral sobre la curva $C$, cerrada, en cero.
@@ -255,11 +255,11 @@ La ecuación del plano tangente de este punto sobre la curva $S$ es:
     \end{figure}
     Puesto que $C$ está orientada antihoraria y encierra una región $A$, simplemente conexa, se puede usar el teorema de Green.
     \begin{equation*}
-        \oint_{C^+} \left(\frac{x}{x^2+y^2},\frac{-y}{x^2+y^2}\right)\cdot\boldsymbol{ds} = \iint_{A} \nabla \times \left(\frac{x}{x^2+y^2},-\frac{y}{x^2+y^2}\right)dA
+        \oint_{C^+} \left(\frac{x}{x^2+y^2},\frac{-y}{x^2+y^2}\right)\cdot\boldsymbol{ds} = \iint_{A} \grad \times \left(\frac{x}{x^2+y^2},-\frac{y}{x^2+y^2}\right)dA
     \end{equation*}
     Tal que el rotor del campo en cuestión se calcula:
     \begin{align*}
-        \nabla \times \left(\frac{x}{x^2+y^2},\frac{-y}{x^2+y^2}\right) &= \partialx\left(\frac{-y}{x^2+y^2}\right) - \partialy\left(\frac{x}{x^2+y^2}\right)\\[10pt]
+        \grad \times \left(\frac{x}{x^2+y^2},\frac{-y}{x^2+y^2}\right) &= \partialx\left(\frac{-y}{x^2+y^2}\right) - \partialy\left(\frac{x}{x^2+y^2}\right)\\[10pt]
         &= \frac{y\cdot2x}{\left(x^2+y^2\right)^2} - \frac{x\cdot(-2y)}{\left(x^2+y^2\right)^2}\\[10pt]
         &= \frac{4yx}{\left(x^2+y^2\right)^2}
     \end{align*}
@@ -269,7 +269,7 @@ La ecuación del plano tangente de este punto sobre la curva $S$ es:
     \end{equation*}
     Así, la integral se puede resolver en coordenadas polares como:
     \begin{align*}
-        \iint_{A} \nabla \times \left(\frac{x}{x^2+y^2},-\frac{y}{x^2+y^2}\right)dA &= \iint_{A} \frac{4yx}{\left(x^2+y^2\right)^2}dxdy\\[10pt]
+        \iint_{A} \grad \times \left(\frac{x}{x^2+y^2},-\frac{y}{x^2+y^2}\right)dA &= \iint_{A} \frac{4yx}{\left(x^2+y^2\right)^2}dxdy\\[10pt]
         &= \iint_{A}\left( \frac{4 \rho \sin{(\phi)} \rho \cos{(\phi)}}{\rho^4}\cdot \rho \right) d\rho d\phi\\[10pt]
         &= \iint_{A}\left( \frac{2 \sin{(2\phi)}}{\rho}\right) d\rho d\phi\\[10pt]
         &= \int^{\frac{\pi}{2}}_{0}\int^{2}_{1}\left( \frac{2 \sin{(2\phi)}}{\rho}\right) d\rho d\phi\\[10pt]
@@ -277,7 +277,7 @@ La ecuación del plano tangente de este punto sobre la curva $S$ es:
         &= \int^{\frac{\pi}{2}}_{0}\left(2\sin{(2\phi)}\ln\left(\frac{2}{1}\right)\right) d\phi\\[10pt]
         &= \ln(2)\cdot 2\left.\left(\frac{-\cos{(2\phi)}}{2}\right)\right|^{\phi=\frac{\pi}{2}}_{\phi=0}\\[10pt]
         &= \ln(2)\cdot 2\\[10pt]
-        \Rightarrow \iint_{A} \nabla \times \left(\frac{x}{x^2+y^2},-\frac{y}{x^2+y^2}\right)dA &= 2\ln(2)
+        \Rightarrow \iint_{A} \grad \times \left(\frac{x}{x^2+y^2},-\frac{y}{x^2+y^2}\right)dA &= 2\ln(2)
     \end{align*}
     Que, volviendo a Green, determina el valor de la integral original.
     \begin{equation*}
