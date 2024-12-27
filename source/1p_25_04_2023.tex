@@ -32,7 +32,7 @@
 %------------Ejercicio 3---------------------------------------
 
 \begin{question}
-    Sea \(g(x,y) = yx^2+\sen(f(x,y))\) con $f$ un campo escalar \(C^1(\mathbb{R}^2)\) tal que \(f(0,0)=0\). Calcular
+    Sea \(g(x,y) = yx^2+\sen(f(x,y))\) con $f$ un campo escalar \(\mathcal{C}^1(\mathbb{R}^2)\) tal que \(f(0,0)=0\). Calcular
     \[
         \lim_{(x,y)\to(0,0)} \frac{g(x,y)-xf_x(0,0)-yf_y(0,0)+x^2+y^2}{\sqrt{x^2+y^2}}
     \]
@@ -128,7 +128,7 @@
 \begin{solution}
     Para resolver este límite debemos intuir que en el numerador se encuentra la función $g$ menos su plano tangente en el $(0,0)$. Entonces buscamos el gradiente de $g$ en el origen.
 
-    Dado que $f$ es  de  clase \(C^1(\mathbb{R}^2)\) luego $g$  resulta de la misma clase.  Usando la regla de la cadena  y el hecho de que $f(0,0)=0$ obtenemos
+    Dado que $f$ es  de  clase \(\mathcal{C}^1(\mathbb{R}^2)\) luego $g$  resulta de la misma clase.  Usando la regla de la cadena  y el hecho de que $f(0,0)=0$ obtenemos
     \begin{align*}
         \grad g(x,y)\Big\rvert_{(0,0)}= & \left( \;2xy+\cos\:(f(x,y))f_x(x,y),\;\; x^2+\cos\:(f(x,y))f_y(x,y)\; \right) \Big\rvert_{(0,0)} \\
         =                                & \left( f_x(0,0),\;\; f_y(0,0) \right).
@@ -137,7 +137,7 @@
     \begin{align*}
          & \lim_{(x,y)\to(0,0)} \left(\frac{g(x,y)-\grad g(0,0)\cdot(x,y)-g(0,0)}{\sqrt{x^2+y^2}}+\frac{x^2+y^2}{\sqrt{x^2+y^2}}\right).
     \end{align*}
-    El primer término tiende a cero dado que $g$ es  de  clase \(C^1(\mathbb{R}^2)\)  entonces es diferenciable en todo $\mathbb{R}^{2}$ y,  en particular, lo es en el origen.  Para el segundo término hacemos un cálculo auxiliar.
+    El primer término tiende a cero dado que $g$ es  de  clase \(\mathcal{C}^1(\mathbb{R}^2)\)  entonces es diferenciable en todo $\mathbb{R}^{2}$ y,  en particular, lo es en el origen.  Para el segundo término hacemos un cálculo auxiliar.
     \[
         \lim_{(x,y)\to(0,0)}\frac{x^2+y^2}{\sqrt{x^2+y^2}}=\lim_{(x,y)\to(0,0)}\sqrt{x^2+y^2}=0
     \]

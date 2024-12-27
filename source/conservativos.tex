@@ -5,21 +5,21 @@
 \end{definition}
 
 \begin{theorem} \label{thm:t1}
-    Sean $A\subseteq\Rn{n}$ abierto y conexo y $f:A\subseteq\Rn{n}\to\R$ de clase $C^1$. Sea $\boldsymbol{\sigma}:[a,b]\to A\subseteq\Rn{n}$ una trayectoria $C^1$ a trozos. Entonces
+    Sean $A\subseteq\Rn{n}$ abierto y conexo y $f:A\subseteq\Rn{n}\to\R$ de clase $\mathcal{C}^1$. Sea $\boldsymbol{\sigma}:[a,b]\to A\subseteq\Rn{n}$ una trayectoria $\mathcal{C}^1$ a trozos. Entonces
     \[
        \int_{\boldsymbol{\sigma}}\grad f\cdot d\mathbf{s}=f(\boldsymbol{\sigma}(b))-f(\boldsymbol{\sigma}(a)).
     \]    
 \end{theorem}
 
 \begin{corollary}
-    Sean $A\subseteq\Rn{n}$ abierto y conexo y $f:A\subseteq\Rn{n}\to\R$ de clase $C^1$, entonces $\int_{\boldsymbol{\sigma}}\grad f\cdot d\mathbf{s}$  s\'olo depende de los puntos inicial y final de la trayectoria. Por lo tanto, sean las trayectorias $\boldsymbol{\sigma}_1:[a_1,b_1]\to A_1\subseteq\Rn{n}$ y $\boldsymbol{\sigma}_2:[a_2,b_2]\to A_2\subseteq\Rn{n}$, tales que $\boldsymbol{\sigma}_1(a_1)=\boldsymbol{\sigma}_2(a_2)\;\land\;\boldsymbol{\sigma}_1(b_1)=\boldsymbol{\sigma}_2(b_2)$, entonces
+    Sean $A\subseteq\Rn{n}$ abierto y conexo y $f:A\subseteq\Rn{n}\to\R$ de clase $\mathcal{C}^1$, entonces $\int_{\boldsymbol{\sigma}}\grad f\cdot d\mathbf{s}$  s\'olo depende de los puntos inicial y final de la trayectoria. Por lo tanto, sean las trayectorias $\boldsymbol{\sigma}_1:[a_1,b_1]\to A_1\subseteq\Rn{n}$ y $\boldsymbol{\sigma}_2:[a_2,b_2]\to A_2\subseteq\Rn{n}$, tales que $\boldsymbol{\sigma}_1(a_1)=\boldsymbol{\sigma}_2(a_2)\;\land\;\boldsymbol{\sigma}_1(b_1)=\boldsymbol{\sigma}_2(b_2)$, entonces
     \[
     \int_{\boldsymbol{\sigma}_1}\grad f\cdot d\mathbf{s}=\int_{\boldsymbol{\sigma}_2}\grad f\cdot d\mathbf{s}.
     \]
 \end{corollary}
 
 \begin{corollary}
-    Sean $A\subseteq\Rn{n}$ abierto y conexo y $f:A\subseteq\Rn{n}\to\R$ de clase $C^1$. Si $\mathbf{F}:A\subseteq\Rn{n}\to\Rn{n}$ es un campo vectorial para el cual $\exists f:A\subseteq\Rn{n}\to\R$ clase $C^1$ tal que 
+    Sean $A\subseteq\Rn{n}$ abierto y conexo y $f:A\subseteq\Rn{n}\to\R$ de clase $\mathcal{C}^1$. Si $\mathbf{F}:A\subseteq\Rn{n}\to\Rn{n}$ es un campo vectorial para el cual $\exists f:A\subseteq\Rn{n}\to\R$ clase $\mathcal{C}^1$ tal que 
     $$\grad f(\mathbf{x})=\mathbf{F}(\mathbf{x})\quad\forall\:\mathbf{x}\in A,$$
     entonces para todo par de curvas $C_1$ y $C_2$ en $A$, con los mismos extremos y misma orientaci\'on,
     \[
@@ -30,7 +30,7 @@
 Estos \'ultimos dos corolarios nos demuestran que la integral de curva 
 
 \begin{corollary}
-    Sean $A\subseteq\Rn{n}$ abierto y conexo y $f:A\subseteq\Rn{n}\to\R$ de clase $C^1$. Si $\mathbf{F}=\grad f$, entonces
+    Sean $A\subseteq\Rn{n}$ abierto y conexo y $f:A\subseteq\Rn{n}\to\R$ de clase $\mathcal{C}^1$. Si $\mathbf{F}=\grad f$, entonces
     $$\oint_C\mathbf{F}\cdot d\mathbf{s}=0,$$
     para toda curva $C$ simple cerrada contenida en $A$.
 \end{corollary}
@@ -40,7 +40,7 @@ Estos \'ultimos dos corolarios nos demuestran que la integral de curva
     $$f(\mathbf{x})=\int_{\mathbf{x}_0}^{\mathbf{x}}\mathbf{F}\cdot d\mathbf{s},$$
     con $\mathbf{x}_0\in A$, cumple que: 
     \begin{enumerate}
-        \item $f$ es $C^1$.
+        \item $f$ es $\mathcal{C}^1$.
         \item $\grad f(\mathbf{x})=\mathbf{F}(\mathbf{x})\quad\forall\:\mathbf{x}\in A.$
     \end{enumerate}
 \end{theorem}
@@ -48,7 +48,7 @@ Estos \'ultimos dos corolarios nos demuestran que la integral de curva
 \begin{theorem}
     Sean $A\subseteq\Rn{n}$ abierto y conexo, $\mathbf{F}:A\subseteq\Rn{n}\to\R$ continuo. Las siguientes condiciones sobre $\mathbf{F}$ son equivalentes:
     \begin{enumerate}
-        \item $\exists f:A\subseteq\Rn{n}\to\R$ de clase $C^1$ tal que $\mathbf{F}(\mathbf{x})=\grad f(\mathbf{x}),\;\forall\mathbf{x}\in A.$ 
+        \item $\exists f:A\subseteq\Rn{n}\to\R$ de clase $\mathcal{C}^1$ tal que $\mathbf{F}(\mathbf{x})=\grad f(\mathbf{x}),\;\forall\mathbf{x}\in A.$ 
         \item La integral de $\mathbf{F}$ es independiente del camino en $A$.
         \item $\oint_C\mathbf{F}\cdot d\mathbf{s}=0$ para toda curva cerrada simple $C$ en $A$.
     \end{enumerate}

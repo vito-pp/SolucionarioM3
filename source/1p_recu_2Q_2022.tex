@@ -11,7 +11,7 @@
         \end{cases}
     \]
 
-    probar que no existe $\delta>0$ tal que $f$ sea clase $C^2$ en $B_{\delta}(0,0)$.
+    probar que no existe $\delta>0$ tal que $f$ sea clase $\mathcal{C}^2$ en $B_{\delta}(0,0)$.
 \end{question}
 
 %------------Ejercicio 2---------------------------------------
@@ -43,7 +43,7 @@
 %-----------Solucion 1--------------------------------------------
 
 \begin{solution}
-    Por el teorema de Schwartz sabemos que si $f \in\ C^2$ en  $B_{\delta}(0,0)$
+    Por el teorema de Schwartz sabemos que si $f \in\ \mathcal{C}^2$ en  $B_{\delta}(0,0)$
     entonces $$  f_{xy} (x,y) = f_{yx} (x,y) \quad \forall (x,y) \in B_{\delta}(0,0).$$ En particular, deber\'ia pasar que $f_{xy} (0,0) = f_{yx}(0,0).$ Veamos que esto \'ultimo no sucede.
 
     \begin{equation}
@@ -99,7 +99,7 @@
         f_{xy}(0,0) = -1 \neq f_{yx}(0,0) = 1.
     \]
 
-    $\therefore\;$ no existe $\delta>0$ tal que $f$ sea clase $C^2$ en $B_{\delta}(0,0)$.
+    $\therefore\;$ no existe $\delta>0$ tal que $f$ sea clase $\mathcal{C}^2$ en $B_{\delta}(0,0)$.
 \end{solution}
 
 %-----------Solucion 2--------------------------------------------
@@ -107,7 +107,7 @@
 \begin{solution}
     Para resolverlo debemos intuir que está conformado por el límite de buena aproximación de un polinomio de Taylor de segundo orden centrado en el origen de una función. Buscamos una expresión para dicho polinomio y para la función.
 
-    Llamemos $f(x,y) = e^{2x}e^{3y}$, notemos que $f$ es de clase $C^3(\Rn{2}).$  Entonces, podemos definir su polinomio de Taylor de segundo orden centrado en el origen, $ P_2(x,y)$, y adem\'as vale el teorema de resto de Taylor
+    Llamemos $f(x,y) = e^{2x}e^{3y}$, notemos que $f$ es de clase $\mathcal{C}^3(\Rn{2}).$  Entonces, podemos definir su polinomio de Taylor de segundo orden centrado en el origen, $ P_2(x,y)$, y adem\'as vale el teorema de resto de Taylor
     \[
         P_2(x,y) = f(0,0) + \grad f(0,0)\cdot(x,y) + \frac{1}{2}(x,y)\boldsymbol{H}_f(0,0)(x,y)^\mathrm{T},
     \]
@@ -292,7 +292,7 @@
     \]
     luego $A=C(g,0) $.
 
-    Como $f,g \in C^1( \mathbb{R}^1),$  el teorema de los multiplicadores de Lagrange nos dice que si $f \big\rvert _A$ tiene un extremo local en un punto \textbf{x} entonces necesariamente los vectores $\grad f(\textbf{x})$ y $\grad g(\textbf{x})$ son paralelos si $\grad g(\textbf{x}) \neq 0$.   Además como $f$ es continua sobre el conjunto $A$ que es cerrado y acotado, por el teorema de Weierstrass, sabemos que $f$ alcanza m\'aximo y m\'inimo en $A$. Luego planteamos el siguiente sistema de ecuaciones
+    Como $f,g \in \mathcal{C}^1( \mathbb{R}^1),$  el teorema de los multiplicadores de Lagrange nos dice que si $f \big\rvert _A$ tiene un extremo local en un punto \textbf{x} entonces necesariamente los vectores $\grad f(\textbf{x})$ y $\grad g(\textbf{x})$ son paralelos si $\grad g(\textbf{x}) \neq 0$.   Además como $f$ es continua sobre el conjunto $A$ que es cerrado y acotado, por el teorema de Weierstrass, sabemos que $f$ alcanza m\'aximo y m\'inimo en $A$. Luego planteamos el siguiente sistema de ecuaciones
     \[
         \grad f(x,y) = \lambda \grad g(x,y), \; \lambda \in \mathbb{R}, \; (x,y) \in A \\
         \iff \begin{cases}
