@@ -7,12 +7,12 @@
 \end{definition}
 
 \begin{center}
-\begin{tikzpicture}
-
-    % Real number line on the left
-    \draw[semithick,-Stealth] (-2,0) -- (2,0);
-    \node[label=below:$a$] at (-1.25,0) {$[$}; 
-    \node[label=below:$b$] at (1.25,0) {$]$}; 
+    \begin{tikzpicture}
+        
+        % Real number line on the left
+        \draw[semithick,-Stealth] (-2,0) -- (2,0);
+        \node[label=below:$a$] at (-1.25,0) {$[$}; 
+        \node[label=below:$b$] at (1.25,0) {$]$}; 
     \node[label=right:$\mathbb{R}$] at (2,0) {};
     
     % Curved arrow in the middle
@@ -28,8 +28,16 @@
         \node[above right] at (3,1) {$\boldsymbol{\sigma}_1(b)$};
     \end{scope}
 
+    \node at (5,-1) [align=center, below] {
+                $\Gamma_1=\text{Im}(\boldsymbol{\sigma_1})$
+            };
+
 \end{tikzpicture}
 \end{center}
+
+\begin{definition}
+    Si $\boldsymbol{\sigma}$ es inyectiva en $I$, salvo tal vez en sus bordes, entonces se llama a $\Gamma$ curva simple.    
+\end{definition}
 
 \begin{center}
 \begin{tikzpicture}
@@ -43,21 +51,23 @@
     % Curved arrow in the middle
     \draw[semithick,->] (2,1) to[out=45,in=135,looseness=0.8] (8,1);
     \node[label=below:$\boldsymbol{\sigma}_2$] at (5,2) {};
-
+    
     % Plane R^2 on the right
     \begin{scope}[xshift=8cm, yshift=0.4cm]
         \draw[semithick] 
             (0,0) .. controls (4.5,-1) and (-1.5,-2.5) .. (3,1);
-        \node at (0,0) [circle,fill,inner sep=1pt] {};
-    \node at (3,1) [circle,fill,inner sep=1pt] {};
+            \node at (0,0) [circle,fill,inner sep=1pt] {};
+            \node at (3,1) [circle,fill,inner sep=1pt] {};
     \node[below left] at (0,0) {$\boldsymbol{\sigma}_2(a)$};
     \node[above right] at (3,1) {$\boldsymbol{\sigma}_2(b)$};
     \end{scope}
 
+    \node at (5,-1) [align=center, below] {
+                $\Gamma_2=\text{Im}(\boldsymbol{\sigma_2})$
+            };
+
 \end{tikzpicture}
 \end{center}
-
-\textcolor{red}{desp agrego las leyendas}
 
 \begin{definition}
     Si $\boldsymbol{\sigma}(a)=\boldsymbol{\sigma}(b)$ entonces $\Gamma$ se llama curva cerrada.    
@@ -65,7 +75,7 @@
 
 \begin{center}
 \begin{tikzpicture}
-
+    
     % Real number line on the left
     \draw[semithick,-Stealth] (-2,0) -- (2,0);
     \node[label=below:$a$] at (-1.25,0) {$[$}; 
@@ -88,15 +98,15 @@
         \node[below left] at (0,0) {$\boldsymbol{\sigma}_3(a)=\boldsymbol{\sigma}_3(b)$};
     \end{scope}
 
+    \node at (5,-1) [align=center, below] {
+                $\Gamma_3=\text{Im}(\boldsymbol{\sigma_3})$
+            };
+
 \end{tikzpicture}
 \end{center}
 
-\begin{definition}
-    Si $\boldsymbol{\sigma}$ es inyectiva en $I$, salvo tal vez en sus bordes, entonces se llama a $\Gamma$ curva simple.    
-\end{definition}
-
 \begin{example}
-    $\Gamma_1$ y $\Gamma_3$ son curvas simples. $\Gamma_2$ no es una curva simple. 
+    $\Gamma_1$ y $\Gamma_3$ son curvas simples, mientras que $\Gamma_2$ no lo es. Adema\'as $\Gamma_3$ es una curva cerrada. 
 \end{example}
 
 \begin{example}
@@ -104,7 +114,7 @@
 
     \begin{center}
     \begin{tikzpicture}
-
+        
         % Real number line on the left
         \draw[semithick,-Stealth] (-2,0) -- (2,0);
         \node[label=below:$0$] at (-1.25,0) {$[$}; 
@@ -135,10 +145,68 @@
 \end{example}
 
 \begin{definition}
-    .\textcolor{red}{Continuidad a trozos. Igual que C1 a trozos}.
+    \textcolor{red}{Continuidad a trozos. Igual que C1 a trozos}.
 \end{definition}
 
-Cada curva simple $\Gamma$ tiene asociadas dos orientaciones o sentidos posibles. Si los puntos $P$ y $Q$ son los extremos de la curva, y $P\neq Q$, entonces podemos considerar a $\Gamma$ con orientaci\'on desde $P$ hacia $Q$ o bien desde $Q$ hacia $P$. \textcolor{red}{Si P=Q definir horario y antihorario.}
+\begin{obs}
+    Cada curva simple $\Gamma$ tiene asociadas dos orientaciones o sentidos posibles. Si los puntos $P$ y $Q$ son los extremos de la curva, y $P\neq Q$, entonces podemos considerar a $\Gamma$ con orientaci\'on desde $P$ hacia $Q$ o bien desde $Q$ hacia $P$. Ahora bien, falta contemplar el caso en el que $P=Q$.
+\end{obs}
+
+\begin{definition}
+    De manera semejante al movimiento de las manecillas de un reloj anal\'ogico, se define la orientaci\'on \textbf{horaria} o \textbf{negativa} tal que si se avanza en la dirección de la parametrización, el interior de la curva queda a la derecha. Y se define la orientaci\'on \textbf{antihoraria} o \textbf{positiva} tal que si se avanza en la dirección de la parametrización, el interior de la curva queda a la derecha.
+
+% dios perdona la desprolijidad
+    \newcommand\clockc[3]{%
+        \begin{tikzpicture}[line cap=round,line width=3pt]
+        \filldraw [fill=blue!60!white!40] (0,0) circle (2cm);
+        \foreach \angle / \label in
+        {0/3, 30/2, 60/1, 90/12, 120/11, 150/10, 180/9,
+        210/8, 240/7, 270/6, 300/5, 330/4}
+        {
+        \draw[line width=1pt] (\angle:1.8cm) -- (\angle:2cm);
+        \draw (\angle:1.4cm) node{\textsf{\label}};
+        }
+        \foreach \angle in {0,90,180,270}
+        \draw[line width=2pt] (\angle:1.6cm) -- (\angle:2cm);
+        \node[draw=none,font=\tiny,text=red] at (0,.9cm) {};
+        \draw[rotate=90,line width=2pt] (0,0) -- (-#1*30-#2*30/60:0.7cm); % hours
+        \draw[rotate=90,line width=1.5pt] (0,0) -- (-#2*6:1cm); % minutes
+        \draw[rotate=90,thin,red] (0,0) -- (-#3*6:1.2cm); % seconds
+        \path [fill=red] (0,0) circle (2pt);
+        %
+        \draw[thin, ->] (0.5,0) arc [start angle=0, end angle=340, radius=0.5cm];
+        \node at (0,-2.5) {Orientaci\'on antihoraria};
+        \end{tikzpicture}%
+    }
+
+    \newcommand\clockw[3]{%
+        \begin{tikzpicture}[line cap=round,line width=3pt]
+        \filldraw [fill=blue!60!white!40] (0,0) circle (2cm);
+        \foreach \angle / \label in
+        {0/3, 30/2, 60/1, 90/12, 120/11, 150/10, 180/9,
+        210/8, 240/7, 270/6, 300/5, 330/4}
+        {
+        \draw[line width=1pt] (\angle:1.8cm) -- (\angle:2cm);
+        \draw (\angle:1.4cm) node{\textsf{\label}};
+        }
+        \foreach \angle in {0,90,180,270}
+        \draw[line width=2pt] (\angle:1.6cm) -- (\angle:2cm);
+        \node[draw=none,font=\tiny,text=red] at (0,.9cm) {};
+        \draw[rotate=90,line width=2pt] (0,0) -- (-#1*30-#2*30/60:0.7cm); % hours
+        \draw[rotate=90,line width=1.5pt] (0,0) -- (-#2*6:1cm); % minutes
+        \draw[rotate=90,thin,red] (0,0) -- (-#3*6:1.2cm); % seconds
+        \path [fill=red] (0,0) circle (2pt);
+        %
+        \draw[thin, ->] (0.5,0) arc [start angle=0, end angle=-340, radius=0.5cm];
+        \node at (0,-2.5) {Orientaci\'on horaria};
+        \end{tikzpicture}%
+    }
+
+    \begin{center}
+        \clockw{15}{5}{20}\hspace{3cm}\clockc{14}{35}{5}
+    \end{center}
+
+\end{definition}
 
 \begin{definition}
     Se define una parametrizaci\'on de una curva simple $\Gamma\in\Rn{n}$ como una trayectoria $\boldsymbol{\sigma}:I\subseteq\R\to\Rn{n}$ continua, de clase $C^1$ a trozos, inyectiva en $\interior{I}$ y $\text{Im}\:(\boldsymbol{\sigma})=\Gamma$.
