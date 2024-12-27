@@ -3,13 +3,13 @@ Dada una funci\'on continua $f:B\to\R$, donde $B$ es un rect\'angulo en $\Rn{2}$
 \[
     S_n=\sum_{i=0}^{n-1}\sum_{j=0}^{n-1} f(c_{ij})\Delta A,
 \]  
-donde $c_{ij}\in B_{ij}$, el $ij$-\'esimo rect\'angulo en la partici\'on de $B$, y $\Delta A$ es el \'area de $B_{ij}$.\final
+donde $c_{ij}\in B_{ij}$, el $ij$-\'esimo rect\'angulo en la partici\'on de $B$, y $\Delta A$ es el \'area de $B_{ij}$.
 \end{definition}
 
 \begin{definition} 
     Sean $B=[a,b]\times[c,d]$ y $f:B\to\R$ una funci\'on acotada. El l\'imite $\lim_{n\to\infty}S_n$, se llama \textbf{integral doble} de $f$ sobre $B$, y se nota $\iint_U f\:dA$, a
     \[
-          \iint_U f\:dA=\iint_U f(x,y)\:dxdy.\finalmath
+          \iint_U f\:dA=\iint_U f(x,y)\:dxdy.
     \]
 \end{definition}
 
@@ -28,7 +28,7 @@ Dada $f:B\to\R$, se define la funci\'on $f^*$ tal que
 \]
 Entonces si $B$ es una caja que contiene a $D$ y $\partial D$ est\'a formada por las gr\'aficas de un n\'umero finito de funciones continuas, $f^*$ ser\'a integrable. Luego, se define
 \[
-    \iint_D f\:dA=\iint_B f^*\:dA.  \finalmath
+    \iint_D f\:dA=\iint_B f^*\:dA.  
 \]
 \end{definition}
 
@@ -53,7 +53,7 @@ Entonces si $B$ es una caja que contiene a $D$ y $\partial D$ est\'a formada por
         \]    
         \item[vii.] Si $D=D_1\cup D_2,\;D_1\cap D_2\neq\varnothing,$ es una partici\'on de $D$, $f$ es integrable en $D$ $\iff$ $f$ es integrable en $D_1$ y $D_2$. En este caso 
         \[
-            \iint_D f\:dA=\iint_{D_1} f\:dA+\iint_{D_2}f\:dA. \finalmath   
+            \iint_D f\:dA=\iint_{D_1} f\:dA+\iint_{D_2}f\:dA.    
         \]
     \end{enumerate}
 \end{propertie}
@@ -75,7 +75,7 @@ Entonces si $B$ es una caja que contiene a $D$ y $\partial D$ est\'a formada por
     \]
     donde $\psi_1(y)\leq\psi_2(y)\;\forall\;y\in[c,d].$
     \item[iii.]
-    $D$ se llama conjunto elemental de \textit{tipo 3} si es \textit{tipo 1} y \textit{tipo 2} a la vez.\final
+    $D$ se llama conjunto elemental de \textit{tipo 3} si es \textit{tipo 1} y \textit{tipo 2} a la vez.
     \end{enumerate}
 \end{definition}
 
@@ -95,7 +95,7 @@ Entonces si $B$ es una caja que contiene a $D$ y $\partial D$ est\'a formada por
         % ,\;\phi_i,\psi_i\;$ son 
         continua, entonces 
         \[
-            \iint_D f=\int_a^b\left(\int_{y=\phi_1(x)}^{y=\phi_2(x)}f(x,y)\:dy\right)dx=\int_a^b\left(\int_{x=\psi_1(y)}^{x=\psi_2(y)}f(x,y)\:dx\right)dy.\finalmath 
+            \iint_D f=\int_a^b\left(\int_{y=\phi_1(x)}^{y=\phi_2(x)}f(x,y)\:dy\right)dx=\int_a^b\left(\int_{x=\psi_1(y)}^{x=\psi_2(y)}f(x,y)\:dx\right)dy. 
         \]
     \end{enumerate}
 \end{corollary}
@@ -138,26 +138,26 @@ Entonces si $B$ es una caja que contiene a $D$ y $\partial D$ est\'a formada por
     Luego $D$ es de tipo 1. Notar que la \'unica manera de demostrar que un conjunto es elemental es dando su descripci\'on impl\'icita. Por el \autoref{col:fubini}
     \begin{gather*}
         \iint_D x^2y\:dA=\int_0^1\left(\int_{x^3}^{x^2}\:dy\right)dx=\int_0^1\left(x^2\frac{1}{2}y^2\Big\lvert_{x^3}^{x^2}\right)dx\\
-        =\int_0^1\frac{1}{2}x^2\left((x^2)^2-(x^3)^2\right)=\int_0^1\frac{1}{2}x^6-\frac{1}{2}x^8\;dx\\=\frac{1}{14}x^7-\frac{1}{18}x^9\Big\lvert_0^1=\frac{1}{14}-\frac{1}{18}.\finalmath
+        =\int_0^1\frac{1}{2}x^2\left((x^2)^2-(x^3)^2\right)=\int_0^1\frac{1}{2}x^6-\frac{1}{2}x^8\;dx\\=\frac{1}{14}x^7-\frac{1}{18}x^9\Big\lvert_0^1=\frac{1}{14}-\frac{1}{18}.
     \end{gather*}
 \end{example}
 \begin{definition} %cambie la palabra region --> conjunto
     Se define el \'area de un conjunto $D\subset\Rn{n}$, y se nota $\text{A}(D)$ como la integral, si existe, de la funci\'on 1. Es decir,
     \[
-        \text{A}(D)=\iint_D1\:dA.\finalmath
+        \text{A}(D)=\iint_D1\:dA.
     \]
 \end{definition}
 \begin{theorem}
     \textbf{Teorema del valor medio para integrales dobles}. Sea $f:D\subseteq\Rn{2}\to\R$ continua y $D$ es un conjunto elemental. Entonces existe $(x_0,y_0)$ en $D$ tal que
     \[
-        \int_D f(x,y)\:dA=f(x_0,y_0)\text{A}(D).\finalmath
+        \int_D f(x,y)\:dA=f(x_0,y_0)\text{A}(D).
     \]
 \end{theorem}
 
 \begin{definition}
     Sea $\mathbf{F}:A\subseteq\Rn{n}\to\Rn{n}$ un campo $C^1(A)$ y sea $\boldsymbol{D}_\mathbf{F}$ su matriz diferencial definida en $A$. Se define el \textbf{jacobiano}, o \textbf{determinante jacobiano}, y se lo nota $J_\mathbf{F}$ a 
     \[
-        J_\mathbf{F}=\left|\text{det}(\boldsymbol{D}_\mathbf{F})\right|.\finalmath
+        J_\mathbf{F}=\left|\text{det}(\boldsymbol{D}_\mathbf{F})\right|.
     \]
     \textcolor{red}{\textit{quizas esta definicion convnga ponerla en la primera parte teorica.}}
 \end{definition}
@@ -165,6 +165,6 @@ Entonces si $B$ es una caja que contiene a $D$ y $\partial D$ est\'a formada por
 \begin{theorem} % lo escribi como lo tenia en mis apuntes
     \textbf{Teorema del cambio de variables para integrales dobles}. Sea $f:D\subseteq\Rn{2}\to\Rn{2}$ un campo escalar integrable. Sea $\mathbf{T}:D^*\subseteq\Rn{2}\to D$ continua de clase $C^1$ en $\interior{D^*}$, inyectiva en $\interior{D^*}$ y $\mathbf{T}(D^*)=D$. Entonces
     \[
-        \iint_D f\:dA=\iint_{D^*}(f\circ\mathbf{T})J_\mathbf{T}\:dV.\finalmath
+        \iint_D f\:dA=\iint_{D^*}(f\circ\mathbf{T})J_\mathbf{T}\:dV.
     \]
 \end{theorem}

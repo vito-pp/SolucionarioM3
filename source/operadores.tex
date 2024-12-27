@@ -3,14 +3,14 @@
     \[
         \grad f(\mathbf{x})=\left(\frac{\partial f(\mathbf{x})}{\partial x_1},\frac{\partial f(\mathbf{x})}{\partial x_2},\:\ldots,\: \frac{\partial f(\mathbf{x})}{\partial x_n}\right),
     \]
-    donde $\mathbf{x}=(x_1, x_2,\ldots, x_n)$.\final   
+    donde $\mathbf{x}=(x_1, x_2,\ldots, x_n)$.   
 \end{definition}
 \begin{definition}
     Sea $\mathbf{F}:U\subset\Rn{n}\to\Rn{n}$, $U$ abierto, de clase $C^1(U)$. Se define la \textbf{divergencia} de $\mathbf{F}$ como
     \[
         \grad\cdot \mathbf{F}(\mathbf{x})=\frac{\partial f_1(\mathbf{x})}{\partial x_1}+\frac{\partial f_2(\mathbf{x})}{\partial x_2}+\:\ldots+\: \frac{\partial f_n(\mathbf{x})}{\partial x_n},
     \]
-    donde $\mathbf{F}=(f_1,f_2,\ldots,f_n),$ con cada $f_i:\Rn{n}\to\R\;(i=1,\ldots,n).$\final
+    donde $\mathbf{F}=(f_1,f_2,\ldots,f_n),$ con cada $f_i:\Rn{n}\to\R\;(i=1,\ldots,n).$
 \end{definition}
 \begin{definition}
     Sea $\mathbf{F}:U\subset\Rn{3}\to\Rn{3}$, $U$ abierto, de clase $C^1(U)$. Se define el \textbf{rotor} de $\mathbf{F}$ como 
@@ -20,7 +20,7 @@
     donde $\mathbf{F}(x,y,z)=(f_1(x,y,z),\:f_2(x,y,z),\:f_3(x,y,z))$.
     Y para el caso en el que $\mathbf{F}:U\subset\Rn{2}\to\Rn{n}$, con las mismas condiciones, el \textbf{rotor} es
     \[
-        \grad\times\mathbf{F}(\mathbf{x})=\left(\frac{\partial f_2(\mathbf{x})}{\partial x}-\frac{\partial f_1(\mathbf{x})}{\partial y}\right).\finalmath
+        \grad\times\mathbf{F}(\mathbf{x})=\left(\frac{\partial f_2(\mathbf{x})}{\partial x}-\frac{\partial f_1(\mathbf{x})}{\partial y}\right).
     \]
 \end{definition}
     Estas f\'ormulas son m\'as faciles de recordar si pensamos a ``nabla'' $\grad$ como el operador tal que 
@@ -44,37 +44,37 @@
     \]
     Y para el caso de un campo vectorial $\mathbf{F}:U\subset\Rn{n}\to\Rn{n}$ de clase $C^2(\Rn{n})$, el \textbf{laplaciano} escalar
     \[
-        \Delta\mathbf{F}=(\Delta f_1,\Delta f_2,\ldots,\Delta f_n).\finalmath 
+        \Delta\mathbf{F}=(\Delta f_1,\Delta f_2,\ldots,\Delta f_n). 
     \]
 \end{definition}
 
 \textcolor{red}{AGREGAR EJEMPLOS}
 
 \begin{definition}
-    Sea un campo vectorial $\mathbf{F}$. Si $\grad\times\mathbf{F}=0$, lo llamamos \textbf{irrotacional}. Si $\grad\cdot\mathbf{F}=0$, lo llamamos \textbf{solenoidal}.\final
+    Sea un campo vectorial $\mathbf{F}$. Si $\grad\times\mathbf{F}=0$, lo llamamos \textbf{irrotacional}. Si $\grad\cdot\mathbf{F}=0$, lo llamamos \textbf{solenoidal}.
 \end{definition}
 \begin{definition}
-    Sea un campo escalar $f$ o vectorial $\mathbf{F}$ vectorial, lo llamamos \textbf{arm\'onico} si $\Delta f=0$ o $\Delta \mathbf{F}=0$.\final
+    Sea un campo escalar $f$ o vectorial $\mathbf{F}$ vectorial, lo llamamos \textbf{arm\'onico} si $\Delta f=0$ o $\Delta \mathbf{F}=0$.
 \end{definition}
 \begin{propertie}
     Los operadores vectoriales son aplicaciones lineales. Sean $f:U\subseteq\Rn{n}\to\R$ diferenciable y $\mathbf{F}:U\subseteq\Rn{n}\to\Rn{n}$ diferenciable. Sean $\alpha,\;\beta\in\R$:
     \begin{enumerate}
         \item \(\grad(\alpha f(\mathbf{x})+\beta g(\mathbf{x}))=\alpha\grad f(\mathbf{x})+\beta\grad g(\mathbf{x}),\quad\forall\mathbf{x}\in U\)
         \item \(\grad\cdot(\alpha \mathbf{F}(\mathbf{x})+\beta \mathbf{G}(\mathbf{x}))=\alpha\grad\cdot\mathbf{F}(\mathbf{x})+\beta\grad\cdot\mathbf{G}(\mathbf{x}),\quad\forall\mathbf{x}\in U\)
-        \item \(\grad\times(\alpha \mathbf{F}(\mathbf{x})+\beta \mathbf{G}(\mathbf{x}))=\alpha\grad\times\mathbf{F}(\mathbf{x})+\beta\grad\times\mathbf{G}(\mathbf{x}),\quad\forall\mathbf{x}\in U\)\final
+        \item \(\grad\times(\alpha \mathbf{F}(\mathbf{x})+\beta \mathbf{G}(\mathbf{x}))=\alpha\grad\times\mathbf{F}(\mathbf{x})+\beta\grad\times\mathbf{G}(\mathbf{x}),\quad\forall\mathbf{x}\in U\)
     \end{enumerate}
 \end{propertie}
 \begin{propertie}
     \textbf{Regla de Leibniz para el producto}. Sea $h:\Rn{n}\to\R$ un campo escalar tal que $h\in C^1$.
     \begin{enumerate}
         \item Sea $\mathbf{F}:U\subseteq\Rn{n}\to\Rn{n}$ de clase $C^1(U)$, entonces $\grad\cdot(h\mathbf{F})=h\grad\cdot\mathbf{F}+\grad h\cdot\mathbf{F}$
-        \item Sea $\mathbf{F}:U\subseteq\Rn{3}\to\Rn{3}$ (o $\Rn{2}$) de clase $C^1(U)$, entonces $\grad\times(h\mathbf{F})=h\grad\times\mathbf{F}+\grad h\times\mathbf{F}$\final
+        \item Sea $\mathbf{F}:U\subseteq\Rn{3}\to\Rn{3}$ (o $\Rn{2}$) de clase $C^1(U)$, entonces $\grad\times(h\mathbf{F})=h\grad\times\mathbf{F}+\grad h\times\mathbf{F}$
     \end{enumerate}
 \end{propertie}
 \begin{propertie}
     Productos:
     \begin{enumerate}
         \item $\grad(fg)=f\grad g+g\grad f$
-        \item $\grad\cdot(\mathbf{F}\times\mathbf{G})=\grad\times\mathbf{F}\cdot\mathbf{G}-\mathbf{F}\cdot\grad\times\mathbf{G}$\final
+        \item $\grad\cdot(\mathbf{F}\times\mathbf{G})=\grad\times\mathbf{F}\cdot\mathbf{G}-\mathbf{F}\cdot\grad\times\mathbf{G}$
     \end{enumerate}
 \end{propertie}

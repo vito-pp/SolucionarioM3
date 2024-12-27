@@ -3,13 +3,13 @@ Dada una funci\'on continua $f:U\to\R$, donde $U$ es un paralelep\'ipedo rectang
 \[
     S_n=\sum_{i=0}^{n-1}\sum_{j=0}^{n-1}\sum_{k=0}^{n-1}f(c_{ijk})\Delta V,
 \]  
-donde $c_{ijk}\in U_{ijk}$, el $ijk$-\'esimo paralelep\'ipedo rectangular en la partici\'on de $U$, y $\Delta V$ es el volumen de $U_{ijk}$.\final
+donde $c_{ijk}\in U_{ijk}$, el $ijk$-\'esimo paralelep\'ipedo rectangular en la partici\'on de $U$, y $\Delta V$ es el volumen de $U_{ijk}$.
 \end{definition}
 
 \begin{definition} 
     Sean $U=[a,b]\times[c,d]\times[p,q]$ y $f:U\to\R$ una funci\'on acotada.El l\'imite $\lim_{n\to\infty}S_n$ se llama \textbf{integral triple} de $f$ sobre $U$, y se nota $\iiint_U f\:dV$ a
     \[
-          \iiint_U f\:dV=\iiint_U f(x,y,z)\:dxdydz.\finalmath
+          \iiint_U f\:dV=\iiint_U f(x,y,z)\:dxdydz.
     \]
 \end{definition}
 
@@ -28,7 +28,7 @@ Dada $f:U\to\R$, se define la funci\'on $f^*$ tal que
 \]
 Entonces si $U$ es una caja que contiene a $W$ y $\partial W$ est\'a formada por las gr\'aficas de un n\'umero finito de funciones continuas, $f^*$ ser\'a integrable. Luego, se define
 \[
-    \iiint_W f\:dV=\iiint_U f^*\:dV.  \finalmath
+    \iiint_W f\:dV=\iiint_U f^*\:dV.  
 \]
 \end{definition}
 
@@ -53,7 +53,7 @@ Entonces si $U$ es una caja que contiene a $W$ y $\partial W$ est\'a formada por
         \]    
         \item[vii.] Si $W=W_1\cup W_2, y \;W_1\cap W_2\neq\varnothing,$ es una partici\'on de $W$, $f$ es integrable en $W$ $\iff$ $f$ es integrable en $W_1$ y $W_2$. En este caso 
         \[
-            \iiint_W f\:dV=\iiint_{W_1} f\:dV+\iiint_{W_2}f\:dV. \finalmath   
+            \iiint_W f\:dV=\iiint_{W_1} f\:dV+\iiint_{W_2}f\:dV.    
         \]
     \end{enumerate}
 \end{propertie}
@@ -61,14 +61,14 @@ Entonces si $U$ es una caja que contiene a $W$ y $\partial W$ est\'a formada por
 \begin{definition}
     Se define el volumen de un conjunto $W\subset\Rn{n}$, y se nota $\text{Vol}(W)$, como la integral, si existe, de la funci\'on 1. Es decir,
     \[
-        \text{Vol}(W)=\iiint_W1\:dV.\finalmath
+        \text{Vol}(W)=\iiint_W1\:dV.
     \]
 \end{definition}
 
 \begin{theorem}
     \textbf{Teorema del valor medio}. Sea $f:W\subseteq\Rn{3}\to\Rn{3}$ continua y $W$ es un conjunto elemental. Entonces existe $(x_0,y_0,z_0)$ en $W$ tal que 
     \[
-        \iiint_W f\:dV=f(x_0,y_0,z_0)\text{Vol}(W).\finalmath
+        \iiint_W f\:dV=f(x_0,y_0,z_0)\text{Vol}(W).
     \]
 \end{theorem}
 
@@ -78,12 +78,12 @@ Entonces si $U$ es una caja que contiene a $W$ y $\partial W$ est\'a formada por
     \begin{equation*}
         x\in[a,b], \qquad \phi_1(x)\leq y\leq\phi_2(x), \qquad \gamma_1(x,y)\leq z\leq\gamma_2(x,y). 
     \end{equation*}
-    O bien, intercambiando el orden de las variables.\final
+    O bien, intercambiando el orden de las variables.
 \end{definition}
 
 \begin{theorem}
     \textbf{Teorema del cambio de variables para integrales triples}. Sea $f:W\subseteq\Rn{3}\to\Rn{3}$ un campo escalar integrable. Sea $\mathbf{T}:W^*\subseteq\Rn{3}\to W\subseteq\Rn{3}$ continua de clase $C^1$ en $\interior{W^*}$, inyectiva en $\interior{W^*}$ y $\mathbf{T}(W^*)=W$. Entonces
     \[
-        \iiint_W f\:dV=\iiint_{W^*}(f\circ\mathbf{T})J_\mathbf{T}\:dV.\finalmath
+        \iiint_W f\:dV=\iiint_{W^*}(f\circ\mathbf{T})J_\mathbf{T}\:dV.
     \]
 \end{theorem}
