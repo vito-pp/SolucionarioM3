@@ -23,43 +23,79 @@
 \begin{obs} 
     Otra manera de enunciar el teorema de Green es usando un cambio en la notaci\'on vectorial. Pensando el producto escalar $\mathbf{F}\cdot d\mathbf{s}$ como $P\:dx+Q\:dy$, donde $\mathbf{F}=(P,Q)$ y sabiendo que el rotor en $\Rn{2}$ es la componente $z$ del rotor en $\Rn{3}$; reescribimos el teorema de Green como
 \[
-        \int_{\partial D}P\:dx+Q\:dy=\iint_D\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right).
+        \int_{\partial D}P\:dx+Q\:dy=\iint_D\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)dxdy.
 \]
 \end{obs}
 
 \begin{obs}
-    \textbf{Extensi\'on de Green.} El teorema de Green es aplicable a regiones a\'un m\'as generales que simplemente conexas. De hecho, a cualquier regi\'on en $\Rn{2}$ cuya frontera se pueda descomponer en un n\'umero finito de curvas cerradas simples orientadas se le puede aplicar el teorema de Green. La idea es ``recorrer" dicha frontera pasando por todas las curvas que la confroman.
+    \textbf{Extensi\'on de Green.} El teorema de Green es aplicable a regiones a\'un m\'as generales que simplemente conexas. De hecho, a cualquier regi\'on en $\Rn{2}$ cuya frontera se pueda descomponer en un n\'umero finito de curvas cerradas simples orientadas se le puede aplicar el teorema de Green. La idea es ``recorrer" dicha frontera pasando por todas las curvas que la confroman. 
+    
+    Por ejemplo, sea $D=D_1\cup D_2\cup D_3$ una regi\'on en $\Rn{2}$ no simplemente conexa, como muestra la figura a continuaci\'on.
+    
+    \begin{center}
+    \begin{tikzpicture}
+        % Define the exterior boundary with clockwise arrows
+        \fill[blue!60!white!40] (0,0) circle (4);
+        \foreach \angle in {315, 270, 225, 180, 135, 90, 45, 0} {
+            \draw[thick, ->] ({4*cos(\angle+10)}, {4*sin(\angle+10)}) 
+                arc[start angle=\angle+10, end angle=\angle-45+10, radius=4];
+        }
+        
+        \draw[thick, dashed] (-3.96, 0.5) -- (3.96, 0.5);
+        \draw[thick, dashed] (-3.7, -1.5) -- (3.7, -1.5);
+        
+        % Inner circle 1 with counterclockwise arrows
+        \fill[white] (-1,0.5) circle (1.5);
+        \foreach \angle in {0, 90, 180, 270} {
+            \draw[thick, ->] ({-1+1.5*cos(\angle+80)}, {0.5+1.5*sin(\angle+80)}) 
+            arc[start angle=\angle+80, end angle=\angle+170, radius=1.5];
+            }
+            
+            % Inner circle 2 with counterclockwise arrows
+        \fill[white] (1.5,-1.5) circle (0.7);
+        \foreach \angle in {0, 90, 180, 270} {
+            \draw[thick, ->] ({1.5+0.7*cos(\angle+80)}, {-1.5+0.7*sin(\angle+80)}) 
+                arc[start angle=\angle+80, end angle=\angle+170, radius=0.7];
+                }
+
+        % Labels for regions
+        \node at (0,3.3) {$D_1$};
+        \node at (0.6,-0.5) {$D_2$};
+        \node at (0,-3) {$D_3$};
+        \node at (-2, 4) {$C$};
+        \node at (-1,1.2) {$C_1$};
+        \node at (1.5,-1.5) {$C_2$};
+        \node at (-3.2, 1) {$\underleftarrow{\;\;L_1\;\;}$};
+        \node at (-3.2, 0) {$\overrightarrow{\:-L_1\:}$};
+        \node at (2.2, 1) {$\underleftarrow{\;\;L_2\;\;}$};
+        \node at (2.2, 0) {$\overrightarrow{\:-L_2\:}$};
+        \node at (-2.5, -1) {$\underleftarrow{\;\;L_3\;\;}$};
+        \node at (-2.5, -2) {$\overrightarrow{\:-L_3\:}$};
+        \node at (2.8, -1) {$\underleftarrow{\;\;L_4\;\;}$};
+        \node at (2.8, -2) {$\overrightarrow{\:-L_4\:}$};
+    \end{tikzpicture}
+    \end{center}
+
+    El borde de $D$ es $\partial D=C\cup C_1\cup C_2$. Y las orientaciones est\'an definidas tal que $C$ sea horaria y $C_1$ y $C_2$ sean antihorarias. Para poder aplicar el teorema de Green, se puede pensar en subdividir la regi\'on $D$ en tres regiones que s\'i sean simplemente conexas $D_1$, $D_2$ y $D_3$. Dichas regiones las delimitan las curvas $L_1$, $L_2$, $L_3$ y $L_4$. Notar que al ``recorrer'' cada una de las regiones subdivididas, las integrales sobre $L_1$, $L_2$, $L_3$ y $L_4$ se ``cancelan'' entre las regiones lim\'itrofes ya que poseen orientación opuesta. 
+    
+    Por lo tanto, si $\mathbf{F}$ es un campo vectorial definido en $D$, aplicando el teorema de Green.
+    \begin{align*}
+        \oint_{\partial D} \mathbf{F}\cdot d\mathbf{s}=&\oint_{C}\mathbf{F}\cdot d\mathbf{s}+\oint_{C_1}\mathbf{F}\cdot d\mathbf{s}+\oint_{C_2}\mathbf{F}\cdot d\mathbf{s}\\[.2cm]
+        =&\oint_{\partial D_1}\mathbf{F}\cdot d\mathbf{s}+\oint_{\partial D_2}\mathbf{F}\cdot d\mathbf{s}+\oint_{\partial D_1}\mathbf{F}\cdot d\mathbf{s}\\[.2cm]
+        =&\iint_{ D_1}\nabla\times\mathbf{F}\cdot d\mathbf{A}+\iint_{ D_2}\nabla\times\mathbf{F}\cdot d\mathbf{A}+\iint_{ D_1}\nabla\times\mathbf{F}\cdot d\mathbf{A}\\[.2cm]
+        =&\iint_D \nabla\times\mathbf{F}\cdot d\mathbf{A}
+    \end{align*}
+
 \end{obs}
 
-\begin{center}
-\begin{tikzpicture}
-    % Define the exterior boundary
-    \draw[thick, fill=blue!60!white!40] (0,0) circle (4);
-
-    % Define the inner boundaries
-    \draw[thick, fill=white] (0,1.5) circle (1);
-    \draw[thick, fill=white] (1.5,-1.5) circle (0.8);
-
-    % % Draw arrows for the outer boundary
-    \ARW[thick,red,<-]{0, 0, 0, 347};
-
-    % Label the regions
-    \node at (0,4.3) {$C_1$};
-    \node at (0,2.1) {$C_2$};
-    \node at (1.5,-0.3) {$C_3$};
-
-\end{tikzpicture}
-\end{center}
-\textcolor{red}{falta poner las flechas que indican la orientacion}
-
 \begin{theorem}
-\textbf{Teorema de la divergencia en el plano}. Sea $D\subset\Rn{2}$ una regi\'on donde valga Green y sea $\partial D$ su frontera. Denotaremos por $\mathbf{n}$ el versor unitario normal a $\partial D$ en todo punto. Si $\boldsymbol{\sigma}:[a,b]\to\Rn{2},\;\boldsymbol{\sigma}(t)=(x(t),y(t))$ es una parametrizaci\'on orientada de manera positiva de $\partial D$, $\mathbf{n}$ est\'a dado por 
+\textbf{Teorema de la divergencia en el plano}. Sea $D\subset\Rn{2}$ una regi\'on donde valga el teorema de Green y sea $\partial D$ su frontera. Denotaremos por $\mathbf{n}$ el versor unitario normal a $\partial D$ en todo punto. Si $\boldsymbol{\sigma}:[a,b]\to\Rn{2},\;\boldsymbol{\sigma}(t)=(x(t),y(t))$ es una parametrizaci\'on orientada de manera positiva de $\partial D$, $\mathbf{n}$ est\'a dado por 
 \[
     \mathbf{n}=\frac{(y'(t),-x'(t))}{\sqrt{[x'(t)]^2+[y'(t)]^2}}.
 \]
 Sea $\mathbf{F}$ un campo vectorial $C^1$ en $D$. Entonces
 \[
-    \int_{\partial D}\mathbf{F}\cdot\mathbf{n}\:ds=\iint\nabla\cdot\mathbf{F}\:dA.\finalmath
+    \int_{\partial D}\mathbf{F}\cdot\mathbf{n}\:ds=\iint_D\nabla\cdot\mathbf{F}\:dA.\finalmath
 \]
 \end{theorem}
 
