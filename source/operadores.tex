@@ -23,6 +23,8 @@
         \grad\times\mathbf{F}(\mathbf{x})=\left(\frac{\partial f_2(\mathbf{x})}{\partial x}-\frac{\partial f_1(\mathbf{x})}{\partial y}\right).
     \]
 \end{definition}
+
+\begin{obs}
     Estas f\'ormulas son m\'as faciles de recordar si pensamos a ``nabla'' $\grad$ como el operador tal que 
     \[
         \grad = (\frac{\partial}{\partial x_1},\frac{\partial}{\partial x_2},\:\ldots,\: \frac{\partial}{\partial x_n}).  
@@ -37,10 +39,11 @@
         \end{vmatrix} \\[.2cm]
         &=\left(\frac{\partial f_3}{\partial y}-\frac{\partial f_2}{\partial z},\;\frac{\partial f_1}{\partial z}-\frac{\partial f_3}{\partial x},\;\frac{\partial f_2}{\partial x}-\frac{\partial f_1}{\partial y}\right).
     \end{align*}
+\end{obs}
 \begin{definition}
-    Sea $f:U\subset\Rn{n}\to\R$, $U$ abierto, un campo escalar de clase $C^2(U)$. Se define el \textbf{laplaciano} de $f$, y se lo nota, como
+    Sea $f:U\subset\Rn{n}\to\R$, $U$ abierto, un campo escalar de clase $C^2(U)$. Se define el \textbf{laplaciano} de $f$, y se lo nota $\Delta f$ o $\grad^2 f$, a
     \[
-        \Delta f=\grad^2f=\grad\cdot(\grad f)=\text{div}\:\text{grad}\:\mathbf{F}.  
+        \Delta f=\grad^2f=\grad\cdot(\grad f).  
     \]
     Y para el caso de un campo vectorial $\mathbf{F}:U\subset\Rn{n}\to\Rn{n}$ de clase $C^2(\Rn{n})$, el \textbf{laplaciano} escalar
     \[
