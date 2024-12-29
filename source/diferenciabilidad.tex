@@ -385,19 +385,19 @@ y
     \end{align*}
   y un punto $x_o \in \interior{A} \text{ tal que } g(x_o) \in \interior{B}$. Supongamos que $g$ es diferenciable en $x_o$ y que $f$ es diferenciable en $yo = g(x_o)$. Entonces la composic\'on $f \circ g$ es diferenciable en $x_o$ y, adem\'as,
   \[
-   \mathbf{D}(f \circ g)_{(x_o)} = \mathbf{D}f_{(y_o)} 
-   \mathbf{D}g_{(x_o)}.
+   \boldsymbol{D}(f \circ g)_{(x_o)} = \boldsymbol{D}f_{(y_o)} 
+   \boldsymbol{D}g_{(x_o)}.
   \]
 \end{theorem}
 
 \begin{theorem}[Teorema de la Funci\'on Inversa] \label{teo:inversa}
 \mbox{}
 
- Sean $A \subset \Rn{n}$ un conjunto abierto y $F: A \subset \Rn{n} \to \Rn{n}$ una funci\'on de clase $\mathcal{C}^1$. Sea $x_o \in A$ y supongamos que $\det(\mathbf{D}F_{(x_o)}) \ne 0$. Entonces existen un entorno abierto $U \subset A$ de $x_o$ y un entorno abierto $V \subset \Rn{n}$ de $F(x_o)$ tal que $F:U \to V$ (la restricci\'on de $F$ a $U$) tiene inversa $F^{-1}:V \to U$. Esta funci\'on $F^{-1}$ es de clase $\mathcal{C}^1$ y, adem\'as,
+ Sean $A \subset \Rn{n}$ un conjunto abierto y $F: A \subset \Rn{n} \to \Rn{n}$ una funci\'on de clase $\mathcal{C}^1$. Sea $x_o \in A$ y supongamos que $\det(\boldsymbol{D}F_{(x_o)}) \ne 0$. Entonces existen un entorno abierto $U \subset A$ de $x_o$ y un entorno abierto $V \subset \Rn{n}$ de $F(x_o)$ tal que $F:U \to V$ (la restricci\'on de $F$ a $U$) tiene inversa $F^{-1}:V \to U$. Esta funci\'on $F^{-1}$ es de clase $\mathcal{C}^1$ y, adem\'as,
  \[
-  \mathbf{D}F^{-1}_{(F(x_o))} = \left[ \mathbf{D}F_{(x_o)} \right]^{-1}.
+  \boldsymbol{D}F^{-1}_{(F(x_o))} = \left[ \boldsymbol{D}F_{(x_o)} \right]^{-1}.
  \]
- Si $F$ es de clase $\mathcal{C}^p, p \ge 1,$ entonces $F^{-1}$ tambi\'on.
+ Si $F$ es de clase $\mathcal{C}^p, p \ge 1,$ entonces $F^{-1}$ tambi\'en.
 \end{theorem}
 
 \begin{theorem}[Caso particular del Teorema de la Funci\'on Impl\'icita] \label{teo:implicit_part}
@@ -418,7 +418,7 @@ Sean $A \subset \Rn{3}$ un conjunto abierto y $F: A \to \R$ una funci\'on de cla
   g_{x}(x,y) &= -\frac{F_x (x,y,g(x,y))}{F_z (x,y,g(x,y))}  \\
   g_{y}(x,y) &= -\frac{F_y (x,y,g(x,y))}{F_z (x,y,g(x,y))} \\
  \end{align*}
- Si $F$ es de clase $\mathcal{C}^p, p \ge 1,$ entonces $g$ tambi\'on.
+ Si $F$ es de clase $\mathcal{C}^p, p \ge 1,$ entonces $g$ tambi\'en.
  
 \end{theorem}
 
@@ -474,6 +474,6 @@ Sean $A \subset \Rn{3}$ un conjunto abierto y $F: A \to \R$ una funci\'on de cla
                 \dif{f_m}{x_1} & \dif{f_m}{x_2} & \cdots & \dif{f_m}{x_n}
                 \end{bmatrix*}.            
  \]
-Si $F$ es de clase $\mathcal{C}^p, p \ge 1,$ entonces $g$ tambi\'on.
+Si $F$ es de clase $\mathcal{C}^p, p \ge 1,$ entonces $g$ tambi\'en.
  
 \end{theorem}

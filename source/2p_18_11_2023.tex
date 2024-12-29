@@ -17,7 +17,7 @@
 
 \begin{question}
     Sea $C$ una curva simple parametrizada por $\boldsymbol{\sigma}:[0,1] \rightarrow \mathbb{R}^3$ tal que 
-    $\boldsymbol{\sigma}(0)=\boldsymbol{\sigma}(1)$  y sea el campo $\boldsymbol{F}(x,y,z) = (y^2-2xz+g(x),2xy+z^3-g(y),3yz^2-x^2)$
+    $\boldsymbol{\sigma}(0)=\boldsymbol{\sigma}(1)$  y sea el campo $\mathbf{F}(x,y,z) = (y^2-2xz+g(x),2xy+z^3-g(y),3yz^2-x^2)$
     con $g:\mathbb{R}\rightarrow \mathbb{R}$ una función de clase $\mathcal{C}^1$. Calcular $\int_{C}F \cdot ds$.
 \end{question}
 
@@ -172,19 +172,19 @@ La ecuación del plano tangente de este punto sobre la curva $S$ es:
 
 \begin{solution}
     En principio, no sabemos la expresión de la parametrización de la curva. La única información que tenemos es que es una curva simple y cerrada, puesto que sus valores inicial y final son iguales.
-    Sin embargo, tenemos la expresión del campo $\boldsymbol{F}$, cuya integral sobre la curva $C$ hay que calcular. El ejercicio, por lo tanto, apunta a chequar si $\boldsymbol{F}$ es un campo conservativo, para que:
+    Sin embargo, tenemos la expresión del campo $\mathbf{F}$, cuya integral sobre la curva $C$ hay que calcular. El ejercicio, por lo tanto, apunta a chequar si $\mathbf{F}$ es un campo conservativo, para que:
     \begin{equation*}
-        \oint_{C}\boldsymbol{F}\cdot\boldsymbol{ds}=0
+        \oint_{C}\mathbf{F}\cdot\boldsymbol{ds}=0
     \end{equation*}
     según el corolario para el teorema de la integral sobre una curva de un campo conservativo.
 
-    Ya que $g \in \mathcal{C}^1(\R)$, $\boldsymbol{F}$ queda definida de $\boldsymbol{F}:\Rn{3}\rightarrow\Rn{3}$. Así, con el campo definido en un conjunto simplemente conexo, se puede usar que:
+    Ya que $g \in \mathcal{C}^1(\R)$, $\mathbf{F}$ queda definida de $\mathbf{F}:\Rn{3}\rightarrow\Rn{3}$. Así, con el campo definido en un conjunto simplemente conexo, se puede usar que:
     \begin{equation*}
-        \grad \times \boldsymbol{F} = 0 \Leftrightarrow \boldsymbol{F} \text{ es un campo conservativo}
+        \grad \times \mathbf{F} = 0 \Leftrightarrow \mathbf{F} \text{ es un campo conservativo}
     \end{equation*}
     Así, se calcula el rotor del campo:
     \begin{align*}
-        \grad \times \boldsymbol{F}(x,y,z) &= \grad \times (y^2-2xz+g(x),2xy+z^3-g(y),3yz^2-x^2)\\[10pt]
+        \grad \times \mathbf{F}(x,y,z) &= \grad \times (y^2-2xz+g(x),2xy+z^3-g(y),3yz^2-x^2)\\[10pt]
         &=  \renewcommand{\arraystretch}{1.5} \begin{vmatrix}
                 \mathbf{i} & \mathbf{j} & \mathbf{k} \\
                 \partialx & \partialy & \partialz \\
@@ -196,12 +196,12 @@ La ecuación del plano tangente de este punto sobre la curva $S$ es:
         \partialx(2xy+z^3-g(y)) - \partialy(y^2-2xz+g(x))
         \end{pmatrix}\\[10pt]
     &= \left(3z^2-3z^2,-2x+2x,2y-2y\right)\\[10pt]
-    \grad \times \boldsymbol{F}(x,y,z) &= (0,0,0) \Rightarrow \boldsymbol{F} \text{ es un campo conservativo.}
+    \grad \times \mathbf{F}(x,y,z) &= (0,0,0) \Rightarrow \mathbf{F} \text{ es un campo conservativo.}
     \end{align*}
 
-    Por lo tanto, con $\boldsymbol{F}$ un campo conservativo, podemos usar el corolario antes mencionado y calcular el valor de la integral sobre la curva $C$, cerrada, en cero.
+    Por lo tanto, con $\mathbf{F}$ un campo conservativo, podemos usar el corolario antes mencionado y calcular el valor de la integral sobre la curva $C$, cerrada, en cero.
     \begin{equation*}
-       \therefore \oint_{C}\boldsymbol{F}\cdot\boldsymbol{ds}=0
+       \therefore \oint_{C}\mathbf{F}\cdot\boldsymbol{ds}=0
     \end{equation*}
 \end{solution}
 
