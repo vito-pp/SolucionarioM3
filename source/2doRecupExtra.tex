@@ -205,7 +205,7 @@
                     ymin=0, ymax=1,
                     xtick distance=1, ytick distance=1,
                 ]
-                \draw[cyan, thick] (-1,0) -- (1,0) -- (0,1) -- cycle;
+                \draw[red, thick] (-1,0) -- (1,0) -- (0,1) -- cycle;
             \end{axis}
         \end{tikzpicture}
     \end{center}
@@ -217,10 +217,10 @@
     por el teorema de Green
     \[
         \oint_C \mathbf{F}\cdot d\mathbf{s} = \iint_T
-        \grad\times\mathbf{F}\:dA.
+        \grad\times\mathbf{F}\cdot d\mathbf{A}.
     \]
-    Como $\grad\times\mathbf{F} = 1$, queda que \[\oint_C
-        \mathbf{F}\cdot d\mathbf{s} = \iint_T dA = \textcolor{red}{Area}(T)
+    Como $\grad\times\mathbf{F} = \mathbf{1}$, queda que \[\oint_C
+        \mathbf{F}\cdot d\mathbf{s} = \iint_T \mathbf{1}\cdot d\mathbf{A}=\iint_T dA = \mbox{A}(T)
         = \frac{2\cdot1}{2} = 1.\]
 \end{solution}
 
@@ -241,7 +241,7 @@
     \]
     Mirando cada t\'ermino detenidamente se puede llegar a
     la conclusi\'on de que $$f(x,y) = e^{xy} + \sen{(xy)} + C,
-        \mbox{ con } C\in\R$$ es soluci\'on del sistema. Lo que
+        \mbox{ con } C\in\R,$$ es soluci\'on del sistema. Lo que
     significa que $\mathbf{F}$ es un campo conservativo.
 
     Luego para calcular $\int_C \mathbf{F}\cdot d\mathbf{s}$
