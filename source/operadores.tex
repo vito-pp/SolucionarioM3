@@ -43,7 +43,7 @@
 \begin{definition}
     Sea $f:U\subset\Rn{n}\to\R$, $U$ abierto, un campo escalar de clase $\mathcal{C}^2(U)$. Se define el \textbf{laplaciano} de $f$, y se lo nota $\Delta f$ o $\grad^2 f$, a
     \[
-        \Delta f=\grad^2f=\grad\cdot(\grad f).  
+        \Delta f=\grad^2f=\grad\cdot\grad f.  
     \]
     Y para el caso de un campo vectorial $\mathbf{F}:U\subset\Rn{n}\to\Rn{n}$ de clase $\mathcal{C}^2(\Rn{n})$, el \textbf{laplaciano} escalar
     \[
@@ -51,10 +51,25 @@
     \]
 \end{definition}
 
-\textcolor{red}{AGREGAR EJEMPLOS}
+\begin{example}
+    Sea $f(x,y)=\sin{(x^2+y^2)}$. Calcular $\Delta f(x,y)$.
+
+    Primero calculamos el gradiente de $f$.
+    \[
+        \grad f = (2x\cos{(x^2+y^2)}, 2y\cos{(x^2+y^2)})
+    \]
+    Luego le aplicamos el gradiente.
+    \begin{align*}
+        \grad\cdot\grad f &= \left(\frac{\partial}{\partial x}, \frac{\partial}{\partial y}\right)\cdot (2x\cos{(x^2+y^2)}, 2y\cos{(x^2+y^2)})\\[.2cm]
+        &= 2\cos{(x^2+y^2)}-4x^2\sin{(x^2+y^2)}+2\cos{(x^2+y^2)}-4y^2\sin{(x^2+y^2)}\\[.2cm]
+        &=4\cos{(x^2+y^2)}-4(x^2+y^2)\sin{(x^2+y^2)}=\Delta f
+    \end{align*}
+    Notar que la expresi\'on para el laplaciano es an\'aloga a la segunda derivada de una funci\'on de una variable.
+    $$\Delta f=\frac{\partial^2 f}{\partial x^2}+\frac{\partial^2 f}{\partial y^2}$$
+\end{example}
 
 \begin{definition}
-    Sea un campo vectorial $\mathbf{F}$. Si $\grad\times\mathbf{F}=0$, lo llamamos \textbf{irrotacional}. Si $\grad\cdot\mathbf{F}=0$, lo llamamos \textbf{solenoidal}.
+    Sea un campo vectorial $\mathbf{F}$. Si $\grad\times\mathbf{F}=\mathbf{0}$, lo llamamos \textbf{irrotacional}. Si $\grad\cdot\mathbf{F}=0$, lo llamamos \textbf{solenoidal}.
 \end{definition}
 \begin{definition}
     Sea un campo escalar $f$ o vectorial $\mathbf{F}$ vectorial, lo llamamos \textbf{arm\'onico} si $\Delta f=0$ o $\Delta \mathbf{F}=0$.
