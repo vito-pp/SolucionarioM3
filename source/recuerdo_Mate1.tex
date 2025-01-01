@@ -27,7 +27,7 @@
     Se llama \textit{imagen} de una función \newline $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}$ 
     al conjunto 
     \begin{equation*}
-        \text{Im}(f) = \left\{ y\in B: \exists x\in A / f(x)=y \right\}.    
+        \text{Im}(f) = \left\{ y\in B: \exists\;x\in A\:|\:f(x)=y \right\}.    
     \end{equation*}
 \end{definition}
 \begin{definition}\textbf{Gráfica de una función en $\mathbb{R}$.}
@@ -38,7 +38,7 @@
     \end{equation*}
 \end{definition}
 \begin{example}
-    Si se tiene la función ejemplo $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R} / f(x)=2x-1$.
+    Si se tiene la función ejemplo $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R} \:|\: f(x)=2x-1$.
     Se puede armar la siguiente tabla de valores:
     \begin{table}[H]
         \centering
@@ -93,17 +93,17 @@
     \begin{equation*}
         f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}.
     \end{equation*}
-    La función se dice \textit{sobreyectiva} si se cumple que su codominio es igual a su imagen
+    La función se dice \textit{sobreyectiva} si se cumple que su codominio es igual a su imagen, esto es
     \begin{equation*}
-        \text{Cod}(f)=\text{Img}(f).
+        \text{Cod}(f)=\text{Im}(f).
     \end{equation*}
     Es decir que cada elemento del conjunto de salida es la evaluación de la función en al menos un elemento del
     dominio.
 
     La función se dice \textit{inyectiva} si a cada elemento en el conjunto imagen le corresponde un único
-    valor del dominio. Es decir, que la función es inyectiva cuando se cumple
+    valor del dominio. Es decir, que la función es inyectiva cuando se cumple que
     \begin{equation*}
-        a=b \Leftrightarrow f(a)=f(b),
+        a=b \iff f(a)=f(b),
     \end{equation*}
     tal que $a,b\in \text{Dom}(f)$.
 
