@@ -1,3 +1,8 @@
+
+\textcolor{red}{Falta definicion de distancia, de norma y la relacion entre ellas.  Como ejemplo poner la norma 1 y 2. Graficar algunos mismos conjuntos con diferente normas}
+
+
+
 \begin{definition} [Bola de radio $\delta$ y centro $x_o$] \label{def:bola}
     Sean $x_o \in \Rn{n},\;\delta > 0$ y $\text{d}$ una distancia en $\Rn{n}$. La \emph{bola de radio $\delta$ y centro $x_o$}, que denotamos con $B_{\delta}(x_o)$, es el conjunto:
     \[
@@ -16,11 +21,12 @@
     \[
      \exists \delta > 0 / B_{\delta}(x_o) \subset A.
     \]
-    El \emph{interior} de $A$, que denotamos con $\interior(A)$ o \AA{}, es el conjunto de todos los puntos interiores de $A$:
+    El \emph{interior} de $A$, que denotamos con $A^{\circ}$, es el conjunto de todos los puntos interiores de $A$:
     \[
-     \interior(A) = \left\lbrace x \in A : x \text{ es punto interior de } A \right\rbrace.
+    A^{\circ}= \left\lbrace x \in A : x \text{ es punto interior de } A \right\rbrace.
     \]
    \end{definition}
+   
    
    \begin{definition} [Conjunto abierto] \label{def:abierto}
        Sea $A \subset \Rn{n}$. Decimos que $A$ es \emph{abierto} si
@@ -29,9 +35,10 @@
    \]
    \end{definition}
    
-   \begin{propertie} \label{prop:abierto_int} 
-     Un conjunto $A \subset \Rn{n}$ es abierto si y solo si $A = \interior(A)$.
-   \end{propertie}
+   \begin{propertie}  \label{prop:abierto_int}    Sea  $A \subseteq \Rn{n}$
+   
+    1.  $A \subseteq  A^{\circ}.$      \:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:                        2.  $\text{   A  es abierto }  \iff   A =  A^{\circ}.$
+    \end{propertie}
    
    \begin{definition} [Conjunto cerrado] \label{def:cerrado}
     Sea $A \subset \Rn{n}$. Decimos que $A$ es \emph{cerrado} si su complemento $A^c = \Rn{n} - A$ es abierto.
@@ -77,4 +84,17 @@
     Sea $A \subset \Rn{n}$. Decimos que $A$ es un \emph{conjunto acotado} si existe $\delta > 0$ tal que la bola de radio $\delta$  centrada en el origen contiene al conjunto $A$, es decir, si $\exists \delta > 0 : A \subset B_{\delta}(\mathbf{0})$.\\
     Equivalentemente, $A$ es un \emph{conjunto acotado} si $\exists \delta > 0, x_o \in \Rn{n} : A \subset B_{\delta}(x_o)$.
    \end{definition}
+   
+   
+   \begin{definition}
+    Sea un conjunto $A\subseteq\Rn{n}$. $A$ se llama \textbf{conexo} si dados dos puntos cualquiera de $A$ se los puede unir por una curva continua que este incluida en $A$.
+\end{definition}
+   
+   
+    \begin{definition}  \textcolor{red}{conjunto convexo,   simplemente conexo}     \end{definition}
+   
+   
+    \textcolor{red}{Agregar algunos dibujos y  ejemplos.   Uno podría ser los conocidos intervalos abiertos, cerradaos etc de Mate 1. }
+   
+   
    

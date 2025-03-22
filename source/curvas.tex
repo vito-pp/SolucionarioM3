@@ -1,9 +1,14 @@
+
+\begin{definition} A un campo  $\boldsymbol{\sigma}:I\subseteq\R\to\Rn{n}$ continuo de lo llama  \textit{Trayectoria}. 
+   \end{definition}
+
+
 \begin{definition}
-    \textcolor{red}{Falta definici\'on $\mathcal{C}^1$ a trozos.}
+    \textcolor{red}{Falta definici\'on de trayectoria $\mathcal{C}^1$ a trozos.}
 \end{definition}
 
 \begin{definition}
-    Se define una curva $\Gamma\in\Rn{n}$ como la imagen de una trayectoria $\boldsymbol{\sigma}:I\subseteq\R\to\Rn{n}$ continua y de clase $\mathcal{C}^1$ a trozos. Si $I=[a,b]$ a los puntos $\boldsymbol{\sigma}(a)$ y $\boldsymbol{\sigma}(b)$ se los llama extremos de la curva.
+    Se define una curva $\Gamma\in\Rn{n}$ como la imagen de una trayectoria $\boldsymbol{\sigma}:I\subseteq\R\to\Rn{n}$  de clase $\mathcal{C}^1$ a trozos. Si $I=[a,b]$ a los puntos $\boldsymbol{\sigma}(a)$ y $\boldsymbol{\sigma}(b)$ son los  extremos de la curva.
 \end{definition}
 
 \begin{center}
@@ -36,7 +41,7 @@
 \end{center}
 
 \begin{definition}
-    Si $\boldsymbol{\sigma}$ es inyectiva en $I$, salvo tal vez en sus bordes, entonces se llama a $\Gamma$ curva simple.    
+ Diremos que   $\Gamma\in\Rn{n}$ es una curva simple si $\Gamma = Img(\boldsymbol{\sigma})$ con $\boldsymbol{\sigma}:I\subseteq\R\to\Rn{n}$   inyectiva en $I^{\circ}$.   
 \end{definition}
 
 \begin{center}
@@ -70,7 +75,7 @@
 \end{center}
 
 \begin{definition}
-    Si $\boldsymbol{\sigma}(a)=\boldsymbol{\sigma}(b)$ entonces $\Gamma$ se llama curva cerrada.    
+   Si $\boldsymbol{\sigma}(a)=\boldsymbol{\sigma}(b)$ entonces $\Gamma$ se llama curva cerrada.    
 \end{definition}
 
 \begin{center}
@@ -106,7 +111,7 @@
 \end{center}
 
 \begin{example}
-    $\Gamma_1$ y $\Gamma_3$ son curvas simples, mientras que $\Gamma_2$ no lo es. Adema\'as $\Gamma_3$ es una curva cerrada. 
+    $\Gamma_1$ y $\Gamma_3$ son curvas simples, mientras que $\Gamma_2$ no lo es. Adem\'as $\Gamma_3$ es una curva cerrada. 
 \end{example}
 
 \begin{example}
@@ -144,17 +149,14 @@
     
 \end{example}
 
-\begin{definition}
-    \textcolor{red}{Continuidad a trozos. Igual que C1 a trozos}.
-\end{definition}
 
-\begin{obs}
-    Cada curva simple $\Gamma$ tiene asociadas dos orientaciones o sentidos posibles. Si los puntos $P$ y $Q$ son los extremos de la curva, y $P\neq Q$, entonces podemos considerar a $\Gamma$ con orientaci\'on desde $P$ hacia $Q$ o bien desde $Q$ hacia $P$. Ahora bien, falta contemplar el caso en el que $P=Q$.
-\end{obs}
 
-\begin{definition}
-    De manera semejante al movimiento de las manecillas de un reloj anal\'ogico, se define la orientaci\'on \textbf{horaria} o \textbf{negativa} tal que si se avanza en la dirección de la parametrización, el interior de la curva queda a la derecha. Y se define la orientaci\'on \textbf{antihoraria} o \textbf{positiva} tal que si se avanza en la dirección de la parametrización, el interior de la curva queda a la derecha.
+ \begin{obs}
+    Cada curva simple $\Gamma$ tiene asociadas dos orientaciones o sentidos posibles. Si los puntos $P$ y $Q$ son los extremos de la curva, y $P\neq Q$, entonces podemos considerar a $\Gamma$ con orientaci\'on desde $P$ hacia $Q$ o bien desde $Q$ hacia $P$.   Si $P=Q$ y $\Gamma \subset \mathbb{R}^{2}$ podemos pensar de manera semejante al movimiento de las manecillas de un reloj anal\'ogico.  Se define la orientaci\'on \textbf{horaria} o \textbf{negativa} tal que si se avanza en la dirección de la parametrización, el interior de la curva queda a la derecha.  Y se define la orientaci\'on \textbf{antihoraria} o \textbf{positiva} tal que si se avanza en la dirección de la parametrización, el interior de la curva queda a la derecha.
+ \end{obs}
 
+%\begin{definition}
+   
 % dios perdona la desprolijidad
     \newcommand\clockc[3]{%
         \begin{tikzpicture}[line cap=round,line width=3pt]
@@ -206,12 +208,12 @@
         \clockw{15}{5}{20}\hspace{3cm}\clockc{14}{35}{5}
     \end{center}
 
+%\end{definition}
+
+\begin{definition}
+    Se define una parametrizaci\'on de una curva simple $\Gamma\in\Rn{n}$ como una trayectoria $\boldsymbol{\sigma}:I\subseteq\R\to\Rn{n}$ continua, de clase $\mathcal{C}^1$ a trozos, inyectiva en $\interior{I}$ y tal que  $\text{Im}\:(\boldsymbol{\sigma})=\Gamma$.
 \end{definition}
 
 \begin{definition}
-    Se define una parametrizaci\'on de una curva simple $\Gamma\in\Rn{n}$ como una trayectoria $\boldsymbol{\sigma}:I\subseteq\R\to\Rn{n}$ continua, de clase $\mathcal{C}^1$ a trozos, inyectiva en $\interior{I}$ y $\text{Im}\:(\boldsymbol{\sigma})=\Gamma$.
-\end{definition}
-
-\begin{definition}
-    Una paremetrizaci\'on $\boldsymbol{\sigma}:I\subset\R\to\Rn{n}$ se llama regular si $\boldsymbol{\sigma}'(t)\neq0$, $\forall t\in\interior{I}$.
+    Una paremetrizaci\'on $\boldsymbol{\sigma}:I\subset\R\to\Rn{n}$ se llama regular si $\boldsymbol{\sigma}'(t)\neq0 \: \forall t\in\interior{I}$.
 \end{definition}

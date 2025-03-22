@@ -1,47 +1,46 @@
+
+\textcolor{red}{Unificar lo siguiente:  lo nombres en capitulos anteriores no estan en negritas sino que estan con textit }
+
 \begin{definition}
-    Sea $f:U\subset\Rn{n}\to\R$, $U$ abierto, diferenciable en $U$. Se define el \textbf{gradiente} de $f$, y si nota $\grad f(\mathbf{x})$, evaluado en $\mathbf{x}$ como el vector en el espacio $\Rn{n}$ dado por 
+    Sea $f:U\subset\Rn{n}\to\R$ con $U$ abierto y $f$ diferenciable en $U$.   Se define el \textbf{gradiente} de $f$ evaluado en $\mathbf{x}\in U$, y se nota $\grad f(\mathbf{x})$,  como el vector en el espacio $\Rn{n}$ dado por 
     \[
         \grad f(\mathbf{x})=\left(\frac{\partial f(\mathbf{x})}{\partial x_1},\frac{\partial f(\mathbf{x})}{\partial x_2},\:\ldots,\: \frac{\partial f(\mathbf{x})}{\partial x_n}\right),
     \]
-    donde $\mathbf{x}=(x_1, x_2,\ldots, x_n)$.   
-\end{definition}
+  \end{definition}
+
+
 \begin{definition}
-    Sea $\mathbf{F}:U\subset\Rn{n}\to\Rn{n}$, $U$ abierto, de clase $\mathcal{C}^1(U)$. Se define la \textbf{divergencia} de $\mathbf{F}$ como
+    Sea $\mathbf{F}:U\subset\Rn{n}\to\Rn{n}$ con  $U$ abierto y $\mathbf{F}$ de clase $\mathcal{C}^1(U)$. Se define la \textbf{divergencia} de $\mathbf{F}$ como
     \[
-        \grad\cdot \mathbf{F}(\mathbf{x})=\frac{\partial f_1(\mathbf{x})}{\partial x_1}+\frac{\partial f_2(\mathbf{x})}{\partial x_2}+\:\ldots+\: \frac{\partial f_n(\mathbf{x})}{\partial x_n},
+        \grad\cdot \mathbf{F}(\mathbf{x})=\frac{\partial f_1(\mathbf{x})}{\partial x_1}+\frac{\partial f_2(\mathbf{x})}{\partial x_2}+\:\ldots+\: \frac{\partial f_n(\mathbf{x})}{\partial x_n}.
     \]
-    donde $\mathbf{F}=(f_1,f_2,\ldots,f_n),$ con cada $f_i:\Rn{n}\to\R\;(i=1,\ldots,n).$
+    donde $\mathbf{F}=(f_1,f_2,\ldots,f_n),$ con cada $f_i :U\subset\Rn{n} \to\R\;(i=1,\ldots,n).$
 \end{definition}
+
+
 \begin{definition}
-    Sea $\mathbf{F}:U\subset\Rn{3}\to\Rn{3}$, $U$ abierto, de clase $\mathcal{C}^1(U)$. Se define el \textbf{rotor} de $\mathbf{F}$ como 
+    Sea $\mathbf{F}:U\subset\Rn{3}\to\Rn{3}$ con $U$ abierto y $\mathbf{F}$ de clase $\mathcal{C}^1(U)$. Se define el \textbf{rotor} de $\mathbf{F}$  evaluado en $\mathbf{x}\in U$, y se nota  $\grad\times\mathbf{F}(\mathbf{x})$,   como el vector en el espacio $\Rn{3}$ dado por 
     \[
         \grad\times\mathbf{F}(\mathbf{x})=\left(\frac{\partial f_3(\mathbf{x})}{\partial y}-\frac{\partial f_2(\mathbf{x})}{\partial z},\;\frac{\partial f_1(\mathbf{x})}{\partial z}-\frac{\partial f_3(\mathbf{x})}{\partial x},\;\frac{\partial f_2(\mathbf{x})}{\partial x}-\frac{\partial f_1(\mathbf{x})}{\partial y}\right),
     \]   
     donde $\mathbf{F}(x,y,z)=(f_1(x,y,z),\:f_2(x,y,z),\:f_3(x,y,z))$.
-    Y para el caso en el que $\mathbf{F}:U\subset\Rn{2}\to\Rn{n}$, con las mismas condiciones, el \textbf{rotor} es
+  
+  
+    Sea $\mathbf{F}:U\subset\Rn{2}\to\Rn{2}$   con $U$ abierto y $\mathbf{F}$ de clase $\mathcal{C}^1(U)$. Se define el \textbf{rotor} de $\mathbf{F}$  evaluado en $\mathbf{x}\in U$, y se nota  $\grad\times\mathbf{F}(\mathbf{x})$,   como el escalar dado por
     \[
         \grad\times\mathbf{F}(\mathbf{x})=\left(\frac{\partial f_2(\mathbf{x})}{\partial x}-\frac{\partial f_1(\mathbf{x})}{\partial y}\right).
     \]
+     donde $\mathbf{F}(x,y)=(f_1(x,y),\:f_2(x,y))$
 \end{definition}
 
-\begin{obs}
-    Estas f\'ormulas son m\'as faciles de recordar si pensamos a ``nabla'' $\grad$ como el operador tal que 
-    \[
-        \grad = (\frac{\partial}{\partial x_1},\frac{\partial}{\partial x_2},\:\ldots,\: \frac{\partial}{\partial x_n}).  
-    \]
-    Por lo que, pensando a $\grad$ como un vector, la divergencia es el producto escalar de $\grad$ con un campo vectorial y para el caso en $\Rn{3}$ es el producto vectorial. Esto \'ultimo es
-    \begin{align*}
-        \grad\times\mathbf{F}&= 
-        \begin{vmatrix}
-        \mathbf{i} & \mathbf{j} & \mathbf{k} \\
-        \partialx & \partialy & \partialz \\
-        f_1 & f_2 & f_3
-        \end{vmatrix} \\[.2cm]
-        &=\left(\frac{\partial f_3}{\partial y}-\frac{\partial f_2}{\partial z},\;\frac{\partial f_1}{\partial z}-\frac{\partial f_3}{\partial x},\;\frac{\partial f_2}{\partial x}-\frac{\partial f_1}{\partial y}\right).
-    \end{align*}
-\end{obs}
+
+
+\textcolor{red}{Unificar lo siguiente:  lo nombres en capitulos anteriores no estan en negritas sino que estan con textit: laplaciano. irrotacional etc }
+
+
+
 \begin{definition}
-    Sea $f:U\subset\Rn{n}\to\R$, $U$ abierto, un campo escalar de clase $\mathcal{C}^2(U)$. Se define el \textbf{laplaciano} de $f$, y se lo nota $\Delta f$ o $\grad^2 f$, a
+    Sea $f:U\subset\Rn{n}\to\R$ con  $U$ abierto y $f$ de clase $\mathcal{C}^2(U)$.  Se define el \textbf{laplaciano} de $f$, y se lo nota $\Delta f$ o $\grad^2 f$, a
     \[
         \Delta f=\grad^2f=\grad\cdot\grad f.  
     \]
@@ -51,36 +50,62 @@
     \]
 \end{definition}
 
+
+\begin{obs}
+    Estas f\'ormulas son m\'as f\'aciles de recordar si pensamos a nabla ($\grad$) como   el siguiente operador 
+    \[
+        \grad = (\frac{\partial}{\partial x_1},\frac{\partial}{\partial x_2},\:\ldots,\: \frac{\partial}{\partial x_n}).  
+    \]
+    De esta manera,   la divergencia es el producto escalar de $\grad$  con un campo vectorial  y para el caso del rotor en $\Rn{3}$ es el producto cruz  con un campo vectorial. Es decir, 
+    
+    $$ \grad . \mathbf{F} =  \sum_{i=1}^{n} \frac{\partial f_i }{\partial x_i}  $$
+     $$     \grad\times\mathbf{F}= 
+                \left(\frac{\partial f_3}{\partial y}-\frac{\partial f_2}{\partial z},\;\frac{\partial f_1}{\partial z}-\frac{\partial f_3}{\partial x},\;\frac{\partial f_2}{\partial x}-\frac{\partial f_1}{\partial y}\right).$$ 
+    
+\end{obs}
+
+\textcolor{red}{Agregar a la obs lo mismo para el  laplaciano }
+
+
+
 \begin{example}
     Sea $f(x,y)=\sin{(x^2+y^2)}$. Calcular $\Delta f(x,y)$.
 
     Primero calculamos el gradiente de $f$.
     \[
-        \grad f = (2x\cos{(x^2+y^2)}, 2y\cos{(x^2+y^2)})
+        \grad f(x,y) = (2x\cos{(x^2+y^2)}, 2y\cos{(x^2+y^2)})
     \]
     Luego le aplicamos la divergencia.
     \begin{align*}
-        \grad\cdot\grad f &= \left(\frac{\partial}{\partial x}, \frac{\partial}{\partial y}\right)\cdot (2x\cos{(x^2+y^2)}, 2y\cos{(x^2+y^2)})\\[.2cm]
+        \grad\cdot\grad f (x,y) &= \left(\frac{\partial}{\partial x}, \frac{\partial}{\partial y}\right)\cdot (2x\cos{(x^2+y^2)}, 2y\cos{(x^2+y^2)})\\[.2cm]
         &= 2\cos{(x^2+y^2)}-4x^2\sin{(x^2+y^2)}+2\cos{(x^2+y^2)}-4y^2\sin{(x^2+y^2)}\\[.2cm]
         &=4\cos{(x^2+y^2)}-4(x^2+y^2)\sin{(x^2+y^2)}=\Delta f
     \end{align*}
-    Notar que la expresi\'on para el laplaciano es an\'aloga a la segunda derivada de una funci\'on de una variable, siendo
-    $$\Delta f=\frac{\partial^2 f}{\partial x^2}+\frac{\partial^2 f}{\partial y^2}.$$
-\end{example}
+ \end{example}
 
 \begin{definition}
-    Sea un campo vectorial $\mathbf{F}$. Si $\grad\times\mathbf{F}=\mathbf{0}$, lo llamamos \textbf{irrotacional}. Si $\grad\cdot\mathbf{F}=0$, lo llamamos \textbf{solenoidal}.
+    Sea un campo vectorial $\mathbf{F}:U\subseteq\Rn{n}\to\Rn{n}$.  Si $\grad\times\mathbf{F}=\mathbf{0}$ se llama  \textbf{irrotacional}.
+  \end{definition}  
+  
+  
+  \begin{definition} Sea un campo vectorial $\mathbf{F}:U\subseteq\Rn{n}\to\Rn{n}$.
+     Si $\grad\cdot\mathbf{F}=0$  se llama  \textbf{solenoidal}.
 \end{definition}
 \begin{definition}
-    Sea un campo escalar $f$ o vectorial $\mathbf{F}$ vectorial, lo llamamos \textbf{arm\'onico} si $\Delta f=0$ o $\Delta \mathbf{F}=0$.
+    Sea un campo escalar $f$ o un campo vectorial $\mathbf{F}$. Si $\Delta f=0$ o $\Delta \mathbf{F}=0$  se llama  \textbf{arm\'onico}.
 \end{definition}
+
 \begin{propertie}
-    Los operadores vectoriales son aplicaciones lineales. Sean $f:U\subseteq\Rn{n}\to\R$ diferenciable y $\mathbf{F}:U\subseteq\Rn{n}\to\Rn{n}$ diferenciable. Sean $\alpha,\;\beta\in\R$:
-    \begin{enumerate}
-        \item \(\grad(\alpha f(\mathbf{x})+\beta g(\mathbf{x}))=\alpha\grad f(\mathbf{x})+\beta\grad g(\mathbf{x}),\quad\forall\mathbf{x}\in U\)
-        \item \(\grad\cdot(\alpha \mathbf{F}(\mathbf{x})+\beta \mathbf{G}(\mathbf{x}))=\alpha\grad\cdot\mathbf{F}(\mathbf{x})+\beta\grad\cdot\mathbf{G}(\mathbf{x}),\quad\forall\mathbf{x}\in U\)
-        \item \(\grad\times(\alpha \mathbf{F}(\mathbf{x})+\beta \mathbf{G}(\mathbf{x}))=\alpha\grad\times\mathbf{F}(\mathbf{x})+\beta\grad\times\mathbf{G}(\mathbf{x}),\quad\forall\mathbf{x}\in U\)
-    \end{enumerate}
+    Sean $f:U\subseteq\Rn{n}\to\R$  y $\mathbf{F}:U\subseteq\Rn{n}\to\Rn{n}$  ambas diferenciables en $U$ y sean $\alpha,\;\beta\in\R$:
+    \begin{itemize}
+        \item[1.] \(\grad(\alpha f(\mathbf{x})+\beta g(\mathbf{x}))=\alpha\grad f(\mathbf{x})+\beta\grad g(\mathbf{x}),\quad\forall\mathbf{x}\in U\) 
+     \end{itemize}   
+ 
+\:\:\:\:  Adem\'as, si ambas son de clase $C^{1}(U)$ 
+       \begin{itemize}
+        \item[2.]  \(\grad\cdot(\alpha \mathbf{F}(\mathbf{x})+\beta \mathbf{G}(\mathbf{x}))=\alpha\grad\cdot\mathbf{F}(\mathbf{x})+\beta\grad\cdot\mathbf{G}(\mathbf{x}),\quad\forall\mathbf{x}\in U\)
+        \item[3.] \(\grad\times(\alpha \mathbf{F}(\mathbf{x})+\beta \mathbf{G}(\mathbf{x}))=\alpha\grad\times\mathbf{F}(\mathbf{x})+\beta\grad\times\mathbf{G}(\mathbf{x}),\quad\forall\mathbf{x}\in U\)
+    \end{itemize}
 \end{propertie}
 \begin{propertie}
     \textbf{Regla de Leibniz para el producto}. Sea $h:\Rn{n}\to\R$ un campo escalar tal que $h\in \mathcal{C}^1$.
@@ -89,7 +114,7 @@
         \item Sea $\mathbf{F}:U\subseteq\Rn{3}\to\Rn{3}$ (o $\Rn{2}$) de clase $\mathcal{C}^1(U)$, entonces $\grad\times(h\mathbf{F})=h\grad\times\mathbf{F}+\grad h\times\mathbf{F}$
     \end{enumerate}
 \end{propertie}
-\begin{propertie}
+\begin{propertie} \textcolor{red}{hipotesis}
     Productos:
     \begin{enumerate}
         \item $\grad(fg)=f\grad g+g\grad f$

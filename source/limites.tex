@@ -43,6 +43,24 @@ donde $\norm{\cdot}_n$ y $\norm{\cdot}_m$ son las normas en $\Rn{n}$ y $\Rn{m}$,
 
 \end{definition}
 
+
+\begin{example} Probar, usando la definici\'on, los siguientes l\'imites
+ 
+ \[
+  \lim_{(x,y) \to (0,0)} \frac{x^2  y}{x^2 + y^2} = 0.
+ \]
+
+ \[
+  \lim_{(x,y) \to (0,0)} \frac{x^2 \sin( y)}{x^2 + y^2} = 0.
+ \]
+
+
+\textcolor{red}{mejorar los espacios. Resolver los ejemplos. Hacer menci\'on de los cotas utiles}
+
+
+\end{example}
+
+
 \begin{theorem}\textbf{Unicidad del l\'imite.} \label{teo:unicidad_limite}
 \mbox{}
 
@@ -132,6 +150,20 @@ Como
   \]
   \end{enumerate}
 \end{propertie}
+
+
+\begin{example} Calcular los siguientes l\'imites usando Algebra de L\'imites
+ \[
+  \lim_{(x,y) \to (0,0)} \frac{x^2 +1 +  y}{(x-1)^2 +  y^2} 
+ \]
+ \[
+  \lim_{(x,y) \to (0,0)} \frac{\exp{x} \log(\cos( y))}{x^2 + (y+1)^2}
+ \]
+ 
+ \textcolor{red}{mejorar los espacios. Resolver los ejemplos. Hacer menci\'on sobre los limites notables de mate 1 una variable}
+
+ 
+\end{example}
 
 \begin{propertie} \label{prop:lim_x_comp}
  Sea $F: A \subset \Rn{n} \to \Rn{m}$ un campo vectorial y $x_0$ un punto de acumulaci\'on de $A$. Sean $f_j: A \subset \Rn{n} \to \R \, (j = 1,2, \dots, m)$ campos escalares tales que $F(x) = \left( f_1(x), f_2(x), \dots, f_m(x) \right) \, \forall x \in A$\footnote{Los campos escalares $f_j$ quedan determinados un\'ivocamente por $F$ de la siguiente manera: 
@@ -293,7 +325,7 @@ Una consecuencia directa de la propiedad \eqref{prop:lim_comp} es el siguiente c
    \lim_{(x,y) \to (x_o,y_o)} f(x,y) = L.
   \]
 
-  Entonces, para cualesquiera funciones continuas $g_1, \, g_2 : I \subset \R \to \R$ tales que, para alg\'on $t_o \in I'$
+  Entonces, para cualesquiera funciones continuas $g_1, \, g_2 : I \subset \R \to \R$ tales que, para alg\'un $t_o \in I'$
   \[
     \lim_{t \to t_o} \left( g_1(t),g_2(t) \right) = \left( x_o , y_o \right)
   \]
@@ -303,14 +335,10 @@ Una consecuencia directa de la propiedad \eqref{prop:lim_comp} es el siguiente c
    \lim_{t \to t_o} f\left( g_1(t),g_2(t) \right) = L.
   \]
 \end{corollary}
-\begin{example}
- \begin{align*}
-   f: &\left\lbrace (x,y) \in \Rn{2} : x \ne y \right\rbrace \to \R \\
-   &f(x,y) = \frac{x^2}{x - y}.
-  \end{align*} 
-  Veamos que $f$ no tiene l\'imite para $(x,y) \to (0,0)$.
-  \begin{enumerate} [(a)]
-   \item  Sean $g_1(t) = t, \, g_2(t) = t + t^2$.
+
+\begin{example} Probar que $f$ no tiene l\'imite para $(x,y) \to (0,0)$ siendo $$ f: \left\lbrace (x,y) \in \Rn{2} : x \ne y \right\rbrace \to \R \: |\:  f(x,y) = \frac{x^2}{x - y}$$
+   \begin{enumerate} 
+   \item  Sean $g_1(t) = t, \,  g_2(t) = t + t^2$.
   \[
    f(g_1(t),g_2(t)) = f(t,t + t^2) = \frac{t^2}{-t^2} \to -1 \text{ cuando } t \to 0,
   \]
@@ -321,7 +349,7 @@ Una consecuencia directa de la propiedad \eqref{prop:lim_comp} es el siguiente c
   \]
   de modo que, \emph{si $f$ tiene l\'imite}, el l\'imite es 1, por \eqref{cor:lim_curva} y la unicidad del l\'imite.
   \end{enumerate}
-  Por lo tanto, por la unicidad del l\'imite (teorema \eqref{teo:unicidad_limite}), \emph{si $f$ tiene l\'imite $L$}, $L = 1 = -1$, lo que es un absurdo. El absurdo provino de suponer que $f$ tiene l\'imite, por lo cual $f$ no puede tener l\'imite.
+  Por lo tanto, por la unicidad del l\'imite (teorema \eqref{teo:unicidad_limite}), \emph{si $f$ tiene l\'imite $L$}, $L = 1$ y $ L= -1$, lo que es un absurdo.  Por lo cual $f$ no puede tener l\'imite cuando  $(x,y) \to (0,0)$  .
 \end{example}
 
 \begin{propertie}\textbf{L\'imites iterados.} \label{prop:lim_ite}

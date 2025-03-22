@@ -1,22 +1,34 @@
+\textcolor{red}{definir rectangulo B en R2. }
+\textcolor{red}{definir particion de un rectangulo B. quien es $\Delta A_{ij}$  quien es $B_{ij}$. Explicar la notacion que aparece en la primer definicion }
+
+
+
 \begin{definition}
-Dada una funci\'on continua $f:B\to\R$, donde $B$ es un rect\'angulo en $\Rn{2}$, se define la suma de Reimann de $f$ sobre $B$, partiendo los dos lados de $B$ en $n$ partes iguales y formando la suma, a
+Dada una funci\'on $f:B\to\R$, donde $B$ es un rect\'angulo en $\Rn{2}$, se define la suma de Reimann de $f$ sobre $B$ a 
 \[
-    S_n=\sum_{i=0}^{n-1}\sum_{j=0}^{n-1} f(c_{ij})\Delta A,
+    S_n=\sum_{i=0}^{n-1}\sum_{j=0}^{n-1} f(c_{ij})\Delta A_{ij},
 \]  
 donde $c_{ij}\in B_{ij}$, el $ij$-\'esimo rect\'angulo en la partici\'on de $B$, y $\Delta A$ es el \'area de $B_{ij}$.
 \end{definition}
 
+
+
 \begin{definition} 
-    Sean $B=[a,b]\times[c,d]$ y $f:B\to\R$ una funci\'on acotada. El l\'imite $\lim_{n\to\infty}S_n$, se llama \textbf{integral doble} de $f$ sobre $B$, y se nota $\iint_U f\:dA$, a
+    Sea $f:B=[a,b]\times[c,d]\to\R$ una funci\'on. Diremos que $f$ es integrable sobre $B$ si  el l\'imite $\lim_{n\to\infty}S_n$  existe y es finito, en tal caso el valor de dicho  l\'imite  se llama \textbf{integral doble} de $f$ sobre $B$ y se nota 
     \[
-          \iint_U f\:dA=\iint_U f(x,y)\:dxdy.
+          \iint_B f\:dA=\iint_B f(x,y)\:dxdy.
     \]
 \end{definition}
 
-Para extender esta noci\'on de integral a un conjunto acotado m\'as general, esto es, conjuntos que puedan ser encerrados por un rect\'angulo, definimos lo siguiente. 
+\begin{obs}
+\textcolor{red}{agregar condiciones sobre f para la  existencia del limite}
+\end{obs}
 
-\begin{definition}
-Dada $f:B\to\R$, se define la funci\'on $f^*$ tal que
+
+Para extender esta noci\'on de integral a  conjuntos acotados m\'as generales que no sean  rect\'angulos, definimos lo siguiente. 
+
+\begin{definition}\label{int_D} \textcolor{red}{Hacer un dibujo}
+Dada $f:D\to\R$, se define la funci\'on $f^*$ tal que \textcolor{red}{quien es D?}
 \[
     f^*(x,y)=
     \begin{dcases*}
@@ -24,32 +36,34 @@ Dada $f:B\to\R$, se define la funci\'on $f^*$ tal que
         0        & si $(x,y)\notin D.$
     \end{dcases*}
 \]
-Entonces si $B$ es una caja que contiene a $D$ y $\partial D$ est\'a formada por las gr\'aficas de un n\'umero finito de funciones continuas, $f^*$ ser\'a integrable. Luego, se define
+Entonces si $B$ es un rect\'angulo que contiene a $D$ y $\partial D$ est\'a formada por las gr\'aficas de un n\'umero finito de funciones continuas,  $f^*$ ser\'a integrable.  Se define
 \[
     \iint_D f\:dA=\iint_B f^*\:dA.  
 \]
 \end{definition}
 
+\textcolor{red}{Mejor la explicacion anterior}
+
 \begin{obs} 
-    Notar que esta integral es independiente de la selecci\'on de $B$.
+La  definici\'on  (\ref{int_D})  es independiente  de la selecci\'on de $B$.
 \end{obs}
 
 \begin{propertie}
     Sean $f,\;g$ dos funciones integrables en una regi\'on $D\subset\Rn{2}$, entonces:
     \begin{enumerate}
-        \item[i.] $\alpha f+\beta g$ es integrable en $D$, $\forall\;\alpha,\;\beta\in\R$ y adem\'as
+        \item[i.] $\alpha f+\beta g$ es integrable en $D$, $\forall\;\alpha,\;\beta\in\R$ y, adem\'as,
         \[
             \iint_D \left(\alpha f+\beta g\right)dA=\alpha\iint_D f\:dA+\beta\iint_D g\:dA.
         \]
         \item[ii.] El producto $fg$ es integrable en $D$.
         \item[iii.] Si $|g(x,y)|\geq k>0\;\forall(x,y)\in D$, el cociente $f/g$ es integrable en $D$.
-        \item[iv.] Si $f\geq$ en $D$, $\iint_D f\:dA\geq0$.
+        \item[iv.] Si $f\geq 0$ en $D$, $\iint_D f\:dA\geq0$.
         \item[v.]Si $f\leq g$ en $D$, $\iint_D f\:dA\leq\iint_D g\:dA.$
         \item[vi.]Si $|f|$ es integrable en $D$, entonces 
         \[
             \left|\iint_D f\:dA\right|\leq\iint_D|f|\:dA.  
         \]    
-        \item[vii.] Si $D=D_1\cup D_2,\;D_1\cap D_2\neq\varnothing,$ es una partici\'on de $D$, $f$ es integrable en $D$ $\iff$ $f$ es integrable en $D_1$ y $D_2$. En este caso 
+        \item[vii.] Si $D=D_1\cup D_2$ donde $\;D_1\cap D_2$ es un conjunto de medida nula, entonces   $f$ es integrable sobre $D_1$ y sobre $D_2$ y, adem\'as,  
         \[
             \iint_D f\:dA=\iint_{D_1} f\:dA+\iint_{D_2}f\:dA.    
         \]
@@ -57,46 +71,52 @@ Entonces si $B$ es una caja que contiene a $D$ y $\partial D$ est\'a formada por
 \end{propertie}
 
 %-----------------------------------------------------------
-\begin{definition}\textbf{Conjuntos elementales en }$\Rn{2}$.
-    Sea $D\subseteq\Rn{2}$.
+\begin{definition}  Un conjunto  $D\subseteq\Rn{2}$ se llama elemental si puede ser descripto de alguna de las siguientes maneras. 
+   
     \begin{enumerate}
     \item[i.]
-    Decimos que el conjunto elemental $D$ es de \textit{tipo 1} si existen funciones continuas $\phi_1,\;\phi_2:[a,b]\to\R$ tales que $D$ es el conjunto de puntos $(x,y)$ que satisfacen
+    Existen funciones continuas $\phi_1,\;\phi_2:[a,b]\to\R$ tales que $D$ es el conjunto de puntos $(x,y)$ que satisfacen
     \[
         x\in[a,b], \qquad \phi_1(x)\leq y\leq\phi_2(x),  
     \]% no se pq no funciona \hfill para no usar \qquad
-    donde $\phi_1(x)\leq\phi_2(x)\;\forall\;x\in[a,b].$
+    donde $\phi_1(x) < \phi_2(x)\;\forall\;x\in[a,b].$  En tal  el conjunto $D$ se llama  \textit{elemental de tipo 1.} 
     \item[ii.]
-    Decimos que el conjunto elemental $D$ es de \textit{tipo 2} si existen funciones continuas $\psi_1,\;\psi_2:[c,d]\to\R$ tales que $D$ es el conjunto de puntos $(x,y)$ que satisfacen
+    Si existen funciones continuas $\psi_1,\;\psi_2:[c,d]\to\R$ tales que $D$ es el conjunto de puntos $(x,y)$ que satisfacen
     \[
         y\in[c,d], \qquad \psi_1(y)\leq x\leq\psi_2(y),  
     \]
-    donde $\psi_1(y)\leq\psi_2(y)\;\forall\;y\in[c,d].$
+    donde $\psi_1(y) < \psi_2(y)\;\forall\;y\in[c,d].$ En tal  el conjunto $D$ se llama  \textit{elemental de tipo 2.} 
     \item[iii.]
     $D$ se llama conjunto elemental de \textit{tipo 3} si es \textit{tipo 1} y \textit{tipo 2} a la vez.
+    
+    
+    
+    
+    \textcolor{red}{Dibujar los casos.}
+    
+    
     \end{enumerate}
 \end{definition}
 
-\begin{corollary} \label{col:fubini}
+\begin{propertie} \label{col:fubini}
+   
     \begin{enumerate}
-        \item Sea $D\subseteq\Rn{2}$ un conjunto de tipo 1. Y sea $f:D\to\R$ continua. Entonces
+        \item  Sea $f:D\to\R$ continua sobre  $D\subseteq\Rn{2}$  un conjunto de tipo 1, entonces
         \[
             \iint_D f=\int_a^b\left(\int_{\phi_1(x)}^{\phi_2(x)}f(x,y)\:dy\right)dx.  
         \]
-        \item Sea $D\subseteq\Rn{2}$ un conjunto de tipo 2. Sea $f:D\to\R$ continua.
+        \item  Sea $f:D\to\R$ continua sobre  $D\subseteq\Rn{2}$  un conjunto de tipo 2, entonces
         % y las $\psi_i$ son continuas. 
         Entonces
         \[
             \iint_D f=\int_a^b\left(\int_{\psi_1(y)}^{\psi_2(y)}f(x,y)\:dx\right)dy.  
         \]
-        \item Si $D$ es de tipo 3 y $f$
-        % ,\;\phi_i,\psi_i\;$ son 
-        continua, entonces 
+        \item  Sea $f:D\to\R$ continua sobre  $D\subseteq\Rn{2}$  un conjunto de tipo 3, entonces
         \[
             \iint_D f=\int_a^b\left(\int_{y=\phi_1(x)}^{y=\phi_2(x)}f(x,y)\:dy\right)dx=\int_a^b\left(\int_{x=\psi_1(y)}^{x=\psi_2(y)}f(x,y)\:dx\right)dy. 
         \]
     \end{enumerate}
-\end{corollary}
+\end{propertie}
 \begin{example}
     Calcular $\iint_D f$, donde $f(x,y)=x^2y$, donde $D$ es la regi\'on del plano encerrado entre $y=x^3$, $y=x^2$, con $x\in[0,1]$. 
 
@@ -140,7 +160,7 @@ Entonces si $B$ es una caja que contiene a $D$ y $\partial D$ est\'a formada por
     \end{gather*}
 \end{example}
 \begin{definition} %cambie la palabra region --> conjunto
-    Se define el \'area de un conjunto $D\subset\Rn{n}$, y se nota $\text{A}(D)$ como la integral, si existe, de la funci\'on 1. Es decir,
+    Se define el \'area de un conjunto $D\subset\Rn{2}$, y se nota $\text{A}(D)$, a  
     \[
         \text{A}(D)=\iint_D1\:dA.
     \]
@@ -152,6 +172,10 @@ Entonces si $B$ es una caja que contiene a $D$ y $\partial D$ est\'a formada por
     \]
 \end{theorem}
 
+
+\textcolor{red}{Falta definir  $\boldsymbol{D}_\mathbf{F}$}
+
+
 \begin{definition}
     Sea $\mathbf{F}:A\subseteq\Rn{n}\to\Rn{n}$ un campo $\mathcal{C}^1(A)$ y sea $\boldsymbol{D}_\mathbf{F}$ su matriz diferencial definida en $A$. Se define el \textbf{jacobiano}, o \textbf{determinante jacobiano}, y se lo nota $J_\mathbf{F}$ a 
     \[
@@ -159,9 +183,13 @@ Entonces si $B$ es una caja que contiene a $D$ y $\partial D$ est\'a formada por
     \]
 \end{definition}
 
+
+\textcolor{red}{dos ejemplos  sencillos en n=2 y n=3}
+
+
 \begin{theorem} % lo escribi como lo tenia en mis apuntes
-    \textbf{Teorema del cambio de variables para integrales dobles}. Sea $f:D\subseteq\Rn{2}\to\Rn{2}$ un campo escalar integrable. Sea $\mathbf{T}:D^*\subseteq\Rn{2}\to D$ continua de clase $\mathcal{C}^1$ en $\interior{D^*}$, inyectiva en $\interior{D^*}$ y $\mathbf{T}(D^*)=D$. Entonces
+    \textbf{Teorema del cambio de variables para integrales dobles}. Sea $f:D\subseteq\Rn{2}\to\Rn{2}$ un campo escalar integrable. Sea $\mathbf{T}:D^*\subseteq\Rn{2}\to D$ continua de clase $\mathcal{C}^1$ en $\interior{(D^*)}$, inyectiva en $\interior{(D^*)}$ y tal que $\mathbf{T}(D^*)=D$. Entonces
     \[
-        \iint_D f\:dA=\iint_{D^*}(f\circ\mathbf{T})J_\mathbf{T}\:dV.
+        \iint_D f\:dA=\iint_{D^*}(f\circ\mathbf{T})J_\mathbf{T}\:dA.
     \]
 \end{theorem}

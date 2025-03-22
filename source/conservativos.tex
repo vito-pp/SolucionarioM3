@@ -1,20 +1,24 @@
-\begin{definition}
-    Sea un conjunto $A\subseteq\Rn{n}$. $A$ se llama \textbf{conexo} si dados dos puntos cualquiera de $A$ se los puede unir por una curva continua que este incluida en $A$.
-\end{definition}
+
 
 \begin{theorem} \label{thm:t1}
-    Sean $A\subseteq\Rn{n}$ abierto y conexo y $f:A\subseteq\Rn{n}\to\R$ de clase $\mathcal{C}^1$. Sea $\boldsymbol{\sigma}:[a,b]\to A\subseteq\Rn{n}$ una trayectoria $\mathcal{C}^1$ a trozos. Entonces
+    Sean $A\subseteq\Rn{n}$ un conjuto abierto y conexo y  $f:A\subseteq\Rn{n}\to\R$ un campo de clase $\mathcal{C}^1(\interior{A})$. Si $\boldsymbol{\sigma}:[a,b]\to A\subseteq\Rn{n}$ es una trayectoria continua,  entonces
     \[
        \int_{\boldsymbol{\sigma}}\grad f\cdot d\mathbf{s}=f(\boldsymbol{\sigma}(b))-f(\boldsymbol{\sigma}(a)).
     \]    
 \end{theorem}
 
+\textcolor{red}{Demostracion}
+
 \begin{corollary}
-    Sean $A\subseteq\Rn{n}$ abierto y conexo y $f:A\subseteq\Rn{n}\to\R$ de clase $\mathcal{C}^1$, entonces $\int_{\boldsymbol{\sigma}}\grad f\cdot d\mathbf{s}$  s\'olo depende de los puntos inicial y final de la trayectoria. Por lo tanto, sean las trayectorias $\boldsymbol{\sigma}_1:[a_1,b_1]\to A_1\subseteq\Rn{n}$ y $\boldsymbol{\sigma}_2:[a_2,b_2]\to A_2\subseteq\Rn{n}$, tales que $\boldsymbol{\sigma}_1(a_1)=\boldsymbol{\sigma}_2(a_2)\;\land\;\boldsymbol{\sigma}_1(b_1)=\boldsymbol{\sigma}_2(b_2)$, entonces
+    Sean $A\subseteq\Rn{n}$ un conjuto abierto y conexo y  $f:A\subseteq\Rn{n}\to\R$ un campo de clase $\mathcal{C}^1(\interior{A})$.  Si  $\boldsymbol{\sigma}_1:[a_1,b_1]\to A_1\subseteq\Rn{n}$ y $\boldsymbol{\sigma}_2:[a_2,b_2]\to A_2\subseteq\Rn{n}$ son dos trayectorias continuas  tales que $\boldsymbol{\sigma}_1(a_1)=\boldsymbol{\sigma}_2(a_2)\;\land\;\boldsymbol{\sigma}_1(b_1)=\boldsymbol{\sigma}_2(b_2)$, entonces
     \[
     \int_{\boldsymbol{\sigma}_1}\grad f\cdot d\mathbf{s}=\int_{\boldsymbol{\sigma}_2}\grad f\cdot d\mathbf{s}.
     \]
+    
+ Es decir,  $\int_{\boldsymbol{\sigma}}\grad f\cdot d\mathbf{s}$  s\'olo depende de los puntos inicial y final de la trayectoria.
 \end{corollary}
+
+\textcolor{red}{Demostracion}
 
 \begin{corollary}
     Sean $A\subseteq\Rn{n}$ abierto y conexo y $f:A\subseteq\Rn{n}\to\R$ de clase $\mathcal{C}^1$. Si $\mathbf{F}:A\subseteq\Rn{n}\to\Rn{n}$ es un campo vectorial para el cual $\exists f:A\subseteq\Rn{n}\to\R$ clase $\mathcal{C}^1$ tal que 
@@ -25,7 +29,8 @@
     \]
 \end{corollary}
 
-Estos \'ultimos dos corolarios nos demuestran que la integral de curva 
+
+\textcolor{red}{Demostracion}
 
 \begin{corollary}
     Sean $A\subseteq\Rn{n}$ abierto y conexo y $f:A\subseteq\Rn{n}\to\R$ de clase $\mathcal{C}^1$. Si $\mathbf{F}=\grad f$, entonces
@@ -33,10 +38,20 @@ Estos \'ultimos dos corolarios nos demuestran que la integral de curva
     para toda curva $C$ simple cerrada contenida en $A$.
 \end{corollary}
 
+\textcolor{red}{Demostracion}
+
+
+
+
+\textcolor{red}{falta decir que quiere decir ser  independiente del camino}
+
+\textcolor{red}{Notacion:   Explicar que quiere decir  la notacion: $\int_{\mathbf{x}_0}^{\mathbf{x}}\mathbf{F}\cdot d\mathbf{s}$}
+
+
 \begin{theorem}
-    Sean $A\subseteq\Rn{n}$ abierto y conexo, $\mathbf{F}:A\subseteq\Rn{n}\to\Rn{n}$ continuo tal que $\int_C \mathbf{F}\cdot d\mathbf{s}$ es independiente del camino en $A$. Entonces $f:A\subseteq\Rn{n}\to\R$ tal que
-    $$f(\mathbf{x})=\int_{\mathbf{x}_0}^{\mathbf{x}}\mathbf{F}\cdot d\mathbf{s},$$
-    con $\mathbf{x}_0\in A$, cumple que: 
+   Sea  $\mathbf{F}:A\subseteq\Rn{n} \to \Rn{n}$ continuo con  $A$ abierto y conexo. Si  $\int_C \mathbf{F}\cdot d\mathbf{s}$ es independiente del camino en $A$  entonces el campo
+    $$f:A\subseteq\Rn{n}\to\R\: | \:f(\mathbf{x})=\int_{\mathbf{x}_0}^{\mathbf{x}}\mathbf{F}\cdot d\mathbf{s},  \mbox{ con }  \mathbf{x}_0\in A, $$
+    cumple que: 
     \begin{enumerate}
         \item $f$ es $\mathcal{C}^1$.
         \item $\grad f(\mathbf{x})=\mathbf{F}(\mathbf{x})\quad\forall\:\mathbf{x}\in A.$
@@ -44,7 +59,7 @@ Estos \'ultimos dos corolarios nos demuestran que la integral de curva
 \end{theorem}
 
 \begin{theorem}
-    Sean $A\subseteq\Rn{n}$ abierto y conexo, $\mathbf{F}:A\subseteq\Rn{n}\to\R$ continuo. Las siguientes condiciones sobre $\mathbf{F}$ son equivalentes:
+    Sean $A\subseteq\Rn{n}$ abierto y conexo, $\mathbf{F}:A\subseteq\Rn{n}\to\R$ continuo. Las siguientes proposiciones sobre $\mathbf{F}$ son equivalentes:
     \begin{enumerate}
         \item $\exists f:A\subseteq\Rn{n}\to\R$ de clase $\mathcal{C}^1$ tal que $\mathbf{F}(\mathbf{x})=\grad f(\mathbf{x}),\;\forall\mathbf{x}\in A.$ 
         \item La integral de $\mathbf{F}$ es independiente del camino en $A$.
@@ -52,4 +67,5 @@ Estos \'ultimos dos corolarios nos demuestran que la integral de curva
     \end{enumerate}
 \end{theorem}
 
-\textcolor{red}{\textit{falta definicion independecia del camino}}
+\textcolor{red}{Demostracion: las que se pueden hacer referencia a lo escrito antes}
+

@@ -22,7 +22,7 @@ Si $A$ es un conjunto abierto, decimos que $f$ es \emph{diferenciable} si es dif
 \begin{theorem}\textbf{Diferenciabilidad y continuidad.} \label{teo:difCont}
 \mbox{}
 
-Sean $f: A \subset \Rn{n} \to \R$ y $x_o \in \interior{(A)}$. Si $f$ es diferenciable en $x_o$, entonces $f$ es continua en $x_o$.
+Sean $f: A \subset \Rn{n} \to \R$ y $x_o \in  A^{\circ}$. Si $f$ es diferenciable en $x_o$, entonces $f$ es continua en $x_o$.
  \begin{proof}
  \mbox{}
  
@@ -240,7 +240,7 @@ Se deja como ejercicio para el lector la demostraci\'on de esta afirmaci\'on.
 
 Una consecuencia directa del teorema \eqref{teo:difDer} es el siguiente corolario:
 \begin{corollary}
- Sean $f: A \subset \Rn{n} \to \R$ y $x_o \in \interior{(A)}$. Son equivalentes:
+ Sean $f: A \subset \Rn{n} \to \R$ y $x_o \in A^{\circ}$. Son equivalentes:
  \begin{enumerate} %[I.]
   \item $f$ es diferenciable en $x_o$;
   \item existen todas las derivadas parciales de $f$ en $x_o$ y 
@@ -254,7 +254,7 @@ Una consecuencia directa del teorema \eqref{teo:difDer} es el siguiente corolari
 % La idea es incluir tres demostraciones, una usando la misma idea que para la demo de las derivadas parciales, otra usando que el delta f se puede escribir de una determinada manera y construyendo el cociente incremental, una tercera utilizando la regla de la cadena
 \mbox{}
 
-Sea $f: A \subset \Rn{n} \to \R$ diferenciable en $x_o \in \interior{(A)}$. Entonces, $\forall \check{u} \in \Rn{n} \text{tal que } \norm{\check{u}} = 1$ existe en $x_o$ la derivada de $f$ en la direcci\'on de $\check{u}$ y, adem\'as,
+Sea $f: A \subset \Rn{n} \to \R$ diferenciable en $x_o \in \interior{A}$. Entonces, $\forall \check{u} \in \Rn{n} \text{tal que } \norm{\check{u}} = 1$ existe en $x_o$ la derivada de $f$ en la direcci\'on de $\check{u}$ y, adem\'as,
 \[
  \frac{\partial f}{\partial \check{u}} (x_o) = \grad f (x_o) \cdot \check{u}.
 \]
@@ -305,7 +305,7 @@ y por lo tanto, por definici\'on,
 \begin{theorem}\textbf{Valores extremos de la derivada direccional.} \label{teo:max_deriv}
 \mbox{}
 
- Sean $f: A \subset \Rn{n} \to \R$ diferenciable en un punto $x_o \in \interior{(A)}$. Entonces 
+ Sean $f: A \subset \Rn{n} \to \R$ diferenciable en un punto $x_o \in \interior{A}$. Entonces 
  \[
   \max_{\norm{\check{u}} = 1} \frac{\partial f}{\partial \check{u}} (x_o) = \norm{\grad f (x_o)}, \quad 
   \min_{\norm{\check{u}} = 1} \frac{\partial f}{\partial \check{u}} (x_o) = -\norm{\grad f (x_o)}

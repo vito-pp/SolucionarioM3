@@ -1,45 +1,36 @@
-\begin{definition}\textbf{Función en $\mathbb{R}$.}
-    Se llama \textit{función} a la relación $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}$ tal que a cada elemento de
-    $A$ le corresponde un y s\'olo un elemento de $B$.
+\begin{definition}
+   Se llama \textit{función} a la regla que asigna a cada elemento de un conjunto
+    $A$  un y s\'olo un elemento de un conjunto $B$. Tomaremos, en esta secci\'on,  el caso  donde $A, B \subseteq \mathbb{R}.$   La manera habitual de denotar una funci\'on $f$ es $$f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}.$$  A los conjuntos $A$ y $B$  se los llama, respectivamente, \textit{dominio}  y \textit{codominio} de la funci\'on y  la notaci\'on usual para los mismos  es  $A=\text{Dom}(f)$ y $B=\text{Cod}(f)$.
 \end{definition}
 
-\begin{example}
-    Si tomamos como ejemplo a $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}$ tal que $f(x)=2x-1$,
-    \begin{itemize}
-        \item $f$ es el nombre de la función.
-        \item $A$ es el dominio.
-        \item $B$ es el codominio.
-        \item $x$ es la variable.
-        \item $2x-1$ es la fórmula de la función.
-    \end{itemize}
-\end{example}
 
-\begin{definition}\textbf{Dominio de una función en $\mathbb{R}$.}
-    Se llama \textit{dominio} de una función \newline$f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}$
-    al conjunto de entrada del mismo. Es decir, $\text{Dom}(f)=A$.
-\end{definition}
-\begin{definition}\textbf{Codominio de una función en $\mathbb{R}$.}
-    Se llama \textit{codominio} de una función \newline $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}$
-    al conjunto al que se restringen las salidas del mismo. Es decir que $\text{Cod}(f)=B$.
-    Puede que no todos los elementos de $B$ correspondan a una evaluación de la función.
-\end{definition}
-\begin{definition}\textbf{Imagen de una función en $\mathbb{R}$.}
-    Se llama \textit{imagen} de una función \newline $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}$ 
+\begin{definition} Dada una funci\'on $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R},$  se llama \textit{imagen} de una función y se nota  $\text{Im}(f)$, a
     al conjunto 
     \begin{equation*}
         \text{Im}(f) = \left\{ y\in B: \exists\;x\in A\:|\:f(x)=y \right\}.    
     \end{equation*}
 \end{definition}
-\begin{definition}\textbf{Gráfica de una función en $\mathbb{R}$.}
-    La \textit{gráfica} de una función $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}$ es
-    el conjunto
+
+\begin{definition}\label{grafm1}
+   Dada una función $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}$ se define la \textit{gráfica} de $f$, y se nota  $\text{Graf}(f)$, al conjunto
     \begin{equation*}
-        \text{Graf}(f) = \left\{ (x,y)\in \mathbb{R}: x \in A \land y=f(x)\right\}.    
+        \text{Graf}(f) = \left\{ (x,y)\in \mathbb{R}^{2}: x \in A \land y=f(x)\right\}.    
     \end{equation*}
 \end{definition}
+
+
+\textcolor{red}{Aca hay un lio en los ejemplos, la tabla y el grafico no corresponden a la formula. Hacer dos ejemplos completo por separado. }
+
+
 \begin{example}
-    Si se tiene la función ejemplo $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R} \:|\: f(x)=2x-1$.
-    Se puede armar la siguiente tabla de valores:
+   Sea $$f:  [0,\infty]  \subseteq \mathbb{R} \rightarrow  \mathbb{R} \:|\:  f(x)=2x-1$$ tenemos que, $f$ es el nombre de la función, $x$ es la variable independiente de $f$  y $2x-1$ su  fórmula, es decir,  el valor que la asigna $f$ a cada $x \in  [0,\infty]. $ Adem\'as,   $\text{Dom}(f)=  [0,\infty]$,   $\text{Cod}(f)=  \mathbb{R}$ y $\text{Im}(f)= [-1,\infty]$ 
+ \end{example}
+
+
+
+\begin{example}  Sea $$f: A  \subseteq \mathbb{R} \rightarrow  \mathbb{R} \:|\:  f(x)=..........$$ 
+
+,   armar la siguiente tabla de valores:
     \begin{table}[H]
         \centering
         \begin{tabular}{|c|c|}
@@ -57,6 +48,9 @@
     \begin{equation*}
         \left\{ (-2,4),(-1,1),(0,0),(1,1),(2,4) \right\}\subset \text{Graf}(f)
     \end{equation*}
+  
+  \textcolor{red}{hacer dos dibujos, el primero solo con los puntos rojos y el segundo con los mismos puntos mas el trazo. Decir algo asi como: por conocimiemto previo sabemos que la manera de unir los puntos es a trav\'es de..... }
+  
     De hecho, si se fuera a posicionar los puntos de $\text{Graf}(f)$, se obtendría
     lo que se entiende normalmente si se habla de la gráfica de la función. De hecho,
     graficando la función como uno lo haría normalmente, en realidad
@@ -88,24 +82,19 @@
         \end{tikzpicture}
         \end{center}
 \end{example}
-\begin{definition}\textbf{Sobreyectividad, Inyectividad y Biyectividad.}
-    Se tiene una función
-    \begin{equation*}
-        f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}.
-    \end{equation*}
-    La función se dice \textit{sobreyectiva} si se cumple que su codominio es igual a su imagen, esto es
-    \begin{equation*}
+\begin{definition}
+  
+  Sea la funci\'on $f: A \subseteq \mathbb{R} \rightarrow B \subseteq \mathbb{R}$. Diremos que
+   $f$ es \textit{sobreyectiva} si se cumple que su codominio es igual a su imagen, esto es
+   \begin{equation*}
         \text{Cod}(f)=\text{Im}(f).
-    \end{equation*}
-    Es decir que cada elemento del conjunto de salida es la evaluación de la función en al menos un elemento del
-    dominio.
+    \end{equation*}   Es decir que cada elemento del conjunto de salida es la evaluación de la función en al menos un elemento del dominio.
 
-    La función se dice \textit{inyectiva} si a cada elemento en el conjunto imagen le corresponde un único
-    valor del dominio. Es decir, que la función es inyectiva cuando se cumple que
-    \begin{equation*}
+ Diremos que $f$ es   \textit{inyectiva} si a cada elemento en el conjunto imagen le corresponde un único
+    valor del  conjunto dominio, esto es,   si  $a,b\in \text{Dom}(f)$, entonces:
+     \begin{equation*}
         a=b \iff f(a)=f(b),
-    \end{equation*}
-    tal que $a,b\in \text{Dom}(f)$.
+    \end{equation*} 
 
-    Finalmente, la función es \textit{biyectiva} cuando es simultáneamente sobreyectiva e inyectiva.
+    Finalmente, diremos que $f$  es \textit{biyectiva} cuando es simultáneamente \textit{sobreyectiva} e \textit{inyectiva} a la vez.
 \end{definition}

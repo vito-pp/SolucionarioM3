@@ -1,17 +1,27 @@
+\textcolor{red}{definir paralelep\'ipedo rectangular B en R3. }
+\textcolor{red}{definir particion de un  paralelep\'ipedo rectangular. quien es $\Delta V_{ijk}$  quien es $V_{ijk}$. Explicar la notacion que aparece en la primer definicion }
+\textcolor{red}{se podria hacer algun dibujo} 
+
+
 \begin{definition}
 Dada una funci\'on continua $f:U\to\R$, donde $U$ es un paralelep\'ipedo rectangular (una caja) en $\Rn{3}$, se define la suma de Reimann de $f$ sobre $U$, partiendo los tres lados de $U$ en $n$ partes iguales, a
 \[
-    S_n=\sum_{i=0}^{n-1}\sum_{j=0}^{n-1}\sum_{k=0}^{n-1}f(c_{ijk})\Delta V,
+    S_n=\sum_{i=0}^{n-1}\sum_{j=0}^{n-1}\sum_{k=0}^{n-1}f(c_{ijk})\Delta V_{ijk},
 \]  
-donde $c_{ijk}\in U_{ijk}$, el $ijk$-\'esimo paralelep\'ipedo rectangular en la partici\'on de $U$, y $\Delta V$ es el volumen de $U_{ijk}$.
+donde $c_{ijk}\in U_{ijk}$, el $ijk$-\'esimo paralelep\'ipedo rectangular en la partici\'on de $U$, y $\Delta V_{ijk}$ es el volumen de $U_{ijk}$.
 \end{definition}
 
 \begin{definition} 
-    Sean $U=[a,b]\times[c,d]\times[p,q]$ y $f:U\to\R$ una funci\'on acotada.El l\'imite $\lim_{n\to\infty}S_n$ se llama \textbf{integral triple} de $f$ sobre $U$, y se nota $\iiint_U f\:dV$ a
+    Sean $U=[a,b]\times[c,d]\times[p,q]$ y $f:U\to\R$ una funci\'on.  Diremos que $f$ es integrable sobre $U$ si existe y es finito el  l\'imite $\lim_{n\to\infty}S_n$, en tal caso  el valor de dicho l\'imite  se llama \textbf{integral triple} de $f$ sobre $U$ y se nota 
     \[
           \iiint_U f\:dV=\iiint_U f(x,y,z)\:dxdydz.
     \]
 \end{definition}
+
+\begin{obs}
+\textcolor{red}{agregar condiciones sobre f para la  existencia del limite}
+\end{obs}
+
 
 Para extender esta noci\'on de integral a un conjunto acotado m\'as general, esto es, conjuntos que puedan ser encerrados por una caja, definimos lo siguiente. 
 
@@ -24,14 +34,14 @@ Dada $f:U\to\R$, se define la funci\'on $f^*$ tal que
         0        & si $(x,y,z)\notin W.$
     \end{dcases*}
 \]
-Entonces si $U$ es una caja que contiene a $W$ y $\partial W$ est\'a formada por las gr\'aficas de un n\'umero finito de funciones continuas, $f^*$ ser\'a integrable. Luego, se define
+Entonces si $U$ es una caja que contiene a $W$ y $\partial W$ est\'a formada por las gr\'aficas de un n\'umero finito de funciones continuas, $f^*$ ser\'a integrable.  Se define
 \[
     \iiint_W f\:dV=\iiint_U f^*\:dV.  
 \]
 \end{definition}
 
 \begin{obs} 
-    Notar que esta integral es independiente de la selecci\'on de $U$.
+   Esta definici\'on es independiente de la selecci\'on de $U$.
 \end{obs}
 
 \begin{propertie}
@@ -43,7 +53,7 @@ Entonces si $U$ es una caja que contiene a $W$ y $\partial W$ est\'a formada por
         \]
         \item[ii.] El producto $fg$ es integrable en $W$.
         \item[iii.] Si $|g(x,y,z)|\geq k>0\;\forall(x,y,z)\in W$, el cociente $f/g$ es integrable en $W$.
-        \item[iv.] Si $f\geq$ en $W$, $\iiint_W f\:dV\geq0$.
+        \item[iv.] Si $f\geq 0 $ en $W$, $\iiint_W f\:dV\geq0$.
         \item[v.]Si $f\leq g$ en $W$, $\iiint_W f\:dV\leq\iiint_W g\:dV.$
         \item[vi.]Si $|f|$ es integrable en $W$, entonces 
         \[
@@ -57,7 +67,7 @@ Entonces si $U$ es una caja que contiene a $W$ y $\partial W$ est\'a formada por
 \end{propertie}
 
 \begin{definition}
-    Se define el volumen de un conjunto $W\subset\Rn{n}$, y se nota $\text{Vol}(W)$, como la integral, si existe, de la funci\'on 1. Es decir,
+    Se define el volumen de un conjunto $W\subset\Rn{3}$  y se nota $\text{Vol}(W)$, a
     \[
         \text{Vol}(W)=\iiint_W1\:dV.
     \]
@@ -70,17 +80,21 @@ Entonces si $U$ es una caja que contiene a $W$ y $\partial W$ est\'a formada por
     \]
 \end{theorem}
 
-\begin{definition}
+\begin{definition}  \textcolor{red}{No queda claro quien es el conjunto D.  }
     \textbf{Conjunto elemental en }$\Rn{3}$.
-    Sea $W\subseteq\Rn{3}$. Sean $\phi_1,\;\phi_2:[a,b]\to\R$ funciones y sean $\gamma_1,\;\gamma_2:D\to\R$ funciones continuas. Un conjunto $W\subseteq\Rn{3}$ se llama elemental, si puede ser escrito como el conjunto de puntos $(x,y,z)$ que satifacen
+    Sea $W\subseteq\Rn{3}$. Sean $\phi_1,\;\phi_2:[a,b]\to\R$ funciones y sean $\gamma_1,\;\gamma_2:D\to\R$ funciones continuas.  Un conjunto $W\subseteq\Rn{3}$ se llama elemental, si puede ser escrito  \textcolor{red}{de algunas de las siguientes 6 maneras: es largo pero escribirlas todas, ojo con la notacion} como el conjunto de puntos $(x,y,z)$ que satifacen
     \begin{equation*}
         x\in[a,b], \qquad \phi_1(x)\leq y\leq\phi_2(x), \qquad \gamma_1(x,y)\leq z\leq\gamma_2(x,y). 
     \end{equation*}
     O bien, intercambiando el orden de las variables.
 \end{definition}
 
+
+ \textcolor{red}{Ilustracion}
+
+
 \begin{theorem}
-    \textbf{Teorema del cambio de variables para integrales triples}. Sea $f:W\subseteq\Rn{3}\to\Rn{3}$ un campo escalar integrable. Sea $\mathbf{T}:W^*\subseteq\Rn{3}\to W\subseteq\Rn{3}$ continua de clase $\mathcal{C}^1$ en $\interior{W^*}$, inyectiva en $\interior{W^*}$ y $\mathbf{T}(W^*)=W$. Entonces
+    \textbf{Teorema del cambio de variables para integrales triples}. Sea $f:W\subseteq\Rn{3}\to\R$  un campo escalar integrable. Sea $\mathbf{T}:W^*\subseteq\Rn{3}\to W\subseteq\Rn{3}$ continua, de clase $\mathcal{C}^1$ en $\interior{(W^*)}$,  inyectiva en $\interior{(W^*)}$ y tal que $\mathbf{T}(W^*)=W$. Entonces
     \[
         \iiint_W f\:dV=\iiint_{W^*}(f\circ\mathbf{T})J_\mathbf{T}\:dV.
     \]

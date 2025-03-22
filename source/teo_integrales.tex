@@ -1,5 +1,5 @@
 \begin{definition}
-    Sea $\boldsymbol{\Sigma}:D\subseteq\Rn{2}\to S\subseteq\Rn{3}$ una parametrizaci\'on inyectiva para todo $D$ en $S$. Se define el \textbf{borde} o \textbf{frontera} de $S$, y se lo nota $\partial S$, a la curva cerrada simple en $\Rn{3}$ tal que 
+   Sea $\boldsymbol{\Sigma}:D\subseteq\Rn{2} \to\Rn{3}$ una parametrizaci\'on continua e  inyectiva de una superficie $S$. Si $ \partial D$ es la curva cerrada, simple,  frontera del conjunto $D$,  se define el \textbf{borde} o \textbf{frontera} de $S$, y se lo nota $\partial S$, a la curva cerrada simple en $\Rn{3}$ tal que 
     \[
         \partial S=\boldsymbol{\Sigma}(\partial D).
     \]
@@ -9,23 +9,28 @@
     Si $\partial D$ est\'a orientada de manera antihoraria, entonces $\boldsymbol{\Sigma}$ \textbf{induce} una orientaci\'on sobre $\partial S$. Adem\'as $\boldsymbol{\Sigma}$ \textbf{induce} una orientaci\'on sobre $S$.
 \end{obs}
 
-\begin{definition}
-    Sea $D$ un conjunto conexo (en $\Rn{2}$ o en $\Rn{3}$). $D$ se llama \textbf{simplemente conexo} si toda curva cerrada simple $C\subset D$ es el borde de una regi\'on $R$ totalmente contenida en $D$.
+\textcolor{red}{Mano derecha. Explicacion e ilustracion}
+
+
+\begin{definition} \textcolor{red}{mandar a topologia y referenciar}
+    Sea $D$ un conjunto conexo (en $\Rn{2}$ o en $\Rn{3}$).  $D$ se llama \textbf{simplemente conexo}  si toda curva cerrada y  simple  $C\subset D$  es el borde de un conjunto $\hat{D}$ tal que $\hat{D} \subset  D.$
 \end{definition}
 
 \begin{theorem}
-    \textbf{Teorema de Green}. Sea $D\in\Rn{2}$ una regi\'on simplemente conexa y sea $\partial D$ la frontera de $D$, con orientaci\'on antihoraria. Y Sea $\mathbf{F}:D\to\Rn{2}$ de clase $\mathcal{C}^1$. Entonces
+    \textbf{Teorema de Green}. Sea $D\subset \Rn{2}$ un conjunto simplemente conexo y sea   la curva simple y cerrada  $\partial D$ su frontera. Si  $\mathbf{F}:D\to\Rn{2}$  es continuo y de clase $\mathcal{C}^1$, entonces
     \[
-        \oint_{\partial D}\mathbf{F}\cdot d\mathbf{s} = \iint_D \grad\times\mathbf{F}\cdot d\mathbf{A}.
+        \oint_{\partial D^{+}} \mathbf{F}\cdot d\mathbf{s} = \iint_D \grad\times\mathbf{F}\cdot d\mathbf{A}.
     \]
 \end{theorem}
 
-\begin{obs} 
-    Otra manera de enunciar el teorema de Green es usando un cambio en la notaci\'on vectorial. Pensando el producto escalar $\mathbf{F}\cdot d\mathbf{s}$ como $P\:dx+Q\:dy$, donde $\mathbf{F}=(P,Q)$ y sabiendo que el rotor en $\Rn{2}$ es la componente $z$ del rotor en $\Rn{3}$; reescribimos el teorema de Green como
-\[
-        \int_{\partial D}P\:dx+Q\:dy=\iint_D\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)dxdy.
+\begin{obs}  \textcolor{red}{Notacion: dar}
+   \[
+        \int_{\partial D}P\:dx+Q\:dy=.
 \]
 \end{obs}
+
+
+
 
 \begin{obs}
     \textbf{Extensi\'on de Green.} El teorema de Green es aplicable a regiones a\'un m\'as generales que simplemente conexas. De hecho, a cualquier regi\'on en $\Rn{2}$ cuya frontera se pueda descomponer en un n\'umero finito de curvas cerradas simples orientadas se le puede aplicar el teorema de Green. La idea es ``recorrer" dicha frontera pasando por todas las curvas que la confroman. 
@@ -89,25 +94,29 @@
 \end{obs}
 
 \begin{theorem}
-\textbf{Teorema de la divergencia en el plano}. Sea $D\subset\Rn{2}$ una regi\'on donde valga el teorema de Green y sea $\partial D$ su frontera. Denotaremos por $\mathbf{n}$ el versor unitario normal a $\partial D$ en todo punto. Si $\boldsymbol{\sigma}:[a,b]\to\Rn{2},\;\boldsymbol{\sigma}(t)=(x(t),y(t))$ es una parametrizaci\'on orientada de manera positiva de $\partial D$, $\mathbf{n}$ est\'a dado por 
+\textbf{Teorema de la divergencia en el plano}. Sea $D\subset\Rn{2}$ una regi\'on donde valga el teorema de Green y sea $\partial D$ su frontera. Denotaremos por $\mathbf{n}$ el versor unitario normal a $\partial D$.  Si $\boldsymbol{\sigma}:[a,b]\to\Rn{2},\;\boldsymbol{\sigma}(t)=(x(t),y(t))$ es una parametrizaci\'on que recorre a $\partial D$ de manera positiva,  entonces  $\mathbf{n}$ est\'a dado por 
 \[
     \mathbf{n}=\frac{(y'(t),-x'(t))}{\sqrt{[x'(t)]^2+[y'(t)]^2}}.
 \]
-Sea $\mathbf{F}$ un campo vectorial $\mathcal{C}^1$ en $D$. Entonces
+Si $\mathbf{F}:  D\to \Rn{2}$ es un campo vectorial continuo y de clase $\mathcal{C}^1(\interior{D})$,  entonces
 \[
     \int_{\partial D}\mathbf{F}\cdot\mathbf{n}\:ds=\iint_D\grad\cdot\mathbf{F}\:dA.
 \]
 \end{theorem}
 
+
+\textcolor{red}{explicar:  son las inducidas por $\boldsymbol{\Sigma}$. Se puede referenciar a la regla de la mano derecha}
+
 \begin{theorem}
-\textbf{Teorema de Stokes}. Sea $S\subset\Rn{3}$ una superficie parametrizada por $\boldsymbol{\Sigma}:D\subset\Rn{3}to S$, donde las orientaciones de $S$ y $\partial S$ fueron inducidas por $\boldsymbol{\Sigma}$. Si $\mathbf{F}:$ es un campo vectorial $\mathcal{C}^1$ en $S$. Entonces
+\textbf{Teorema de Stokes}. Sea $\boldsymbol{\Sigma}:D\subset\Rn{2} \to S\subset\Rn{3}$    una parametrizaci\'on de una superficie $S$.   Si $\mathbf{F}:  A\subset \Rn{3}\to \Rn{3}$ es un campo vectorial continuo, de clase  $\mathcal{C}^1(\interior{A})$ tal que  $S \subset A$, entonces
 \[
-    \oint_{\partial S}\mathbf{F}\cdot d\mathbf{s}=\iint_S\grad\times\mathbf{F}\cdot d\mathbf{A}.
-\]
+    \oint_{\partial S}\mathbf{F}\cdot d\mathbf{s}=\iint_S\grad\times\mathbf{F}\cdot d\mathbf{A}, 
+\]  donde las orientaciones tanto de  $S$ como de $\partial S$ son las inducidas por $\boldsymbol{\Sigma}$ sobre ellas.
+
 \end{theorem}
 
 \begin{theorem}
-\textbf{Teorema de la divergencia o de Gauss}. Sea $S\subset\Rn{3}$ una superficie que encierra un volumen $\Omega$ orientada de manera exterior, esto es $S=\partial \Omega$. Sea $\mathbf{F}:\Omega\to\Rn{3}$ un campo vectorial clase $\mathcal{C}^1$, entonces
+\textbf{Teorema de la divergencia o de Gauss}. Sea $S\subset\Rn{3}$ una superficie que encierra un volumen $\Omega$ ( $S=\partial \Omega$ ) orientada de manera exterior.  Si $\mathbf{F}:A \subset \Rn{3} \to\Rn{3}$ es  un campo vectorial continuo y de clase $\mathcal{C}^1(\interior{A})$ tal que $\Omega \subset \interior{A}$, entonces
 \[
     \oiint_{\partial \Omega}\mathbf{F}\cdot d\mathbf{S}=\iiint_{\Omega}\grad\cdot\mathbf{F}\:dV.
 \]
